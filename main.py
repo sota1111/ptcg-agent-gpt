@@ -17,7 +17,7 @@ import time
 # Kaggle executes this file with exec(), so the submission directory is not
 # necessarily first on sys.path. Prefer the bundled agents/ package over an
 # unrelated kaggle_environments module with the same top-level name.
-_KAGGLE_AGENT_DIR = "/kaggle_simulations/agent"
+_KAGGLE_AGENT_DIR = os.environ.get("KAGGLE_AGENT_DIR", "/kaggle_simulations/agent")
 _SUBMISSION_DIR = (
     _KAGGLE_AGENT_DIR if os.path.isdir(_KAGGLE_AGENT_DIR) else os.path.abspath(os.getcwd())
 )
@@ -212,9 +212,7 @@ def read_deck_csv() -> list:
     Returns:
         list[int]: A list of 60 card IDs in the deck.
     """
-    file_path = "deck.csv"
-    if not os.path.exists(file_path):
-        file_path = "/kaggle_simulations/agent/" + file_path
+    file_path = os.path.join(_SUBMISSION_DIR, "deck.csv")
     with open(file_path) as file:
         csv = file.read().split("\n")
     return [int(csv[i]) for i in range(60)]

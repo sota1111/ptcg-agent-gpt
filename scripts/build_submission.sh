@@ -16,4 +16,5 @@ if grep -E '(^|/)(\.env($|\.)|\.git/|tests/|eval/|\.venv/|access_token|kaggle\.j
   echo "submission contains a forbidden path" >&2
   exit 1
 fi
+python3 "$repo/scripts/verify_submission_exec.py"
 echo "submission archive: $archive"

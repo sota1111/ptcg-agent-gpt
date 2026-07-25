@@ -31,6 +31,18 @@ python eval/battle_vs.py --seeds 20 --base-seed 20260722 \
   --json artifacts/semantic-vs-hash.json
 ```
 
+`build_submission.sh` is also the submission exec-compatibility gate. It extracts the archive into an
+isolated directory, changes to an unrelated working directory, removes `PYTHONPATH`, and executes
+`main.py` without defining `__file__`. The gate must print `exec compatibility: PASS`. The optional
+`KAGGLE_AGENT_DIR` environment variable exists only to reproduce Kaggle's fixed
+`/kaggle_simulations/agent` path in this isolated check.
+
+This repository does not currently use a separate champion registry or a `submit.file` field. The
+promoted champion is the root `main.py`, and `submission.tar.gz` built from it is the submit-ready
+artifact. If a registry is introduced and its champion `submit.file` is empty, set it to the smallest
+self-contained champion entry point (`main.py`) and require this same gate before submission; do not
+silently submit an unrelated candidate.
+
 Each seed runs twice with seats reversed. Promotion requires at least 20 seeds, semantic win rate at
 least 60% excluding draws, Wilson 95% lower bound strictly above 50%, zero semantic faults, zero
 unfinished matches, and maximum semantic think time below 600 seconds. Only when the JSON report says

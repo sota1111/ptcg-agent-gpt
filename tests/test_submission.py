@@ -38,6 +38,10 @@ def test_kaggle_exec_without_file_loads_deck(monkeypatch: pytest.MonkeyPatch) ->
     assert len(agent({"select": None})) == 60
 
 
+def test_submission_archive_passes_exec_compatibility_gate() -> None:
+    subprocess.run(["bash", "scripts/build_submission.sh"], cwd=REPO, check=True)
+
+
 @pytest.mark.parametrize("minimum,maximum", [(0, 0), (1, 1), (2, 3)])
 def test_decision_satisfies_selection_contract(minimum: int, maximum: int) -> None:
     action = load_submission().agent(
@@ -63,7 +67,6 @@ def test_invalid_bounds_fail_closed() -> None:
 def test_submission_archive_layout_when_engine_is_installed() -> None:
     if not (REPO / "cg" / "libcg.so").is_file():
         pytest.skip("competition runtime not installed")
-    subprocess.run(["bash", "scripts/build_submission.sh"], cwd=REPO, check=True)
     archive = REPO / "submission.tar.gz"
     with tarfile.open(archive, "r:gz") as bundle:
         names = bundle.getnames()
