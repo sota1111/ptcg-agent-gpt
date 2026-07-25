@@ -37,6 +37,7 @@ import os
 import subprocess
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -130,27 +131,55 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
         )
     steps = 0
     think = [0.0, 0.0]  # per-seat cumulative act() wall clock
+    contexts = [Counter(), Counter()]
     try:
         while steps < MAX_DECISIONS:
             cur = obs.get("current") or {}
             result = cur.get("result", -1)
             if result != -1:
-                return {"result": result, "steps": steps, "fault_seat": None, "think": think}
+                return {
+                    "result": result,
+                    "steps": steps,
+                    "fault_seat": None,
+                    "think": think,
+                    "contexts": contexts,
+                }
             seat = cur.get("yourIndex", 0)
+            context = (obs.get("select") or {}).get("context")
+            if isinstance(context, int):
+                contexts[seat][context] += 1
             agent = seat0 if seat == 0 else seat1
             t0 = time.perf_counter()
             try:
                 action = agent.act(obs)
             except Exception:  # noqa: BLE001 - agent fault => that seat loses
-                return {"result": 1 - seat, "steps": steps, "fault_seat": seat, "think": think}
+                return {
+                    "result": 1 - seat,
+                    "steps": steps,
+                    "fault_seat": seat,
+                    "think": think,
+                    "contexts": contexts,
+                }
             finally:
                 think[seat] += time.perf_counter() - t0
             try:
                 obs = game.battle_select(action)
             except Exception:  # noqa: BLE001 - engine reject => illegal move
-                return {"result": 1 - seat, "steps": steps, "fault_seat": seat, "think": think}
+                return {
+                    "result": 1 - seat,
+                    "steps": steps,
+                    "fault_seat": seat,
+                    "think": think,
+                    "contexts": contexts,
+                }
             steps += 1
-        return {"result": -1, "steps": steps, "fault_seat": None, "think": think}
+        return {
+            "result": -1,
+            "steps": steps,
+            "fault_seat": None,
+            "think": think,
+            "contexts": contexts,
+        }
     finally:
         game.battle_finish()
 
@@ -176,6 +205,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
     }
     max_think = {"semantic": 0.0, opponent_label: 0.0}
     match_times = []
+    semantic_contexts = Counter()
     try:
         n = seeds * 2
         for i in range(n):
@@ -189,6 +219,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
             seat0, seat1 = (semantic, opp) if semantic_seat == 0 else (opp, semantic)
             t0 = time.perf_counter()
             out = play_match(game, seat0, seat1)
+            semantic_contexts.update(out["contexts"][semantic_seat])
             match_times.append(time.perf_counter() - t0)
             for seat, contestant in ((0, seat0), (1, seat1)):
                 max_think[contestant.label] = max(max_think[contestant.label], out["think"][seat])
@@ -221,6 +252,15 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
 
     decided = stats["wins_semantic"] + stats["wins_opp"]
     lo, hi = wilson_ci(stats["wins_semantic"], decided)
+    from agents.rule_policy import uses_generic_ordering
+
+    generic_contexts = {
+        str(context): count
+        for context, count in sorted(
+            semantic_contexts.items(), key=lambda item: (-item[1], item[0])
+        )
+        if uses_generic_ordering(context)
+    }
     return {
         "semantic_repo": REPO,
         "opponent_repo": os.path.abspath(opponent_repo),
@@ -241,6 +281,14 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
             "max": max(match_times) if match_times else 0,
             "total": sum(match_times),
         },
+        "context_decisions": {
+            str(context): count
+            for context, count in sorted(
+                semantic_contexts.items(), key=lambda item: (-item[1], item[0])
+            )
+        },
+        "generic_ordering_contexts": generic_contexts,
+        "generic_ordering_decisions": sum(generic_contexts.values()),
     }
 
 

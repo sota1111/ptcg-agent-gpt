@@ -35,6 +35,7 @@ CTX_SWITCH = 3
 CTX_TO_ACTIVE = 4
 CTX_TO_HAND = 7
 CTX_NOT_MOVE = 12
+CTX_DISCARD_ENERGY = 30
 CTX_DRAW_COUNT = 38
 CTX_COIN_HEAD = 46
 
@@ -96,6 +97,18 @@ COUNT_MODE = {
 # YES/NO contexts where "max" above means answering YES; the ordering
 # override below ranks the YES option first for exactly these.
 YES_CONTEXTS = frozenset({41, 42, 43, 44, 46})
+SPECIALIZED_ORDER_CONTEXTS = frozenset(
+    {
+        CTX_MAIN,  # GreedyAgent has explicit per-action MAIN semantics.
+        CTX_SETUP_ACTIVE,
+        CTX_SWITCH,
+        CTX_TO_ACTIVE,
+        CTX_TO_HAND,
+        CTX_DISCARD_ENERGY,
+        45,  # MORE_DEVOLVE: explicit NO preference below.
+        *YES_CONTEXTS,
+    }
+)
 
 _OT_YES, _OT_NO = 1, 2
 
@@ -162,6 +175,14 @@ class RulePolicy:
         if context in (CTX_SWITCH, CTX_TO_ACTIVE):
             # Promote the readiest Pokémon: attached Energy, then HP.
             return lambda i: self._option_readiness(view, i)
+        if context == CTX_TO_HAND:
+            # Search effects should take the highest-value card explicitly;
+            # this was the most frequent generic-ordering trace context.
+            scores = self._greedy.score_options(view)
+            return lambda i: scores[i]
+        if context == CTX_DISCARD_ENERGY:
+            # Pay the smallest Energy-card/count cost explicitly.
+            return lambda i: -float(view.select.options[i].raw.get("count") or 1)
         if context in YES_CONTEXTS:
             return lambda i: 1.0 if view.select.options[i].type == _OT_YES else 0.0
         if context == 45:  # MORE_DEVOLVE: prefer NO
@@ -195,6 +216,11 @@ class RulePolicy:
         return self._greedy._resolve_card_id(
             view, raw.get("area"), raw.get("index"), raw.get("playerIndex", view.your_index)
         )
+
+
+def uses_generic_ordering(context: int) -> bool:
+    """Return whether ordering still delegates to generic card scoring."""
+    return context not in SPECIALIZED_ORDER_CONTEXTS
 
 
 class RuleAgent(BaseAgent):
