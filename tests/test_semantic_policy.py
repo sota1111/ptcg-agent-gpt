@@ -7,7 +7,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 
 from agents.observation import adapt  # noqa: E402
-from agents.rule_policy import COUNT_MODE, RulePolicy  # noqa: E402
+from agents.rule_policy import COUNT_MODE, RulePolicy, uses_generic_ordering  # noqa: E402
 from eval.battle_vs import promotion_decision, wilson_ci  # noqa: E402
 from tests.support import observation, select, synthetic_card_index  # noqa: E402
 
@@ -57,6 +57,23 @@ def test_rule_policy_interprets_action_type_not_serialized_hash() -> None:
         )
     )
     assert RulePolicy(synthetic_card_index()).choose(view) == [1]
+
+
+def test_top_trace_contexts_have_explicit_ordering_rules() -> None:
+    assert not uses_generic_ordering(7)  # TO_HAND
+    assert not uses_generic_ordering(30)  # DISCARD_ENERGY
+
+    discard_view = adapt(
+        observation(
+            select(
+                [{"type": 6, "count": 2}, {"type": 6, "count": 1}],
+                context=30,
+                min_count=1,
+                max_count=1,
+            )
+        )
+    )
+    assert RulePolicy(synthetic_card_index()).choose(discard_view) == [1]
 
 
 def test_time_governor_hands_search_to_greedy_before_600_seconds() -> None:
