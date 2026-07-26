@@ -104,6 +104,8 @@ SPECIALIZED_ORDER_CONTEXTS = frozenset(
         CTX_SWITCH,
         CTX_TO_ACTIVE,
         CTX_TO_HAND,
+        21,  # ATTACH_FROM: preserve the most useful in-play source.
+        22,  # ATTACH_TO: develop the recipient closest to attacking.
         CTX_DISCARD_ENERGY,
         45,  # MORE_DEVOLVE: explicit NO preference below.
         *YES_CONTEXTS,
@@ -180,6 +182,20 @@ class RulePolicy:
             # this was the most frequent generic-ordering trace context.
             scores = self._greedy.score_options(view)
             return lambda i: scores[i]
+        if context == 21:  # ATTACH_FROM
+            # Moving an attached card must not strand the current attacker.
+            # Prefer a benched source, then genuine surplus beyond its
+            # cheapest attack requirement.  All inputs are public board/card
+            # attributes; unresolved card-shaped options retain deterministic
+            # generic ordering.
+            scores = self._greedy.score_options(view)
+            return lambda i: self._attach_source_score(view, i, scores[i])
+        if context == 22:  # ATTACH_TO
+            # Put the resource where it most improves continuity: an Active
+            # that becomes attack-ready wins, otherwise close the smallest
+            # visible attack-energy gap.  HP is only a stable final tie-break.
+            scores = self._greedy.score_options(view)
+            return lambda i: self._attach_target_score(view, i, scores[i])
         if context == CTX_DISCARD_ENERGY:
             # Pay the smallest Energy-card/count cost explicitly.
             return lambda i: -float(view.select.options[i].raw.get("count") or 1)
@@ -210,6 +226,41 @@ class RulePolicy:
             card_id = self._option_card_id(view, opt)
             return float(self.cards.card(card_id).hp)
         return 100.0 * len(pokemon.energies) + float(pokemon.hp)
+
+    def _attach_source_score(self, view: View, i: int, fallback: float) -> float:
+        opt = view.select.options[i]
+        raw = opt.raw
+        area = raw.get("area", raw.get("inPlayArea"))
+        pokemon = view.find_pokemon(
+            raw.get("playerIndex", view.your_index), area, raw.get("index")
+        )
+        if pokemon is None:
+            return fallback
+        need = self._minimum_attack_energy(pokemon.card_id)
+        surplus = max(0, len(pokemon.energies) - need)
+        bench_bonus = 1000.0 if area == 5 else 0.0
+        return bench_bonus + 100.0 * surplus - 10.0 * len(pokemon.energies) + pokemon.hp / 1000.0
+
+    def _attach_target_score(self, view: View, i: int, fallback: float) -> float:
+        opt = view.select.options[i]
+        raw = opt.raw
+        area = raw.get("area", raw.get("inPlayArea"))
+        pokemon = view.find_pokemon(
+            raw.get("playerIndex", view.your_index), area, raw.get("index")
+        )
+        if pokemon is None:
+            return fallback
+        need = self._minimum_attack_energy(pokemon.card_id)
+        after = len(pokemon.energies) + 1
+        gap = max(0, need - after)
+        ready_bonus = 2000.0 if need > 0 and gap == 0 else 0.0
+        active_bonus = 1000.0 if area == 4 else 0.0
+        return ready_bonus + active_bonus - 100.0 * gap + pokemon.hp / 1000.0
+
+    def _minimum_attack_energy(self, card_id) -> int:
+        card = self.cards.card(card_id)
+        costs = [self.cards.attack(attack_id).energy_cost for attack_id in card.attack_ids]
+        return min(costs) if costs else 0
 
     def _option_card_id(self, view: View, opt):
         raw = opt.raw

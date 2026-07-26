@@ -261,6 +261,16 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
         )
         if uses_generic_ordering(context)
     }
+    target_contexts = {
+        str(context): {
+            "decisions": semantic_contexts.get(context, 0),
+            "generic_ordering_fallbacks": (
+                semantic_contexts.get(context, 0) if uses_generic_ordering(context) else 0
+            ),
+            "explicit_rule": not uses_generic_ordering(context),
+        }
+        for context in (21, 22)
+    }
     return {
         "semantic_repo": REPO,
         "opponent_repo": os.path.abspath(opponent_repo),
@@ -289,6 +299,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
         },
         "generic_ordering_contexts": generic_contexts,
         "generic_ordering_decisions": sum(generic_contexts.values()),
+        "attach_contexts": target_contexts,
     }
 
 
