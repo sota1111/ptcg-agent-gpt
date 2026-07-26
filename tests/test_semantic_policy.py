@@ -9,7 +9,7 @@ sys.path.insert(0, str(REPO))
 from agents.observation import adapt  # noqa: E402
 from agents.rule_policy import COUNT_MODE, RulePolicy, uses_generic_ordering  # noqa: E402
 from eval.battle_vs import promotion_decision, wilson_ci  # noqa: E402
-from tests.support import observation, select, synthetic_card_index  # noqa: E402
+from tests.support import observation, player, pokemon, select, synthetic_card_index  # noqa: E402
 
 DECK = list(range(1, 61))
 SPEC = importlib.util.spec_from_file_location("sol_semantic_main", REPO / "main.py")
@@ -74,6 +74,50 @@ def test_top_trace_contexts_have_explicit_ordering_rules() -> None:
         )
     )
     assert RulePolicy(synthetic_card_index()).choose(discard_view) == [1]
+
+
+def test_attach_from_preserves_active_and_uses_bench_surplus() -> None:
+    view = adapt(
+        observation(
+            select(
+                [
+                    {"type": 5, "area": 4, "index": 0, "playerIndex": 0},
+                    {"type": 5, "area": 5, "index": 0, "playerIndex": 0},
+                ],
+                context=21,
+                min_count=1,
+                max_count=1,
+            ),
+            me=player(
+                active=[pokemon(101, energies=(3,))],
+                bench=[pokemon(102, energies=(2, 0, 0))],
+            ),
+        )
+    )
+    assert not uses_generic_ordering(21)
+    assert RulePolicy(synthetic_card_index()).choose(view) == [1]
+
+
+def test_attach_to_completes_active_attack_before_bench_development() -> None:
+    view = adapt(
+        observation(
+            select(
+                [
+                    {"type": 3, "area": 4, "index": 0, "playerIndex": 0},
+                    {"type": 3, "area": 5, "index": 0, "playerIndex": 0},
+                ],
+                context=22,
+                min_count=1,
+                max_count=1,
+            ),
+            me=player(
+                active=[pokemon(101)],
+                bench=[pokemon(102, energies=(2,))],
+            ),
+        )
+    )
+    assert not uses_generic_ordering(22)
+    assert RulePolicy(synthetic_card_index()).choose(view) == [0]
 
 
 def test_time_governor_hands_search_to_greedy_before_600_seconds() -> None:
