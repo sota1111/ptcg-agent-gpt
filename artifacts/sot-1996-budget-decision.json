@@ -1,0 +1,100 @@
+{
+  "issue": "SOT-1996",
+  "baseline": {
+    "commit": "961fa5ec7af1bb1c73de0bf64b2dec184d72ea91",
+    "sourceArtifact": "artifacts/sot-1995-confirm-after.json",
+    "config": {
+      "n_worlds": 4,
+      "max_tree_depth": 1,
+      "rollout_turns": 100,
+      "time_budget_s": 0.8,
+      "budget_schedule": [[300.0, 0.8], [420.0, 0.4], [510.0, 0.2]]
+    },
+    "confirm": {
+      "base_seed": 20260726,
+      "seeds": 20,
+      "seat_reversal": true,
+      "opponent_pool": ["eval/hash_baseline"],
+      "wins": 40,
+      "matches": 40,
+      "faults": 0,
+      "unfinished": 0,
+      "mean_runtime_s": 8.696042719122488
+    }
+  },
+  "screen": {
+    "base_seed": 20260726,
+    "seeds": 5,
+    "seat_reversal": true,
+    "opponent_pool": ["eval/hash_baseline"],
+    "candidates": [
+      {
+        "id": "w2-r200-t080",
+        "config": {"n_worlds": 2, "rollout_turns": 200, "time_budget_s": 0.8},
+        "artifact": "artifacts/sot-1996-screen-w2-r200.json",
+        "wins": 8,
+        "matches": 10,
+        "faults": 0,
+        "unfinished": 0,
+        "mean_runtime_s": 9.012760488595813
+      },
+      {
+        "id": "w8-r50-t080",
+        "config": {"n_worlds": 8, "rollout_turns": 50, "time_budget_s": 0.8},
+        "artifact": "artifacts/sot-1996-screen-w8-r50.json",
+        "wins": 9,
+        "matches": 10,
+        "faults": 0,
+        "unfinished": 0,
+        "mean_runtime_s": 10.2226346203126
+      },
+      {
+        "id": "w4-r100-t060",
+        "config": {"n_worlds": 4, "rollout_turns": 100, "time_budget_s": 0.6},
+        "budget_schedule": [[300.0, 0.6], [420.0, 0.3], [510.0, 0.15]],
+        "artifact": "artifacts/sot-1996-screen-t060.json",
+        "wins": 10,
+        "matches": 10,
+        "faults": 0,
+        "unfinished": 0,
+        "mean_runtime_s": 5.058813333744183
+      }
+    ]
+  },
+  "confirm": {
+    "candidate": "w4-r100-t060",
+    "artifact": "artifacts/sot-1996-confirm-t060.json",
+    "base_seed": 20260726,
+    "seeds": 20,
+    "seat_reversal": true,
+    "opponent_pool": ["eval/hash_baseline"],
+    "wins": 40,
+    "matches": 40,
+    "faults": 0,
+    "unfinished": 0,
+    "mean_runtime_s": 7.02122632607352,
+    "runtime_ratio_to_baseline": 0.807404825215369
+  },
+  "promotionGate": {
+    "candidate_pool_kpi_strictly_better": false,
+    "faults_not_increased": true,
+    "timeouts_not_increased": true,
+    "mean_runtime_lte_110_percent": true,
+    "within_600_seconds": true,
+    "promote": false,
+    "reasons": ["candidate tied baseline pool KPI at 40-0; strict improvement was not demonstrated"]
+  },
+  "decision": {
+    "championChanged": false,
+    "configReverted": true,
+    "finalChampionCommit": "961fa5ec7af1bb1c73de0bf64b2dec184d72ea91",
+    "archiveSha256": "bac0bc46fc13e786eec7972f4f93333682a5ea57d31413b3aa83f4c1d1d9f41e",
+    "execCompatibility": "PASS",
+    "kaggleSubmission": {
+      "ref": 55008332,
+      "status": "COMPLETE",
+      "publicScore": 600.0,
+      "description": "SOT-1996 final champion (budget candidate not promoted)"
+    }
+  }
+}

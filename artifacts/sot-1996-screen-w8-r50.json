@@ -1,0 +1,64 @@
+{
+  "semantic_repo": "/workspaces/ptcg-agent-gpt",
+  "opponent_repo": "/workspaces/ptcg-agent-gpt/eval/hash_baseline",
+  "opponent": "hash_baseline",
+  "n_matches": 10,
+  "seeds": 5,
+  "base_seed": 20260726,
+  "wins_semantic": 9,
+  "wins_opp": 1,
+  "draws": 0,
+  "unfinished": 0,
+  "faults_semantic": 0,
+  "faults_opp": 0,
+  "wins_semantic_as_first": 5,
+  "n_semantic_as_first": 5,
+  "winrate_semantic_excl_draws": 0.9,
+  "wilson95_excl_draws": [
+    0.5958436145024278,
+    0.9821242504842788
+  ],
+  "winrate_semantic_draws_half": 0.9,
+  "max_think_s": {
+    "semantic": 23.091621493455023,
+    "hash_baseline": 0.007777762599289417
+  },
+  "match_time_allowance_s": 600.0,
+  "time_per_match_sec": {
+    "mean": 10.2226346203126,
+    "max": 23.106968729756773,
+    "total": 102.22634620312601
+  },
+  "context_decisions": {
+    "0": 118,
+    "7": 27,
+    "30": 14,
+    "1": 10,
+    "21": 6,
+    "22": 6,
+    "41": 5,
+    "2": 4,
+    "4": 2,
+    "38": 1
+  },
+  "generic_ordering_contexts": {},
+  "generic_ordering_decisions": 0,
+  "draw_bench_contexts": {
+    "2": {
+      "decisions": 4,
+      "generic_ordering_fallbacks": 0,
+      "explicit_rule": true
+    },
+    "38": {
+      "decisions": 1,
+      "generic_ordering_fallbacks": 0,
+      "explicit_rule": true
+    }
+  },
+  "promotion": {
+    "promote": false,
+    "reasons": [
+      "fewer than 20 fixed agent seeds"
+    ]
+  }
+}
