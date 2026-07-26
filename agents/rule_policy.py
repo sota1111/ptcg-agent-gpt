@@ -101,12 +101,14 @@ SPECIALIZED_ORDER_CONTEXTS = frozenset(
     {
         CTX_MAIN,  # GreedyAgent has explicit per-action MAIN semantics.
         CTX_SETUP_ACTIVE,
+        CTX_SETUP_BENCH,
         CTX_SWITCH,
         CTX_TO_ACTIVE,
         CTX_TO_HAND,
         21,  # ATTACH_FROM: preserve the most useful in-play source.
         22,  # ATTACH_TO: develop the recipient closest to attacking.
         CTX_DISCARD_ENERGY,
+        CTX_DRAW_COUNT,
         45,  # MORE_DEVOLVE: explicit NO preference below.
         *YES_CONTEXTS,
     }
@@ -174,6 +176,12 @@ class RulePolicy:
         if context == CTX_SETUP_ACTIVE:
             # Active must survive the opening race: HP first.
             return lambda i: self._option_card_hp(view, i)
+        if context == CTX_SETUP_BENCH:
+            # Develop useful, low-liability Basics first.  Attack output and
+            # abilities are expansion value; prize yield, high attack cost,
+            # and low HP are public risks when bench space is contested.
+            scores = self._greedy.score_options(view)
+            return lambda i: self._setup_bench_score(view, i, scores[i])
         if context in (CTX_SWITCH, CTX_TO_ACTIVE):
             # Promote the readiest Pokémon: attached Energy, then HP.
             return lambda i: self._option_readiness(view, i)
@@ -199,6 +207,11 @@ class RulePolicy:
         if context == CTX_DISCARD_ENERGY:
             # Pay the smallest Energy-card/count cost explicitly.
             return lambda i: -float(view.select.options[i].raw.get("count") or 1)
+        if context == CTX_DRAW_COUNT:
+            # Preserve hand continuity without digging past the hard deck
+            # reserve.  Prefer the option that replenishes toward seven cards;
+            # once the deck is thin, explicitly choose the smallest draw.
+            return lambda i: self._draw_count_score(view, i)
         if context in YES_CONTEXTS:
             return lambda i: 1.0 if view.select.options[i].type == _OT_YES else 0.0
         if context == 45:  # MORE_DEVOLVE: prefer NO
@@ -226,6 +239,39 @@ class RulePolicy:
             card_id = self._option_card_id(view, opt)
             return float(self.cards.card(card_id).hp)
         return 100.0 * len(pokemon.energies) + float(pokemon.hp)
+
+    def _setup_bench_score(self, view: View, i: int, fallback: float) -> float:
+        card_id = self._option_card_id(view, view.select.options[i])
+        card = self.cards.card(card_id)
+        if not card.known:
+            return fallback
+        attack_costs = [self.cards.attack(attack_id).energy_cost for attack_id in card.attack_ids]
+        cheapest = min(attack_costs) if attack_costs else 4
+        development = card.max_attack_damage + (40 if card.has_ability else 0)
+        liability = 60 * (card.prize_value - 1) + 12 * cheapest
+        return development - liability + card.hp / 10.0
+
+    @staticmethod
+    def _draw_option_count(view: View, i: int) -> int:
+        raw = view.select.options[i].raw
+        for field in ("count", "drawCount", "value"):
+            value = raw.get(field)
+            if value is not None:
+                try:
+                    return max(0, int(value))
+                except (TypeError, ValueError):
+                    pass
+        return i + 1
+
+    def _draw_count_score(self, view: View, i: int) -> float:
+        draw = self._draw_option_count(view, i)
+        safe_draw = max(0, view.me.deck_count - DECK_RESERVE)
+        if safe_draw <= 0:
+            return -float(draw)
+        continuity_need = max(0, 7 - view.me.hand_count)
+        target = min(max(1, continuity_need), safe_draw)
+        over_reserve = max(0, draw - safe_draw)
+        return -1000.0 * over_reserve - abs(draw - target)
 
     def _attach_source_score(self, view: View, i: int, fallback: float) -> float:
         opt = view.select.options[i]

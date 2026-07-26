@@ -120,6 +120,49 @@ def test_attach_to_completes_active_attack_before_bench_development() -> None:
     assert RulePolicy(synthetic_card_index()).choose(view) == [0]
 
 
+def test_setup_bench_balances_expansion_value_and_prize_risk() -> None:
+    view = adapt(
+        observation(
+            select(
+                [
+                    {"type": 0, "area": 2, "index": 0, "playerIndex": 0},
+                    {"type": 0, "area": 2, "index": 1, "playerIndex": 0},
+                ],
+                context=2,
+                min_count=1,
+                max_count=1,
+            ),
+            me=player(hand=[{"id": 101}, {"id": 102}]),
+        )
+    )
+    assert not uses_generic_ordering(2)
+    assert RulePolicy(synthetic_card_index()).choose(view) == [0]
+
+
+def test_draw_count_targets_hand_continuity_and_protects_deck_reserve() -> None:
+    options = [
+        {"type": 6, "count": 1},
+        {"type": 6, "count": 3},
+        {"type": 6, "count": 5},
+    ]
+    healthy = adapt(
+        observation(
+            select(options, context=38, min_count=1, max_count=1),
+            me=player(hand_count=4, deck_count=20),
+        )
+    )
+    thin = adapt(
+        observation(
+            select(options, context=38, min_count=1, max_count=1),
+            me=player(hand_count=4, deck_count=6),
+        )
+    )
+    policy = RulePolicy(synthetic_card_index())
+    assert not uses_generic_ordering(38)
+    assert policy.choose(healthy) == [1]
+    assert policy.choose(thin) == [0]
+
+
 def test_time_governor_hands_search_to_greedy_before_600_seconds() -> None:
     agent = make_agent()
     search = StubAgent()
