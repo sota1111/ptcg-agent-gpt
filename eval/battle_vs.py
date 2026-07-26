@@ -269,7 +269,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
             ),
             "explicit_rule": not uses_generic_ordering(context),
         }
-        for context in (21, 22)
+        for context in (2, 38)
     }
     return {
         "semantic_repo": REPO,
@@ -299,7 +299,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
         },
         "generic_ordering_contexts": generic_contexts,
         "generic_ordering_decisions": sum(generic_contexts.values()),
-        "attach_contexts": target_contexts,
+        "draw_bench_contexts": target_contexts,
     }
 
 
