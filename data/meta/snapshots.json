@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshots": [
+    {
+      "capturedAt": "2026-07-27T00:00:00Z",
+      "sourceUrl": "https://limitlesstcg.com/decks?time=3months",
+      "targetDate": "2026-07-06",
+      "deckCountBeforeUpdate": 2,
+      "signals": {
+        "top10": [
+          {"archetype": "Gardevoir ex", "rank": 3, "usage": 0.114},
+          {"archetype": "Dragapult ex", "rank": 7, "usage": 0.071}
+        ],
+        "top20": [
+          {"archetype": "Gardevoir ex", "rank": 3, "usage": 0.114},
+          {"archetype": "Dragapult ex", "rank": 7, "usage": 0.071},
+          {"archetype": "Charizard ex", "rank": 14, "usage": 0.039}
+        ],
+        "top100": [
+          {"archetype": "Gardevoir ex", "rank": 3, "usage": 0.114},
+          {"archetype": "Dragapult ex", "rank": 7, "usage": 0.071},
+          {"archetype": "Charizard ex", "rank": 14, "usage": 0.039},
+          {"archetype": "Festival Lead", "rank": 68, "usage": 0.012}
+        ]
+      }
+    },
+    {
+      "capturedAt": "2026-07-27T00:00:00Z",
+      "sourceUrl": "https://limitlesstcg.com/decks?time=3months",
+      "targetDate": "2026-07-13",
+      "deckCountBeforeUpdate": 2,
+      "signals": {
+        "top10": [
+          {"archetype": "Gardevoir ex", "rank": 4, "usage": 0.108},
+          {"archetype": "Dragapult ex", "rank": 6, "usage": 0.078}
+        ],
+        "top20": [
+          {"archetype": "Gardevoir ex", "rank": 4, "usage": 0.108},
+          {"archetype": "Dragapult ex", "rank": 6, "usage": 0.078},
+          {"archetype": "Charizard ex", "rank": 16, "usage": 0.034}
+        ],
+        "top100": [
+          {"archetype": "Gardevoir ex", "rank": 4, "usage": 0.108},
+          {"archetype": "Dragapult ex", "rank": 6, "usage": 0.078},
+          {"archetype": "Charizard ex", "rank": 16, "usage": 0.034},
+          {"archetype": "Festival Lead", "rank": 61, "usage": 0.016}
+        ]
+      }
+    },
+    {
+      "capturedAt": "2026-07-27T00:00:00Z",
+      "sourceUrl": "https://limitlesstcg.com/decks?time=3months",
+      "targetDate": "2026-07-20",
+      "deckCountBeforeUpdate": 2,
+      "signals": {
+        "top10": [
+          {"archetype": "Dragapult ex", "rank": 4, "usage": 0.091},
+          {"archetype": "Gardevoir ex", "rank": 5, "usage": 0.101}
+        ],
+        "top20": [
+          {"archetype": "Dragapult ex", "rank": 4, "usage": 0.091},
+          {"archetype": "Gardevoir ex", "rank": 5, "usage": 0.101},
+          {"archetype": "Charizard ex", "rank": 18, "usage": 0.031}
+        ],
+        "top100": [
+          {"archetype": "Dragapult ex", "rank": 4, "usage": 0.091},
+          {"archetype": "Gardevoir ex", "rank": 5, "usage": 0.101},
+          {"archetype": "Charizard ex", "rank": 18, "usage": 0.031},
+          {"archetype": "Festival Lead", "rank": 54, "usage": 0.021}
+        ]
+      }
+    }
+  ]
+}

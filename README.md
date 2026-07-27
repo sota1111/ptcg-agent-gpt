@@ -128,3 +128,23 @@ hard-opponent scores, replay-derived metrics, and the diverse shortlist. The bas
 always evaluated under the same scoring conditions. Progress is atomically checkpointed every 100
 candidates; rerun the identical command with `--resume` to continue. The shortlist `cards` arrays can
 be consumed directly by the subsequent Sol joint optimizer.
+
+## Meta snapshots and deck inventory
+
+The normalized public-meta fixture in [`data/meta/snapshots.json`](data/meta/snapshots.json) keeps
+Top 10, Top 20, and Top 100 as independent signals. Every snapshot records the capture timestamp,
+public source URL, represented date, and number of decks present before an update. Analysis retains
+rank and usage history for at least three snapshots, usage/rank changes, persistence, and a
+low-usage Top 100 view. The checked-in fixture is an auditable normalized input, not a claim that the
+repository redistributes source-site content.
+
+Current deck roles are temporarily defined here until a dedicated deck registry is introduced:
+
+- `deck.csv`: `top` role; submission baseline; primary archetype `Miraidon ex`.
+- `eval/hash_baseline/deck.csv`: `baseline` role; deterministic regression opponent; primary
+  archetype `Miraidon ex`.
+
+Run `python scripts/build_meta_inventory.py` to deterministically regenerate
+`artifacts/meta-analysis.json` and `docs/deck-inventory.csv`. The inventory records each current
+deck's ID, path, primary archetype, composition hash, purpose, evaluation, role, card count, exact
+duplicates, legality, and loadability.

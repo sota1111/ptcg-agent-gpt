@@ -1,0 +1,262 @@
+{
+  "lowUsageTop100": [
+    {
+      "archetype": "Festival Lead",
+      "persistence": 1.0,
+      "rank": 54,
+      "usage": 0.021
+    }
+  ],
+  "provenance": [
+    {
+      "capturedAt": "2026-07-27T00:00:00Z",
+      "deckCountBeforeUpdate": 2,
+      "sourceUrl": "https://limitlesstcg.com/decks?time=3months",
+      "targetDate": "2026-07-06"
+    },
+    {
+      "capturedAt": "2026-07-27T00:00:00Z",
+      "deckCountBeforeUpdate": 2,
+      "sourceUrl": "https://limitlesstcg.com/decks?time=3months",
+      "targetDate": "2026-07-13"
+    },
+    {
+      "capturedAt": "2026-07-27T00:00:00Z",
+      "deckCountBeforeUpdate": 2,
+      "sourceUrl": "https://limitlesstcg.com/decks?time=3months",
+      "targetDate": "2026-07-20"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "signals": {
+    "top10": {
+      "archetypes": {
+        "Dragapult ex": {
+          "history": [
+            {
+              "rank": 7,
+              "targetDate": "2026-07-06",
+              "usage": 0.071
+            },
+            {
+              "rank": 6,
+              "targetDate": "2026-07-13",
+              "usage": 0.078
+            },
+            {
+              "rank": 4,
+              "targetDate": "2026-07-20",
+              "usage": 0.091
+            }
+          ],
+          "latestRank": 4,
+          "latestUsage": 0.091,
+          "persistence": 1.0,
+          "rankChange": 3,
+          "usageChange": 0.02
+        },
+        "Gardevoir ex": {
+          "history": [
+            {
+              "rank": 3,
+              "targetDate": "2026-07-06",
+              "usage": 0.114
+            },
+            {
+              "rank": 4,
+              "targetDate": "2026-07-13",
+              "usage": 0.108
+            },
+            {
+              "rank": 5,
+              "targetDate": "2026-07-20",
+              "usage": 0.101
+            }
+          ],
+          "latestRank": 5,
+          "latestUsage": 0.101,
+          "persistence": 1.0,
+          "rankChange": -2,
+          "usageChange": -0.013
+        }
+      }
+    },
+    "top100": {
+      "archetypes": {
+        "Charizard ex": {
+          "history": [
+            {
+              "rank": 14,
+              "targetDate": "2026-07-06",
+              "usage": 0.039
+            },
+            {
+              "rank": 16,
+              "targetDate": "2026-07-13",
+              "usage": 0.034
+            },
+            {
+              "rank": 18,
+              "targetDate": "2026-07-20",
+              "usage": 0.031
+            }
+          ],
+          "latestRank": 18,
+          "latestUsage": 0.031,
+          "persistence": 1.0,
+          "rankChange": -4,
+          "usageChange": -0.008
+        },
+        "Dragapult ex": {
+          "history": [
+            {
+              "rank": 7,
+              "targetDate": "2026-07-06",
+              "usage": 0.071
+            },
+            {
+              "rank": 6,
+              "targetDate": "2026-07-13",
+              "usage": 0.078
+            },
+            {
+              "rank": 4,
+              "targetDate": "2026-07-20",
+              "usage": 0.091
+            }
+          ],
+          "latestRank": 4,
+          "latestUsage": 0.091,
+          "persistence": 1.0,
+          "rankChange": 3,
+          "usageChange": 0.02
+        },
+        "Festival Lead": {
+          "history": [
+            {
+              "rank": 68,
+              "targetDate": "2026-07-06",
+              "usage": 0.012
+            },
+            {
+              "rank": 61,
+              "targetDate": "2026-07-13",
+              "usage": 0.016
+            },
+            {
+              "rank": 54,
+              "targetDate": "2026-07-20",
+              "usage": 0.021
+            }
+          ],
+          "latestRank": 54,
+          "latestUsage": 0.021,
+          "persistence": 1.0,
+          "rankChange": 14,
+          "usageChange": 0.009
+        },
+        "Gardevoir ex": {
+          "history": [
+            {
+              "rank": 3,
+              "targetDate": "2026-07-06",
+              "usage": 0.114
+            },
+            {
+              "rank": 4,
+              "targetDate": "2026-07-13",
+              "usage": 0.108
+            },
+            {
+              "rank": 5,
+              "targetDate": "2026-07-20",
+              "usage": 0.101
+            }
+          ],
+          "latestRank": 5,
+          "latestUsage": 0.101,
+          "persistence": 1.0,
+          "rankChange": -2,
+          "usageChange": -0.013
+        }
+      }
+    },
+    "top20": {
+      "archetypes": {
+        "Charizard ex": {
+          "history": [
+            {
+              "rank": 14,
+              "targetDate": "2026-07-06",
+              "usage": 0.039
+            },
+            {
+              "rank": 16,
+              "targetDate": "2026-07-13",
+              "usage": 0.034
+            },
+            {
+              "rank": 18,
+              "targetDate": "2026-07-20",
+              "usage": 0.031
+            }
+          ],
+          "latestRank": 18,
+          "latestUsage": 0.031,
+          "persistence": 1.0,
+          "rankChange": -4,
+          "usageChange": -0.008
+        },
+        "Dragapult ex": {
+          "history": [
+            {
+              "rank": 7,
+              "targetDate": "2026-07-06",
+              "usage": 0.071
+            },
+            {
+              "rank": 6,
+              "targetDate": "2026-07-13",
+              "usage": 0.078
+            },
+            {
+              "rank": 4,
+              "targetDate": "2026-07-20",
+              "usage": 0.091
+            }
+          ],
+          "latestRank": 4,
+          "latestUsage": 0.091,
+          "persistence": 1.0,
+          "rankChange": 3,
+          "usageChange": 0.02
+        },
+        "Gardevoir ex": {
+          "history": [
+            {
+              "rank": 3,
+              "targetDate": "2026-07-06",
+              "usage": 0.114
+            },
+            {
+              "rank": 4,
+              "targetDate": "2026-07-13",
+              "usage": 0.108
+            },
+            {
+              "rank": 5,
+              "targetDate": "2026-07-20",
+              "usage": 0.101
+            }
+          ],
+          "latestRank": 5,
+          "latestUsage": 0.101,
+          "persistence": 1.0,
+          "rankChange": -2,
+          "usageChange": -0.013
+        }
+      }
+    }
+  },
+  "snapshotCount": 3
+}

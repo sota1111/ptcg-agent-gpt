@@ -11,7 +11,10 @@ __pycache__/
 kaggle.json
 data/*
 !data/.gitkeep
+!data/meta/
+!data/meta/snapshots.json
 artifacts/*
 !artifacts/.gitkeep
+!artifacts/meta-analysis.json
 cg/
 submission.tar.gz
