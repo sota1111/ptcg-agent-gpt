@@ -1,0 +1,3 @@
+deckId,path,primaryArchetype,compositionHash,purpose,evaluation,role,cardCount,duplicate,duplicateOf,legal,loadable,errors
+hash-baseline,eval/hash_baseline/deck.csv,Miraidon ex,b702e251e3b56104f84b60fddff309b0e5d4fae865e4dbb57311d4b0d45ec17e,deterministic regression opponent,hash baseline,baseline,60,True,submission,True,True,
+submission,deck.csv,Miraidon ex,b702e251e3b56104f84b60fddff309b0e5d4fae865e4dbb57311d4b0d45ec17e,competition submission,measured baseline,top,60,True,hash-baseline,True,True,
