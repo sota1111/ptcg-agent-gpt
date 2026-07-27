@@ -132,19 +132,72 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
     steps = 0
     think = [0.0, 0.0]  # per-seat cumulative act() wall clock
     contexts = [Counter(), Counter()]
+    telemetry = [
+        {
+            "decisions": 0,
+            "branching_decisions": 0,
+            "max_options": 0,
+            "min_deck_count": 60,
+            "min_prize_count": 6,
+        },
+        {
+            "decisions": 0,
+            "branching_decisions": 0,
+            "max_options": 0,
+            "min_deck_count": 60,
+            "min_prize_count": 6,
+        },
+    ]
+
+    def observe(current: dict, seat: int, observation: dict) -> None:
+        players = current.get("players") or []
+        if len(players) > seat:
+            player = players[seat] or {}
+            telemetry[seat]["min_deck_count"] = min(
+                telemetry[seat]["min_deck_count"], int(player.get("deckCount") or 0)
+            )
+            telemetry[seat]["min_prize_count"] = min(
+                telemetry[seat]["min_prize_count"], len(player.get("prize") or [])
+            )
+        selection = observation.get("select") or {}
+        options = selection.get("option") or []
+        option_count = len(options) if isinstance(options, list) else 0
+        telemetry[seat]["decisions"] += 1
+        telemetry[seat]["max_options"] = max(telemetry[seat]["max_options"], option_count)
+        telemetry[seat]["branching_decisions"] += int(option_count > 6)
+
+    def finish_payload(result: int, fault_seat: int | None = None) -> dict:
+        current = obs.get("current") or {}
+        players = current.get("players") or []
+        final_players = []
+        for player in players[:2]:
+            player = player or {}
+            final_players.append(
+                {
+                    "deck_count": int(player.get("deckCount") or 0),
+                    "prize_count": len(player.get("prize") or []),
+                    "hand_count": int(player.get("handCount") or 0),
+                    "bench_count": len(player.get("bench") or []),
+                }
+            )
+        return {
+            "result": result,
+            "steps": steps,
+            "fault_seat": fault_seat,
+            "think": think,
+            "contexts": contexts,
+            "telemetry": telemetry,
+            "final_players": final_players,
+        }
+
     try:
         while steps < MAX_DECISIONS:
             cur = obs.get("current") or {}
             result = cur.get("result", -1)
             if result != -1:
-                return {
-                    "result": result,
-                    "steps": steps,
-                    "fault_seat": None,
-                    "think": think,
-                    "contexts": contexts,
-                }
+                return finish_payload(result)
             seat = cur.get("yourIndex", 0)
+            observe(cur, seat, obs)
             context = (obs.get("select") or {}).get("context")
             if isinstance(context, int):
                 contexts[seat][context] += 1
@@ -153,33 +206,15 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
             try:
                 action = agent.act(obs)
             except Exception:  # noqa: BLE001 - agent fault => that seat loses
-                return {
-                    "result": 1 - seat,
-                    "steps": steps,
-                    "fault_seat": seat,
-                    "think": think,
-                    "contexts": contexts,
-                }
+                return finish_payload(1 - seat, seat)
             finally:
                 think[seat] += time.perf_counter() - t0
             try:
                 obs = game.battle_select(action)
             except Exception:  # noqa: BLE001 - engine reject => illegal move
-                return {
-                    "result": 1 - seat,
-                    "steps": steps,
-                    "fault_seat": seat,
-                    "think": think,
-                    "contexts": contexts,
-                }
+                return finish_payload(1 - seat, seat)
             steps += 1
-        return {
-            "result": -1,
-            "steps": steps,
-            "fault_seat": None,
-            "think": think,
-            "contexts": contexts,
-        }
+        return finish_payload(-1)
     finally:
         game.battle_finish()
 
@@ -205,6 +240,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
     }
     max_think = {"semantic": 0.0, opponent_label: 0.0}
     match_times = []
+    matches = []
     semantic_contexts = Counter()
     try:
         n = seeds * 2
@@ -219,8 +255,9 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
             seat0, seat1 = (semantic, opp) if semantic_seat == 0 else (opp, semantic)
             t0 = time.perf_counter()
             out = play_match(game, seat0, seat1)
+            runtime_s = time.perf_counter() - t0
             semantic_contexts.update(out["contexts"][semantic_seat])
-            match_times.append(time.perf_counter() - t0)
+            match_times.append(runtime_s)
             for seat, contestant in ((0, seat0), (1, seat1)):
                 max_think[contestant.label] = max(max_think[contestant.label], out["think"][seat])
             if out["fault_seat"] is not None:
@@ -239,6 +276,48 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
                 stats["draws"] += 1
             else:
                 stats["unfinished"] += 1
+            winner = (
+                seat0.label
+                if result == 0
+                else seat1.label
+                if result == 1
+                else "draw"
+                if result == 2
+                else "unfinished"
+            )
+            matches.append(
+                {
+                    "match_index": i,
+                    "agent_seed": base_seed + i // 2,
+                    "semantic_seat": semantic_seat,
+                    "semantic_first": semantic_seat == 0,
+                    "winner": winner,
+                    "semantic_won": winner == "semantic",
+                    "result_seat": result,
+                    "steps": out["steps"],
+                    "fault": (
+                        None
+                        if out["fault_seat"] is None
+                        else (seat0 if out["fault_seat"] == 0 else seat1).label
+                    ),
+                    "unfinished": result == -1,
+                    "runtime_s": runtime_s,
+                    "think_s": {
+                        "semantic": out["think"][semantic_seat],
+                        opponent_label: out["think"][1 - semantic_seat],
+                    },
+                    "semantic_telemetry": out["telemetry"][semantic_seat],
+                    "opponent_telemetry": out["telemetry"][1 - semantic_seat],
+                    "semantic_contexts": {
+                        str(context): count
+                        for context, count in sorted(out["contexts"][semantic_seat].items())
+                    },
+                    "final": {
+                        "semantic": out["final_players"][semantic_seat],
+                        opponent_label: out["final_players"][1 - semantic_seat],
+                    },
+                }
+            )
             print(
                 f"  match {i + 1}/{n}: "
                 f"semantic {stats['wins_semantic']} - {stats['wins_opp']} "
@@ -300,6 +379,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
         "generic_ordering_contexts": generic_contexts,
         "generic_ordering_decisions": sum(generic_contexts.values()),
         "draw_bench_contexts": target_contexts,
+        "matches": matches,
     }
 
 

@@ -1,0 +1,96 @@
+{
+  "issue": "SOT-2062",
+  "provenance": {
+    "champion_commit": "0d652a59a206bf9cce61453645741e60adafd3e1",
+    "champion_main_sha256": "db3389926560a8fb037d70e60e6b8ff6230d2c2489833f77960aecc5274afb73",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "engine_sha256": "ffd89bf923525a3e6feb5e6201e96a866c0f456895499ed5c4a566303caae67c",
+    "champion_config": {
+      "max_root_actions": 6,
+      "max_tree_depth": 1,
+      "rollout_turns": 100,
+      "rollout_depth": 200,
+      "n_worlds": 4,
+      "time_budget_s": 0.8,
+      "deviate_margin": 0.1
+    },
+    "previous_evaluation_seed_bases": [
+      20260726
+    ],
+    "opponent_pool": [
+      {
+        "id": "matsu",
+        "commit": "9ac5b76447b3a05c9ce08dd1e24fa3903c2a2eb6",
+        "main_sha256": "db743198103546e540dd04b83b3b9d4a34a88dd3f8a83293bcd5d01fbd11ee9e",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"
+      },
+      {
+        "id": "take",
+        "commit": "c03e93c77b71ae9186b4ed589e9c55e073be7468",
+        "main_sha256": "1dc9900ccc1a61381adb1002feeefea7afe69d2f0a1024a3adf9ff31aa8d741f",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"
+      },
+      {
+        "id": "ume",
+        "commit": "1bf0b27c345ac5532e2b77b7317ebfb4943ee9c4",
+        "main_sha256": "b14e4bcba4809e6fb2479ad7d1b6e86c099bd3ce96b846e1fcf7c64f38d4ab4f",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"
+      }
+    ]
+  },
+  "evaluation": {
+    "seat_reversal": true,
+    "base_seed": 2062301,
+    "agent_seeds": [
+      2062301,
+      2062302,
+      2062303,
+      2062304,
+      2062305,
+      2062306
+    ],
+    "matches_per_opponent": 12,
+    "engine_seed_control": false,
+    "reproduction_contract": "raw reports are frozen; the analysis is byte-reproducible from this manifest"
+  },
+  "opponents": [
+    {
+      "id": "matsu",
+      "report": "../../artifacts/sot-2062-blind-matsu.json"
+    },
+    {
+      "id": "take",
+      "report": "../../artifacts/sot-2062-blind-take.json"
+    },
+    {
+      "id": "ume",
+      "report": "../../artifacts/sot-2062-blind-ume.json"
+    }
+  ],
+  "explicit_exclusions": [
+    {
+      "area": "fallback semantics",
+      "issues": [
+        "SOT-1994",
+        "SOT-1995"
+      ],
+      "reason": "already handled; reconsider only if new fallback/fault evidence is non-zero"
+    },
+    {
+      "area": "search budget and time governor",
+      "issues": [
+        "SOT-1996"
+      ],
+      "reason": "already screened; reconsider only if >=300s governor evidence or timeout regression appears"
+    },
+    {
+      "area": "meta deck reconfiguration",
+      "issues": [
+        "SOT-2054",
+        "SOT-2056",
+        "SOT-2057"
+      ],
+      "reason": "in-progress independent work; opponent/deck composition changes are outside this diagnostic"
+    }
+  ]
+}
