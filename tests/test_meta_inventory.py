@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from ptcg_agent.deck_preselection import load_cards
+from ptcg_agent.deck_preselection import Card
 from ptcg_agent.meta_inventory import (
     DeckSpec,
     analyze_snapshot_document,
@@ -46,7 +46,20 @@ def test_snapshot_requires_three_complete_provenance_records(tmp_path: Path) -> 
 
 
 def test_all_current_decks_are_inventoried_and_duplicates_detected(tmp_path: Path) -> None:
-    cards = load_cards(ROOT / "data/EN_Card_Data.csv")
+    deck_ids = {int(row) for row in (ROOT / "deck.csv").read_text().splitlines()}
+    cards = {
+        card_id: Card(
+            card_id,
+            f"fixture-{card_id}",
+            "fixture",
+            "Basic Energy" if card_id == 3 else "Basic Pokémon" if card_id == 721 else "Item",
+            "Basic Energy" if card_id == 3 else "Basic Pokémon" if card_id == 721 else "Item",
+            "",
+            "",
+            "",
+        )
+        for card_id in deck_ids
+    }
     specs = [
         DeckSpec("submission", ROOT / "deck.csv", "Miraidon ex", "submission", "baseline", "top"),
         DeckSpec(
