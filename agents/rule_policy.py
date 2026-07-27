@@ -277,9 +277,7 @@ class RulePolicy:
         opt = view.select.options[i]
         raw = opt.raw
         area = raw.get("area", raw.get("inPlayArea"))
-        pokemon = view.find_pokemon(
-            raw.get("playerIndex", view.your_index), area, raw.get("index")
-        )
+        pokemon = view.find_pokemon(raw.get("playerIndex", view.your_index), area, raw.get("index"))
         if pokemon is None:
             return fallback
         need = self._minimum_attack_energy(pokemon.card_id)
@@ -291,9 +289,7 @@ class RulePolicy:
         opt = view.select.options[i]
         raw = opt.raw
         area = raw.get("area", raw.get("inPlayArea"))
-        pokemon = view.find_pokemon(
-            raw.get("playerIndex", view.your_index), area, raw.get("index")
-        )
+        pokemon = view.find_pokemon(raw.get("playerIndex", view.your_index), area, raw.get("index"))
         if pokemon is None:
             return fallback
         need = self._minimum_attack_energy(pokemon.card_id)
