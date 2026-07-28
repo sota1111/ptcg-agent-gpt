@@ -1,0 +1,465 @@
+{
+  "configuration": {
+    "baseSeed": 205800,
+    "candidates": [
+      {
+        "id": "top-emerging",
+        "roles": [
+          "top",
+          "emerging"
+        ],
+        "shortlistIndex": 1
+      },
+      {
+        "id": "counter-diversity",
+        "roles": [
+          "counter",
+          "diversity"
+        ],
+        "shortlistIndex": 13
+      },
+      {
+        "id": "low-usage-diversity",
+        "roles": [
+          "low_usage_top",
+          "diversity"
+        ],
+        "shortlistIndex": 15
+      }
+    ],
+    "maxAdditions": 2,
+    "minimumWinRate": 0.5,
+    "opponents": [
+      {
+        "archetype": "Miraidon ex / matsu policy",
+        "id": "matsu",
+        "repository": "/workspaces/ptcg-agent-matsu"
+      },
+      {
+        "archetype": "Miraidon ex / take policy",
+        "id": "take",
+        "repository": "/workspaces/ptcg-agent-take"
+      },
+      {
+        "archetype": "Miraidon ex / ume policy",
+        "id": "ume",
+        "repository": "/workspaces/ptcg-agent-ume"
+      }
+    ],
+    "seeds": 3
+  },
+  "evaluations": {
+    "counter-diversity": {
+      "byArchetype": {
+        "Miraidon ex / matsu policy": {
+          "averageDecisions": 55.333,
+          "averageTurns": 27.667,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        },
+        "Miraidon ex / take policy": {
+          "averageDecisions": 30.167,
+          "averageTurns": 15.083,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 4,
+          "matches": 6,
+          "winRate": 0.333333,
+          "wins": 2
+        },
+        "Miraidon ex / ume policy": {
+          "averageDecisions": 44.667,
+          "averageTurns": 22.333,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        }
+      },
+      "byOpponent": {
+        "matsu": {
+          "averageDecisions": 55.333,
+          "averageTurns": 27.667,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        },
+        "take": {
+          "averageDecisions": 30.167,
+          "averageTurns": 15.083,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 4,
+          "matches": 6,
+          "winRate": 0.333333,
+          "wins": 2
+        },
+        "ume": {
+          "averageDecisions": 44.667,
+          "averageTurns": 22.333,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        }
+      },
+      "bySeat": {
+        "first": {
+          "averageDecisions": 54.111,
+          "averageTurns": 27.056,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 4,
+          "matches": 9,
+          "winRate": 0.555556,
+          "wins": 5
+        },
+        "second": {
+          "averageDecisions": 32.667,
+          "averageTurns": 16.333,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 6,
+          "matches": 9,
+          "winRate": 0.333333,
+          "wins": 3
+        }
+      },
+      "overall": {
+        "averageDecisions": 43.389,
+        "averageTurns": 21.694,
+        "draws": 0,
+        "errors": 0,
+        "invalidActions": 0,
+        "losses": 10,
+        "matches": 18,
+        "winRate": 0.444444,
+        "wins": 8
+      },
+      "schemaVersion": "1.0.0",
+      "seeds": [
+        205800,
+        205801,
+        205802
+      ]
+    },
+    "low-usage-diversity": {
+      "byArchetype": {
+        "Miraidon ex / matsu policy": {
+          "averageDecisions": 47.833,
+          "averageTurns": 23.917,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        },
+        "Miraidon ex / take policy": {
+          "averageDecisions": 41.167,
+          "averageTurns": 20.583,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 2,
+          "matches": 6,
+          "winRate": 0.666667,
+          "wins": 4
+        },
+        "Miraidon ex / ume policy": {
+          "averageDecisions": 28.167,
+          "averageTurns": 14.083,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        }
+      },
+      "byOpponent": {
+        "matsu": {
+          "averageDecisions": 47.833,
+          "averageTurns": 23.917,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        },
+        "take": {
+          "averageDecisions": 41.167,
+          "averageTurns": 20.583,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 2,
+          "matches": 6,
+          "winRate": 0.666667,
+          "wins": 4
+        },
+        "ume": {
+          "averageDecisions": 28.167,
+          "averageTurns": 14.083,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        }
+      },
+      "bySeat": {
+        "first": {
+          "averageDecisions": 45.444,
+          "averageTurns": 22.722,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 9,
+          "winRate": 0.666667,
+          "wins": 6
+        },
+        "second": {
+          "averageDecisions": 32.667,
+          "averageTurns": 16.333,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 5,
+          "matches": 9,
+          "winRate": 0.444444,
+          "wins": 4
+        }
+      },
+      "overall": {
+        "averageDecisions": 39.056,
+        "averageTurns": 19.528,
+        "draws": 0,
+        "errors": 0,
+        "invalidActions": 0,
+        "losses": 8,
+        "matches": 18,
+        "winRate": 0.555556,
+        "wins": 10
+      },
+      "schemaVersion": "1.0.0",
+      "seeds": [
+        205800,
+        205801,
+        205802
+      ]
+    },
+    "top-emerging": {
+      "byArchetype": {
+        "Miraidon ex / matsu policy": {
+          "averageDecisions": 38.667,
+          "averageTurns": 19.333,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 4,
+          "matches": 6,
+          "winRate": 0.333333,
+          "wins": 2
+        },
+        "Miraidon ex / take policy": {
+          "averageDecisions": 32.833,
+          "averageTurns": 16.417,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 2,
+          "matches": 6,
+          "winRate": 0.666667,
+          "wins": 4
+        },
+        "Miraidon ex / ume policy": {
+          "averageDecisions": 44.5,
+          "averageTurns": 22.25,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        }
+      },
+      "byOpponent": {
+        "matsu": {
+          "averageDecisions": 38.667,
+          "averageTurns": 19.333,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 4,
+          "matches": 6,
+          "winRate": 0.333333,
+          "wins": 2
+        },
+        "take": {
+          "averageDecisions": 32.833,
+          "averageTurns": 16.417,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 2,
+          "matches": 6,
+          "winRate": 0.666667,
+          "wins": 4
+        },
+        "ume": {
+          "averageDecisions": 44.5,
+          "averageTurns": 22.25,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 6,
+          "winRate": 0.5,
+          "wins": 3
+        }
+      },
+      "bySeat": {
+        "first": {
+          "averageDecisions": 34.444,
+          "averageTurns": 17.222,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 3,
+          "matches": 9,
+          "winRate": 0.666667,
+          "wins": 6
+        },
+        "second": {
+          "averageDecisions": 42.889,
+          "averageTurns": 21.444,
+          "draws": 0,
+          "errors": 0,
+          "invalidActions": 0,
+          "losses": 6,
+          "matches": 9,
+          "winRate": 0.333333,
+          "wins": 3
+        }
+      },
+      "overall": {
+        "averageDecisions": 38.667,
+        "averageTurns": 19.333,
+        "draws": 0,
+        "errors": 0,
+        "invalidActions": 0,
+        "losses": 9,
+        "matches": 18,
+        "winRate": 0.5,
+        "wins": 9
+      },
+      "schemaVersion": "1.0.0",
+      "seeds": [
+        205800,
+        205801,
+        205802
+      ]
+    }
+  },
+  "legality": {
+    "counter-diversity": {
+      "errors": [],
+      "legal": true,
+      "loadable": true
+    },
+    "low-usage-diversity": {
+      "errors": [],
+      "legal": true,
+      "loadable": true
+    },
+    "top-emerging": {
+      "errors": [],
+      "legal": true,
+      "loadable": true
+    }
+  },
+  "pool": {
+    "afterCount": 3,
+    "beforeCount": 1,
+    "decisions": [
+      {
+        "decision": "keep",
+        "hash": "b702e251e3b56104f84b60fddff309b0e5d4fae865e4dbb57311d4b0d45ec17e",
+        "id": "baseline",
+        "path": "deck.csv",
+        "reason": "existing legal baseline retained",
+        "roles": [
+          "baseline",
+          "top"
+        ]
+      },
+      {
+        "decision": "add",
+        "hash": "df0c3626c831bd4ca8a04e06bd0d08d85a5e7a649a0565c94afc3da2b4a09fa4",
+        "id": "top-emerging",
+        "path": "artifacts/sot-2058-deck-pool/decks/top-emerging.csv",
+        "reason": "multi-seed seat-reversed win rate 0.500",
+        "roles": [
+          "top",
+          "emerging"
+        ]
+      },
+      {
+        "decision": "remove",
+        "hash": "afb0a39f2c689975b3f5e48e4a4d4bccb3da956fc1c83ad3e9fcbd136d6cbbc8",
+        "id": "counter-diversity",
+        "path": "artifacts/sot-2058-deck-pool/decks/counter-diversity.csv",
+        "reason": "evaluation win rate 0.444444 below 0.5",
+        "roles": [
+          "counter",
+          "diversity"
+        ]
+      },
+      {
+        "decision": "add",
+        "hash": "27850ff30ff161b4692dbc8433a18d634cdae7cb9f4f04168c2510e6992e0578",
+        "id": "low-usage-diversity",
+        "path": "artifacts/sot-2058-deck-pool/decks/low-usage-diversity.csv",
+        "reason": "multi-seed seat-reversed win rate 0.556",
+        "roles": [
+          "low_usage_top",
+          "diversity"
+        ]
+      }
+    ],
+    "limits": {
+      "maxAdditions": 2,
+      "minimumWinRate": 0.5
+    },
+    "schemaVersion": "1.0.0"
+  },
+  "schemaVersion": "1.0.0"
+}
