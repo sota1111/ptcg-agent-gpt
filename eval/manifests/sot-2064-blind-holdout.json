@@ -1,0 +1,65 @@
+{
+  "issue": "SOT-2064",
+  "purpose": "terminal champion blind holdout",
+  "provenance": {
+    "champion_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "champion_main_sha256": "db3389926560a8fb037d70e60e6b8ff6230d2c2489833f77960aecc5274afb73",
+    "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "terminal_decision": "SOT-2063 rejected all candidates; root champion remained unchanged"
+  },
+  "isolation": {
+    "holdout_base_seed": 2064101,
+    "holdout_seeds": [
+      2064101,
+      2064102,
+      2064103,
+      2064104,
+      2064105,
+      2064106,
+      2064107,
+      2064108,
+      2064109,
+      2064110,
+      2064111,
+      2064112,
+      2064113,
+      2064114,
+      2064115,
+      2064116,
+      2064117,
+      2064118,
+      2064119,
+      2064120
+    ],
+    "excluded_prior_seed_ranges": {
+      "SOT-2062_blind": "2062301..2062306",
+      "SOT-2063_screen": "2063101..2063103",
+      "SOT-2063_confirm": "2063201..2063220"
+    },
+    "seat_reversal": true,
+    "matches_per_opponent": 40
+  },
+  "opponents": [
+    {
+      "label": "matsu",
+      "repo": "/workspaces/ptcg-agent-matsu",
+      "commit": "9ac5b76447b3a05c9ce08dd1e24fa3903c2a2eb6",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2064/holdout-matsu.json"
+    },
+    {
+      "label": "take",
+      "repo": "/workspaces/ptcg-agent-take",
+      "commit": "c03e93c77b71ae9186b4ed589e9c55e073be7468",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2064/holdout-take.json"
+    },
+    {
+      "label": "ume",
+      "repo": "/workspaces/ptcg-agent-ume",
+      "commit": "1bf0b27c345ac5532e2b77b7317ebfb4943ee9c4",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2064/holdout-ume.json"
+    }
+  ]
+}

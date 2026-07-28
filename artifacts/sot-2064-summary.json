@@ -1,0 +1,44 @@
+{
+  "issue": "SOT-2064",
+  "champion_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+  "matches": 120,
+  "wins": 77,
+  "losses": 43,
+  "draws": 0,
+  "win_rate": 0.6416666667,
+  "faults": 0,
+  "unfinished": 0,
+  "illegal_action_faults": 0,
+  "runtime_seconds": {
+    "p50": 10.553512203972787,
+    "p95": 24.268816023133695,
+    "max": 40.78649115096778,
+    "allowance": 600
+  },
+  "matchups": {
+    "matsu": {
+      "wins": 24,
+      "losses": 16,
+      "wilson95": [0.445956198273935, 0.7365188938759863]
+    },
+    "take": {
+      "wins": 26,
+      "losses": 14,
+      "wilson95": [0.4950559699353738, 0.7786566682895086]
+    },
+    "ume": {
+      "wins": 27,
+      "losses": 13,
+      "wilson95": [0.52017458088898, 0.7991568303733828]
+    }
+  },
+  "champion_state": "retained",
+  "submission": {
+    "archive_sha256": "309d50625ec64dbcf9ee8593180aad469e624ae852de207fb18a2610a520e8eb",
+    "exec_compatibility": "PASS",
+    "competition": "pokemon-tcg-ai-battle",
+    "ref": "55050021",
+    "status": "COMPLETE",
+    "public_score": 600.0
+  }
+}
