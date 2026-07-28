@@ -78,8 +78,7 @@ def classify(match: dict[str, Any], pair: dict[int, dict[str, Any]]) -> dict[str
         category = CATEGORIES[0]
         evidence = f"fingerprint_unique_rate={metrics['fingerprint_unique_rate']:.3f}"
     elif (
-        metrics["selected_value_spread_max"] >= 0.35
-        or metrics["world_majority_disagreements"] > 0
+        metrics["selected_value_spread_max"] >= 0.35 or metrics["world_majority_disagreements"] > 0
     ):
         category = CATEGORIES[1]
         evidence = (

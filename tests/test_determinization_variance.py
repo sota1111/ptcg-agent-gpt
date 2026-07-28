@@ -40,9 +40,7 @@ def match(won: bool, seat: int) -> dict:
 
 
 def test_analysis_is_deterministic_and_classifies_outlier_sensitivity(tmp_path: Path) -> None:
-    (tmp_path / "hard.json").write_text(
-        json.dumps({"matches": [match(False, 0), match(True, 1)]})
-    )
+    (tmp_path / "hard.json").write_text(json.dumps({"matches": [match(False, 0), match(True, 1)]}))
     manifest = {
         "issue": "TEST-1",
         "provenance": {"champion_commit": "abc"},
@@ -55,7 +53,5 @@ def test_analysis_is_deterministic_and_classifies_outlier_sensitivity(tmp_path: 
 
     first = MODULE.analyze(path)
     assert first == MODULE.analyze(path)
-    assert first["classified_losses"][0]["category"] == (
-        "world_aggregation_outlier_sensitivity"
-    )
+    assert first["classified_losses"][0]["category"] == ("world_aggregation_outlier_sensitivity")
     assert first["champion_behavior_changed"] is False

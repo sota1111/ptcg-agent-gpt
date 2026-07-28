@@ -260,9 +260,7 @@ def run(
     os.chdir(REPO)  # libcg.so resolves relative to the repo root
     from cg import game
 
-    semantic = Contestant(
-        "semantic", REPO, base_seed, semantic_deck, capture_determinization=True
-    )
+    semantic = Contestant("semantic", REPO, base_seed, semantic_deck, capture_determinization=True)
     opp = Contestant(opponent_label, opponent_repo, base_seed)
     semantic.start()
     opp.start()
