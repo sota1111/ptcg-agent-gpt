@@ -59,7 +59,7 @@ archive loads from an unrelated working directory without `PYTHONPATH` or
 The submit-ready `submission.tar.gz` SHA-256 is
 `8964d1fd2a04416528e22520faa7c9cbe4463b8fff09e83dbd224ae7e19bc4d5`.
 It was submitted to `pokemon-tcg-ai-battle` on 2026-07-28 with submission ref
-**55061703**. Kaggle reported **COMPLETE** with public score **600.0**. The
+**55061703**. Kaggle reported **COMPLETE** with public score **752.3**. The
 submission ref, archive hash, final status, and score make the asynchronous
 result reproducible.
 
