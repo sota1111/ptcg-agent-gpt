@@ -1,0 +1,7463 @@
+{
+  "semantic_repo": "/workspaces/ptcg-agent-gpt",
+  "opponent_repo": "/workspaces/ptcg-agent-take",
+  "opponent": "take",
+  "n_matches": 4,
+  "seeds": 2,
+  "base_seed": 2117101,
+  "semantic_deck": "deck.csv",
+  "wins_semantic": 3,
+  "wins_opp": 1,
+  "draws": 0,
+  "unfinished": 0,
+  "faults_semantic": 0,
+  "faults_opp": 0,
+  "wins_semantic_as_first": 2,
+  "n_semantic_as_first": 2,
+  "winrate_semantic_excl_draws": 0.75,
+  "wilson95_excl_draws": [
+    0.3006360524426366,
+    0.9544139373553637
+  ],
+  "winrate_semantic_draws_half": 0.75,
+  "max_think_s": {
+    "semantic": 9.639711403287947,
+    "take": 0.003452945500612259
+  },
+  "match_time_allowance_s": 600.0,
+  "time_per_match_sec": {
+    "mean": 6.492564574698918,
+    "max": 9.64741919701919,
+    "total": 25.97025829879567
+  },
+  "context_decisions": {
+    "0": 31,
+    "7": 8,
+    "1": 4,
+    "41": 2,
+    "2": 1,
+    "4": 1,
+    "21": 1,
+    "22": 1,
+    "38": 1
+  },
+  "generic_ordering_contexts": {},
+  "generic_ordering_decisions": 0,
+  "draw_bench_contexts": {
+    "2": {
+      "decisions": 1,
+      "generic_ordering_fallbacks": 0,
+      "explicit_rule": true
+    },
+    "38": {
+      "decisions": 1,
+      "generic_ordering_fallbacks": 0,
+      "explicit_rule": true
+    }
+  },
+  "matches": [
+    {
+      "match_index": 0,
+      "agent_seed": 2117101,
+      "semantic_seat": 0,
+      "semantic_first": true,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 0,
+      "steps": 30,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 9.64741919701919,
+      "think_s": {
+        "semantic": 9.639711403287947,
+        "take": 0.003452945500612259
+      },
+      "semantic_telemetry": {
+        "decisions": 18,
+        "branching_decisions": 4,
+        "max_options": 15,
+        "min_deck_count": 34,
+        "min_prize_count": 0
+      },
+      "determinization_telemetry": [
+        {
+          "step": 0,
+          "selection_context": 41,
+          "iterations": 217,
+          "worlds": 4,
+          "elapsed_s": 0.6400625640526414,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "7e4821a0778ee481",
+              "iterations": 55,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 47,
+                  "value_mean": 0.7853440338441257
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.25
+                }
+              ]
+            },
+            {
+              "fingerprint": "e76be10cc29bd9bf",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 49,
+                  "value_mean": 0.8571428571428571
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "6cdb5e673a08bb0d",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 44,
+                  "value_mean": 0.75
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.4
+                }
+              ]
+            },
+            {
+              "fingerprint": "38ea407684485043",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 43,
+                  "value_mean": 0.3023255813953488
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "selection_context": 1,
+          "iterations": 126,
+          "worlds": 4,
+          "elapsed_s": 0.6400983659550548,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "d041e4a966e4281a",
+              "iterations": 32,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 32,
+                  "value_mean": 0.71875
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "8f009388fee61c25",
+              "iterations": 32,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 32,
+                  "value_mean": 0.8544825116930516
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "0d0c03142884c4a7",
+              "iterations": 31,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 31,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "dfd2d55ca90c0850",
+              "iterations": 31,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 31,
+                  "value_mean": 0.6774193548387096
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "selection_context": 38,
+          "iterations": 97,
+          "worlds": 4,
+          "elapsed_s": 0.640069073997438,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            2
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "956c552bc10147c3",
+              "iterations": 25,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.42857142857142855
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.2719687362893503
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.2
+                }
+              ]
+            },
+            {
+              "fingerprint": "9036c60e67a4220a",
+              "iterations": 24,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.7857142857142857
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.5714285714285714
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                }
+              ]
+            },
+            {
+              "fingerprint": "d65d11a24682b378",
+              "iterations": 24,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.36363636363636365
+                }
+              ]
+            },
+            {
+              "fingerprint": "4626ad9f526b8de1",
+              "iterations": 24,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.125
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.18181818181818182
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "selection_context": 2,
+          "iterations": 93,
+          "worlds": 4,
+          "elapsed_s": 0.6400793017819524,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "ebc4ec048d79be9b",
+              "iterations": 24,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 22,
+                  "value_mean": 0.14022823727752662
+                },
+                {
+                  "action": [],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "17356a27cdc7e471",
+              "iterations": 23,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 20,
+                  "value_mean": 0.65
+                },
+                {
+                  "action": [],
+                  "visits": 3,
+                  "value_mean": 0.6666666666666666
+                }
+              ]
+            },
+            {
+              "fingerprint": "75df130b8718fb89",
+              "iterations": 23,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 21,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 2,
+                  "value_mean": 0.5
+                }
+              ]
+            },
+            {
+              "fingerprint": "1771b7ae7a9a4014",
+              "iterations": 23,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 21,
+                  "value_mean": 0.14285714285714285
+                },
+                {
+                  "action": [],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "selection_context": 0,
+          "iterations": 111,
+          "worlds": 4,
+          "elapsed_s": 0.6401316300034523,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 1,
+          "world_roots": [
+            {
+              "fingerprint": "52742e12336d990a",
+              "iterations": 28,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 22,
+                  "value_mean": 0.6363636363636364
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "068cce8f74ae0769",
+              "iterations": 28,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.7142857142857143
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.6666666666666666
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.6666666666666666
+                }
+              ]
+            },
+            {
+              "fingerprint": "721f698f98d25a2e",
+              "iterations": 28,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.6103251413177629
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.7142857142857143
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                }
+              ]
+            },
+            {
+              "fingerprint": "e6c866140d442384",
+              "iterations": 27,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 22,
+                  "value_mean": 0.6818181818181818
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "selection_context": 0,
+          "iterations": 143,
+          "worlds": 4,
+          "elapsed_s": 0.6400969098322093,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "234ed511ded4644f",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 34,
+                  "value_mean": 0.8235294117647058
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.5
+                }
+              ]
+            },
+            {
+              "fingerprint": "d17e6d0784ba856d",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 25,
+                  "value_mean": 0.84
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.9090909090909091
+                }
+              ]
+            },
+            {
+              "fingerprint": "fbf622655ccf8ccc",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 32,
+                  "value_mean": 0.8125
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.530975147926177
+                }
+              ]
+            },
+            {
+              "fingerprint": "02963c6064588cae",
+              "iterations": 35,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 25,
+                  "value_mean": 0.88
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 10,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "selection_context": 7,
+          "iterations": 145,
+          "worlds": 4,
+          "elapsed_s": 0.6400399589911103,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "4c32b23dd6d5ad24",
+              "iterations": 37,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.625
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.7600104634263547
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 15,
+                  "value_mean": 0.7333333333333333
+                }
+              ]
+            },
+            {
+              "fingerprint": "0340ea8d7799654e",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 12,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 12,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 12,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "0283c32fee4e7f05",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.2
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.46153846153846156
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 18,
+                  "value_mean": 0.5
+                }
+              ]
+            },
+            {
+              "fingerprint": "5333e684fd3555b1",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.6363636363636364
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.5714285714285714
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 18,
+                  "value_mean": 0.7222222222222222
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "selection_context": 0,
+          "iterations": 0,
+          "worlds": 0,
+          "forced": true
+        },
+        {
+          "step": 16,
+          "selection_context": 0,
+          "iterations": 248,
+          "worlds": 4,
+          "elapsed_s": 0.6401220252737403,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "8a16c0eb2b30ff46",
+              "iterations": 62,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 30,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 30,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 2,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "3591cbedbd552574",
+              "iterations": 62,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 19,
+                  "value_mean": 0.7894736842105263
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 27,
+                  "value_mean": 0.8518518518518519
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 16,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "6db34f0d776db357",
+              "iterations": 62,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 19,
+                  "value_mean": 0.7894736842105263
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.5555555555555556
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 34,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "7811c73fe746849b",
+              "iterations": 62,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 26,
+                  "value_mean": 0.8701307263296005
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 23,
+                  "value_mean": 0.8260869565217391
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "selection_context": 0,
+          "iterations": 188,
+          "worlds": 4,
+          "elapsed_s": 0.6400879668071866,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            8
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "b0999a6dec9fcaff",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 10,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "2b573fa04e4174da",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 17,
+                  "value_mean": 0.5294117647058824
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.4
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.25
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.42857142857142855
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 12,
+                  "value_mean": 0.5833333333333334
+                }
+              ]
+            },
+            {
+              "fingerprint": "317b5ea308471a7f",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 23,
+                  "value_mean": 0.9565217391304348
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.8181818181818182
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.7777777777777778
+                }
+              ]
+            },
+            {
+              "fingerprint": "4f1270be094f5c44",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.16666666666666666
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 25,
+                  "value_mean": 0.44
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.2
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.2
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.21430204045374301
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "selection_context": 22,
+          "iterations": 165,
+          "worlds": 4,
+          "elapsed_s": 0.6401478298939764,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "81a6521afd58a874",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.4173270946899236
+                },
+                {
+                  "action": [],
+                  "visits": 11,
+                  "value_mean": 0.45454545454545453
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 21,
+                  "value_mean": 0.5238095238095238
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "e7c803a09cf67dc0",
+              "iterations": 41,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 25,
+                  "value_mean": 0.88
+                },
+                {
+                  "action": [],
+                  "visits": 11,
+                  "value_mean": 0.8181818181818182
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "271f5f6da46f99ec",
+              "iterations": 41,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 35,
+                  "value_mean": 0.7428571428571429
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "e5700182eae88e6e",
+              "iterations": 41,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 35,
+                  "value_mean": 0.7428571428571429
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "selection_context": 21,
+          "iterations": 284,
+          "worlds": 4,
+          "elapsed_s": 0.6401055911555886,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "0d22854ad2d9db06",
+              "iterations": 71,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 15,
+                  "value_mean": 0.26666666666666666
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 56,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "12c734e5a1a620f6",
+              "iterations": 71,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 71,
+                  "value_mean": 0.8169014084507042
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "f4af6aa00cbc4e8d",
+              "iterations": 71,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 71,
+                  "value_mean": 0.8732394366197183
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "8121d14d1e1d004e",
+              "iterations": 71,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 71,
+                  "value_mean": 0.9956815012965704
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "selection_context": 0,
+          "iterations": 179,
+          "worlds": 4,
+          "elapsed_s": 0.6400506156496704,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "46a40ba3ee12bede",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.2857142857142857
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 24,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.25
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "2df153d9bade88f6",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 16,
+                  "value_mean": 0.6875
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.6
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.6363636363636364
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "903ca0a988ce3d7b",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.9656897450846127
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.8333333333333334
+                }
+              ]
+            },
+            {
+              "fingerprint": "2b456c2ba17cbe03",
+              "iterations": 44,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 9,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 9,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 9,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 21,
+          "selection_context": 0,
+          "iterations": 167,
+          "worlds": 4,
+          "elapsed_s": 0.6400874573737383,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "6855b5c872d97b8d",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 26,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 16,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "1d3d764219fa6b8d",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 26,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 16,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "be7ab7528752e0f4",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 18,
+                  "value_mean": 0.05555555555555555
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 24,
+                  "value_mean": 0.2191824553717074
+                }
+              ]
+            },
+            {
+              "fingerprint": "a24611f2938efbe3",
+              "iterations": 41,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 24,
+                  "value_mean": 0.9583333333333334
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 26,
+          "selection_context": 4,
+          "iterations": 0,
+          "worlds": 0,
+          "forced": true
+        },
+        {
+          "step": 27,
+          "selection_context": 0,
+          "iterations": 1099,
+          "worlds": 4,
+          "elapsed_s": 0.6400608886033297,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "525a6c70c47c3b24",
+              "iterations": 275,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 54,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "a0010325be746c1e",
+              "iterations": 275,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 54,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "e9687d233149dc29",
+              "iterations": 275,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 55,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 55,
+                  "value_mean": 0.9911817363930802
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 54,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "6b0fd5ebf11e33c0",
+              "iterations": 274,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 53,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 52,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 52,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 52,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 52,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 28,
+          "selection_context": 0,
+          "iterations": 406,
+          "worlds": 4,
+          "elapsed_s": 0.6400325261056423,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "ed759a48d64ed49a",
+              "iterations": 102,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 96,
+                  "value_mean": 0.75
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "441a8758bc0bdd33",
+              "iterations": 102,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 94,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.3989431685701834
+                }
+              ]
+            },
+            {
+              "fingerprint": "8c55abdfc4eab229",
+              "iterations": 101,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 48,
+                  "value_mean": 0.22916666666666666
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 53,
+                  "value_mean": 0.3018867924528302
+                }
+              ]
+            },
+            {
+              "fingerprint": "6233592befcf74dd",
+              "iterations": 101,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 63,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 38,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 29,
+          "selection_context": 7,
+          "iterations": 2000,
+          "worlds": 4,
+          "elapsed_s": 0.005539510864764452,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0,
+            1,
+            2
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "6da0798c0ec80f25",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    3,
+                    4
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d0c94b04345ecf8a",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    3,
+                    4
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "7c0acc21424edd1c",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    3,
+                    4
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "081c374bc67e0767",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    3,
+                    4
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "opponent_telemetry": {
+        "decisions": 12,
+        "branching_decisions": 3,
+        "max_options": 9,
+        "min_deck_count": 40,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 9,
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "7": 2,
+        "21": 1,
+        "22": 1,
+        "38": 1,
+        "41": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 34,
+          "prize_count": 3,
+          "hand_count": 8,
+          "bench_count": 0
+        },
+        "take": {
+          "deck_count": 43,
+          "prize_count": 5,
+          "hand_count": 5,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 1,
+      "agent_seed": 2117101,
+      "semantic_seat": 1,
+      "semantic_first": false,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 1,
+      "steps": 23,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 6.880114051979035,
+      "think_s": {
+        "semantic": 6.875539288390428,
+        "take": 0.0020606061443686485
+      },
+      "semantic_telemetry": {
+        "decisions": 13,
+        "branching_decisions": 7,
+        "max_options": 15,
+        "min_deck_count": 32,
+        "min_prize_count": 0
+      },
+      "determinization_telemetry": [
+        {
+          "step": 2,
+          "selection_context": 1,
+          "iterations": 0,
+          "worlds": 0,
+          "forced": true
+        },
+        {
+          "step": 6,
+          "selection_context": 0,
+          "iterations": 180,
+          "worlds": 4,
+          "elapsed_s": 0.6401408482342958,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            4
+          ],
+          "selected_action_index": 1,
+          "world_roots": [
+            {
+              "fingerprint": "84bbb2dfd9fb5903",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 39,
+                  "value_mean": 0.7435897435897436
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "74dd9b6c83327e37",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.125
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 16,
+                  "value_mean": 0.1875
+                }
+              ]
+            },
+            {
+              "fingerprint": "33c92a5b4520fa5d",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.9
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.8333333333333334
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.8
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 10,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "29803c311102d24a",
+              "iterations": 45,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.21428571428571427
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.14285714285714285
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.26149167541913276
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "selection_context": 0,
+          "iterations": 138,
+          "worlds": 4,
+          "elapsed_s": 0.640108382795006,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            4
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "01cc9b3567e1e249",
+              "iterations": 35,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d212f9c556a916ef",
+              "iterations": 35,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 5,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "46c9effd08164dc8",
+              "iterations": 34,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.4444444444444444
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.2857142857142857
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 12,
+                  "value_mean": 0.3333333333333333
+                }
+              ]
+            },
+            {
+              "fingerprint": "0425ce53e8385882",
+              "iterations": 34,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 18,
+                  "value_mean": 0.8888888888888888
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.75
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.75
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "selection_context": 7,
+          "iterations": 176,
+          "worlds": 4,
+          "elapsed_s": 0.640079160220921,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "19c3465d25379137",
+              "iterations": 44,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 20,
+                  "value_mean": 0.6
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 21,
+                  "value_mean": 0.6666666666666666
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "f4288d80b73c10ec",
+              "iterations": 44,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 17,
+                  "value_mean": 0.6470588235294118
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.5714285714285714
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.6153846153846154
+                }
+              ]
+            },
+            {
+              "fingerprint": "ec782501e3737bb8",
+              "iterations": 44,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.3
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 24,
+                  "value_mean": 0.4583333333333333
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.3
+                }
+              ]
+            },
+            {
+              "fingerprint": "7108a355801bc504",
+              "iterations": 44,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 15,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 15,
+                  "value_mean": 0.9924099701102025
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 14,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "selection_context": 0,
+          "iterations": 147,
+          "worlds": 4,
+          "elapsed_s": 0.6401499467901886,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 2,
+          "world_roots": [
+            {
+              "fingerprint": "67aeb6325105400b",
+              "iterations": 37,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 20,
+                  "value_mean": 0.45
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "ce7bd91981209c99",
+              "iterations": 37,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.4
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.5454545454545454
+                }
+              ]
+            },
+            {
+              "fingerprint": "ad8c559064d02fba",
+              "iterations": 37,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.7220973892220188
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.7
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.7142857142857143
+                }
+              ]
+            },
+            {
+              "fingerprint": "67fcd6285ccb1a70",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.5714285714285714
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "selection_context": 0,
+          "iterations": 193,
+          "worlds": 4,
+          "elapsed_s": 0.6401461227796972,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "dbe5021f83d648fb",
+              "iterations": 49,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 42,
+                  "value_mean": 0.5063659865796518
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.25
+                }
+              ]
+            },
+            {
+              "fingerprint": "14254e0e58809146",
+              "iterations": 48,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 30,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 11,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "9f4044f2a48e3b32",
+              "iterations": 48,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 43,
+                  "value_mean": 0.5348837209302325
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d190ef7a618b9bed",
+              "iterations": 48,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 45,
+                  "value_mean": 0.7777777777777778
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "selection_context": 0,
+          "iterations": 208,
+          "worlds": 4,
+          "elapsed_s": 0.6401480482891202,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "d4f729454d2223f5",
+              "iterations": 52,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 39,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.23076923076923078
+                }
+              ]
+            },
+            {
+              "fingerprint": "0634f5b244bd5e53",
+              "iterations": 52,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 33,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 19,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "38bf317740dd3679",
+              "iterations": 52,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 33,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 19,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "7cf51b43c73ad5d9",
+              "iterations": 52,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 44,
+                  "value_mean": 0.5909202341208593
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "selection_context": 0,
+          "iterations": 800,
+          "worlds": 4,
+          "elapsed_s": 0.6401004958897829,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            9
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "accd4a706c68aff0",
+              "iterations": 200,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 49,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 48,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    11
+                  ],
+                  "visits": 48,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "visits": 48,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "bc52f6858924e5c0",
+              "iterations": 200,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 50,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 50,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    11
+                  ],
+                  "visits": 50,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "visits": 49,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "ca18d29879c4e45d",
+              "iterations": 200,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 49,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 49,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    11
+                  ],
+                  "visits": 49,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "visits": 49,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.75
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "5f37f59c1d902b27",
+              "iterations": 200,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 49,
+                  "value_mean": 0.9959369661186882
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 48,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    11
+                  ],
+                  "visits": 48,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "visits": 48,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "selection_context": 0,
+          "iterations": 962,
+          "worlds": 4,
+          "elapsed_s": 0.6400684472173452,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            9
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "a193adcd707117ff",
+              "iterations": 241,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 151,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 22,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "95df0cad6772a160",
+              "iterations": 241,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 151,
+                  "value_mean": 0.9987918839483022
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 22,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "f8707414522ea117",
+              "iterations": 240,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 150,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 22,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "83f4041c41ba87c5",
+              "iterations": 240,
+              "actions": [
+                {
+                  "action": [
+                    9
+                  ],
+                  "visits": 150,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 22,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "selection_context": 0,
+          "iterations": 770,
+          "worlds": 4,
+          "elapsed_s": 0.6400911430828273,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            4
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "22976d771eb5f192",
+              "iterations": 193,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 41,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 24,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "7ed304e193f7b011",
+              "iterations": 193,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 41,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 32,
+                  "value_mean": 0.9978232792250222
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 24,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "89691c9ff3bbccb2",
+              "iterations": 192,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 35,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 35,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 35,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 35,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.7142857142857143
+                }
+              ]
+            },
+            {
+              "fingerprint": "a4b08ff760e5978b",
+              "iterations": 192,
+              "actions": [
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 41,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 32,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "visits": 31,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 24,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "selection_context": 0,
+          "iterations": 2000,
+          "worlds": 4,
+          "elapsed_s": 0.4643439599312842,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "3d782e02ff63170e",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "e574dc5bac2be835",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "1235975009abd06d",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "2c5124a4f77ba2a7",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 21,
+          "selection_context": 0,
+          "iterations": 1356,
+          "worlds": 4,
+          "elapsed_s": 0.6400301069952548,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "e8300284300be73f",
+              "iterations": 339,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 261,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 78,
+                  "value_mean": 0.9358974358974359
+                }
+              ]
+            },
+            {
+              "fingerprint": "5b2082b1a816e4b4",
+              "iterations": 339,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 211,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 128,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "49f986fa9cd6c522",
+              "iterations": 339,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 325,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.35714285714285715
+                }
+              ]
+            },
+            {
+              "fingerprint": "fd5c22e25bbf7253",
+              "iterations": 339,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 211,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 128,
+                  "value_mean": 0.9983373303989266
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 22,
+          "selection_context": 7,
+          "iterations": 2000,
+          "worlds": 4,
+          "elapsed_s": 0.0057529849000275135,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "5951aef22688e636",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "342176983d311a26",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "de1ff7b95f343aee",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "014b6d0167519fde",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 84,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 83,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "opponent_telemetry": {
+        "decisions": 10,
+        "branching_decisions": 2,
+        "max_options": 8,
+        "min_deck_count": 39,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 10,
+        "1": 1,
+        "7": 2
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 32,
+          "prize_count": 5,
+          "hand_count": 8,
+          "bench_count": 1
+        },
+        "take": {
+          "deck_count": 44,
+          "prize_count": 6,
+          "hand_count": 4,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 2,
+      "agent_seed": 2117102,
+      "semantic_seat": 0,
+      "semantic_first": true,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 0,
+      "steps": 30,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 8.157576114870608,
+      "think_s": {
+        "semantic": 8.150761106051505,
+        "take": 0.003405152354389429
+      },
+      "semantic_telemetry": {
+        "decisions": 16,
+        "branching_decisions": 4,
+        "max_options": 9,
+        "min_deck_count": 35,
+        "min_prize_count": 0
+      },
+      "determinization_telemetry": [
+        {
+          "step": 0,
+          "selection_context": 41,
+          "iterations": 201,
+          "worlds": 4,
+          "elapsed_s": 0.6400588545948267,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "3eb7f1437d7c8f8b",
+              "iterations": 51,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 44,
+                  "value_mean": 0.9278323791355917
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.42857142857142855
+                }
+              ]
+            },
+            {
+              "fingerprint": "5bd1eeb43ff8ca1b",
+              "iterations": 50,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 34,
+                  "value_mean": 0.35294117647058826
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 16,
+                  "value_mean": 0.1875
+                }
+              ]
+            },
+            {
+              "fingerprint": "af8182aceb10dbf4",
+              "iterations": 50,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 35,
+                  "value_mean": 0.8571428571428571
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 15,
+                  "value_mean": 0.6666666666666666
+                }
+              ]
+            },
+            {
+              "fingerprint": "6c5ff78f17ad4260",
+              "iterations": 50,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 46,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "selection_context": 1,
+          "iterations": 0,
+          "worlds": 0,
+          "forced": true
+        },
+        {
+          "step": 5,
+          "selection_context": 0,
+          "iterations": 141,
+          "worlds": 4,
+          "elapsed_s": 0.6401222287677228,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "2a28e0189c23a12e",
+              "iterations": 36,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 22,
+                  "value_mean": 0.8020752866466271
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.25
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.5
+                }
+              ]
+            },
+            {
+              "fingerprint": "d82576f8eced778c",
+              "iterations": 35,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 21,
+                  "value_mean": 0.6190476190476191
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                }
+              ]
+            },
+            {
+              "fingerprint": "7f23828c607c6feb",
+              "iterations": 35,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.36363636363636365
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 17,
+                  "value_mean": 0.47058823529411764
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "e4a0caa50f7130f7",
+              "iterations": 35,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 15,
+                  "value_mean": 0.5333333333333333
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.6153846153846154
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "selection_context": 0,
+          "iterations": 0,
+          "worlds": 0,
+          "forced": true
+        },
+        {
+          "step": 12,
+          "selection_context": 0,
+          "iterations": 188,
+          "worlds": 4,
+          "elapsed_s": 0.6400358797982335,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "e2c422f697302a84",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 33,
+                  "value_mean": 0.6060606060606061
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.6
+                }
+              ]
+            },
+            {
+              "fingerprint": "bdba3cef136dabb3",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 33,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 5,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 5,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 4,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "5b510070a2b5e662",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 29,
+                  "value_mean": 0.5172413793103449
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.5555555555555556
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "22a8317e4a25b667",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 16,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 27,
+                  "value_mean": 0.8075117726295644
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "selection_context": 0,
+          "iterations": 159,
+          "worlds": 4,
+          "elapsed_s": 0.6401768769137561,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "be5f00cd5f634ff6",
+              "iterations": 40,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 7,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.8333333333333334
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 6,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "34798af5ef22d35e",
+              "iterations": 40,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 8,
+                  "value_mean": 0.375
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 19,
+                  "value_mean": 0.5263157894736842
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.4444444444444444
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "afb3e1695066e972",
+              "iterations": 40,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.5694924234699127
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 13,
+                  "value_mean": 0.6923076923076923
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 18,
+                  "value_mean": 0.6666666666666666
+                }
+              ]
+            },
+            {
+              "fingerprint": "406015644d10e90b",
+              "iterations": 39,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.5454545454545454
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.5
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 15,
+                  "value_mean": 0.6666666666666666
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "selection_context": 7,
+          "iterations": 216,
+          "worlds": 4,
+          "elapsed_s": 0.6401569698937237,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0,
+            1,
+            2
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "7e9b3df69a2eab3e",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 54,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1,
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    0,
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "149ca10408e65e1a",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 54,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1,
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    0,
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "2fece62e059b753a",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 54,
+                  "value_mean": 0.6111111111111112
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1,
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    0,
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            },
+            {
+              "fingerprint": "7034cbe12b2c115e",
+              "iterations": 54,
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "visits": 54,
+                  "value_mean": 0.5898275382494288
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1,
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    0,
+                    1
+                  ],
+                  "visits": 0,
+                  "value_mean": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "selection_context": 0,
+          "iterations": 169,
+          "worlds": 4,
+          "elapsed_s": 0.6400832859799266,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "77ed62ba0b928143",
+              "iterations": 43,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 24,
+                  "value_mean": 0.5833333333333334
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.5453550094146199
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.6
+                }
+              ]
+            },
+            {
+              "fingerprint": "9e1722101e519765",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 25,
+                  "value_mean": 0.68
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.4
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.5454545454545454
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "855f84f981983a2b",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.5555555555555556
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.5555555555555556
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 19,
+                  "value_mean": 0.7368421052631579
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.6
+                }
+              ]
+            },
+            {
+              "fingerprint": "cadebc2cc786d534",
+              "iterations": 42,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.42857142857142855
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 25,
+                  "value_mean": 0.76
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.5555555555555556
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "selection_context": 0,
+          "iterations": 185,
+          "worlds": 4,
+          "elapsed_s": 0.6401967131532729,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "c13fc66f9029a7ca",
+              "iterations": 47,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 40,
+                  "value_mean": 0.39985556394155175
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 7,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "5ede4256fdb923e2",
+              "iterations": 46,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 29,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 17,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d952ce91fe95d8c0",
+              "iterations": 46,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 42,
+                  "value_mean": 0.8809523809523809
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 4,
+                  "value_mean": 0.25
+                }
+              ]
+            },
+            {
+              "fingerprint": "0d80a443148cff99",
+              "iterations": 46,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 41,
+                  "value_mean": 0.5365853658536586
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "selection_context": 7,
+          "iterations": 322,
+          "worlds": 4,
+          "elapsed_s": 0.640114099252969,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "bfce53661c27ee03",
+              "iterations": 81,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 2,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 11,
+                  "value_mean": 0.6363636363636364
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 40,
+                  "value_mean": 0.825
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 9,
+                  "value_mean": 0.6666666666666666
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 14,
+                  "value_mean": 0.7142857142857143
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 5,
+                  "value_mean": 0.4
+                }
+              ]
+            },
+            {
+              "fingerprint": "a8bd343f754306eb",
+              "iterations": 81,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 32,
+                  "value_mean": 0.5018185917056229
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 27,
+                  "value_mean": 0.4444444444444444
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 3,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 10,
+                  "value_mean": 0.3
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.16666666666666666
+                }
+              ]
+            },
+            {
+              "fingerprint": "57a932fa53130e35",
+              "iterations": 80,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 14,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 14,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "8974d5d2114c2fa4",
+              "iterations": 80,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 14,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 14,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 13,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 24,
+          "selection_context": 0,
+          "iterations": 1174,
+          "worlds": 4,
+          "elapsed_s": 0.6400768579915166,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "0945db3d9b0cd297",
+              "iterations": 294,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "666c35b83c58e5fd",
+              "iterations": 294,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 45,
+                  "value_mean": 0.9970375449903696
+                }
+              ]
+            },
+            {
+              "fingerprint": "15f1dd0403f77467",
+              "iterations": 293,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 44,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "63a636de43f95511",
+              "iterations": 293,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 57,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 44,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 25,
+          "selection_context": 0,
+          "iterations": 1596,
+          "worlds": 4,
+          "elapsed_s": 0.6400497709400952,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            3
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "a89167e28d49ab85",
+              "iterations": 399,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 81,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 30,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "6af57adb46ae763e",
+              "iterations": 399,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 81,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 30,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "0601e9722a0e42a7",
+              "iterations": 399,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 88,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 78,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 78,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 77,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 77,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "7b4446270b0f7f3b",
+              "iterations": 399,
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 81,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 72,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 30,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 26,
+          "selection_context": 7,
+          "iterations": 2000,
+          "worlds": 4,
+          "elapsed_s": 0.5826498391106725,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "367175a5bc617ec9",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "23d5aa9acdab4616",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "14821d4e70c15d3f",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d530fe894d8cd9b9",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [],
+                  "visits": 0,
+                  "value_mean": null
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 250,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 27,
+          "selection_context": 0,
+          "iterations": 2000,
+          "worlds": 4,
+          "elapsed_s": 0.48999037593603134,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "5095cf6bda8d7c85",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 47,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d3d19bd643215110",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 113,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 47,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 1,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "d3e82746f756e60b",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 27,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "71ba0ece8bf7cb6f",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 107,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 45,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 27,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 28,
+          "selection_context": 0,
+          "iterations": 1880,
+          "worlds": 4,
+          "elapsed_s": 0.6400286499410868,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "16f63ad15d5bc563",
+              "iterations": 470,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 199,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 169,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 102,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "14bf4c51619a4734",
+              "iterations": 470,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 199,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 169,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 102,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "230874af13c4e16f",
+              "iterations": 470,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 251,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 213,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 6,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "1d106f290efc7034",
+              "iterations": 470,
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 230,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 195,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 45,
+                  "value_mean": 0.9111111111111111
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 29,
+          "selection_context": 7,
+          "iterations": 2000,
+          "worlds": 4,
+          "elapsed_s": 0.004711839836090803,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "92ad845f1ec44469",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "847a3e9ab701584d",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "0d45f8c0fee63d4f",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "6e7bb8c66cc7010a",
+              "iterations": 500,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 100,
+                  "value_mean": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "opponent_telemetry": {
+        "decisions": 14,
+        "branching_decisions": 4,
+        "max_options": 13,
+        "min_deck_count": 37,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 10,
+        "1": 1,
+        "7": 4,
+        "41": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 36,
+          "prize_count": 4,
+          "hand_count": 6,
+          "bench_count": 0
+        },
+        "take": {
+          "deck_count": 42,
+          "prize_count": 6,
+          "hand_count": 4,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 3,
+      "agent_seed": 2117102,
+      "semantic_seat": 1,
+      "semantic_first": false,
+      "winner": "take",
+      "semantic_won": false,
+      "result_seat": 0,
+      "steps": 15,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 1.2851489349268377,
+      "think_s": {
+        "semantic": 1.2808841150254011,
+        "take": 0.00274687260389328
+      },
+      "semantic_telemetry": {
+        "decisions": 3,
+        "branching_decisions": 1,
+        "max_options": 8,
+        "min_deck_count": 46,
+        "min_prize_count": 0
+      },
+      "determinization_telemetry": [
+        {
+          "step": 2,
+          "selection_context": 1,
+          "iterations": 0,
+          "worlds": 0,
+          "forced": true
+        },
+        {
+          "step": 6,
+          "selection_context": 0,
+          "iterations": 669,
+          "worlds": 4,
+          "elapsed_s": 0.6400753539055586,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "7f1a70c7286ed18b",
+              "iterations": 168,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.008812642716100478
+                }
+              ]
+            },
+            {
+              "fingerprint": "c00330f75cc64e25",
+              "iterations": 167,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 27,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "b87f2934d6b76ca0",
+              "iterations": 167,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 27,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "c446f14b2b25bd34",
+              "iterations": 167,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "visits": 28,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "visits": 27,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "selection_context": 0,
+          "iterations": 583,
+          "worlds": 4,
+          "elapsed_s": 0.6400418430566788,
+          "generated_worlds": 4,
+          "unique_fingerprints": 4,
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "world_roots": [
+            {
+              "fingerprint": "49517f7908f3415c",
+              "iterations": 146,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 91,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "8ef98e29a4d05696",
+              "iterations": 146,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 91,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "940fddf39d903c60",
+              "iterations": 146,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 91,
+                  "value_mean": 0.003803860480381197
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 0.0
+                }
+              ]
+            },
+            {
+              "fingerprint": "21f6c4974c9a992f",
+              "iterations": 145,
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "visits": 90,
+                  "value_mean": 0.0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "visits": 55,
+                  "value_mean": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "opponent_telemetry": {
+        "decisions": 12,
+        "branching_decisions": 4,
+        "max_options": 12,
+        "min_deck_count": 37,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 2,
+        "1": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 46,
+          "prize_count": 6,
+          "hand_count": 6,
+          "bench_count": 0
+        },
+        "take": {
+          "deck_count": 37,
+          "prize_count": 5,
+          "hand_count": 6,
+          "bench_count": 1
+        }
+      }
+    }
+  ],
+  "promotion": {
+    "promote": false,
+    "reasons": [
+      "fewer than 20 fixed agent seeds",
+      "Wilson 95% lower bound does not exceed 50%"
+    ]
+  }
+}
