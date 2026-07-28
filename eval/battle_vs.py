@@ -64,10 +64,16 @@ def wilson_ci(wins: int, n: int, z: float = 1.96) -> tuple:
 class Contestant:
     """One repo's submission agent, driven over a subprocess."""
 
-    def __init__(self, label: str, repo: str, seed: int):
+    def __init__(self, label: str, repo: str, seed: int, deck_path: str | None = None):
         self.label = label
         self.repo = os.path.abspath(repo)
-        self.deck = load_deck(self.repo)
+        self.deck = (
+            [int(value) for value in Path(deck_path).read_text().splitlines() if value]
+            if deck_path
+            else load_deck(self.repo)
+        )
+        if len(self.deck) != 60:
+            raise ValueError(f"{deck_path or self.repo + '/deck.csv'} must contain 60 cards")
         self.proc = None
         self.seed = seed
 
@@ -219,12 +225,18 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
         game.battle_finish()
 
 
-def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> dict:
+def run(
+    opponent_repo: str,
+    opponent_label: str,
+    seeds: int,
+    base_seed: int,
+    semantic_deck: str | None = None,
+) -> dict:
     sys.path.insert(0, REPO)
     os.chdir(REPO)  # libcg.so resolves relative to the repo root
     from cg import game
 
-    semantic = Contestant("semantic", REPO, base_seed)
+    semantic = Contestant("semantic", REPO, base_seed, semantic_deck)
     opp = Contestant(opponent_label, opponent_repo, base_seed)
     semantic.start()
     opp.start()
@@ -357,6 +369,7 @@ def run(opponent_repo: str, opponent_label: str, seeds: int, base_seed: int) -> 
         "n_matches": n,
         "seeds": seeds,
         "base_seed": base_seed,
+        "semantic_deck": os.path.abspath(semantic_deck) if semantic_deck else "deck.csv",
         **stats,
         "winrate_semantic_excl_draws": (stats["wins_semantic"] / decided if decided else None),
         "wilson95_excl_draws": [lo, hi],
@@ -464,6 +477,11 @@ def main():
     p.add_argument("--label", default=None, help="opponent label (default: repo basename)")
     p.add_argument("--seeds", type=int, default=20)
     p.add_argument("--base-seed", type=int, default=20260722)
+    p.add_argument(
+        "--semantic-deck",
+        default=None,
+        help="candidate deck CSV for semantic (default: repository deck.csv)",
+    )
     p.add_argument("--json", default=None)
     p.add_argument(
         "--aggregate",
@@ -480,7 +498,13 @@ def main():
         label = args.label or os.path.basename(os.path.abspath(args.opponent)).replace(
             "ptcg-agent-", ""
         )
-        report = run(args.opponent, label, args.seeds, args.base_seed)
+        report = run(
+            args.opponent,
+            label,
+            args.seeds,
+            args.base_seed,
+            args.semantic_deck,
+        )
         report["promotion"] = promotion_decision(report)
     print(summarize(report))
     if args.json:

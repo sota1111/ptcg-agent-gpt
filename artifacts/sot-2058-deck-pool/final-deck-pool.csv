@@ -1,0 +1,5 @@
+id,path,hash,decision,roles,reason
+baseline,deck.csv,b702e251e3b56104f84b60fddff309b0e5d4fae865e4dbb57311d4b0d45ec17e,keep,baseline|top,existing legal baseline retained
+top-emerging,artifacts/sot-2058-deck-pool/decks/top-emerging.csv,df0c3626c831bd4ca8a04e06bd0d08d85a5e7a649a0565c94afc3da2b4a09fa4,add,top|emerging,multi-seed seat-reversed win rate 0.500
+counter-diversity,artifacts/sot-2058-deck-pool/decks/counter-diversity.csv,afb0a39f2c689975b3f5e48e4a4d4bccb3da956fc1c83ad3e9fcbd136d6cbbc8,remove,counter|diversity,evaluation win rate 0.444444 below 0.5
+low-usage-diversity,artifacts/sot-2058-deck-pool/decks/low-usage-diversity.csv,27850ff30ff161b4692dbc8433a18d634cdae7cb9f4f04168c2510e6992e0578,add,low_usage_top|diversity,multi-seed seat-reversed win rate 0.556

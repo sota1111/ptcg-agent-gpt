@@ -1,0 +1,391 @@
+{
+  "semantic_repo": "/workspaces/ptcg-agent-gpt",
+  "opponent_repo": "/workspaces/ptcg-agent-take",
+  "opponent": "take",
+  "n_matches": 6,
+  "seeds": 3,
+  "base_seed": 205800,
+  "semantic_deck": "/workspaces/ptcg-agent-gpt/artifacts/sot-2058-deck-pool/decks/low-usage-diversity.csv",
+  "wins_semantic": 4,
+  "wins_opp": 2,
+  "draws": 0,
+  "unfinished": 0,
+  "faults_semantic": 0,
+  "faults_opp": 0,
+  "wins_semantic_as_first": 3,
+  "n_semantic_as_first": 3,
+  "winrate_semantic_excl_draws": 0.6666666666666666,
+  "wilson95_excl_draws": [
+    0.29998832134152864,
+    0.9032306674407831
+  ],
+  "winrate_semantic_draws_half": 0.6666666666666666,
+  "max_think_s": {
+    "semantic": 23.806860940530896,
+    "take": 0.006999045144766569
+  },
+  "match_time_allowance_s": 600.0,
+  "time_per_match_sec": {
+    "mean": 13.110165392514318,
+    "max": 23.821135236881673,
+    "total": 78.66099235508591
+  },
+  "context_decisions": {
+    "0": 88,
+    "7": 15,
+    "30": 7,
+    "1": 6,
+    "4": 6,
+    "21": 5,
+    "22": 5,
+    "2": 4,
+    "41": 3,
+    "38": 2,
+    "3": 1
+  },
+  "generic_ordering_contexts": {},
+  "generic_ordering_decisions": 0,
+  "draw_bench_contexts": {
+    "2": {
+      "decisions": 4,
+      "generic_ordering_fallbacks": 0,
+      "explicit_rule": true
+    },
+    "38": {
+      "decisions": 2,
+      "generic_ordering_fallbacks": 0,
+      "explicit_rule": true
+    }
+  },
+  "matches": [
+    {
+      "match_index": 0,
+      "agent_seed": 205800,
+      "semantic_seat": 0,
+      "semantic_first": true,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 0,
+      "steps": 59,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 19.700305324047804,
+      "think_s": {
+        "semantic": 19.686272508464754,
+        "take": 0.006999045144766569
+      },
+      "semantic_telemetry": {
+        "decisions": 36,
+        "branching_decisions": 11,
+        "max_options": 25,
+        "min_deck_count": 21,
+        "min_prize_count": 0
+      },
+      "opponent_telemetry": {
+        "decisions": 23,
+        "branching_decisions": 7,
+        "max_options": 11,
+        "min_deck_count": 40,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 22,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 2,
+        "7": 5,
+        "21": 1,
+        "22": 1,
+        "30": 1,
+        "41": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 25,
+          "prize_count": 1,
+          "hand_count": 9,
+          "bench_count": 2
+        },
+        "take": {
+          "deck_count": 43,
+          "prize_count": 4,
+          "hand_count": 4,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 1,
+      "agent_seed": 205800,
+      "semantic_seat": 1,
+      "semantic_first": false,
+      "winner": "take",
+      "semantic_won": false,
+      "result_seat": 0,
+      "steps": 20,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 5.76768710417673,
+      "think_s": {
+        "semantic": 5.7633533757179976,
+        "take": 0.0021964157931506634
+      },
+      "semantic_telemetry": {
+        "decisions": 11,
+        "branching_decisions": 3,
+        "max_options": 8,
+        "min_deck_count": 40,
+        "min_prize_count": 0
+      },
+      "opponent_telemetry": {
+        "decisions": 9,
+        "branching_decisions": 4,
+        "max_options": 14,
+        "min_deck_count": 39,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 6,
+        "1": 1,
+        "7": 2,
+        "21": 1,
+        "22": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 43,
+          "prize_count": 6,
+          "hand_count": 4,
+          "bench_count": 0
+        },
+        "take": {
+          "deck_count": 39,
+          "prize_count": 5,
+          "hand_count": 5,
+          "bench_count": 1
+        }
+      }
+    },
+    {
+      "match_index": 2,
+      "agent_seed": 205801,
+      "semantic_seat": 0,
+      "semantic_first": true,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 0,
+      "steps": 64,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 23.821135236881673,
+      "think_s": {
+        "semantic": 23.806860940530896,
+        "take": 0.006080939434468746
+      },
+      "semantic_telemetry": {
+        "decisions": 42,
+        "branching_decisions": 16,
+        "max_options": 21,
+        "min_deck_count": 34,
+        "min_prize_count": 0
+      },
+      "opponent_telemetry": {
+        "decisions": 22,
+        "branching_decisions": 8,
+        "max_options": 20,
+        "min_deck_count": 37,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 26,
+        "1": 1,
+        "7": 4,
+        "21": 2,
+        "22": 2,
+        "30": 6,
+        "41": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 35,
+          "prize_count": 3,
+          "hand_count": 3,
+          "bench_count": 5
+        },
+        "take": {
+          "deck_count": 41,
+          "prize_count": 6,
+          "hand_count": 3,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 3,
+      "agent_seed": 205801,
+      "semantic_seat": 1,
+      "semantic_first": false,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 1,
+      "steps": 30,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 7.697364388033748,
+      "think_s": {
+        "semantic": 7.690506004728377,
+        "take": 0.003673776052892208
+      },
+      "semantic_telemetry": {
+        "decisions": 15,
+        "branching_decisions": 5,
+        "max_options": 14,
+        "min_deck_count": 37,
+        "min_prize_count": 0
+      },
+      "opponent_telemetry": {
+        "decisions": 15,
+        "branching_decisions": 3,
+        "max_options": 9,
+        "min_deck_count": 36,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 9,
+        "1": 1,
+        "2": 1,
+        "4": 2,
+        "7": 2
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 37,
+          "prize_count": 3,
+          "hand_count": 5,
+          "bench_count": 1
+        },
+        "take": {
+          "deck_count": 36,
+          "prize_count": 4,
+          "hand_count": 7,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 4,
+      "agent_seed": 205802,
+      "semantic_seat": 0,
+      "semantic_first": true,
+      "winner": "semantic",
+      "semantic_won": true,
+      "result_seat": 0,
+      "steps": 42,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 13.340837670955807,
+      "think_s": {
+        "semantic": 13.330459219869226,
+        "take": 0.005500106140971184
+      },
+      "semantic_telemetry": {
+        "decisions": 23,
+        "branching_decisions": 12,
+        "max_options": 19,
+        "min_deck_count": 39,
+        "min_prize_count": 0
+      },
+      "opponent_telemetry": {
+        "decisions": 19,
+        "branching_decisions": 6,
+        "max_options": 11,
+        "min_deck_count": 38,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 17,
+        "1": 1,
+        "2": 1,
+        "7": 2,
+        "38": 1,
+        "41": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 39,
+          "prize_count": 2,
+          "hand_count": 5,
+          "bench_count": 4
+        },
+        "take": {
+          "deck_count": 40,
+          "prize_count": 6,
+          "hand_count": 3,
+          "bench_count": 0
+        }
+      }
+    },
+    {
+      "match_index": 5,
+      "agent_seed": 205802,
+      "semantic_seat": 1,
+      "semantic_first": false,
+      "winner": "take",
+      "semantic_won": false,
+      "result_seat": 0,
+      "steps": 32,
+      "fault": null,
+      "unfinished": false,
+      "runtime_s": 8.333662630990148,
+      "think_s": {
+        "semantic": 8.325262675993145,
+        "take": 0.004694326315075159
+      },
+      "semantic_telemetry": {
+        "decisions": 15,
+        "branching_decisions": 4,
+        "max_options": 14,
+        "min_deck_count": 39,
+        "min_prize_count": 0
+      },
+      "opponent_telemetry": {
+        "decisions": 17,
+        "branching_decisions": 5,
+        "max_options": 11,
+        "min_deck_count": 38,
+        "min_prize_count": 0
+      },
+      "semantic_contexts": {
+        "0": 8,
+        "1": 1,
+        "2": 1,
+        "4": 2,
+        "21": 1,
+        "22": 1,
+        "38": 1
+      },
+      "final": {
+        "semantic": {
+          "deck_count": 42,
+          "prize_count": 6,
+          "hand_count": 4,
+          "bench_count": 0
+        },
+        "take": {
+          "deck_count": 41,
+          "prize_count": 3,
+          "hand_count": 9,
+          "bench_count": 0
+        }
+      }
+    }
+  ],
+  "promotion": {
+    "promote": false,
+    "reasons": [
+      "fewer than 20 fixed agent seeds",
+      "Wilson 95% lower bound does not exceed 50%"
+    ]
+  }
+}

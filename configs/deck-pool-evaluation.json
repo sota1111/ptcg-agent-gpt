@@ -1,0 +1,40 @@
+{
+  "baseSeed": 205800,
+  "candidates": [
+    {
+      "id": "top-emerging",
+      "shortlistIndex": 1,
+      "roles": ["top", "emerging"]
+    },
+    {
+      "id": "counter-diversity",
+      "shortlistIndex": 13,
+      "roles": ["counter", "diversity"]
+    },
+    {
+      "id": "low-usage-diversity",
+      "shortlistIndex": 15,
+      "roles": ["low_usage_top", "diversity"]
+    }
+  ],
+  "maxAdditions": 2,
+  "minimumWinRate": 0.5,
+  "opponents": [
+    {
+      "archetype": "Miraidon ex / matsu policy",
+      "id": "matsu",
+      "repository": "/workspaces/ptcg-agent-matsu"
+    },
+    {
+      "archetype": "Miraidon ex / take policy",
+      "id": "take",
+      "repository": "/workspaces/ptcg-agent-take"
+    },
+    {
+      "archetype": "Miraidon ex / ume policy",
+      "id": "ume",
+      "repository": "/workspaces/ptcg-agent-ume"
+    }
+  ],
+  "seeds": 3
+}
