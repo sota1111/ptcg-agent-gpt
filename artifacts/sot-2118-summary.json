@@ -1,0 +1,78 @@
+{
+  "issue": "SOT-2118",
+  "terminal_commit": "56131d409cf1ac263fde5858d476d9f195d05eb4",
+  "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+  "champion_main_sha256": "41c178d95f21edfcacb1705bc8de4d998bffc5f0f62bc4aae32a477fa14f74b3",
+  "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+  "matches": 120,
+  "wins": 70,
+  "losses": 50,
+  "draws": 0,
+  "win_rate": 0.5833333333,
+  "faults": 0,
+  "unfinished": 0,
+  "illegal_action_faults": 0,
+  "seat_results": {
+    "first": {
+      "wins": 45,
+      "matches": 60,
+      "win_rate": 0.75
+    },
+    "second": {
+      "wins": 25,
+      "matches": 60,
+      "win_rate": 0.4166666667
+    },
+    "paired_seat_win_rate_gap": 0.3333333333
+  },
+  "runtime_seconds": {
+    "mean": 12.5746607316,
+    "p50": 10.1473063477,
+    "p95": 33.1131545445,
+    "max": 45.2932442338,
+    "allowance": 600
+  },
+  "matchups": {
+    "matsu": {
+      "wins": 22,
+      "losses": 18,
+      "win_rate": 0.55,
+      "wilson95": [0.39828829888440775, 0.6929492471905531],
+      "first_seat_wins": 16,
+      "second_seat_wins": 6,
+      "paired_seat_win_rate_gap": 0.5
+    },
+    "take": {
+      "wins": 24,
+      "losses": 16,
+      "win_rate": 0.6,
+      "wilson95": [0.445956198273935, 0.7365188938759863],
+      "first_seat_wins": 15,
+      "second_seat_wins": 9,
+      "paired_seat_win_rate_gap": 0.3
+    },
+    "ume": {
+      "wins": 24,
+      "losses": 16,
+      "win_rate": 0.6,
+      "wilson95": [0.445956198273935, 0.7365188938759863],
+      "first_seat_wins": 14,
+      "second_seat_wins": 10,
+      "paired_seat_win_rate_gap": 0.2
+    }
+  },
+  "audit": {
+    "result": "PASS",
+    "rationale": "All matches completed without faults and within the runtime allowance; no new candidate was eligible for promotion, so the last gate-passing champion is retained.",
+    "observed_risk": "The 33.3 percentage-point first-versus-second seat gap remains material."
+  },
+  "champion_state": "retained",
+  "submission": {
+    "archive_sha256": "8964d1fd2a04416528e22520faa7c9cbe4463b8fff09e83dbd224ae7e19bc4d5",
+    "exec_compatibility": "PASS",
+    "competition": "pokemon-tcg-ai-battle",
+    "ref": "55061703",
+    "status": "COMPLETE",
+    "public_score": 600.0
+  }
+}
