@@ -1,0 +1,197 @@
+{
+  "champion_behavior_changed": false,
+  "classification": {
+    "counts": {
+      "sample_duplicate_or_low_diversity": 0,
+      "seat_specific_public_state_difference": 0,
+      "unclassified": 0,
+      "world_aggregation_outlier_sensitivity": 5
+    },
+    "exclusive_order": [
+      "sample_duplicate_or_low_diversity",
+      "world_aggregation_outlier_sensitivity",
+      "seat_specific_public_state_difference",
+      "unclassified"
+    ]
+  },
+  "classified_losses": [
+    {
+      "agent_seed": 2116102,
+      "category": "world_aggregation_outlier_sensitivity",
+      "evidence": "max_value_spread=1.000; majority_disagreements=2",
+      "metrics": {
+        "decisions": 8,
+        "fingerprint_unique_rate": 1.0,
+        "generated_worlds": 24,
+        "measurable_value_decisions": 6,
+        "selected_value_spread_max": 1.0,
+        "selected_value_spread_mean": 0.44018874643874645,
+        "unique_fingerprints": 24,
+        "world_majority_disagreements": 2
+      },
+      "opponent": "matsu",
+      "semantic_seat": 1
+    },
+    {
+      "agent_seed": 2116103,
+      "category": "world_aggregation_outlier_sensitivity",
+      "evidence": "max_value_spread=0.996; majority_disagreements=1",
+      "metrics": {
+        "decisions": 5,
+        "fingerprint_unique_rate": 1.0,
+        "generated_worlds": 16,
+        "measurable_value_decisions": 4,
+        "selected_value_spread_max": 0.9957605936594864,
+        "selected_value_spread_mean": 0.6763439134210264,
+        "unique_fingerprints": 16,
+        "world_majority_disagreements": 1
+      },
+      "opponent": "matsu",
+      "semantic_seat": 1
+    },
+    {
+      "agent_seed": 2116101,
+      "category": "world_aggregation_outlier_sensitivity",
+      "evidence": "max_value_spread=1.000; majority_disagreements=3",
+      "metrics": {
+        "decisions": 13,
+        "fingerprint_unique_rate": 1.0,
+        "generated_worlds": 44,
+        "measurable_value_decisions": 11,
+        "selected_value_spread_max": 1.0,
+        "selected_value_spread_mean": 0.4435990791964002,
+        "unique_fingerprints": 44,
+        "world_majority_disagreements": 3
+      },
+      "opponent": "ume",
+      "semantic_seat": 1
+    },
+    {
+      "agent_seed": 2116102,
+      "category": "world_aggregation_outlier_sensitivity",
+      "evidence": "max_value_spread=0.968; majority_disagreements=1",
+      "metrics": {
+        "decisions": 15,
+        "fingerprint_unique_rate": 1.0,
+        "generated_worlds": 52,
+        "measurable_value_decisions": 13,
+        "selected_value_spread_max": 0.9680658440471022,
+        "selected_value_spread_mean": 0.2628099177436987,
+        "unique_fingerprints": 52,
+        "world_majority_disagreements": 1
+      },
+      "opponent": "ume",
+      "semantic_seat": 1
+    },
+    {
+      "agent_seed": 2116103,
+      "category": "world_aggregation_outlier_sensitivity",
+      "evidence": "max_value_spread=1.000; majority_disagreements=2",
+      "metrics": {
+        "decisions": 6,
+        "fingerprint_unique_rate": 1.0,
+        "generated_worlds": 16,
+        "measurable_value_decisions": 4,
+        "selected_value_spread_max": 1.0,
+        "selected_value_spread_mean": 0.7509125657226131,
+        "unique_fingerprints": 16,
+        "world_majority_disagreements": 2
+      },
+      "opponent": "ume",
+      "semantic_seat": 1
+    }
+  ],
+  "evaluation": {
+    "agent_seeds": [
+      2116101,
+      2116102,
+      2116103
+    ],
+    "faults": 0,
+    "fingerprint_unique_rate": 1.0,
+    "losses": 5,
+    "matches": 18,
+    "seat_results": {
+      "first": {
+        "matches": 9,
+        "wins": 9
+      },
+      "second": {
+        "matches": 9,
+        "wins": 4
+      },
+      "win_rate_gap": 0.5555555555555556
+    },
+    "seat_reversal": true,
+    "selected_value_spread_mean": 0.4323663765512544,
+    "unfinished": 0,
+    "wins": 13
+  },
+  "explicit_exclusions": [
+    "n_worlds=2/8 allocation from SOT-1996",
+    "root cap and prior temperature from SOT-2063",
+    "fallback semantic rules",
+    "deck restructuring"
+  ],
+  "issue": "SOT-2116",
+  "matchups": [
+    {
+      "faults": 0,
+      "losses": 2,
+      "matches": 6,
+      "mean_runtime_s": 11.29981768457219,
+      "opponent": "matsu",
+      "report": "../../artifacts/sot-2116/paired-matsu.json",
+      "report_sha256": "683856c07acbb76a0c18a36b368c705376c7bc754f466acbe8f93a54e6536acb",
+      "unfinished": 0,
+      "wins": 4
+    },
+    {
+      "faults": 0,
+      "losses": 0,
+      "matches": 6,
+      "mean_runtime_s": 13.931891510185475,
+      "opponent": "take",
+      "report": "../../artifacts/sot-2116/paired-take.json",
+      "report_sha256": "d3cd7ada07c5c0900315342bfd9bb526373661f6e390ca30faa818ad200fef0f",
+      "unfinished": 0,
+      "wins": 6
+    },
+    {
+      "faults": 0,
+      "losses": 3,
+      "matches": 6,
+      "mean_runtime_s": 11.920196098508313,
+      "opponent": "ume",
+      "report": "../../artifacts/sot-2116/paired-ume.json",
+      "report_sha256": "f8416a57afa1703719cfa4e903926fe24b3120bb9cc70c7c3927561ae441e6a4",
+      "unfinished": 0,
+      "wins": 3
+    }
+  ],
+  "next_candidates": [
+    {
+      "change": "compare median/trimmed root aggregation at fixed total search budget",
+      "evidence_losses": 5,
+      "id": "robust-world-aggregation",
+      "quantitative_basis": "classified loss count and selected-action value spread",
+      "trigger": "world_aggregation_outlier_sensitivity"
+    },
+    {
+      "change": "calibrate observable turn/board tempo terms without changing sampling count",
+      "evidence_losses": 0,
+      "id": "seat-conditioned-public-state-calibration",
+      "quantitative_basis": "first-seat 9/9 vs second-seat 4/9",
+      "trigger": "seat_specific_public_state_difference"
+    }
+  ],
+  "provenance": {
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "champion_commit": "dd8592c27ab483ccdc7eaef1ec81246c194de33a",
+    "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "champion_main_sha256": "db3389926560a8fb037d70e60e6b8ff6230d2c2489833f77960aecc5274afb73",
+    "manifest": "/workspaces/ptcg-agent-gpt/eval/manifests/sot-2116-determinization-seat.json",
+    "manifest_sha256": "359458544c2fa591928cdbf683aa8aa769015cb7ee4e076262113790e21ef92a"
+  },
+  "schema_version": 1
+}

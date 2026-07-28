@@ -1,0 +1,58 @@
+{
+  "issue": "SOT-2116",
+  "purpose": "paired-seat determinization and seat-variance diagnosis",
+  "provenance": {
+    "champion_commit": "dd8592c27ab483ccdc7eaef1ec81246c194de33a",
+    "champion_main_sha256": "db3389926560a8fb037d70e60e6b8ff6230d2c2489833f77960aecc5274afb73",
+    "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130"
+  },
+  "evaluation": {
+    "agent_seeds": [
+      2116101,
+      2116102,
+      2116103
+    ],
+    "seat_reversal": true,
+    "matches_per_opponent": 6,
+    "engine_seedability": "engine exposes no seed API; agent-side determinization is fixed by AGENT_SEED"
+  },
+  "excluded_prior_seed_ranges": {
+    "SOT-2062_blind": "2062301..2062306",
+    "SOT-2063_screen": "2063101..2063103",
+    "SOT-2063_confirm": "2063201..2063220",
+    "SOT-2064_holdout": "2064101..2064120"
+  },
+  "opponents": [
+    {
+      "id": "matsu",
+      "repo": "/workspaces/ptcg-agent-matsu",
+      "commit": "9ac5b76447b3a05c9ce08dd1e24fa3903c2a2eb6",
+      "main_sha256": "db743198103546e540dd04b83b3b9d4a34a88dd3f8a83293bcd5d01fbd11ee9e",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2116/paired-matsu.json"
+    },
+    {
+      "id": "take",
+      "repo": "/workspaces/ptcg-agent-take",
+      "commit": "c03e93c77b71ae9186b4ed589e9c55e073be7468",
+      "main_sha256": "1dc9900ccc1a61381adb1002feeefea7afe69d2f0a1024a3adf9ff31aa8d741f",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2116/paired-take.json"
+    },
+    {
+      "id": "ume",
+      "repo": "/workspaces/ptcg-agent-ume",
+      "commit": "1bf0b27c345ac5532e2b77b7317ebfb4943ee9c4",
+      "main_sha256": "b14e4bcba4809e6fb2479ad7d1b6e86c099bd3ce96b846e1fcf7c64f38d4ab4f",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2116/paired-ume.json"
+    }
+  ],
+  "explicit_exclusions": [
+    "n_worlds=2/8 allocation from SOT-1996",
+    "root cap and prior temperature from SOT-2063",
+    "fallback semantic rules",
+    "deck restructuring"
+  ]
+}

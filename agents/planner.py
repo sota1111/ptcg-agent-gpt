@@ -45,6 +45,8 @@ All randomness flows through the per-decision `Rng` stream passed to
 """
 
 import contextlib
+import hashlib
+import json
 import math
 import time
 from dataclasses import dataclass
@@ -369,6 +371,7 @@ class MctsPlanner:
         self._greedy = GreedyAgent(seed=0, card_index=card_index)
         self.degraded_count = 0  # decisions answered by the greedy prior
         self.last_stats = {}
+        self._world_fingerprints = []
 
     @property
     def backend(self):
@@ -397,6 +400,7 @@ class MctsPlanner:
 
         root_player = view.your_index
         worlds = []
+        self._world_fingerprints = []
         iterations = 0
         try:
             for _ in range(max(1, cfg.n_worlds)):
@@ -421,10 +425,35 @@ class MctsPlanner:
                 self.backend.end()
 
         best = self._best_action(candidates, worlds, cfg.deviate_margin)
+        selected_index = candidates.index(best)
+        world_roots = []
+        for index, world in enumerate(worlds):
+            actions_stats = []
+            for candidate, edge in zip(candidates, world.root.edges, strict=True):
+                visits = int(edge[2])
+                actions_stats.append(
+                    {
+                        "action": list(candidate),
+                        "visits": visits,
+                        "value_mean": edge[3] / visits if visits else None,
+                    }
+                )
+            world_roots.append(
+                {
+                    "fingerprint": self._world_fingerprints[index],
+                    "iterations": int(world.iterations),
+                    "actions": actions_stats,
+                }
+            )
         self.last_stats = {
             "iterations": iterations,
             "worlds": len(worlds),
             "elapsed_s": self._clock() - t0,
+            "generated_worlds": len(worlds),
+            "unique_fingerprints": len(set(self._world_fingerprints)),
+            "selected_action": list(best),
+            "selected_action_index": selected_index,
+            "world_roots": world_roots,
         }
         return list(best)
 
@@ -510,6 +539,19 @@ class MctsPlanner:
 
     def _make_world(self, raw_obs, candidates, priors, root_player, rng):
         fills = self._fills_fn(raw_obs, self._own_deck, rng, self.cards)
+        encoded = json.dumps(
+            {
+                "my_deck": fills.my_deck,
+                "my_prize": fills.my_prize,
+                "opp_deck": fills.opp_deck,
+                "opp_prize": fills.opp_prize,
+                "opp_hand": fills.opp_hand,
+                "opp_active": fills.opp_active,
+            },
+            separators=(",", ":"),
+            sort_keys=True,
+        ).encode()
+        fingerprint = hashlib.sha256(encoded).hexdigest()[:16]
         sid, obs = self.backend.begin(raw_obs, fills, manual_coin=True)
         root = _Node(sid, obs, root_player)
         if root.terminal is None:
@@ -519,6 +561,7 @@ class MctsPlanner:
                     raise ValueError("world root select mismatch")
         root.edges = [[list(a), None, 0, 0.0] for a in candidates]
         root.priors = list(priors)
+        self._world_fingerprints.append(fingerprint)
         return _World(root)
 
     # ---- one PUCT iteration -------------------------------------------------
