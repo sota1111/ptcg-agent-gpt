@@ -1,0 +1,67 @@
+{
+  "issue": "SOT-2118",
+  "purpose": "third-cycle terminal champion blind holdout",
+  "provenance": {
+    "sot_2117_terminal_commit": "56131d409cf1ac263fde5858d476d9f195d05eb4",
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "champion_main_sha256": "41c178d95f21edfcacb1705bc8de4d998bffc5f0f62bc4aae32a477fa14f74b3",
+    "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "terminal_decision": "SOT-2117 rejected all candidates; sum aggregation remained the champion default"
+  },
+  "isolation": {
+    "holdout_base_seed": 2118101,
+    "holdout_seeds": [
+      2118101,
+      2118102,
+      2118103,
+      2118104,
+      2118105,
+      2118106,
+      2118107,
+      2118108,
+      2118109,
+      2118110,
+      2118111,
+      2118112,
+      2118113,
+      2118114,
+      2118115,
+      2118116,
+      2118117,
+      2118118,
+      2118119,
+      2118120
+    ],
+    "excluded_prior_seed_ranges": {
+      "SOT-2116_diagnosis": "2116101..2116103",
+      "SOT-2117_screen": "2117101..2117102",
+      "SOT-2117_confirm_reserved": "2117201..2117205",
+      "SOT-2064_prior_holdout": "2064101..2064120"
+    },
+    "seat_reversal": true,
+    "matches_per_opponent": 40
+  },
+  "opponents": [
+    {
+      "label": "matsu",
+      "repo": "/workspaces/ptcg-agent-matsu",
+      "commit": "9ac5b76447b3a05c9ce08dd1e24fa3903c2a2eb6",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2118/holdout-matsu.json"
+    },
+    {
+      "label": "take",
+      "repo": "/workspaces/ptcg-agent-take",
+      "commit": "c03e93c77b71ae9186b4ed589e9c55e073be7468",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2118/holdout-take.json"
+    },
+    {
+      "label": "ume",
+      "repo": "/workspaces/ptcg-agent-ume",
+      "commit": "1bf0b27c345ac5532e2b77b7317ebfb4943ee9c4",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "report": "../../artifacts/sot-2118/holdout-ume.json"
+    }
+  ]
+}
