@@ -64,7 +64,14 @@ def wilson_ci(wins: int, n: int, z: float = 1.96) -> tuple:
 class Contestant:
     """One repo's submission agent, driven over a subprocess."""
 
-    def __init__(self, label: str, repo: str, seed: int, deck_path: str | None = None):
+    def __init__(
+        self,
+        label: str,
+        repo: str,
+        seed: int,
+        deck_path: str | None = None,
+        capture_determinization: bool = False,
+    ):
         self.label = label
         self.repo = os.path.abspath(repo)
         self.deck = (
@@ -76,6 +83,8 @@ class Contestant:
             raise ValueError(f"{deck_path or self.repo + '/deck.csv'} must contain 60 cards")
         self.proc = None
         self.seed = seed
+        self.capture_determinization = capture_determinization
+        self.last_telemetry = {}
 
     @property
     def python(self) -> str:
@@ -85,6 +94,8 @@ class Contestant:
     def start(self) -> None:
         env = dict(os.environ)
         env["AGENT_SEED"] = str(self.seed)
+        if self.capture_determinization:
+            env["PTCG_TELEMETRY_PROTOCOL"] = "1"
         self.proc = subprocess.Popen(
             [self.python, SERVER],
             cwd=self.repo,
@@ -110,6 +121,9 @@ class Contestant:
         action = json.loads(reply)
         if isinstance(action, dict) and "__error__" in action:
             raise RuntimeError(f"{self.label} agent error: {action['__error__']}")
+        if self.capture_determinization:
+            self.last_telemetry = action.get("telemetry") or {}
+            action = action["action"]
         return action
 
     def stop(self) -> None:
@@ -154,6 +168,7 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
             "min_prize_count": 6,
         },
     ]
+    determinization = [[], []]
 
     def observe(current: dict, seat: int, observation: dict) -> None:
         players = current.get("players") or []
@@ -193,6 +208,7 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
             "think": think,
             "contexts": contexts,
             "telemetry": telemetry,
+            "determinization": determinization,
             "final_players": final_players,
         }
 
@@ -211,6 +227,14 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
             t0 = time.perf_counter()
             try:
                 action = agent.act(obs)
+                if agent.capture_determinization:
+                    determinization[seat].append(
+                        {
+                            "step": steps,
+                            "selection_context": (obs.get("select") or {}).get("context"),
+                            **agent.last_telemetry,
+                        }
+                    )
             except Exception:  # noqa: BLE001 - agent fault => that seat loses
                 return finish_payload(1 - seat, seat)
             finally:
@@ -236,7 +260,9 @@ def run(
     os.chdir(REPO)  # libcg.so resolves relative to the repo root
     from cg import game
 
-    semantic = Contestant("semantic", REPO, base_seed, semantic_deck)
+    semantic = Contestant(
+        "semantic", REPO, base_seed, semantic_deck, capture_determinization=True
+    )
     opp = Contestant(opponent_label, opponent_repo, base_seed)
     semantic.start()
     opp.start()
@@ -319,6 +345,7 @@ def run(
                         opponent_label: out["think"][1 - semantic_seat],
                     },
                     "semantic_telemetry": out["telemetry"][semantic_seat],
+                    "determinization_telemetry": out["determinization"][semantic_seat],
                     "opponent_telemetry": out["telemetry"][1 - semantic_seat],
                     "semantic_contexts": {
                         str(context): count

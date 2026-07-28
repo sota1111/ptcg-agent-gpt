@@ -51,6 +51,14 @@ def main() -> int:
             payload = {"__error__": f"{type(exc).__name__}: {exc}"}
         else:
             payload = action
+            if os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1":
+                submission = getattr(main_mod, "_agent", None)
+                mcts = getattr(submission, "_mcts", None)
+                planner = getattr(mcts, "planner", None)
+                payload = {
+                    "action": action,
+                    "telemetry": dict(getattr(planner, "last_stats", {}) or {}),
+                }
         sys.stdout.write(json.dumps(payload))
         sys.stdout.write("\n")
         sys.stdout.flush()
