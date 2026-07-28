@@ -112,6 +112,10 @@ class PlannerConfig:
     # pooled mean value beats the prior's by this margin (SOT-1672: ~0.1 was
     # the decisive setting, 0.577 -> 0.63).
     deviate_margin: float = 0.0
+    # Root statistics across determinizations. ``sum`` is the champion.
+    # Robust modes normalize visits per world before reducing so one world
+    # cannot dominate merely because it received more wall-clock iterations.
+    world_aggregation: str = "sum"  # "sum" | "median" | "trimmed_mean"
 
 
 @dataclass
@@ -424,7 +428,7 @@ class MctsPlanner:
             with contextlib.suppress(Exception):
                 self.backend.end()
 
-        best = self._best_action(candidates, worlds, cfg.deviate_margin)
+        best = self._best_action(candidates, worlds, cfg.deviate_margin, cfg.world_aggregation)
         selected_index = candidates.index(best)
         world_roots = []
         for index, world in enumerate(worlds):
@@ -779,12 +783,46 @@ class MctsPlanner:
     # ---- aggregation ----------------------------------------------------------
 
     @staticmethod
-    def _best_action(candidates, worlds, deviate_margin: float = 0.0) -> list:
+    def _best_action(
+        candidates,
+        worlds,
+        deviate_margin: float = 0.0,
+        world_aggregation: str = "sum",
+    ) -> list:
+        if world_aggregation not in {"sum", "median", "trimmed_mean"}:
+            raise ValueError(f"unknown world aggregation: {world_aggregation}")
         totals = [[0, 0.0] for _ in candidates]
-        for world in worlds:
-            for i, edge in enumerate(world.root.edges):
-                totals[i][0] += edge[2]
-                totals[i][1] += edge[3]
+        if world_aggregation == "sum":
+            for world in worlds:
+                for i, edge in enumerate(world.root.edges):
+                    totals[i][0] += edge[2]
+                    totals[i][1] += edge[3]
+        else:
+            per_action = [[] for _ in candidates]
+            for world in worlds:
+                world_visits = sum(edge[2] for edge in world.root.edges) or 1
+                for i, edge in enumerate(world.root.edges):
+                    visits = edge[2]
+                    value_mean = edge[3] / visits if visits else 0.0
+                    per_action[i].append((visits / world_visits, value_mean))
+            for i, observations in enumerate(per_action):
+
+                def reduce(values):
+                    ordered = sorted(values)
+                    if world_aggregation == "median":
+                        middle = len(ordered) // 2
+                        selected = (
+                            [ordered[middle]]
+                            if len(ordered) % 2
+                            else [ordered[middle - 1], ordered[middle]]
+                        )
+                    else:
+                        selected = ordered[1:-1] if len(ordered) >= 4 else ordered
+                    return sum(selected) / len(selected)
+
+                visit_score = reduce([row[0] for row in observations])
+                value_score = reduce([row[1] for row in observations])
+                totals[i] = [visit_score, visit_score * value_score]
         best_i = 0
         best_key = None
         for i, (visits, value) in enumerate(totals):

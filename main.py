@@ -46,6 +46,11 @@ SOL_CONFIG = {
     "n_worlds": 4,
     "time_budget_s": 0.8,
     "deviate_margin": 0.1,
+    "world_aggregation": (
+        os.environ.get("PTCG_WORLD_AGGREGATION", "sum")
+        if os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+        else "sum"
+    ),
     "eval_weights": {
         "deck_low": -0.2,
         "deck_low_at": 14,

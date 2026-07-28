@@ -1,0 +1,68 @@
+{
+  "issue": "SOT-2117",
+  "purpose": "robust world aggregation promotion decision",
+  "baseline": {
+    "sot_2116_terminal_main_commit": "27a8f788f9e86f2ace7ea803d336dc22b14e420e",
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "db3389926560a8fb037d70e60e6b8ff6230d2c2489833f77960aecc5274afb73",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "aggregation": "sum"
+  },
+  "frozen_search": {
+    "n_worlds": 4,
+    "time_budget_s": 0.8,
+    "rollout_turns": 100,
+    "rollout_depth": 200,
+    "max_root_actions": 6,
+    "max_tree_depth": 1,
+    "prior_temperature": 40.0,
+    "deviate_margin": 0.1,
+    "deck": "deck.csv",
+    "fallback_semantics": "unchanged"
+  },
+  "candidates": [
+    {
+      "id": "median",
+      "hypothesis": "median normalized world statistics reduce single-world outlier sensitivity"
+    },
+    {
+      "id": "trimmed_mean",
+      "hypothesis": "dropping per-action min/max normalized world statistics reduces tail sensitivity"
+    }
+  ],
+  "screen": {
+    "base_seed": 2117101,
+    "seeds_per_opponent": 2,
+    "seat_reversal": true
+  },
+  "confirm": {
+    "base_seed": 2117201,
+    "seeds_per_opponent": 5,
+    "seat_reversal": true,
+    "independent_from_screen": true
+  },
+  "opponents": [
+    {
+      "id": "matsu",
+      "repo": "/workspaces/ptcg-agent-matsu",
+      "commit": "9ac5b76447b3a05c9ce08dd1e24fa3903c2a2eb6"
+    },
+    {
+      "id": "take",
+      "repo": "/workspaces/ptcg-agent-take",
+      "commit": "c03e93c77b71ae9186b4ed589e9c55e073be7468"
+    },
+    {
+      "id": "ume",
+      "repo": "/workspaces/ptcg-agent-ume",
+      "commit": "1bf0b27c345ac5532e2b77b7317ebfb4943ee9c4"
+    }
+  ],
+  "promotion_gate": {
+    "pool_kpi": "candidate win rate must exceed champion",
+    "paired_seat_gap": "reported and must not materially regress",
+    "fault_timeout": "must not increase",
+    "mean_runtime_ratio_max": 1.1,
+    "match_time_limit_s": 600
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "issue": "SOT-2117",
+  "manifest": "eval/manifests/sot-2117-world-aggregation.json",
+  "baseline": {
+    "sot_2116_terminal_main_commit": "27a8f788f9e86f2ace7ea803d336dc22b14e420e",
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "db3389926560a8fb037d70e60e6b8ff6230d2c2489833f77960aecc5274afb73",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "aggregation": "sum"
+  },
+  "frozen_search": {
+    "n_worlds": 4,
+    "time_budget_s": 0.8,
+    "rollout_turns": 100,
+    "rollout_depth": 200,
+    "max_root_actions": 6,
+    "max_tree_depth": 1,
+    "prior_temperature": 40.0,
+    "deviate_margin": 0.1,
+    "deck": "deck.csv",
+    "fallback_semantics": "unchanged"
+  },
+  "screen": {
+    "sum": {
+      "matches": 12,
+      "wins": 7,
+      "losses": 5,
+      "pool_kpi": 0.5833333333333334,
+      "matchups": {
+        "matsu": {
+          "wins": 1,
+          "losses": 3
+        },
+        "take": {
+          "wins": 3,
+          "losses": 1
+        },
+        "ume": {
+          "wins": 3,
+          "losses": 1
+        }
+      },
+      "seat": {
+        "first_win_rate": 0.6666666666666666,
+        "second_win_rate": 0.5,
+        "paired_gap": 0.16666666666666663
+      },
+      "faults": 0,
+      "timeouts": 0,
+      "runtime_s": {
+        "mean": 10.447517538714843,
+        "p95": 26.28637423599139,
+        "max_think": 19.856143380515277
+      }
+    },
+    "median": {
+      "matches": 12,
+      "wins": 7,
+      "losses": 5,
+      "pool_kpi": 0.5833333333333334,
+      "matchups": {
+        "matsu": {
+          "wins": 2,
+          "losses": 2
+        },
+        "take": {
+          "wins": 2,
+          "losses": 2
+        },
+        "ume": {
+          "wins": 3,
+          "losses": 1
+        }
+      },
+      "seat": {
+        "first_win_rate": 0.6666666666666666,
+        "second_win_rate": 0.5,
+        "paired_gap": 0.16666666666666663
+      },
+      "faults": 0,
+      "timeouts": 0,
+      "runtime_s": {
+        "mean": 12.659938186911555,
+        "p95": 25.04482158040628,
+        "max_think": 22.385082294233143
+      }
+    },
+    "trimmed_mean": {
+      "matches": 12,
+      "wins": 5,
+      "losses": 7,
+      "pool_kpi": 0.4166666666666667,
+      "matchups": {
+        "matsu": {
+          "wins": 2,
+          "losses": 2
+        },
+        "take": {
+          "wins": 2,
+          "losses": 2
+        },
+        "ume": {
+          "wins": 1,
+          "losses": 3
+        }
+      },
+      "seat": {
+        "first_win_rate": 0.6666666666666666,
+        "second_win_rate": 0.16666666666666666,
+        "paired_gap": 0.5
+      },
+      "faults": 0,
+      "timeouts": 0,
+      "runtime_s": {
+        "mean": 12.66496844678962,
+        "p95": 30.047052612993866,
+        "max_think": 24.01678285235539
+      }
+    }
+  },
+  "screen_passing_candidates": [],
+  "confirm": {},
+  "decision": {
+    "promote": false,
+    "candidate": null,
+    "reason": "no candidate exceeded champion pool KPI at the preregistered screen gate",
+    "champion_aggregation": "sum"
+  }
+}
