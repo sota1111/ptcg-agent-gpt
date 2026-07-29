@@ -26,6 +26,7 @@ DEFAULT_WEIGHTS = {
     "prize_taken": 2.0,  # per prize card this side has taken (dominant term)
     "pokemon": 0.3,  # per Pokémon this side has in play
     "energy": 0.2,  # per Energy attached on this side
+    "active_energy": 0.0,  # optional public tempo term; default OFF
     "hp": 0.004,  # per HP point this side has in play
     "hand": 0.06,  # per card in hand
     "deck_empty": -3.0,  # this side loses at its next turn start (deck-out)
@@ -84,6 +85,7 @@ class HeuristicEvaluator(Evaluator):
         hp_total = 0
         pokemon = 0
         energy = 0
+        active_energy = 0
         in_play = list(getattr(p, "active", None) or ())
         in_play += list(getattr(p, "bench", None) or ())
         for pk in in_play:
@@ -92,9 +94,13 @@ class HeuristicEvaluator(Evaluator):
                 continue
             pokemon += 1
             hp_total += getattr(pk, "hp", 0) or 0
-            energy += len(getattr(pk, "energies", None) or ())
+            attached = len(getattr(pk, "energies", None) or ())
+            energy += attached
+            if pk in (getattr(p, "active", None) or ()):
+                active_energy += attached
         score += w["pokemon"] * pokemon
         score += w["energy"] * energy
+        score += w.get("active_energy", 0.0) * active_energy
         score += w["hp"] * hp_total
         score += w["hand"] * (getattr(p, "handCount", 0) or 0)
         deck = getattr(p, "deckCount", 0) or 0
