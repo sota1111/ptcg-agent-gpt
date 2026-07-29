@@ -46,6 +46,61 @@ MAX_DECISIONS = 100_000  # engine draws/decks-out long before this
 MATCH_TIME_ALLOWANCE_S = 600.0
 
 
+def public_decision_snapshot(observation: dict, seat: int, action: list | None = None) -> dict:
+    """Return only state visible to both players plus the acting player's counts.
+
+    Card identities from either hand/prize zone and the engine's opaque search
+    input are deliberately excluded.  Active/bench card contents are public,
+    but this diagnostic records only counts and attached-energy totals.
+    """
+    current = observation.get("current") or {}
+    players = current.get("players") or []
+
+    def player_counts(player: dict) -> dict:
+        active = [card for card in (player.get("active") or []) if card]
+        bench = [card for card in (player.get("bench") or []) if card]
+        in_play = active + bench
+        return {
+            "hand_count": int(player.get("handCount") or 0),
+            "bench_count": len(bench),
+            "prize_count": len(player.get("prize") or []),
+            "deck_count": int(player.get("deckCount") or 0),
+            "discard_count": len(player.get("discard") or []),
+            "active_energy_count": sum(len(card.get("energies") or []) for card in active),
+            "board_energy_count": sum(len(card.get("energies") or []) for card in in_play),
+        }
+
+    rows = [player_counts(player or {}) for player in players[:2]]
+    while len(rows) < 2:
+        rows.append(player_counts({}))
+    own = rows[seat]
+    opponent = rows[1 - seat]
+    selection = observation.get("select") or {}
+    options = selection.get("option") or []
+    option_types = [int(option.get("type", -1)) for option in options if isinstance(option, dict)]
+    chosen_types = [
+        option_types[index] for index in (action or []) if 0 <= int(index) < len(option_types)
+    ]
+    return {
+        "turn_index": int(current.get("turn") or 0),
+        "turn_action_count": int(current.get("turnActionCount") or 0),
+        "selection_context": selection.get("context"),
+        "hand_count_delta": own["hand_count"] - opponent["hand_count"],
+        "bench_count_delta": own["bench_count"] - opponent["bench_count"],
+        "prize_count_delta": own["prize_count"] - opponent["prize_count"],
+        "own": own,
+        "opponent": opponent,
+        "energy_already_attached_this_turn": bool(current.get("energyAttached")),
+        "energy_attachment_available": 8 in option_types,
+        "attack_ready": 13 in option_types,
+        "end_turn_available": 14 in option_types,
+        "selected_end_turn": 14 in chosen_types,
+        "selected_attack": 13 in chosen_types,
+        "selected_option_types": chosen_types,
+        "option_count": len(option_types),
+    }
+
+
 def load_deck(repo: str) -> list:
     with open(os.path.join(repo, "deck.csv")) as f:
         return [int(x) for x in f.read().split("\n")[:60]]
@@ -71,6 +126,7 @@ class Contestant:
         seed: int,
         deck_path: str | None = None,
         capture_determinization: bool = False,
+        public_telemetry_only: bool = False,
     ):
         self.label = label
         self.repo = os.path.abspath(repo)
@@ -84,6 +140,7 @@ class Contestant:
         self.proc = None
         self.seed = seed
         self.capture_determinization = capture_determinization
+        self.public_telemetry_only = public_telemetry_only
         self.last_telemetry = {}
 
     @property
@@ -125,6 +182,16 @@ class Contestant:
             self.last_telemetry = action.get("telemetry") or {}
             action = action["action"]
         return action
+
+    def telemetry(self) -> dict:
+        """Return planner trace, optionally removing hidden-world fingerprints."""
+        telemetry = dict(self.last_telemetry)
+        if self.public_telemetry_only:
+            telemetry["world_roots"] = [
+                {key: value for key, value in root.items() if key != "fingerprint"}
+                for root in telemetry.get("world_roots", [])
+            ]
+        return telemetry
 
     def stop(self) -> None:
         if self.proc is None:
@@ -232,7 +299,8 @@ def play_match(game, seat0: Contestant, seat1: Contestant) -> dict:
                         {
                             "step": steps,
                             "selection_context": (obs.get("select") or {}).get("context"),
-                            **agent.last_telemetry,
+                            "public_state": public_decision_snapshot(obs, seat, action),
+                            **agent.telemetry(),
                         }
                     )
             except Exception:  # noqa: BLE001 - agent fault => that seat loses
@@ -255,12 +323,20 @@ def run(
     seeds: int,
     base_seed: int,
     semantic_deck: str | None = None,
+    public_telemetry_only: bool = False,
 ) -> dict:
     sys.path.insert(0, REPO)
     os.chdir(REPO)  # libcg.so resolves relative to the repo root
     from cg import game
 
-    semantic = Contestant("semantic", REPO, base_seed, semantic_deck, capture_determinization=True)
+    semantic = Contestant(
+        "semantic",
+        REPO,
+        base_seed,
+        semantic_deck,
+        capture_determinization=True,
+        public_telemetry_only=public_telemetry_only,
+    )
     opp = Contestant(opponent_label, opponent_repo, base_seed)
     semantic.start()
     opp.start()
@@ -507,6 +583,11 @@ def main():
         default=None,
         help="candidate deck CSV for semantic (default: repository deck.csv)",
     )
+    p.add_argument(
+        "--public-telemetry-only",
+        action="store_true",
+        help="omit hidden-world fingerprints while retaining root action/value telemetry",
+    )
     p.add_argument("--json", default=None)
     p.add_argument(
         "--aggregate",
@@ -529,6 +610,7 @@ def main():
             args.seeds,
             args.base_seed,
             args.semantic_deck,
+            args.public_telemetry_only,
         )
         report["promotion"] = promotion_decision(report)
     print(summarize(report))
