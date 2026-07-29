@@ -1,0 +1,51 @@
+{
+  "issue": "SOT-2176",
+  "manifest": "eval/manifests/sot-2176-blind-holdout.json",
+  "matches": 120,
+  "pool": {
+    "wins": 69,
+    "losses": 51,
+    "win_rate": 0.575
+  },
+  "matchups": {
+    "matsu": {"wins": 25, "losses": 15},
+    "take": {"wins": 22, "losses": 18},
+    "ume": {"wins": 22, "losses": 18}
+  },
+  "seat": {
+    "first_wins": 47,
+    "first_losses": 13,
+    "first_win_rate": 0.7833333333333333,
+    "second_wins": 22,
+    "second_losses": 38,
+    "second_win_rate": 0.36666666666666664,
+    "paired_seat_gap": 0.4166666666666667
+  },
+  "audit": {
+    "agent_faults": 0,
+    "unfinished": 0,
+    "illegal_action_faults": 0,
+    "runtime_s": {
+      "mean": 12.167982325691446,
+      "p50": 9.56854204550109,
+      "p95": 27.710416467998584,
+      "max": 34.07060229199851
+    },
+    "max_semantic_think_s": 26.83166737996362,
+    "match_time_allowance_s": 600
+  },
+  "decision": {
+    "promote": false,
+    "champion_behavior_changed": false,
+    "reason": "SOT-2175 promoted no candidate; the retained champion passed the blind operational audit"
+  },
+  "submission": {
+    "archive": "submission.tar.gz",
+    "archive_sha256": "c1a9c99b36827c37fb740823ad61204370ea1b37da866f0709688966ae43e0be",
+    "exec_compatibility": "PASS",
+    "competition": "pokemon-tcg-ai-battle",
+    "ref": 55091718,
+    "status": "COMPLETE",
+    "public_score": 600.0
+  }
+}
