@@ -58,6 +58,16 @@ SOL_CONFIG = {
     },
 }
 
+# Evaluation-only SOT-2175 candidates. The switch is accepted only by the
+# real-engine telemetry harness, so normal/Kaggle execution always retains
+# the frozen champion. Both terms use public board attributes exclusively.
+if os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1":
+    _tempo_candidate = os.environ.get("PTCG_TEMPO_CANDIDATE", "")
+    if _tempo_candidate == "board-energy":
+        SOL_CONFIG["eval_weights"]["energy"] = 0.4
+    elif _tempo_candidate == "active-energy":
+        SOL_CONFIG["eval_weights"]["active_energy"] = 0.2
+
 # Remaining-time-aware budget control (~10 min total clock per player per
 # match; no per-move limit). Thresholds are on THIS agent's cumulative act()
 # wall-clock; crossing one shrinks the per-decision search budget, and past
