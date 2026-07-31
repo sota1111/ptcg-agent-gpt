@@ -5,7 +5,9 @@ archive="$repo/submission.tar.gz"
 for required in main.py deck.csv agents cg; do
   [ -e "$repo/$required" ] || { echo "missing required submission path: $required" >&2; exit 1; }
 done
-tar -C "$repo" -czf "$archive" --exclude='__pycache__' --exclude='*.pyc' main.py deck.csv agents cg
+tar -C "$repo" --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner \
+  --exclude='__pycache__' --exclude='*.pyc' -cf - main.py deck.csv agents cg \
+  | gzip -n > "$archive"
 gzip -t "$archive"
 listing="$(mktemp)"
 trap 'rm -f -- "$listing"' EXIT
