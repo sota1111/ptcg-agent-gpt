@@ -1,0 +1,140 @@
+{
+  "candidates": [
+    {
+      "evidence": "diversified losses classified as policy calibration",
+      "id": "cross-lineage-matchup-value-calibration",
+      "one_change": "calibrate leaf value only for public board/attack-readiness disadvantage"
+    },
+    {
+      "evidence": "claude matchup is materially below the fixed-pool aggregate",
+      "id": "opponent-family-balanced-root-selection",
+      "one_change": "select root action against a balanced public opponent-family prior"
+    },
+    {
+      "evidence": "fixed-pool win rate overstates cross-lineage performance",
+      "id": "diversified-pool-screen-gate",
+      "one_change": "add the frozen diversified pool as a non-regression gate"
+    }
+  ],
+  "champion_behavior_changed": false,
+  "diversified_pool": {
+    "faults": 0,
+    "first_seat": {
+      "matches": 10,
+      "wins": 5
+    },
+    "illegal_actions": 0,
+    "losses": 10,
+    "matches": 20,
+    "opponents": {
+      "claude": {
+        "losses": 7,
+        "wilson95": [
+          0.10778928748621183,
+          0.6032267800204347
+        ],
+        "win_rate": 0.3,
+        "wins": 3
+      },
+      "obo": {
+        "losses": 3,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "runtime_s": {
+      "mean": 16.28670433440275,
+      "p95": 32.05226932099322
+    },
+    "seat_gap": 0.0,
+    "second_seat": {
+      "matches": 10,
+      "wins": 5
+    },
+    "unfinished": 0,
+    "wilson95": [
+      0.2992949144298199,
+      0.7007050855701801
+    ],
+    "win_rate": 0.5,
+    "wins": 10
+  },
+  "fixed_pool": {
+    "losses": 51,
+    "matches": 120,
+    "win_rate": 0.575,
+    "wins": 69
+  },
+  "generalization_gap_pp": 7.5,
+  "hidden_information_leakage": false,
+  "issue": "SOT-2231",
+  "loss_explanations": {
+    "counts": {
+      "matchup robustness": 1,
+      "package provenance": 0,
+      "policy calibration": 8,
+      "pool coverage": 1,
+      "unclassifiable": 0
+    },
+    "shares": {
+      "matchup robustness": 0.1,
+      "package provenance": 0.0,
+      "policy calibration": 0.8,
+      "pool coverage": 0.1,
+      "unclassifiable": 0.0
+    }
+  },
+  "provenance": {
+    "champion": {
+      "archive": "submission.tar.gz",
+      "archive_sha256": "c1a9c99b36827c37fb740823ad61204370ea1b37da866f0709688966ae43e0be",
+      "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+      "deck": "deck.csv",
+      "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+      "entry_point": "main.py",
+      "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+      "terminal_commit": "63f462da65044c469d010b95f5945816c0f7e1b8"
+    },
+    "diversified_report_sha256": {
+      "claude": "7eba7ec9f29d352a5182fbed08f3524b9140c61c04ab72ed420431b6da74ba5c",
+      "obo": "992d8b06e7735eda241c60353602dfe7a4f55ca14d983b18592223d95967d8f6"
+    },
+    "fixed_summary_sha256": "8de51dd789a49ca11df76edeb2c408fe05fe3cf65723bc7c83998ddd7d8fb703",
+    "manifest": "eval/manifests/sot-2231-generalization-gap.json",
+    "manifest_sha256": "ca7a3e1435b449826000e1aa835310db65e5fe8bb822b9ee5b49d0889426685e",
+    "submissions": [
+      {
+        "archive_sha256": "unknown",
+        "deck_sha256": "unknown",
+        "main_sha256": "unknown",
+        "public_score": 571.7,
+        "ref": 55058190,
+        "source_commit": "unknown",
+        "status": "COMPLETE"
+      },
+      {
+        "archive_sha256": "unknown",
+        "deck_sha256": "unknown",
+        "main_sha256": "unknown",
+        "public_score": 557.9,
+        "ref": 55085406,
+        "source_commit": "unknown",
+        "status": "COMPLETE"
+      },
+      {
+        "archive_sha256": "unknown",
+        "deck_sha256": "unknown",
+        "main_sha256": "unknown",
+        "public_score": 521.0,
+        "ref": 55130939,
+        "source_commit": "unknown",
+        "status": "COMPLETE"
+      }
+    ]
+  },
+  "schema_version": 1
+}
