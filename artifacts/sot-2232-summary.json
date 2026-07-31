@@ -1,0 +1,318 @@
+{
+  "champion_behavior_changed": false,
+  "decisions": {
+    "cross-lineage-active-calibration": {
+      "confirm_required": false,
+      "confirm_run": false,
+      "reasons": [
+        "diversified KPI did not improve",
+        "fixed-pool worst-matchup regressed",
+        "mean runtime exceeded 110% gate"
+      ],
+      "runtime_ratio": 1.2977612526472635,
+      "screen_pass": false
+    },
+    "cross-lineage-board-calibration": {
+      "confirm_required": false,
+      "confirm_run": false,
+      "reasons": [
+        "diversified KPI did not improve",
+        "diversified worst-matchup regressed",
+        "fixed-pool worst-matchup regressed"
+      ],
+      "runtime_ratio": 0.9705785898282273,
+      "screen_pass": false
+    }
+  },
+  "hidden_information_leakage": false,
+  "issue": "SOT-2232",
+  "manifest_sha256": "125262a82b64d9859fa1823de9a0913844c36efd113479d26cfe3cddf078cfcb",
+  "promoted": null,
+  "report_sha256": {
+    "artifacts/sot-2232/screen/champion-claude.json": "e2f9853e0d16717f44c1767e92e95210b97f64327f6a81125e805715a9b7fba4",
+    "artifacts/sot-2232/screen/champion-matsu.json": "1ef2de34882fb9ec3c4ae19e56daeb37b0370c50a23450f47f687e0121dde934",
+    "artifacts/sot-2232/screen/champion-obo.json": "81f69330beef69bce51e40ef4e56fee597ab1cfda8c96bd297baf94a10e83331",
+    "artifacts/sot-2232/screen/champion-take.json": "fc783995adef5df5b32fb5e9db73ae4ac08892582875de9353f6a74685fda5d1",
+    "artifacts/sot-2232/screen/champion-ume.json": "61bb933a8bc8f5c1b529ed1c88446992e3498cad157bc983786fd88683d6126e",
+    "artifacts/sot-2232/screen/cross-lineage-active-calibration-claude.json": "b01e2d0513c8aef67b38a6b87a5cbaf45043ea4f90d11d04b8f795993a13300c",
+    "artifacts/sot-2232/screen/cross-lineage-active-calibration-matsu.json": "8c4da7f10bb8efcea86e26d3243ab1575b5fcde78e718f3901ce835f2a485627",
+    "artifacts/sot-2232/screen/cross-lineage-active-calibration-obo.json": "ba25c291c9a62d0114e1921e2594658292c50affa349037b2881668531e49298",
+    "artifacts/sot-2232/screen/cross-lineage-active-calibration-take.json": "88404aed4ba326d82d950ef6e4767c2ada3feeafdc706b52f55c89e24d376f0b",
+    "artifacts/sot-2232/screen/cross-lineage-active-calibration-ume.json": "a0a44e3aba8b1d926ecc5889f5b1fcdc70c6958bb92dccd55f2c77addbca2dc0",
+    "artifacts/sot-2232/screen/cross-lineage-board-calibration-claude.json": "01177ac7edcb31801fd5db1bc0647f0b341afc6a70bd756b54afea4ae634e9b2",
+    "artifacts/sot-2232/screen/cross-lineage-board-calibration-matsu.json": "dc919c3a308083459926405794b5c32fa33c54e6fd681ec53aef619e49fb7c39",
+    "artifacts/sot-2232/screen/cross-lineage-board-calibration-obo.json": "bc772cbfe1b2d1e257bff91283c5bfc0b259a6a3df46ce2094741a74ee265f94",
+    "artifacts/sot-2232/screen/cross-lineage-board-calibration-take.json": "6d0a065d58017515e8dee37ee05ffa2fef0ff1128c4a519dd258647ec225c6a5",
+    "artifacts/sot-2232/screen/cross-lineage-board-calibration-ume.json": "67868832140953f76071605b467fc09830fc98e07eed575b07aa343a0b82417b"
+  },
+  "results": {
+    "champion": {
+      "diversified": {
+        "faults": 0,
+        "first_seat_win_rate": 1.0,
+        "matches": 12,
+        "opponents": {
+          "claude": {
+            "matches": 6,
+            "wilson95": [
+              0.43649056343635395,
+              0.9699474141282697
+            ],
+            "win_rate": 0.8333333333333334,
+            "wins": 5
+          },
+          "obo": {
+            "matches": 6,
+            "wilson95": [
+              0.29998832134152864,
+              0.9032306674407831
+            ],
+            "win_rate": 0.6666666666666666,
+            "wins": 4
+          }
+        },
+        "runtime_s": {
+          "max": 20.908423027023673,
+          "mean": 11.103528411668472,
+          "p95": 20.908423027023673
+        },
+        "second_seat_win_rate": 0.5,
+        "unfinished": 0,
+        "wilson95": [
+          0.46768966087934005,
+          0.9110599603710386
+        ],
+        "win_rate": 0.75,
+        "wins": 9,
+        "worst_matchup": 0.6666666666666666
+      },
+      "fixed": {
+        "faults": 0,
+        "first_seat_win_rate": 0.7777777777777778,
+        "matches": 18,
+        "opponents": {
+          "matsu": {
+            "matches": 6,
+            "wilson95": [
+              0.29998832134152864,
+              0.9032306674407831
+            ],
+            "win_rate": 0.6666666666666666,
+            "wins": 4
+          },
+          "take": {
+            "matches": 6,
+            "wilson95": [
+              0.29998832134152864,
+              0.9032306674407831
+            ],
+            "win_rate": 0.6666666666666666,
+            "wins": 4
+          },
+          "ume": {
+            "matches": 6,
+            "wilson95": [
+              0.43649056343635395,
+              0.9699474141282697
+            ],
+            "win_rate": 0.8333333333333334,
+            "wins": 5
+          }
+        },
+        "runtime_s": {
+          "max": 34.22879188400111,
+          "mean": 14.880054504224164,
+          "p95": 34.22879188400111
+        },
+        "second_seat_win_rate": 0.6666666666666666,
+        "unfinished": 0,
+        "wilson95": [
+          0.49126922453805477,
+          0.8750043085364452
+        ],
+        "win_rate": 0.7222222222222222,
+        "wins": 13,
+        "worst_matchup": 0.6666666666666666
+      }
+    },
+    "cross-lineage-active-calibration": {
+      "diversified": {
+        "faults": 0,
+        "first_seat_win_rate": 0.8333333333333334,
+        "matches": 12,
+        "opponents": {
+          "claude": {
+            "matches": 6,
+            "wilson95": [
+              0.29998832134152864,
+              0.9032306674407831
+            ],
+            "win_rate": 0.6666666666666666,
+            "wins": 4
+          },
+          "obo": {
+            "matches": 6,
+            "wilson95": [
+              0.43649056343635395,
+              0.9699474141282697
+            ],
+            "win_rate": 0.8333333333333334,
+            "wins": 5
+          }
+        },
+        "runtime_s": {
+          "max": 30.25155713802087,
+          "mean": 14.409728940331357,
+          "p95": 30.25155713802087
+        },
+        "second_seat_win_rate": 0.6666666666666666,
+        "unfinished": 0,
+        "wilson95": [
+          0.46768966087934005,
+          0.9110599603710386
+        ],
+        "win_rate": 0.75,
+        "wins": 9,
+        "worst_matchup": 0.6666666666666666
+      },
+      "fixed": {
+        "faults": 0,
+        "first_seat_win_rate": 0.8888888888888888,
+        "matches": 18,
+        "opponents": {
+          "matsu": {
+            "matches": 6,
+            "wilson95": [
+              0.09676933255921683,
+              0.7000116786584712
+            ],
+            "win_rate": 0.3333333333333333,
+            "wins": 2
+          },
+          "take": {
+            "matches": 6,
+            "wilson95": [
+              0.43649056343635395,
+              0.9699474141282697
+            ],
+            "win_rate": 0.8333333333333334,
+            "wins": 5
+          },
+          "ume": {
+            "matches": 6,
+            "wilson95": [
+              0.43649056343635395,
+              0.9699474141282697
+            ],
+            "win_rate": 0.8333333333333334,
+            "wins": 5
+          }
+        },
+        "runtime_s": {
+          "max": 43.28682473601657,
+          "mean": 17.771305742662257,
+          "p95": 43.28682473601657
+        },
+        "second_seat_win_rate": 0.4444444444444444,
+        "unfinished": 0,
+        "wilson95": [
+          0.4374906934425036,
+          0.8372144563633714
+        ],
+        "win_rate": 0.6666666666666666,
+        "wins": 12,
+        "worst_matchup": 0.3333333333333333
+      }
+    },
+    "cross-lineage-board-calibration": {
+      "diversified": {
+        "faults": 0,
+        "first_seat_win_rate": 0.8333333333333334,
+        "matches": 12,
+        "opponents": {
+          "claude": {
+            "matches": 6,
+            "wilson95": [
+              0.6096569663469354,
+              0.9999999999999999
+            ],
+            "win_rate": 1.0,
+            "wins": 6
+          },
+          "obo": {
+            "matches": 6,
+            "wilson95": [
+              0.18761280689940874,
+              0.8123871931005913
+            ],
+            "win_rate": 0.5,
+            "wins": 3
+          }
+        },
+        "runtime_s": {
+          "max": 28.953971501003252,
+          "mean": 10.776846947914843,
+          "p95": 28.953971501003252
+        },
+        "second_seat_win_rate": 0.6666666666666666,
+        "unfinished": 0,
+        "wilson95": [
+          0.46768966087934005,
+          0.9110599603710386
+        ],
+        "win_rate": 0.75,
+        "wins": 9,
+        "worst_matchup": 0.5
+      },
+      "fixed": {
+        "faults": 0,
+        "first_seat_win_rate": 0.7777777777777778,
+        "matches": 18,
+        "opponents": {
+          "matsu": {
+            "matches": 6,
+            "wilson95": [
+              0.18761280689940874,
+              0.8123871931005913
+            ],
+            "win_rate": 0.5,
+            "wins": 3
+          },
+          "take": {
+            "matches": 6,
+            "wilson95": [
+              0.29998832134152864,
+              0.9032306674407831
+            ],
+            "win_rate": 0.6666666666666666,
+            "wins": 4
+          },
+          "ume": {
+            "matches": 6,
+            "wilson95": [
+              0.29998832134152864,
+              0.9032306674407831
+            ],
+            "win_rate": 0.6666666666666666,
+            "wins": 4
+          }
+        },
+        "runtime_s": {
+          "max": 32.10421340999892,
+          "mean": 14.032145670332183,
+          "p95": 32.10421340999892
+        },
+        "second_seat_win_rate": 0.4444444444444444,
+        "unfinished": 0,
+        "wilson95": [
+          0.3861866858065616,
+          0.7969500807306884
+        ],
+        "win_rate": 0.6111111111111112,
+        "wins": 11,
+        "worst_matchup": 0.5
+      }
+    }
+  },
+  "schema_version": 1
+}

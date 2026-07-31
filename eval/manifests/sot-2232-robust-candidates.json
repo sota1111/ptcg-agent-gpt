@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2232",
+  "preregistered_before_experiment": true,
+  "baseline": {
+    "source_issue": "SOT-2231",
+    "terminal_commit": "3d585ecc688bf9486b892e4b0348360c40f90499",
+    "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "diagnosis": "../../artifacts/sot-2231-summary.json",
+    "used_seeds": [2231101, 2231102, 2231103, 2231104, 2231105]
+  },
+  "fixed_variables": {
+    "deck": "deck.csv",
+    "search_budget": {"max_root_actions": 6, "n_worlds": 4, "time_budget_s": 0.8},
+    "rollout": "greedy",
+    "world_aggregation": "sum",
+    "deviate_margin": 0.1,
+    "fallback_semantics": "MCTS -> Greedy -> Rule -> random-legal"
+  },
+  "pools": {
+    "fixed": ["matsu", "take", "ume"],
+    "diversified": ["claude", "obo"]
+  },
+  "candidates": [
+    {
+      "id": "cross-lineage-board-calibration",
+      "hypothesis": "A smaller public total-board energy weight increase improves cross-lineage worst-matchup performance.",
+      "one_change": "evaluator energy weight 0.2 -> 0.3",
+      "retry_evidence": "SOT-2231 newly attributes 8/10 diversified losses to public-board policy calibration; unlike SOT-2175's 0.4 weight this tests a preregistered half-step.",
+      "environment": {"PTCG_TEMPO_CANDIDATE": "cross-lineage-board-calibration"}
+    },
+    {
+      "id": "cross-lineage-active-calibration",
+      "hypothesis": "A smaller public active-energy readiness term improves cross-lineage worst-matchup performance.",
+      "one_change": "evaluator active_energy weight 0.0 -> 0.1",
+      "retry_evidence": "SOT-2231 newly attributes 8/10 diversified losses to public attack-readiness calibration; unlike SOT-2175's 0.2 weight this tests a preregistered half-step.",
+      "environment": {"PTCG_TEMPO_CANDIDATE": "cross-lineage-active-calibration"}
+    }
+  ],
+  "screen": {"base_seed": 2232101, "seeds_per_opponent": 3, "seat_reversal": true},
+  "confirm": {"base_seed": 2232201, "seeds_per_opponent": 10, "seat_reversal": true},
+  "promotion_gate": {
+    "diversified_kpi_improves": true,
+    "worst_matchup_non_regression": true,
+    "fault_timeout_non_increase": true,
+    "mean_runtime_ratio_max": 1.1,
+    "match_runtime_seconds_max": 600,
+    "screen_then_independent_confirm": true
+  },
+  "privacy": {"public_state_only": true, "hidden_zone_features": false, "pool_direct_branching": false}
+}
