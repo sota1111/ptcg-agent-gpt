@@ -1,0 +1,179 @@
+{
+  "decision": {
+    "champion_behavior_changed": false,
+    "operational_audit_passed": true,
+    "promoted": null
+  },
+  "diversified": {
+    "faults": 0,
+    "first_seat_win_rate": 0.3,
+    "illegal_actions": 0,
+    "losses": 10,
+    "matches": 20,
+    "opponents": {
+      "claude": {
+        "matches": 10,
+        "wilson95": [
+          0.16817758120350962,
+          0.6873304525498136
+        ],
+        "win_rate": 0.4,
+        "wins": 4
+      },
+      "obo": {
+        "matches": 10,
+        "wilson95": [
+          0.3126695474501863,
+          0.8318224187964902
+        ],
+        "win_rate": 0.6,
+        "wins": 6
+      }
+    },
+    "runtime_s": {
+      "max": 32.60133225200116,
+      "mean": 13.222852500896261,
+      "p50": 12.125859157487866,
+      "p95": 26.134518033999484
+    },
+    "second_seat_win_rate": 0.7,
+    "unfinished": 0,
+    "wilson95": [
+      0.2992949144298199,
+      0.7007050855701801
+    ],
+    "win_rate": 0.5,
+    "wins": 10,
+    "worst_matchup": 0.4
+  },
+  "fixed": {
+    "faults": 0,
+    "first_seat_win_rate": 0.6,
+    "illegal_actions": 0,
+    "losses": 15,
+    "matches": 30,
+    "opponents": {
+      "matsu": {
+        "matches": 10,
+        "wilson95": [
+          0.10778928748621183,
+          0.6032267800204347
+        ],
+        "win_rate": 0.3,
+        "wins": 3
+      },
+      "take": {
+        "matches": 10,
+        "wilson95": [
+          0.23658959361548731,
+          0.7634104063845126
+        ],
+        "win_rate": 0.5,
+        "wins": 5
+      },
+      "ume": {
+        "matches": 10,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "runtime_s": {
+      "max": 31.215238017990487,
+      "mean": 13.783087470167084,
+      "p50": 11.980025842494797,
+      "p95": 30.307051644980675
+    },
+    "second_seat_win_rate": 0.4,
+    "unfinished": 0,
+    "wilson95": [
+      0.33153851227173764,
+      0.6684614877282624
+    ],
+    "win_rate": 0.5,
+    "wins": 15,
+    "worst_matchup": 0.3
+  },
+  "issue": "SOT-2233",
+  "manifest_sha256": "1083e288e5a1cdca335e9f91b19eeb0ddba2cf4c4cb7da63b9af6415403303c2",
+  "pool": {
+    "faults": 0,
+    "first_seat_win_rate": 0.48,
+    "illegal_actions": 0,
+    "losses": 25,
+    "matches": 50,
+    "opponents": {
+      "claude": {
+        "matches": 10,
+        "wilson95": [
+          0.16817758120350962,
+          0.6873304525498136
+        ],
+        "win_rate": 0.4,
+        "wins": 4
+      },
+      "matsu": {
+        "matches": 10,
+        "wilson95": [
+          0.10778928748621183,
+          0.6032267800204347
+        ],
+        "win_rate": 0.3,
+        "wins": 3
+      },
+      "obo": {
+        "matches": 10,
+        "wilson95": [
+          0.3126695474501863,
+          0.8318224187964902
+        ],
+        "win_rate": 0.6,
+        "wins": 6
+      },
+      "take": {
+        "matches": 10,
+        "wilson95": [
+          0.23658959361548731,
+          0.7634104063845126
+        ],
+        "win_rate": 0.5,
+        "wins": 5
+      },
+      "ume": {
+        "matches": 10,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "runtime_s": {
+      "max": 32.60133225200116,
+      "mean": 13.558993482458755,
+      "p50": 11.980025842494797,
+      "p95": 30.307051644980675
+    },
+    "second_seat_win_rate": 0.52,
+    "unfinished": 0,
+    "wilson95": [
+      0.36644286412332855,
+      0.6335571358766714
+    ],
+    "win_rate": 0.5,
+    "wins": 25,
+    "worst_matchup": 0.3
+  },
+  "report_sha256": {
+    "claude": "da84c1a11a52cb39cb771e6e2e8dc75d45970ea87f84d98e9132d324417ff37a",
+    "matsu": "f9e554ffc7fedfdb133f653bed8cb03046df3c23a1768652f76719dbd1d3c244",
+    "obo": "358f63b52a5df4986dae8892b47a380611e7443891356d879a78d995f930062d",
+    "take": "fbc85f62ee593d49138452501138c66ee3ce454c0af787fe1fe17a6b84c5b111",
+    "ume": "30811d651e384378963b597dcdca4213a903c33bbbe88b8cb3efd55b3590d482"
+  },
+  "schema_version": 1
+}
