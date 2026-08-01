@@ -1,0 +1,2244 @@
+{
+  "candidates": [
+    {
+      "evidence": {
+        "mean_effect": 0.017733852768798852,
+        "support": 28,
+        "total": 45
+      },
+      "id": "bounded-public-setup-continuation",
+      "one_change": "at setup-only public decision points, use a two-decision continuation tie-break under the existing root budget",
+      "screen_confirm_gate": {
+        "confirm": {
+          "both_seats": true,
+          "fixed_pool": [
+            "matsu",
+            "take",
+            "ume",
+            "claude",
+            "obo"
+          ],
+          "seeds": [
+            2255201,
+            2255202,
+            2255203,
+            2255204,
+            2255205
+          ]
+        },
+        "pass": "candidate pool win rate strictly exceeds champion; worst matchup non-regresses; faults/timeouts do not increase; mean runtime <= 110% of champion; max runtime < 600s",
+        "screen": {
+          "both_seats": true,
+          "fixed_pool": [
+            "matsu",
+            "take",
+            "ume",
+            "claude",
+            "obo"
+          ],
+          "seeds": [
+            2255101,
+            2255102
+          ]
+        }
+      }
+    }
+  ],
+  "champion_behavior_changed": false,
+  "excluded_prior_families": [
+    "public-state weights",
+    "action-regret correction",
+    "root cap",
+    "prior temperature",
+    "median aggregation",
+    "trimmed aggregation"
+  ],
+  "horizon_shortfall": {
+    "max_effect": 0.22999999999999998,
+    "mean_effect": 0.017733852768798852,
+    "median_effect": 0.01649100515230062,
+    "support": 28,
+    "support_rate": 0.6222222222222222,
+    "total": 45
+  },
+  "issue": "SOT-2254",
+  "method": {
+    "comparison": "selected one-ply root mean versus mean of the observed bounded two-setup-decision continuation",
+    "diagnostic_only": true,
+    "lookahead": {
+      "decisions": 2,
+      "discount": 1.0,
+      "max_step_gap": 2,
+      "same_turn_only": true
+    }
+  },
+  "privacy_audit": {
+    "allowlist": [
+      "attack_ready",
+      "bench_count_delta",
+      "end_turn_available",
+      "energy_already_attached_this_turn",
+      "energy_attachment_available",
+      "hand_count_delta",
+      "opponent",
+      "option_count",
+      "own",
+      "prize_count_delta",
+      "selected_attack",
+      "selected_end_turn",
+      "selected_option_types",
+      "selection_context",
+      "turn_action_count",
+      "turn_index"
+    ],
+    "hidden_information_leakage": false,
+    "opponent_identity_branching": false,
+    "public_state_only": true
+  },
+  "provenance": {
+    "champion": {
+      "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+      "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+      "champion_main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+      "public_score": 600.0,
+      "submission_ref": 55154527,
+      "terminal_commit": "6c2468e5eca72568b12264fbb233cc4d7443159c",
+      "terminal_issue": "SOT-2242"
+    },
+    "manifest_sha256": "146a8951487024fcd742d43d5b4d34ed9932f59c706eb92256376b2f6a59497d",
+    "report_sha256": {
+      "claude": "890817fbc9d233a86d307df7ec35a824f3a4d25f5330ae9535731f84d6b619f4",
+      "matsu": "676f3769b8e0b5e0878a4857074161607f2f7329d42b14a25bdda61e2a6662a5"
+    }
+  },
+  "runtime": {
+    "faults": 0,
+    "losses": 6,
+    "matches": 12,
+    "max_runtime_s": 39.77832974301418,
+    "unfinished": 0
+  },
+  "schema_version": 1,
+  "sequences": [
+    {
+      "horizon_effect": -0.11246281182921902,
+      "next_setup_score": 0.1936567518204891,
+      "one_ply_score": 0.4185823754789272,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 47,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "option_count": 7,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 45,
+          "discard_count": 0,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 1
+      },
+      "seat": 0,
+      "seed": 2254101,
+      "step": 4,
+      "supported": false,
+      "turn_index": 1,
+      "two_decision_score": 0.30611956364970816
+    },
+    {
+      "horizon_effect": 0.034059896242820964,
+      "next_setup_score": 0.2568549703512546,
+      "one_ply_score": 0.18873517786561267,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 7,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254101,
+      "step": 6,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.22279507410843363
+    },
+    {
+      "horizon_effect": 0.14255465768151554,
+      "next_setup_score": 0.5419642857142857,
+      "one_ply_score": 0.2568549703512546,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254101,
+      "step": 7,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.39940962803277014
+    },
+    {
+      "horizon_effect": 0.050257034632034625,
+      "next_setup_score": 0.3501984126984127,
+      "one_ply_score": 0.24968434343434343,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 0,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 0,
+          "board_energy_count": 2,
+          "deck_count": 45,
+          "discard_count": 1,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 5,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254101,
+      "step": 10,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.29994137806637805
+    },
+    {
+      "horizon_effect": 0.08100233100233101,
+      "next_setup_score": 0.45367132867132864,
+      "one_ply_score": 0.29166666666666663,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 45,
+          "discard_count": 1,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "option_count": 9,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 45,
+          "discard_count": 0,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 8,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.37266899766899764
+    },
+    {
+      "horizon_effect": 0.1605214899813806,
+      "next_setup_score": 0.7747143086340897,
+      "one_ply_score": 0.45367132867132864,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 45,
+          "discard_count": 1,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "option_count": 7,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 44,
+          "discard_count": 1,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 9,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.6141928186527092
+    },
+    {
+      "horizon_effect": 0.01669034090909091,
+      "next_setup_score": 0.056818181818181816,
+      "one_ply_score": 0.0234375,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": -1,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 42,
+          "discard_count": 1,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "option_count": 8,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 9,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.04012784090909091
+    },
+    {
+      "horizon_effect": -0.021464646464646464,
+      "next_setup_score": 0.013888888888888888,
+      "one_ply_score": 0.056818181818181816,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": -2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 42,
+          "discard_count": 1,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 2,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 10,
+      "supported": false,
+      "turn_index": 2,
+      "two_decision_score": 0.03535353535353535
+    },
+    {
+      "horizon_effect": -0.07240091677674676,
+      "next_setup_score": 0.45833333333333337,
+      "one_ply_score": 0.6031351668868269,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 0,
+          "board_energy_count": 3,
+          "deck_count": 43,
+          "discard_count": 2,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 14,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 43,
+          "discard_count": 1,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 4
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 17,
+      "supported": false,
+      "turn_index": 4,
+      "two_decision_score": 0.5307342501100801
+    },
+    {
+      "horizon_effect": 0.06466450216450215,
+      "next_setup_score": 0.5876623376623377,
+      "one_ply_score": 0.45833333333333337,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": true,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 0,
+          "board_energy_count": 3,
+          "deck_count": 43,
+          "discard_count": 2,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 6,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 43,
+          "discard_count": 1,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 4
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 18,
+      "supported": true,
+      "turn_index": 4,
+      "two_decision_score": 0.5229978354978355
+    },
+    {
+      "horizon_effect": -0.08549783549783552,
+      "next_setup_score": 0.41666666666666663,
+      "one_ply_score": 0.5876623376623377,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 0,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 0,
+          "board_energy_count": 3,
+          "deck_count": 43,
+          "discard_count": 2,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 43,
+          "discard_count": 1,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3,
+          3,
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 3,
+        "turn_index": 4
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 19,
+      "supported": false,
+      "turn_index": 4,
+      "two_decision_score": 0.5021645021645021
+    },
+    {
+      "horizon_effect": 0.12648809523809523,
+      "next_setup_score": 0.6696428571428572,
+      "one_ply_score": 0.41666666666666663,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 0,
+          "board_energy_count": 3,
+          "deck_count": 43,
+          "discard_count": 2,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 7,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 40,
+          "discard_count": 2,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          9
+        ],
+        "selection_context": 0,
+        "turn_action_count": 4,
+        "turn_index": 4
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 20,
+      "supported": true,
+      "turn_index": 4,
+      "two_decision_score": 0.5431547619047619
+    },
+    {
+      "horizon_effect": 0.12337644240112161,
+      "next_setup_score": 0.6,
+      "one_ply_score": 0.35324711519775676,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 42,
+          "discard_count": 4,
+          "hand_count": 4,
+          "prize_count": 6
+        },
+        "option_count": 10,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 39,
+          "discard_count": 2,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 6
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 28,
+      "supported": true,
+      "turn_index": 6,
+      "two_decision_score": 0.47662355759887837
+    },
+    {
+      "horizon_effect": 0.0433740804096957,
+      "next_setup_score": 0.6867481608193914,
+      "one_ply_score": 0.6,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 4,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 42,
+          "discard_count": 4,
+          "hand_count": 4,
+          "prize_count": 6
+        },
+        "option_count": 13,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 37,
+          "discard_count": 3,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 6
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 29,
+      "supported": true,
+      "turn_index": 6,
+      "two_decision_score": 0.6433740804096957
+    },
+    {
+      "horizon_effect": -0.0864973262032086,
+      "next_setup_score": 0.54375,
+      "one_ply_score": 0.7167446524064172,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 42,
+          "discard_count": 4,
+          "hand_count": 4,
+          "prize_count": 6
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 3,
+          "deck_count": 37,
+          "discard_count": 3,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          6
+        ],
+        "selection_context": 30,
+        "turn_action_count": 5,
+        "turn_index": 6
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 32,
+      "supported": false,
+      "turn_index": 6,
+      "two_decision_score": 0.6302473262032086
+    },
+    {
+      "horizon_effect": 0.042364926739926756,
+      "next_setup_score": 0.7216346153846154,
+      "one_ply_score": 0.6369047619047619,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 3,
+          "deck_count": 42,
+          "discard_count": 3,
+          "hand_count": 4,
+          "prize_count": 5
+        },
+        "option_count": 12,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 1,
+          "board_energy_count": 0,
+          "deck_count": 36,
+          "discard_count": 8,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 8
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 41,
+      "supported": true,
+      "turn_index": 8,
+      "two_decision_score": 0.6792696886446886
+    },
+    {
+      "horizon_effect": -0.02571224272579853,
+      "next_setup_score": 0.6702101299330183,
+      "one_ply_score": 0.7216346153846154,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 3,
+          "deck_count": 42,
+          "discard_count": 3,
+          "hand_count": 4,
+          "prize_count": 5
+        },
+        "option_count": 5,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 1,
+          "board_energy_count": 0,
+          "deck_count": 30,
+          "discard_count": 8,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 22,
+        "turn_action_count": 2,
+        "turn_index": 8
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 42,
+      "supported": false,
+      "turn_index": 8,
+      "two_decision_score": 0.6959223726588168
+    },
+    {
+      "horizon_effect": 0.09197826836682421,
+      "next_setup_score": 0.8541666666666666,
+      "one_ply_score": 0.6702101299330183,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 3,
+          "deck_count": 42,
+          "discard_count": 3,
+          "hand_count": 4,
+          "prize_count": 5
+        },
+        "option_count": 2,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 1,
+          "board_energy_count": 0,
+          "deck_count": 30,
+          "discard_count": 8,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 21,
+        "turn_action_count": 3,
+        "turn_index": 8
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 43,
+      "supported": true,
+      "turn_index": 8,
+      "two_decision_score": 0.7621883982998425
+    },
+    {
+      "horizon_effect": 0.1651785714285714,
+      "next_setup_score": 1.0,
+      "one_ply_score": 0.6696428571428572,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 41,
+          "discard_count": 3,
+          "hand_count": 3,
+          "prize_count": 5
+        },
+        "option_count": 11,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 34,
+          "discard_count": 9,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 10
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 49,
+      "supported": true,
+      "turn_index": 10,
+      "two_decision_score": 0.8348214285714286
+    },
+    {
+      "horizon_effect": -0.01969696969696977,
+      "next_setup_score": 0.9606060606060606,
+      "one_ply_score": 1.0,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 5,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 41,
+          "discard_count": 3,
+          "hand_count": 3,
+          "prize_count": 5
+        },
+        "option_count": 13,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 31,
+          "discard_count": 10,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 10
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 50,
+      "supported": false,
+      "turn_index": 10,
+      "two_decision_score": 0.9803030303030302
+    },
+    {
+      "horizon_effect": 0.019696969696969657,
+      "next_setup_score": 1.0,
+      "one_ply_score": 0.9606060606060606,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 4,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 41,
+          "discard_count": 3,
+          "hand_count": 3,
+          "prize_count": 5
+        },
+        "option_count": 2,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 31,
+          "discard_count": 10,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 3,
+        "turn_index": 10
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 51,
+      "supported": true,
+      "turn_index": 10,
+      "two_decision_score": 0.9803030303030302
+    },
+    {
+      "horizon_effect": -0.025000000000000022,
+      "next_setup_score": 0.95,
+      "one_ply_score": 1.0,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 5,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 41,
+          "discard_count": 3,
+          "hand_count": 3,
+          "prize_count": 5
+        },
+        "option_count": 12,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 30,
+          "discard_count": 11,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 4,
+        "turn_index": 10
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 52,
+      "supported": false,
+      "turn_index": 10,
+      "two_decision_score": 0.975
+    },
+    {
+      "horizon_effect": 0.01649100515230062,
+      "next_setup_score": 0.9829820103046012,
+      "one_ply_score": 0.95,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 4,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 41,
+          "discard_count": 3,
+          "hand_count": 3,
+          "prize_count": 5
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 3,
+          "deck_count": 30,
+          "discard_count": 11,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 5,
+        "turn_index": 10
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 53,
+      "supported": true,
+      "turn_index": 10,
+      "two_decision_score": 0.9664910051523006
+    },
+    {
+      "horizon_effect": -0.01879928191926017,
+      "next_setup_score": 0.9453834464660809,
+      "one_ply_score": 0.9829820103046012,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 41,
+          "discard_count": 3,
+          "hand_count": 3,
+          "prize_count": 5
+        },
+        "option_count": 1,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 3,
+          "deck_count": 30,
+          "discard_count": 11,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 6,
+        "turn_index": 10
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 54,
+      "supported": false,
+      "turn_index": 10,
+      "two_decision_score": 0.964182728385341
+    },
+    {
+      "horizon_effect": 0.01666666666666672,
+      "next_setup_score": 0.7,
+      "one_ply_score": 0.6666666666666666,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 6,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 40,
+          "discard_count": 7,
+          "hand_count": 2,
+          "prize_count": 5
+        },
+        "option_count": 18,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 2,
+          "board_energy_count": 3,
+          "deck_count": 31,
+          "discard_count": 9,
+          "hand_count": 8,
+          "prize_count": 5
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          9
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 12
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 62,
+      "supported": true,
+      "turn_index": 12,
+      "two_decision_score": 0.6833333333333333
+    },
+    {
+      "horizon_effect": 0.025000000000000022,
+      "next_setup_score": 0.75,
+      "one_ply_score": 0.7,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": 1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 5,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 40,
+          "discard_count": 7,
+          "hand_count": 2,
+          "prize_count": 5
+        },
+        "option_count": 15,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 2,
+          "board_energy_count": 3,
+          "deck_count": 31,
+          "discard_count": 9,
+          "hand_count": 7,
+          "prize_count": 5
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 12
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 63,
+      "supported": true,
+      "turn_index": 12,
+      "two_decision_score": 0.725
+    },
+    {
+      "horizon_effect": 0.012500000000000067,
+      "next_setup_score": 1.0,
+      "one_ply_score": 0.975,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 40,
+          "discard_count": 7,
+          "hand_count": 2,
+          "prize_count": 5
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 3,
+          "bench_count": 2,
+          "board_energy_count": 4,
+          "deck_count": 31,
+          "discard_count": 10,
+          "hand_count": 5,
+          "prize_count": 5
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          6
+        ],
+        "selection_context": 30,
+        "turn_action_count": 6,
+        "turn_index": 12
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 66,
+      "supported": true,
+      "turn_index": 12,
+      "two_decision_score": 0.9875
+    },
+    {
+      "horizon_effect": 0.005480428517515623,
+      "next_setup_score": 1.0,
+      "one_ply_score": 0.9890391429649688,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 0,
+          "board_energy_count": 2,
+          "deck_count": 15,
+          "discard_count": 32,
+          "hand_count": 8,
+          "prize_count": 1
+        },
+        "option_count": 8,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 22,
+          "discard_count": 24,
+          "hand_count": 9,
+          "prize_count": 2
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 18
+      },
+      "seat": 1,
+      "seed": 2254102,
+      "step": 86,
+      "supported": true,
+      "turn_index": 18,
+      "two_decision_score": 0.9945195714824844
+    },
+    {
+      "horizon_effect": 0.07113376457117171,
+      "next_setup_score": 0.6382054673151203,
+      "one_ply_score": 0.49593793817277676,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 0,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 0,
+        "opponent": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 47,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "option_count": 2,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 47,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          0
+        ],
+        "selection_context": 38,
+        "turn_action_count": 4,
+        "turn_index": 0
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 3,
+      "supported": true,
+      "turn_index": 0,
+      "two_decision_score": 0.5670717027439485
+    },
+    {
+      "horizon_effect": 0.03977272727272729,
+      "next_setup_score": 0.5795454545454546,
+      "one_ply_score": 0.5,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 47,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "option_count": 12,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 1,
+          "board_energy_count": 0,
+          "deck_count": 45,
+          "discard_count": 0,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 1
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 5,
+      "supported": true,
+      "turn_index": 1,
+      "two_decision_score": 0.5397727272727273
+    },
+    {
+      "horizon_effect": -0.025195729559719715,
+      "next_setup_score": 0.5291539954260152,
+      "one_ply_score": 0.5795454545454546,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": 1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 0,
+        "opponent": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 47,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 1,
+          "board_energy_count": 0,
+          "deck_count": 45,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 2,
+        "turn_index": 1
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 6,
+      "supported": false,
+      "turn_index": 1,
+      "two_decision_score": 0.5543497249857349
+    },
+    {
+      "horizon_effect": -0.19827223503793712,
+      "next_setup_score": 0.27845552992412576,
+      "one_ply_score": 0.675,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 44,
+          "discard_count": 1,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 13,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 43,
+          "discard_count": 1,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 3
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 14,
+      "supported": false,
+      "turn_index": 3,
+      "two_decision_score": 0.4767277649620629
+    },
+    {
+      "horizon_effect": 0.21492900079584715,
+      "next_setup_score": 0.70831353151582,
+      "one_ply_score": 0.27845552992412576,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 44,
+          "discard_count": 1,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 11,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 41,
+          "discard_count": 2,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 3
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 15,
+      "supported": true,
+      "turn_index": 3,
+      "two_decision_score": 0.4933845307199729
+    },
+    {
+      "horizon_effect": -0.2087240734502177,
+      "next_setup_score": 0.2908653846153846,
+      "one_ply_score": 0.70831353151582,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 44,
+          "discard_count": 1,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 1,
+          "board_energy_count": 1,
+          "deck_count": 41,
+          "discard_count": 2,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 3,
+        "turn_index": 3
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 16,
+      "supported": false,
+      "turn_index": 3,
+      "two_decision_score": 0.4995894580656023
+    },
+    {
+      "horizon_effect": 0.1053034119788945,
+      "next_setup_score": 0.3357347226242441,
+      "one_ply_score": 0.1251278986664551,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -1,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 4,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 42,
+          "discard_count": 4,
+          "hand_count": 4,
+          "prize_count": 6
+        },
+        "option_count": 12,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 39,
+          "discard_count": 3,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 5
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 26,
+      "supported": true,
+      "turn_index": 5,
+      "two_decision_score": 0.2304313106453496
+    },
+    {
+      "horizon_effect": -0.022980997675758397,
+      "next_setup_score": 0.2897727272727273,
+      "one_ply_score": 0.3357347226242441,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -1,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 42,
+          "discard_count": 4,
+          "hand_count": 4,
+          "prize_count": 6
+        },
+        "option_count": 2,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 1,
+          "board_energy_count": 2,
+          "deck_count": 39,
+          "discard_count": 3,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3,
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 2,
+        "turn_index": 5
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 27,
+      "supported": false,
+      "turn_index": 5,
+      "two_decision_score": 0.3127537249484857
+    },
+    {
+      "horizon_effect": -0.10176282051282054,
+      "next_setup_score": 0.19230769230769232,
+      "one_ply_score": 0.39583333333333337,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -2,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 2,
+          "board_energy_count": 2,
+          "deck_count": 38,
+          "discard_count": 4,
+          "hand_count": 6,
+          "prize_count": 5
+        },
+        "option_count": 7,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 36,
+          "discard_count": 7,
+          "hand_count": 9,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 7
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 39,
+      "supported": false,
+      "turn_index": 7,
+      "two_decision_score": 0.29407051282051283
+    },
+    {
+      "horizon_effect": -0.08430908808933003,
+      "next_setup_score": 0.023689516129032258,
+      "one_ply_score": 0.19230769230769232,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -2,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 2,
+          "board_energy_count": 2,
+          "deck_count": 38,
+          "discard_count": 4,
+          "hand_count": 6,
+          "prize_count": 5
+        },
+        "option_count": 8,
+        "own": {
+          "active_energy_count": 1,
+          "bench_count": 0,
+          "board_energy_count": 1,
+          "deck_count": 36,
+          "discard_count": 8,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          8
+        ],
+        "selection_context": 0,
+        "turn_action_count": 2,
+        "turn_index": 7
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 40,
+      "supported": false,
+      "turn_index": 7,
+      "two_decision_score": 0.10799860421836228
+    },
+    {
+      "horizon_effect": 0.003391935092187097,
+      "next_setup_score": 0.03047338631340645,
+      "one_ply_score": 0.023689516129032258,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -2,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 2,
+          "bench_count": 2,
+          "board_energy_count": 2,
+          "deck_count": 38,
+          "discard_count": 4,
+          "hand_count": 6,
+          "prize_count": 5
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 0,
+          "board_energy_count": 2,
+          "deck_count": 36,
+          "discard_count": 8,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 3,
+        "turn_index": 7
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 41,
+      "supported": true,
+      "turn_index": 7,
+      "two_decision_score": 0.027081451221219355
+    },
+    {
+      "horizon_effect": 0.006578947368421052,
+      "next_setup_score": 0.013157894736842105,
+      "one_ply_score": 0.0,
+      "public_state": {
+        "attack_ready": true,
+        "bench_count_delta": -3,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 3,
+          "board_energy_count": 1,
+          "deck_count": 36,
+          "discard_count": 7,
+          "hand_count": 5,
+          "prize_count": 5
+        },
+        "option_count": 8,
+        "own": {
+          "active_energy_count": 2,
+          "bench_count": 0,
+          "board_energy_count": 2,
+          "deck_count": 36,
+          "discard_count": 7,
+          "hand_count": 8,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 9
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 50,
+      "supported": true,
+      "turn_index": 9,
+      "two_decision_score": 0.006578947368421052
+    },
+    {
+      "horizon_effect": -0.015,
+      "next_setup_score": 0.0,
+      "one_ply_score": 0.03,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -3,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 3,
+          "board_energy_count": 1,
+          "deck_count": 36,
+          "discard_count": 7,
+          "hand_count": 5,
+          "prize_count": 5
+        },
+        "option_count": 4,
+        "own": {
+          "active_energy_count": 4,
+          "bench_count": 0,
+          "board_energy_count": 4,
+          "deck_count": 35,
+          "discard_count": 8,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          6
+        ],
+        "selection_context": 30,
+        "turn_action_count": 6,
+        "turn_index": 9
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 55,
+      "supported": false,
+      "turn_index": 9,
+      "two_decision_score": 0.015
+    },
+    {
+      "horizon_effect": 0.22999999999999998,
+      "next_setup_score": 0.45999999999999996,
+      "one_ply_score": 0.0,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -3,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 3,
+          "board_energy_count": 1,
+          "deck_count": 36,
+          "discard_count": 7,
+          "hand_count": 5,
+          "prize_count": 5
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 3,
+          "bench_count": 0,
+          "board_energy_count": 3,
+          "deck_count": 35,
+          "discard_count": 9,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 1,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          6
+        ],
+        "selection_context": 30,
+        "turn_action_count": 7,
+        "turn_index": 9
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 56,
+      "supported": true,
+      "turn_index": 9,
+      "two_decision_score": 0.22999999999999998
+    },
+    {
+      "horizon_effect": 7.095391601907314e-05,
+      "next_setup_score": 0.0001419078320381463,
+      "one_ply_score": 0.0,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -2,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": true,
+        "energy_attachment_available": false,
+        "hand_count_delta": 3,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 35,
+          "discard_count": 9,
+          "hand_count": 4,
+          "prize_count": 5
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 3,
+          "bench_count": 0,
+          "board_energy_count": 3,
+          "deck_count": 34,
+          "discard_count": 10,
+          "hand_count": 7,
+          "prize_count": 5
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          6
+        ],
+        "selection_context": 30,
+        "turn_action_count": 3,
+        "turn_index": 11
+      },
+      "seat": 0,
+      "seed": 2254103,
+      "step": 64,
+      "supported": true,
+      "turn_index": 11,
+      "two_decision_score": 7.095391601907314e-05
+    },
+    {
+      "horizon_effect": 0.1886362279659612,
+      "next_setup_score": 0.42356875222821866,
+      "one_ply_score": 0.046296296296296294,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -2,
+        "end_turn_available": true,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": true,
+        "hand_count_delta": 2,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 45,
+          "discard_count": 0,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 8,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          7
+        ],
+        "selection_context": 0,
+        "turn_action_count": 1,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254103,
+      "step": 7,
+      "supported": true,
+      "turn_index": 2,
+      "two_decision_score": 0.23493252426225747
+    },
+    {
+      "horizon_effect": -0.17636232615717565,
+      "next_setup_score": 0.07084409991386736,
+      "one_ply_score": 0.42356875222821866,
+      "public_state": {
+        "attack_ready": false,
+        "bench_count_delta": -2,
+        "end_turn_available": false,
+        "energy_already_attached_this_turn": false,
+        "energy_attachment_available": false,
+        "hand_count_delta": 1,
+        "opponent": {
+          "active_energy_count": 1,
+          "bench_count": 2,
+          "board_energy_count": 1,
+          "deck_count": 45,
+          "discard_count": 0,
+          "hand_count": 5,
+          "prize_count": 6
+        },
+        "option_count": 3,
+        "own": {
+          "active_energy_count": 0,
+          "bench_count": 0,
+          "board_energy_count": 0,
+          "deck_count": 46,
+          "discard_count": 0,
+          "hand_count": 6,
+          "prize_count": 6
+        },
+        "prize_count_delta": 0,
+        "selected_attack": false,
+        "selected_end_turn": false,
+        "selected_option_types": [
+          3,
+          3,
+          3
+        ],
+        "selection_context": 7,
+        "turn_action_count": 2,
+        "turn_index": 2
+      },
+      "seat": 1,
+      "seed": 2254103,
+      "step": 8,
+      "supported": false,
+      "turn_index": 2,
+      "two_decision_score": 0.247206426071043
+    }
+  ]
+}

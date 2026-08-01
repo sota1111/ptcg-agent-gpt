@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2254",
+  "preregistered_before_experiment": true,
+  "purpose": "quantify whether bounded public action sequences expose setup value missed by one-ply selection",
+  "provenance": {
+    "terminal_issue": "SOT-2242",
+    "terminal_commit": "6c2468e5eca72568b12264fbb233cc4d7443159c",
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "champion_main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "champion_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "submission_ref": 55154527,
+    "public_score": 600.0
+  },
+  "fixed_conditions": {
+    "seeds": [2254101, 2254102, 2254103],
+    "excluded_seed_ranges": ["2240101..2240103", "2241101..2241102", "2241201..2241205", "2242101..2242105"],
+    "seat_reversal": true,
+    "matches_per_opponent": 6,
+    "search_budget": {"max_root_actions": 6, "n_worlds": 4, "time_budget_s": 0.8},
+    "lookahead": {"decisions": 2, "max_step_gap": 2, "same_turn_only": true, "discount": 1.0},
+    "runtime_budget_s": 600,
+    "candidate_limit": 3
+  },
+  "opponents": [
+    {"id": "matsu", "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799", "report": "../../artifacts/sot-2254/traces/matsu.json"},
+    {"id": "claude", "commit": "f5b63c4a570e9ec1c26c0c0e04d6f6a25925b810", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799", "report": "../../artifacts/sot-2254/traces/claude.json"}
+  ],
+  "privacy": {
+    "public_state_allowlist": ["turn_index", "turn_action_count", "selection_context", "hand_count_delta", "bench_count_delta", "prize_count_delta", "own", "opponent", "energy_already_attached_this_turn", "energy_attachment_available", "attack_ready", "end_turn_available", "selected_end_turn", "selected_attack", "selected_option_types", "option_count"],
+    "hidden_zone_features": false,
+    "opponent_identity_branching": false
+  },
+  "excluded_prior_families": ["public-state weights", "action-regret correction", "root cap", "prior temperature", "median aggregation", "trimmed aggregation"],
+  "promotion_gate": {
+    "screen": {"seeds": [2255101, 2255102], "both_seats": true, "fixed_pool": ["matsu", "take", "ume", "claude", "obo"]},
+    "confirm": {"seeds": [2255201, 2255202, 2255203, 2255204, 2255205], "both_seats": true, "fixed_pool": ["matsu", "take", "ume", "claude", "obo"]},
+    "pass": "candidate pool win rate strictly exceeds champion; worst matchup non-regresses; faults/timeouts do not increase; mean runtime <= 110% of champion; max runtime < 600s"
+  }
+}
