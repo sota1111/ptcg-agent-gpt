@@ -67,13 +67,6 @@ if os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1":
         SOL_CONFIG["eval_weights"]["energy"] = 0.4
     elif _tempo_candidate == "active-energy":
         SOL_CONFIG["eval_weights"]["active_energy"] = 0.2
-    _regret_candidate = os.environ.get("PTCG_REGRET_CANDIDATE", "")
-    if _regret_candidate in {
-        "mid-active-energy-deficit-leaf-penalty",
-        "early-bench-deficit-setup-priority",
-        "mid-neutral-root-tiebreak",
-    }:
-        SOL_CONFIG["eval_weights"]["regret_candidate"] = _regret_candidate
 
 # Remaining-time-aware budget control (~10 min total clock per player per
 # match; no per-move limit). Thresholds are on THIS agent's cumulative act()
