@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2242",
+  "candidate": null,
+  "champion": {
+    "terminal_commit": "ecc0a20e8520fa9a365f841ba6d238c568c73745",
+    "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "behavior_changed": false
+  },
+  "holdout": {
+    "manifest": "eval/manifests/sot-2242-blind-holdout.json",
+    "summary": "artifacts/sot-2242-summary.json",
+    "matches": 50,
+    "wins": 26,
+    "losses": 24,
+    "faults": 0,
+    "unfinished": 0,
+    "illegal_actions": 0
+  },
+  "artifact": {
+    "archive_sha256": "c3b9f8cc2b67b25e1be5b0d66230b0fbc2009316e72eb9817a87146b9d6b48c7",
+    "canonical_content_sha256": "c99faf21da398563c92b905c94b00c5b30a3d562f76f14c315e8e67f32cbb509",
+    "source_commit": "bc90f54a51bf295926317422a6ee8774a7890df4",
+    "rebuild_byte_identical": true,
+    "isolated_exec": "PASS"
+  },
+  "submission": {
+    "competition": "pokemon-tcg-ai-battle",
+    "submitted": true,
+    "ref": "55154527",
+    "status": "COMPLETE",
+    "public_score": 600.0,
+    "polled_at": "2026-08-01T05:29:00Z",
+    "message": "SOT-2242 bc90f54 [artifact:sha256:c3b9f8cc2b67b25e1be5b0d66230b0fbc2009316e72eb9817a87146b9d6b48c7]",
+    "poll_note": "Kaggle completed evaluation and returned the public score"
+  }
+}

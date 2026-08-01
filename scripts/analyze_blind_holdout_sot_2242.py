@@ -89,9 +89,7 @@ def main() -> int:
             for label in reports
         },
         "fixed": summarize([reports[label] for label in manifest["pools"]["fixed"]]),
-        "diversified": summarize(
-            [reports[label] for label in manifest["pools"]["diversified"]]
-        ),
+        "diversified": summarize([reports[label] for label in manifest["pools"]["diversified"]]),
         "worst_matchups": summarize(
             [reports[label] for label in manifest["pools"]["worst_matchups"]]
         ),
@@ -100,7 +98,10 @@ def main() -> int:
             "promoted": None,
             "champion_behavior_changed": False,
             "operational_audit_passed": True,
-            "reason": "SOT-2241 promoted no candidate; holdout had no faults, unfinished games, or runtime breach",
+            "reason": (
+                "SOT-2241 promoted no candidate; holdout had no faults, "
+                "unfinished games, or runtime breach"
+            ),
         },
     }
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
