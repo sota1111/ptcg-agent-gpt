@@ -1,24 +1,14 @@
+import importlib.util
 import json
 from pathlib import Path
 
-from agents.planner import MctsPlanner, PlannerConfig
-
 MANIFEST = Path("eval/manifests/sot-2255-selective-lookahead-promotion.json")
-
-
-class Option:
-    def __init__(self, option_type: int):
-        self.type = option_type
-
-
-class Select:
-    def __init__(self, *types: int):
-        self.option = [Option(value) for value in types]
-
-
-class Obs:
-    def __init__(self, *types: int):
-        self.select = Select(*types)
+SPEC = importlib.util.spec_from_file_location(
+    "selective_lookahead", Path("scripts/analyze_selective_lookahead_sot_2255.py")
+)
+assert SPEC and SPEC.loader
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
 
 
 def test_manifest_preregisters_one_change_and_independent_seeds() -> None:
@@ -31,9 +21,15 @@ def test_manifest_preregisters_one_change_and_independent_seeds() -> None:
     assert manifest["privacy"]["opponent_identity_branching"] is False
 
 
-def test_candidate_defaults_off_and_recognizes_setup_only_actions() -> None:
-    assert PlannerConfig().selective_setup_lookahead is False
-    assert MctsPlanner._is_setup_action(Obs(7, 8, 14), [0]) is True
-    assert MctsPlanner._is_setup_action(Obs(7, 8, 14), [2]) is False
-    assert MctsPlanner._is_setup_action(Obs(7, 13), [0, 1]) is False
-    assert MctsPlanner._is_setup_action(Obs(7), []) is False
+def test_screen_is_complete_and_failed_candidate_preserves_champion() -> None:
+    result = MODULE.analyze(MANIFEST)
+    assert result["decision"]["screen_pass"] is False
+    assert result["decision"]["confirm_run"] is False
+    assert "worst matchup matsu regressed" in result["decision"]["reasons"]
+    assert result["confirm"] == {}
+    assert result["promoted"] is None
+    assert result["champion_behavior_changed"] is False
+    assert result["hidden_information_leakage"] is False
+    for identity in ("champion", "bounded-public-setup-continuation"):
+        assert result["results"][identity]["fixed"]["faults"] == 0
+        assert result["results"][identity]["diversified"]["unfinished"] == 0

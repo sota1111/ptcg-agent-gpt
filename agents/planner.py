@@ -116,9 +116,6 @@ class PlannerConfig:
     # Robust modes normalize visits per world before reducing so one world
     # cannot dominate merely because it received more wall-clock iterations.
     world_aggregation: str = "sum"  # "sum" | "median" | "trimmed_mean"
-    # Evaluation-only SOT-2255 candidate.  Under the same wall-clock budget,
-    # allow one extra tree edge only for consecutive public setup actions.
-    selective_setup_lookahead: bool = False
 
 
 @dataclass
@@ -577,25 +574,15 @@ class MctsPlanner:
         node = world.root
         path = []
         depth = 0
-        setup_continuation = False
         value = None
         while True:
             if node.terminal is not None:
                 value = node.terminal
                 break
-            depth_limit = self.config.max_tree_depth
-            if self.config.selective_setup_lookahead and setup_continuation:
-                depth_limit += 1
-            if depth >= depth_limit or not node.edges:
+            if depth >= self.config.max_tree_depth or not node.edges:
                 value = self._rollout(node, root_player, rng, deadline)
                 break
             edge = self._select_edge(node, root_player)
-            is_setup_edge = self._is_setup_action(node.obs, edge[0])
-            if depth == 0:
-                setup_continuation = is_setup_edge
-            elif self.config.selective_setup_lookahead and setup_continuation and not is_setup_edge:
-                value = self._rollout(node, root_player, rng, deadline)
-                break
             path.append(edge)
             if edge[1] is None:
                 child = self._expand(node, edge[0], root_player, rng)
@@ -612,17 +599,6 @@ class MctsPlanner:
             edge[2] += 1
             edge[3] += value
         world.iterations += 1
-
-    @staticmethod
-    def _is_setup_action(obs, action) -> bool:
-        """Whether an action selects only public non-attack/non-end-turn options."""
-        options = list(getattr(getattr(obs, "select", None), "option", None) or ())
-        selected_types = {
-            getattr(options[index], "type", -1)
-            for index in action
-            if 0 <= index < len(options)
-        }
-        return bool(selected_types) and not bool(selected_types & {13, 14})
 
     def _select_edge(self, node, root_player):
         c = self.config.uct_c
