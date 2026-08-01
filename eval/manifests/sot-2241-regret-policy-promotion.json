@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2241",
+  "preregistered_before_experiment": true,
+  "baseline": {
+    "source_issue": "SOT-2240",
+    "terminal_commit": "d0b91306966d183f3763563f8c8a32aa9a1d7c4f",
+    "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "diagnosis": "../../artifacts/sot-2240-summary.json",
+    "used_seeds": [2240101, 2240102, 2240103]
+  },
+  "fixed_variables": {
+    "deck": "deck.csv",
+    "search_budget": {"max_root_actions": 6, "n_worlds": 4, "time_budget_s": 0.8},
+    "rollout": "greedy",
+    "world_aggregation": "sum",
+    "deviate_margin": 0.1,
+    "fallback_semantics": "MCTS -> Greedy -> Rule -> random-legal"
+  },
+  "pools": {
+    "fixed": ["matsu", "take", "ume"],
+    "diversified": ["claude", "obo"],
+    "worst_matchups": ["matsu", "claude"]
+  },
+  "opponent_repositories": {
+    "matsu": "/workspaces/ptcg-agent-matsu",
+    "take": "/workspaces/ptcg-agent-take",
+    "ume": "/workspaces/ptcg-agent-ume",
+    "claude": "/workspaces/ptcg-agent-claude",
+    "obo": "/workspaces/ptcg-agent-obo"
+  },
+  "candidates": [
+    {
+      "id": "mid-active-energy-deficit-leaf-penalty",
+      "hypothesis": "A bounded midgame leaf penalty only when public active Energy trails reduces the largest common action-regret cluster.",
+      "one_change": "public turn 4..12 own active-energy deficit applies -0.18 leaf score",
+      "difference_from_prior_axes": "state-gated deficit penalty, not a generic board or active-energy weight",
+      "environment": {"PTCG_REGRET_CANDIDATE": "mid-active-energy-deficit-leaf-penalty"}
+    },
+    {
+      "id": "early-bench-deficit-setup-priority",
+      "hypothesis": "A bounded early leaf bonus only while the public bench trails improves setup sequencing.",
+      "one_change": "public turn <=4 own bench deficit applies +0.14 leaf score",
+      "difference_from_prior_axes": "early deficit-gated setup preference, not a generic board/readiness weight",
+      "environment": {"PTCG_REGRET_CANDIDATE": "early-bench-deficit-setup-priority"}
+    },
+    {
+      "id": "mid-neutral-root-tiebreak",
+      "hypothesis": "A small midgame public-neutral leaf preference breaks otherwise close root choices in the isolated regret cluster.",
+      "one_change": "public turn 4..12 equal active-energy, bench, and prize tempo applies +0.08 leaf score",
+      "difference_from_prior_axes": "phase-and-neutral-state tiebreak, not opponent identity or a global evaluator weight",
+      "environment": {"PTCG_REGRET_CANDIDATE": "mid-neutral-root-tiebreak"}
+    }
+  ],
+  "screen": {"base_seed": 2241101, "seeds_per_opponent": 2, "seat_reversal": true},
+  "confirm": {"base_seed": 2241201, "seeds_per_opponent": 5, "seat_reversal": true},
+  "promotion_gate": {
+    "diversified_kpi_improves": true,
+    "worst_matchup_non_regression": true,
+    "fixed_pool_non_regression": true,
+    "wilson95_recorded": true,
+    "fault_timeout_non_increase": true,
+    "mean_runtime_ratio_max": 1.1,
+    "match_runtime_seconds_max": 600,
+    "screen_then_independent_confirm": true
+  },
+  "privacy": {
+    "public_state_only": true,
+    "hidden_zone_features": false,
+    "opponent_identity_branching": false,
+    "pool_direct_branching": false
+  }
+}

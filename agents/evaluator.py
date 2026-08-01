@@ -41,6 +41,10 @@ DEFAULT_WEIGHTS = {
     # drawing for the finisher remains correctly valued.
     "deck_low_prize_gate": 0,
     "scale": 0.6,  # logistic scale on the score difference
+    # Evaluation-only, public-state SOT-2241 leaf corrections. Empty in the
+    # champion; main.py enables exactly one preregistered candidate only for
+    # the real-engine telemetry harness.
+    "regret_candidate": "",
 }
 
 PRIZE_START = 6  # PRIZE_SIZE (ptcgProgram 22/Core.h:14)
@@ -76,7 +80,34 @@ class HeuristicEvaluator(Evaluator):
         if len(players) < 2:
             return 0.5
         diff = self._side_score(players[root_player]) - self._side_score(players[1 - root_player])
+        diff += self._public_regret_correction(obs, root_player)
         return 1.0 / (1.0 + math.exp(-self.weights["scale"] * diff))
+
+    def _public_regret_correction(self, obs, root_player: int) -> float:
+        """One bounded SOT-2241 correction derived only from public board state."""
+        candidate = self.weights.get("regret_candidate", "")
+        current = getattr(obs, "current", None)
+        players = getattr(current, "players", None) or ()
+        if not candidate or len(players) < 2:
+            return 0.0
+
+        def public_tempo(player):
+            active = list(getattr(player, "active", None) or ())
+            bench = list(getattr(player, "bench", None) or ())
+            active_energy = sum(len(getattr(card, "energies", None) or ()) for card in active if card)
+            return active_energy, len(bench), len(getattr(player, "prize", None) or ())
+
+        mine = public_tempo(players[root_player])
+        theirs = public_tempo(players[1 - root_player])
+        turn = int(getattr(current, "turn", 0) or 0)
+        if candidate == "mid-active-energy-deficit-leaf-penalty":
+            return -0.18 if 4 <= turn <= 12 and mine[0] < theirs[0] else 0.0
+        if candidate == "early-bench-deficit-setup-priority":
+            return 0.14 if turn <= 4 and mine[1] < theirs[1] else 0.0
+        if candidate == "mid-neutral-root-tiebreak":
+            neutral = mine[0] == theirs[0] and mine[1] == theirs[1] and mine[2] == theirs[2]
+            return 0.08 if 4 <= turn <= 12 and neutral else 0.0
+        return 0.0
 
     def _side_score(self, p) -> float:
         w = self.weights
