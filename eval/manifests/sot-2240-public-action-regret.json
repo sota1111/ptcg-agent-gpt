@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2240",
+  "preregistered_before_experiment": true,
+  "purpose": "public-state counterfactual diagnosis of the matsu and claude worst matchups",
+  "champion": {
+    "terminal_issue": "SOT-2233",
+    "terminal_commit": "bfab44c0fbdf4146e64c0573ac5cd188d0f63720",
+    "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "fixed_conditions": {
+    "seeds": [2240101, 2240102, 2240103],
+    "excluded_prior_seed_ranges": ["2231101..2231105", "2232101..2232103", "2232201..2232210", "2233101..2233105"],
+    "seat_reversal": true,
+    "matches_per_opponent": 6,
+    "counterfactual_horizon": "one root decision under the same four sampled worlds",
+    "search_budget": {"max_root_actions": 6, "n_worlds": 4, "time_budget_s": 0.8},
+    "candidate_limit": 6,
+    "screen_confirm_contract": "diagnosis only; hypotheses require small-N screen then independent-seed confirm before promotion"
+  },
+  "opponents": [
+    {
+      "id": "matsu",
+      "repo": "/workspaces/ptcg-agent-matsu",
+      "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "loss_trace_report": "../../artifacts/sot-2233/holdout/matsu.json",
+      "validation_report": "../../artifacts/sot-2240/traces/matsu.json"
+    },
+    {
+      "id": "claude",
+      "repo": "/workspaces/ptcg-agent-claude",
+      "commit": "f9d598c3216f60d38ac45620471b2c0be1a7e7f9",
+      "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "loss_trace_report": "../../artifacts/sot-2233/holdout/claude.json",
+      "validation_report": "../../artifacts/sot-2240/traces/claude.json"
+    }
+  ],
+  "privacy": {
+    "public_state_allowlist": ["turn_index", "turn_action_count", "selection_context", "hand_count_delta", "bench_count_delta", "prize_count_delta", "own", "opponent", "energy_already_attached_this_turn", "energy_attachment_available", "attack_ready", "end_turn_available", "selected_end_turn", "selected_attack", "selected_option_types", "option_count"],
+    "hidden_zone_features": false,
+    "opponent_identity_branching": false
+  }
+}
