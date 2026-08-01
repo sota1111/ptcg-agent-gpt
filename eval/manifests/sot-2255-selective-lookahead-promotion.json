@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2255",
+  "preregistered_before_experiment": true,
+  "baseline": {
+    "source_issue": "SOT-2254",
+    "terminal_commit": "2664e01",
+    "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "diagnosis_manifest": "sot-2254-selective-lookahead.json",
+    "diagnosis_summary": "../../artifacts/sot-2254-summary.json"
+  },
+  "fixed_variables": {
+    "deck": "deck.csv",
+    "search_budget": {"max_root_actions": 6, "n_worlds": 4, "time_budget_s": 0.8},
+    "rollout": "greedy",
+    "world_aggregation": "sum",
+    "deviate_margin": 0.1,
+    "fallback_semantics": "MCTS -> Greedy -> Rule -> random-legal"
+  },
+  "pools": {
+    "fixed": ["matsu", "take", "ume"],
+    "diversified": ["claude", "obo"],
+    "worst_matchups": ["matsu", "claude"]
+  },
+  "opponent_repositories": {
+    "matsu": "/workspaces/ptcg-agent-matsu",
+    "take": "/workspaces/ptcg-agent-take",
+    "ume": "/workspaces/ptcg-agent-ume",
+    "claude": "/workspaces/ptcg-agent-claude",
+    "obo": "/workspaces/ptcg-agent-obo"
+  },
+  "candidates": [
+    {
+      "id": "bounded-public-setup-continuation",
+      "one_change": "under the unchanged wall-clock/world budget, extend tree depth by one edge only when root and continuation actions are both public setup actions",
+      "environment": {"PTCG_LOOKAHEAD_CANDIDATE": "bounded-public-setup-continuation"}
+    }
+  ],
+  "screen": {"base_seed": 2255101, "seeds_per_opponent": 2, "seat_reversal": true},
+  "confirm": {"base_seed": 2255201, "seeds_per_opponent": 5, "seat_reversal": true},
+  "promotion_gate": {
+    "diversified_kpi_improves": true,
+    "worst_matchup_non_regression": true,
+    "fixed_pool_non_regression": true,
+    "fault_timeout_non_increase": true,
+    "mean_runtime_ratio_max": 1.1,
+    "match_runtime_seconds_max": 600,
+    "screen_then_independent_confirm": true
+  },
+  "privacy": {
+    "public_state_only": true,
+    "hidden_zone_features": false,
+    "opponent_identity_branching": false,
+    "pool_direct_branching": false
+  }
+}
