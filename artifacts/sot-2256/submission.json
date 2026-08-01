@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2256",
+  "terminal": {
+    "identity": "champion",
+    "sot_2255_terminal_commit": "2f0921d0374d8480f893abc3b1ff4f39cb86c578",
+    "candidate_commit": "5418e86d5eda21d858d73dc8a5d57d0aaea8ac99",
+    "champion_behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "holdout": {
+    "manifest": "eval/manifests/sot-2256-blind-holdout.json",
+    "manifest_sha256": "cc4b92da42133d234f657de5b69d0da12ce9993872388e47ddf52c1dfcc99746",
+    "summary": "artifacts/sot-2256-summary.json",
+    "matches": 50,
+    "wins": 26,
+    "losses": 24,
+    "faults": 0,
+    "unfinished": 0,
+    "operational_audit_passed": true
+  },
+  "artifact": {
+    "archive": "submission.tar.gz",
+    "archive_sha256": "c3b9f8cc2b67b25e1be5b0d66230b0fbc2009316e72eb9817a87146b9d6b48c7",
+    "canonical_content_sha256": "c99faf21da398563c92b905c94b00c5b30a3d562f76f14c315e8e67f32cbb509",
+    "rebuilds_byte_identical": true
+  },
+  "exec_compatibility": {
+    "command": ".venv/bin/python scripts/verify_submission_exec.py",
+    "passed": true
+  },
+  "fingerprint_gate": {
+    "passed": true,
+    "decision": "duplicate fingerprint detected; safe skip",
+    "matched_fingerprint": "sha256:c3b9f8cc2b67b25e1be5b0d66230b0fbc2009316e72eb9817a87146b9d6b48c7"
+  },
+  "submission": {
+    "helper_executed": true,
+    "helper_command": "bash scripts/ai/kaggle_targets_submit.sh --competition ptcg --repo ptcg-agent-gpt --execute",
+    "submitted_this_run": false,
+    "outcome": "skip_duplicate_fingerprint",
+    "reason": "repeat requires a new artifact fingerprint; selected artifact was already submitted today",
+    "recovery_condition": "build and fully verify a genuinely changed artifact with a new SHA-256 fingerprint, then rerun the approved helper",
+    "existing_ref": "55154527",
+    "existing_status": "COMPLETE",
+    "existing_public_score": 529.4,
+    "existing_submitted_at": "2026-08-01T05:27:28.710Z"
+  }
+}

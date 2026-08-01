@@ -42,6 +42,9 @@ def test_submission_record_uniquely_maps_audited_artifact() -> None:
     assert submission["holdout"]["operational_audit_passed"] is True
     assert submission["exec_compatibility"]["passed"] is True
     assert submission["fingerprint_gate"]["passed"] is True
-    assert submission["submission"]["submitted"] is True
-    assert submission["submission"]["ref"]
-    assert submission["submission"]["status"]
+    assert submission["submission"]["helper_executed"] is True
+    assert submission["submission"]["submitted_this_run"] is False
+    assert submission["submission"]["outcome"] == "skip_duplicate_fingerprint"
+    assert submission["submission"]["existing_ref"] == "55154527"
+    assert submission["submission"]["existing_status"] == "COMPLETE"
+    assert submission["submission"]["existing_public_score"] == 529.4

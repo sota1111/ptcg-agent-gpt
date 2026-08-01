@@ -53,7 +53,9 @@ def summarize(reports: list[dict[str, Any]]) -> dict[str, Any]:
         "faults": sum(report["faults_semantic"] for report in reports),
         "unfinished": sum(report["unfinished"] for report in reports),
         "illegal_actions": sum(
-            1 for match in matches if match.get("fault") and "illegal" in str(match["fault"]).lower()
+            1
+            for match in matches
+            if match.get("fault") and "illegal" in str(match["fault"]).lower()
         ),
         "runtime_s": {
             "mean": statistics.fmean(runtimes),
@@ -81,13 +83,9 @@ def main() -> int:
         "schema_version": 1,
         "issue": manifest["issue"],
         "manifest_sha256": sha256(args.manifest),
-        "report_sha256": {
-            label: sha256(report_dir / f"{label}.json") for label in reports
-        },
+        "report_sha256": {label: sha256(report_dir / f"{label}.json") for label in reports},
         "fixed": summarize([reports[label] for label in manifest["pools"]["fixed"]]),
-        "diversified": summarize(
-            [reports[label] for label in manifest["pools"]["diversified"]]
-        ),
+        "diversified": summarize([reports[label] for label in manifest["pools"]["diversified"]]),
         "worst_matchups": summarize(
             [reports[label] for label in manifest["pools"]["worst_matchups"]]
         ),
