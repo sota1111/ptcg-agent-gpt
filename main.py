@@ -67,6 +67,8 @@ if os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1":
         SOL_CONFIG["eval_weights"]["energy"] = 0.4
     elif _tempo_candidate == "active-energy":
         SOL_CONFIG["eval_weights"]["active_energy"] = 0.2
+    if os.environ.get("PTCG_LOOKAHEAD_CANDIDATE") == "bounded-public-setup-continuation":
+        SOL_CONFIG["selective_setup_lookahead"] = True
 
 # Remaining-time-aware budget control (~10 min total clock per player per
 # match; no per-move limit). Thresholds are on THIS agent's cumulative act()
