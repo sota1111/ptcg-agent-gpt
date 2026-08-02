@@ -1,0 +1,262 @@
+{
+  "confirm_candidates": [
+    "wellspring-bench-pressure",
+    "kyogre-consistency"
+  ],
+  "decisions": [
+    {
+      "id": "kyogre-consistency",
+      "passed": true,
+      "reason": "all preregistered screen gates passed",
+      "total_win_delta": 1,
+      "worst_matchup_win_delta": 0
+    },
+    {
+      "id": "suicune-energy-scaling",
+      "passed": false,
+      "reason": "one or more preregistered screen gates missed",
+      "total_win_delta": -1,
+      "worst_matchup_win_delta": 0
+    },
+    {
+      "id": "wellspring-bench-pressure",
+      "passed": true,
+      "reason": "all preregistered screen gates passed",
+      "total_win_delta": 3,
+      "worst_matchup_win_delta": 1
+    }
+  ],
+  "issue": "SOT-2279",
+  "outcome": "advance_to_confirm",
+  "protocol": {
+    "base_seed": 2279101,
+    "gate": {
+      "fault_and_unfinished_non_increase": true,
+      "minimum_total_win_delta": 1,
+      "minimum_worst_matchup_win_delta": 0
+    },
+    "max_confirm_candidates": 2,
+    "same_pool_and_seeds_for_champion_and_candidates": true,
+    "seat_reversal": true,
+    "seeds_per_opponent": 1
+  },
+  "results": {
+    "champion": {
+      "faults": 0,
+      "matches": 10,
+      "opponents": {
+        "claude": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "matsu": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        },
+        "obo": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "take": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        },
+        "ume": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 1.0,
+          "wins": 2
+        }
+      },
+      "unfinished": 0,
+      "win_rate": 0.4,
+      "wins": 4
+    },
+    "kyogre-consistency": {
+      "faults": 0,
+      "matches": 10,
+      "opponents": {
+        "claude": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        },
+        "matsu": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "obo": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "take": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 1.0,
+          "wins": 2
+        },
+        "ume": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 1.0,
+          "wins": 2
+        }
+      },
+      "unfinished": 0,
+      "win_rate": 0.5,
+      "wins": 5
+    },
+    "suicune-energy-scaling": {
+      "faults": 0,
+      "matches": 10,
+      "opponents": {
+        "claude": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        },
+        "matsu": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "obo": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "take": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        },
+        "ume": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        }
+      },
+      "unfinished": 0,
+      "win_rate": 0.3,
+      "wins": 3
+    },
+    "wellspring-bench-pressure": {
+      "faults": 0,
+      "matches": 10,
+      "opponents": {
+        "claude": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 0,
+          "unfinished": 0,
+          "win_rate": 0.0,
+          "wins": 0
+        },
+        "matsu": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 1.0,
+          "wins": 2
+        },
+        "obo": {
+          "faults": 0,
+          "first_seat_wins": 0,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 0.5,
+          "wins": 1
+        },
+        "take": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 1.0,
+          "wins": 2
+        },
+        "ume": {
+          "faults": 0,
+          "first_seat_wins": 1,
+          "matches": 2,
+          "second_seat_wins": 1,
+          "unfinished": 0,
+          "win_rate": 1.0,
+          "wins": 2
+        }
+      },
+      "unfinished": 0,
+      "win_rate": 0.7,
+      "wins": 7
+    }
+  },
+  "schema_version": 1
+}

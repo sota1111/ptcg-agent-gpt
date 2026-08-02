@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2279",
+  "purpose": "refresh explainable deck-composition candidates after the third-cycle blind holdout",
+  "preregistered_before_screen": true,
+  "retry_of": {
+    "issue": "SOT-2058",
+    "reason": "The opponent pool now includes diversified Claude/obo policies; SOT-2256 reproduced matsu (30%) and Claude (20%) as worst matchups; public scores fell 600 -> 529.4 -> 480.0."
+  },
+  "champion": {
+    "deck": "deck.csv",
+    "behavior_commit": "fd09f651ba9ed11648a6e5ac3a80fa2f16749130",
+    "terminal_commit": "9e6b2e1",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "inputs": {"card_database": "data/EN_Card_Data.csv", "regulation": "sv-current-2026-07"},
+  "pools": {"fixed": ["matsu", "take", "ume"], "diversified": ["claude", "obo"], "worst_matchups": ["matsu", "claude"]},
+  "opponents": [
+    {"label": "matsu", "repo": "/workspaces/ptcg-agent-matsu", "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "take", "repo": "/workspaces/ai-dev-control-plane/.targets/ptcg-agent-take", "commit": "7bd60f3ae3165268928e856851751ffdca7dbfdc", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "ume", "repo": "/workspaces/ptcg-agent-ume", "commit": "9a1945513533089b142033d33406e1248de65111", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "claude", "repo": "/workspaces/ai-dev-control-plane/.targets/ptcg-agent-claude", "commit": "f5b63c4a570e9ec1c26c0c0e04d6f6a25925b810", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "obo", "repo": "/workspaces/ai-dev-control-plane/.targets/ptcg-agent-obo", "commit": "216d057c9ab6e4dd2f5ebbf4131f8496a43e883d", "deck_sha256": "66e37caa6c0cc6eae69749c927f2bf717d4eeec3e8b003de113ffe131ee9ebc2"}
+  ],
+  "candidate_changes": [
+    {"id": "kyogre-consistency", "remove_card_id": 3, "add_card_id": 721, "role": "consistency", "rationale": "Increase the existing Basic Kyogre attacker from two to three copies so it is found more reliably against the matsu/Claude pressure profiles."},
+    {"id": "suicune-energy-scaling", "remove_card_id": 3, "add_card_id": 803, "role": "energy-scaling attacker", "rationale": "Add one Basic Water Suicune whose damage scales once four Water Energy are in play, using the champion's heavy Water Energy composition."},
+    {"id": "wellspring-bench-pressure", "remove_card_id": 3, "add_card_id": 108, "role": "bench pressure", "rationale": "Add one searchable Basic Water attacker with explicit 120 bench damage to test pressure against the reproduced matsu/Claude worst matchups."}
+  ],
+  "screen": {
+    "base_seed": 2279101,
+    "seeds_per_opponent": 1,
+    "seat_reversal": true,
+    "same_pool_and_seeds_for_champion_and_candidates": true,
+    "max_confirm_candidates": 2,
+    "gate": {"minimum_total_win_delta": 1, "minimum_worst_matchup_win_delta": 0, "fault_and_unfinished_non_increase": true}
+  },
+  "confirm": {
+    "base_seed": 2280101,
+    "seeds_per_opponent": 5,
+    "seat_reversal": true,
+    "run_by": "SOT-2280",
+    "gate": {"total_win_rate_improves": true, "worst_matchup_non_regression": true, "fixed_pool_non_regression": true, "fault_and_unfinished_non_increase": true}
+  }
+}
