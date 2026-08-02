@@ -1,0 +1,405 @@
+{
+  "candidate_artifact_sha256": "8aa5504182c56ef5e76fd1f7674a5ce374e0762c0b0e2e6757c26c096986dfa8",
+  "champion_changed": false,
+  "champion_deck_sha256_after": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+  "champion_deck_sha256_before": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+  "confirm": {
+    "decisions": {
+      "wellspring-bench-pressure": {
+        "passed": false,
+        "reasons": [
+          "matsu win rate regressed"
+        ],
+        "runtime_ratio": 1.102416989405753
+      }
+    },
+    "protocol": {
+      "base_seed": 2280101,
+      "seat_reversal": true,
+      "seeds_per_opponent": 5
+    },
+    "report_sha256": {
+      "artifacts/sot-2280-deck-promotion/confirm/champion-vs-claude.json": "68ff4425cb05285003f01b3746acf9c82596c3ff7187ac6d98b41812f0a90986",
+      "artifacts/sot-2280-deck-promotion/confirm/champion-vs-matsu.json": "90ba104e7dd0561b8312c9a7f1f6d934f4d6a768617bbffc3961a7ac79c4cfa1",
+      "artifacts/sot-2280-deck-promotion/confirm/champion-vs-obo.json": "0bc01e8268b8609b1edbf9806ab3a8c90e7b6720ccfa72bcfc9f7518f6358df8",
+      "artifacts/sot-2280-deck-promotion/confirm/champion-vs-take.json": "af8d21cc827a14ce10a7570ba2d3adfd62c70dc01ce59784cfc0327e992e38c0",
+      "artifacts/sot-2280-deck-promotion/confirm/champion-vs-ume.json": "e73cba75dfa459dc416b9cead9f88d33747146be01905206ff1fd46a1786af33",
+      "artifacts/sot-2280-deck-promotion/confirm/wellspring-bench-pressure-vs-claude.json": "c938d557055969be5e66de0e0a84366083c3575fdcf813395d537f67a4098dea",
+      "artifacts/sot-2280-deck-promotion/confirm/wellspring-bench-pressure-vs-matsu.json": "7b6476fb2ae517eb7a380b961dec8f2478784d78fec7e04154533c73ac0d396b",
+      "artifacts/sot-2280-deck-promotion/confirm/wellspring-bench-pressure-vs-obo.json": "783ce4d93c651d0bb27d4c9923ecd5ecc5a0c5175ac59cabf430d6b5d0dc9fa0",
+      "artifacts/sot-2280-deck-promotion/confirm/wellspring-bench-pressure-vs-take.json": "5024bdebbb6f18e441ed908abd3bdd763764cfac9dbb4a36846e2ef3e72a44ab",
+      "artifacts/sot-2280-deck-promotion/confirm/wellspring-bench-pressure-vs-ume.json": "b166c3414f084aa52e226e769bbacc84ef5a2263d07beb5a0aa74f5fba6bfdd3"
+    },
+    "results": {
+      "champion": {
+        "faults": 0,
+        "first_seat_win_rate": 0.68,
+        "matches": 50,
+        "opponents": {
+          "claude": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.4,
+            "wins": 4
+          },
+          "matsu": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.6,
+            "wins": 6
+          },
+          "obo": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.7,
+            "wins": 7
+          },
+          "take": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.6,
+            "wins": 6
+          },
+          "ume": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 5
+          }
+        },
+        "runtime_s": {
+          "max": 44.08222234598361,
+          "mean": 12.334495492900023,
+          "p95": 23.51156821195036
+        },
+        "second_seat_win_rate": 0.44,
+        "unfinished": 0,
+        "win_rate": 0.56,
+        "wins": 28
+      },
+      "wellspring-bench-pressure": {
+        "faults": 0,
+        "first_seat_win_rate": 0.72,
+        "matches": 50,
+        "opponents": {
+          "claude": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.7,
+            "wins": 7
+          },
+          "matsu": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.3,
+            "wins": 3
+          },
+          "obo": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.7,
+            "wins": 7
+          },
+          "take": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.8,
+            "wins": 8
+          },
+          "ume": {
+            "faults": 0,
+            "matches": 10,
+            "unfinished": 0,
+            "win_rate": 0.7,
+            "wins": 7
+          }
+        },
+        "runtime_s": {
+          "max": 43.14774756797124,
+          "mean": 13.597757387121673,
+          "p95": 31.996910141024273
+        },
+        "second_seat_win_rate": 0.56,
+        "unfinished": 0,
+        "win_rate": 0.64,
+        "wins": 32
+      }
+    }
+  },
+  "issue": "SOT-2280",
+  "manifest_sha256": "a5082bb6b5ef14659fd817f43f4930244e957cada98a61bcb96ba16d4ef95925",
+  "outcome": "champion_retained",
+  "promoted": null,
+  "schema_version": 1,
+  "screen": {
+    "confirm_candidates": [
+      "wellspring-bench-pressure"
+    ],
+    "decisions": {
+      "kyogre-consistency": {
+        "passed": false,
+        "reasons": [
+          "matsu win rate regressed"
+        ],
+        "runtime_ratio": 1.5106156889714986
+      },
+      "suicune-energy-scaling": {
+        "passed": false,
+        "reasons": [
+          "pool win rate did not strictly improve",
+          "matsu win rate regressed"
+        ],
+        "runtime_ratio": 0.788829498593077
+      },
+      "wellspring-bench-pressure": {
+        "passed": true,
+        "reasons": [],
+        "runtime_ratio": 1.4789424204927446
+      }
+    },
+    "phase": "screen",
+    "protocol": {
+      "base_seed": 2279101,
+      "seat_reversal": true,
+      "seeds_per_opponent": 1
+    },
+    "report_sha256": {
+      "artifacts/sot-2279-meta-deck-candidates/screen/champion-vs-claude.json": "7b89a7f4a579f9ee02b7366ec0276cb2fbe496e9eadcf399046969158f67e77c",
+      "artifacts/sot-2279-meta-deck-candidates/screen/champion-vs-matsu.json": "dce79e4ad783fc390358de12dba06402a80b28da8b24666dfe7341e1597824a6",
+      "artifacts/sot-2279-meta-deck-candidates/screen/champion-vs-obo.json": "fe616e44e8166603c76b97edeb12acbbf6521599ad74fa6c7baf9cf96b56a233",
+      "artifacts/sot-2279-meta-deck-candidates/screen/champion-vs-take.json": "acfb4314b9d154cf14a6307f57eaeee27e86a51e459bbaf67d631ea89a720321",
+      "artifacts/sot-2279-meta-deck-candidates/screen/champion-vs-ume.json": "1b02ba62afcb0a66f40bf8914b34bc1c8bd69ee59e5768b6c3d89dc3a17875a7",
+      "artifacts/sot-2279-meta-deck-candidates/screen/kyogre-consistency-vs-claude.json": "db2b143059880446bcfd468662215f72caad52db4120b18de4e40a7992b39430",
+      "artifacts/sot-2279-meta-deck-candidates/screen/kyogre-consistency-vs-matsu.json": "34fb482ce15dc102adb0985f3c57c79a724a1e0346b56f578dcd92d2484527aa",
+      "artifacts/sot-2279-meta-deck-candidates/screen/kyogre-consistency-vs-obo.json": "3a3f0afc74c6c409a2e02ee92ca90d4fe468d592d1103380eaad78b8b9aa0764",
+      "artifacts/sot-2279-meta-deck-candidates/screen/kyogre-consistency-vs-take.json": "d86cecad0aa10b4ac645a847727c886a703df29c33f6ed67ccc1f41076f18974",
+      "artifacts/sot-2279-meta-deck-candidates/screen/kyogre-consistency-vs-ume.json": "16807e7fd5106c36cff42d20216fc48aaca6a0beff37d3a59ba5cf41a7afc706",
+      "artifacts/sot-2279-meta-deck-candidates/screen/suicune-energy-scaling-vs-claude.json": "42846efe36de4c5f5ea774df795b45923f58d1fa05a5049bb9c45f0ac668dff1",
+      "artifacts/sot-2279-meta-deck-candidates/screen/suicune-energy-scaling-vs-matsu.json": "0fb088fc6062434de4929922e0f4cfb64053dbd408db4aff1ca639ea2b73f427",
+      "artifacts/sot-2279-meta-deck-candidates/screen/suicune-energy-scaling-vs-obo.json": "409de847689555e0876818035526cc0dcc2cf76f69beaa27b3a88dd5e2bba16e",
+      "artifacts/sot-2279-meta-deck-candidates/screen/suicune-energy-scaling-vs-take.json": "1da571470f0abd55cd350c1c9bd360a7a98ab4db0e29230df88f151b7906a6b3",
+      "artifacts/sot-2279-meta-deck-candidates/screen/suicune-energy-scaling-vs-ume.json": "2faf33326b1353f8a5d2c01ab82de22d5c94aa540edc57d4b9f9b243b6e661f9",
+      "artifacts/sot-2279-meta-deck-candidates/screen/wellspring-bench-pressure-vs-claude.json": "406f1524ce6f25399340df1d7f04594e1bfaa6abeca92df782fc2ac2f0bcb4a0",
+      "artifacts/sot-2279-meta-deck-candidates/screen/wellspring-bench-pressure-vs-matsu.json": "87a82b7165f95b6d461f6cdc64656d91851e6c372c4c442a26d2c549a1d9d4a7",
+      "artifacts/sot-2279-meta-deck-candidates/screen/wellspring-bench-pressure-vs-obo.json": "87706052bbbc83a35d638acad71633e9919db46aa6775fdf005a672d8e4b2386",
+      "artifacts/sot-2279-meta-deck-candidates/screen/wellspring-bench-pressure-vs-take.json": "5b0a927f7245f9c269448aad6c7c06a7b26150f05785aa059256223978f483e4",
+      "artifacts/sot-2279-meta-deck-candidates/screen/wellspring-bench-pressure-vs-ume.json": "6d2b8c387380797ee0eaa30aaac6965d89dad6136ba19ad9ef0ed462db4fb77e"
+    },
+    "results": {
+      "champion": {
+        "faults": 0,
+        "first_seat_win_rate": 0.4,
+        "matches": 10,
+        "opponents": {
+          "claude": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "matsu": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          },
+          "obo": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "take": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          },
+          "ume": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 1.0,
+            "wins": 2
+          }
+        },
+        "runtime_s": {
+          "max": 26.571649273042567,
+          "mean": 11.008805647597182,
+          "p95": 26.571649273042567
+        },
+        "second_seat_win_rate": 0.4,
+        "unfinished": 0,
+        "win_rate": 0.4,
+        "wins": 4
+      },
+      "kyogre-consistency": {
+        "faults": 0,
+        "first_seat_win_rate": 0.6,
+        "matches": 10,
+        "opponents": {
+          "claude": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          },
+          "matsu": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "obo": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "take": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 1.0,
+            "wins": 2
+          },
+          "ume": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 1.0,
+            "wins": 2
+          }
+        },
+        "runtime_s": {
+          "max": 37.797843926004134,
+          "mean": 16.63007452809834,
+          "p95": 37.797843926004134
+        },
+        "second_seat_win_rate": 0.4,
+        "unfinished": 0,
+        "win_rate": 0.5,
+        "wins": 5
+      },
+      "suicune-energy-scaling": {
+        "faults": 0,
+        "first_seat_win_rate": 0.6,
+        "matches": 10,
+        "opponents": {
+          "claude": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          },
+          "matsu": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "obo": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "take": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          },
+          "ume": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          }
+        },
+        "runtime_s": {
+          "max": 24.686213951034006,
+          "mean": 8.68407063910272,
+          "p95": 24.686213951034006
+        },
+        "second_seat_win_rate": 0.0,
+        "unfinished": 0,
+        "win_rate": 0.3,
+        "wins": 3
+      },
+      "wellspring-bench-pressure": {
+        "faults": 0,
+        "first_seat_win_rate": 0.6,
+        "matches": 10,
+        "opponents": {
+          "claude": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.0,
+            "wins": 0
+          },
+          "matsu": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 1.0,
+            "wins": 2
+          },
+          "obo": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 0.5,
+            "wins": 1
+          },
+          "take": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 1.0,
+            "wins": 2
+          },
+          "ume": {
+            "faults": 0,
+            "matches": 2,
+            "unfinished": 0,
+            "win_rate": 1.0,
+            "wins": 2
+          }
+        },
+        "runtime_s": {
+          "max": 29.510769009997603,
+          "mean": 16.281389671191572,
+          "p95": 29.510769009997603
+        },
+        "second_seat_win_rate": 0.8,
+        "unfinished": 0,
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "schema_version": 1
+  }
+}
