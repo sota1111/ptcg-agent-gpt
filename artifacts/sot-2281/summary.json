@@ -1,0 +1,284 @@
+{
+  "decision": {
+    "operational_audit_passed": true,
+    "promoted": false,
+    "promotion_outcome": "champion_retained",
+    "reason": "SOT-2280 promoted no candidate; blind holdout audits the retained champion",
+    "terminal_identity": "champion"
+  },
+  "diversified": {
+    "faults": 0,
+    "first_seat_win_rate": 0.6,
+    "illegal_actions": 0,
+    "losses": 9,
+    "matches": 20,
+    "opponents": {
+      "claude": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.23658959361548731,
+          0.7634104063845126
+        ],
+        "win_rate": 0.5,
+        "wins": 5
+      },
+      "obo": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.3126695474501863,
+          0.8318224187964902
+        ],
+        "win_rate": 0.6,
+        "wins": 6
+      }
+    },
+    "runtime_s": {
+      "max": 45.32901926804334,
+      "mean": 15.163701130059781,
+      "p50": 13.528137655492174,
+      "p95": 32.67693119402975
+    },
+    "second_seat_win_rate": 0.5,
+    "unfinished": 0,
+    "wilson95": [
+      0.3420820083075997,
+      0.7418049791429071
+    ],
+    "win_rate": 0.55,
+    "wins": 11,
+    "worst_matchup": "claude",
+    "worst_matchup_win_rate": 0.5
+  },
+  "fixed": {
+    "faults": 0,
+    "first_seat_win_rate": 0.8666666666666667,
+    "illegal_actions": 0,
+    "losses": 9,
+    "matches": 30,
+    "opponents": {
+      "matsu": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      },
+      "take": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      },
+      "ume": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "runtime_s": {
+      "max": 32.7708914920222,
+      "mean": 11.550506062235218,
+      "p50": 9.159554886486148,
+      "p95": 25.58154938701773
+    },
+    "second_seat_win_rate": 0.5333333333333333,
+    "unfinished": 0,
+    "wilson95": [
+      0.5212387898833981,
+      0.8333543735604105
+    ],
+    "win_rate": 0.7,
+    "wins": 21,
+    "worst_matchup": "matsu",
+    "worst_matchup_win_rate": 0.7
+  },
+  "issue": "SOT-2281",
+  "manifest_sha256": "4294e932262b83749a2b11a5bc4dcbdc5c866bafae22b3c08d29c02e5d92b40c",
+  "pool": {
+    "faults": 0,
+    "first_seat_win_rate": 0.76,
+    "illegal_actions": 0,
+    "losses": 18,
+    "matches": 50,
+    "opponents": {
+      "claude": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.23658959361548731,
+          0.7634104063845126
+        ],
+        "win_rate": 0.5,
+        "wins": 5
+      },
+      "matsu": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      },
+      "obo": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.3126695474501863,
+          0.8318224187964902
+        ],
+        "win_rate": 0.6,
+        "wins": 6
+      },
+      "take": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      },
+      "ume": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "runtime_s": {
+      "max": 45.32901926804334,
+      "mean": 12.995784089365042,
+      "p50": 10.782094091002364,
+      "p95": 32.67693119402975
+    },
+    "second_seat_win_rate": 0.52,
+    "unfinished": 0,
+    "wilson95": [
+      0.5014076201030195,
+      0.7586143703281711
+    ],
+    "win_rate": 0.64,
+    "wins": 32,
+    "worst_matchup": "claude",
+    "worst_matchup_win_rate": 0.5
+  },
+  "report_sha256": {
+    "claude": "5d3aefba9a9759b7e937f256c60f4babbe7207de0e9f5e2d75a09414bfc4a62a",
+    "matsu": "5ded2647c4d74737407581cdac3e5d2ab77d08543baab4b9ab6244bdb31e9981",
+    "obo": "a2f0dfec61906b0047da0f25dc372cbe7534f48608de6790c7b66e0eac0e65e9",
+    "take": "0227229d2fe1fee5ae4213d28d22af71d779052d3f374064013b62b3ee515374",
+    "ume": "08ae5aa370990b89fe9614cde937d2a1e178be7b589d0278067a75b35c08dcc0"
+  },
+  "schema_version": 1,
+  "terminal": {
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "opponents": {
+      "claude": {
+        "commit": "f5b63c4a570e9ec1c26c0c0e04d6f6a25925b810",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+        "validated": true
+      },
+      "matsu": {
+        "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+        "validated": true
+      },
+      "obo": {
+        "commit": "216d057c9ab6e4dd2f5ebbf4131f8496a43e883d",
+        "deck_sha256": "66e37caa6c0cc6eae69749c927f2bf717d4eeec3e8b003de113ffe131ee9ebc2",
+        "validated": true
+      },
+      "take": {
+        "commit": "7bd60f3ae3165268928e856851751ffdca7dbfdc",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+        "validated": true
+      },
+      "ume": {
+        "commit": "9a1945513533089b142033d33406e1248de65111",
+        "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+        "validated": true
+      }
+    },
+    "terminal_commit": "b48e5f5fb897494271c5566e7060004c3d1fb23d",
+    "validated": true
+  },
+  "worst_matchups": {
+    "faults": 0,
+    "first_seat_win_rate": 0.7,
+    "illegal_actions": 0,
+    "losses": 8,
+    "matches": 20,
+    "opponents": {
+      "claude": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.23658959361548731,
+          0.7634104063845126
+        ],
+        "win_rate": 0.5,
+        "wins": 5
+      },
+      "matsu": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "wilson95": [
+          0.39677321997956516,
+          0.892210712513788
+        ],
+        "win_rate": 0.7,
+        "wins": 7
+      }
+    },
+    "runtime_s": {
+      "max": 45.32901926804334,
+      "mean": 16.325979980858392,
+      "p50": 16.60717314798967,
+      "p95": 32.67693119402975
+    },
+    "second_seat_win_rate": 0.5,
+    "unfinished": 0,
+    "wilson95": [
+      0.3865779423152061,
+      0.7811960325858074
+    ],
+    "win_rate": 0.6,
+    "wins": 12,
+    "worst_matchup": "claude",
+    "worst_matchup_win_rate": 0.5
+  }
+}

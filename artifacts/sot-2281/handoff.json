@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2281",
+  "parent_issue": "SOT-2278",
+  "terminal": {
+    "identity": "champion",
+    "outcome": "champion_retained",
+    "promoted_candidate": null,
+    "commit": "b48e5f5fb897494271c5566e7060004c3d1fb23d",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "holdout": {
+    "manifest": "eval/manifests/sot-2281-blind-holdout.json",
+    "summary": "artifacts/sot-2281/summary.json",
+    "matches": 50,
+    "wins": 32,
+    "win_rate": 0.64,
+    "worst_matchup": "claude",
+    "worst_matchup_win_rate": 0.5,
+    "faults": 0,
+    "illegal_actions": 0,
+    "unfinished": 0,
+    "max_runtime_s": 45.32901926804334
+  },
+  "artifact": {
+    "fingerprint": "artifacts/sot-2281/submission-fingerprint.json",
+    "archive_sha256": "c3b9f8cc2b67b25e1be5b0d66230b0fbc2009316e72eb9817a87146b9d6b48c7",
+    "content_sha256": "c99faf21da398563c92b905c94b00c5b30a3d562f76f14c315e8e67f32cbb509",
+    "main_sha256": "043fa98468f10dc1d4490df6ef2c908866fa77bdd1bcd61fab4a73f873d62816",
+    "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "verification": {
+    "holdout_passed": true,
+    "deterministic_rebuild_passed": true,
+    "exec_compatibility_passed": true
+  },
+  "submission": {
+    "kaggle_submitted": false,
+    "approved_helper_executed": false,
+    "next_action": "parent_may_run_approved_helper"
+  }
+}
