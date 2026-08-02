@@ -7,6 +7,7 @@ deck templates.  It never reconstructs a competitor's private list from replays.
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 from collections import Counter
 from collections.abc import Iterable
@@ -18,6 +19,17 @@ from ptcg_agent.deck_preselection import Card, deck_hash, validate_deck
 
 Role = Literal["top", "counter", "emerging", "low_usage_top", "baseline", "diversity"]
 Decision = Literal["add", "keep", "remove"]
+
+
+@dataclass(frozen=True)
+class OneChange:
+    """A single, explainable card replacement relative to the champion deck."""
+
+    candidate_id: str
+    remove_card_id: int
+    add_card_id: int
+    role: str
+    rationale: str
 
 
 @dataclass(frozen=True)
@@ -41,6 +53,68 @@ class DeckTemplate:
     roles: tuple[Role, ...] = ()
     counters: tuple[str, ...] = ()
     source: str = "repository template"
+
+
+def sha256_file(path: Path) -> str:
+    """Return a stable provenance fingerprint for an input file."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def generate_one_change_candidates(
+    *, champion: tuple[int, ...], changes: Iterable[OneChange], cards: dict[int, Card]
+) -> dict[str, Any]:
+    """Generate deterministic, legal, composition-distinct one-change candidates."""
+    champion_errors = validate_deck(champion, cards)
+    if champion_errors:
+        raise ValueError("champion is illegal: " + "; ".join(champion_errors))
+    champion_hash = deck_hash(champion)
+    seen_hashes = {champion_hash}
+    candidates: list[dict[str, Any]] = []
+    for change in sorted(changes, key=lambda item: item.candidate_id):
+        if change.remove_card_id not in champion:
+            raise ValueError(
+                f"{change.candidate_id}: remove card {change.remove_card_id} is absent"
+            )
+        candidate = list(champion)
+        candidate.remove(change.remove_card_id)
+        candidate.append(change.add_card_id)
+        candidate_cards = tuple(sorted(candidate))
+        errors = validate_deck(candidate_cards, cards)
+        candidate_hash = deck_hash(candidate_cards)
+        if candidate_hash in seen_hashes:
+            raise ValueError(f"{change.candidate_id}: duplicate composition")
+        seen_hashes.add(candidate_hash)
+        candidates.append(
+            {
+                "id": change.candidate_id,
+                "cards": list(candidate_cards),
+                "composition_sha256": candidate_hash,
+                "one_change": {
+                    "remove": {
+                        "card_id": change.remove_card_id,
+                        "name": cards[change.remove_card_id].name,
+                    },
+                    "add": {
+                        "card_id": change.add_card_id,
+                        "name": cards[change.add_card_id].name,
+                    },
+                },
+                "role": change.role,
+                "rationale": change.rationale,
+                "card_count": len(candidate_cards),
+                "legal": not errors,
+                "loadable": True,
+                "errors": errors,
+            }
+        )
+    if not 2 <= len(candidates) <= 3:
+        raise ValueError("exactly two or three candidates are required")
+    return {
+        "schema_version": 1,
+        "champion_composition_sha256": champion_hash,
+        "candidate_count": len(candidates),
+        "candidates": candidates,
+    }
 
 
 def load_meta_snapshots(path: Path) -> list[MetaSnapshot]:

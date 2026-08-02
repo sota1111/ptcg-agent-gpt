@@ -6,8 +6,10 @@ from ptcg_agent.meta_deck_candidates import (
     DeckTemplate,
     MetaEntry,
     MetaSnapshot,
+    OneChange,
     analyze_meta,
     composition_similarity,
+    generate_one_change_candidates,
     load_meta_snapshots,
     select_candidates,
     write_selected_decks,
@@ -150,3 +152,29 @@ def test_similarity_detects_exact_and_near_identical_compositions() -> None:
     near = tuple(sorted((*original[:-2], 7, 7)))
     assert composition_similarity(original, original) == 1.0
     assert composition_similarity(original, near) >= 0.9
+
+
+def test_one_change_generation_is_legal_unique_and_deterministic(tmp_path: Path) -> None:
+    cards = load_cards(_write_card_data(tmp_path))
+    champion = _deck(2, 6)
+    changes = [
+        OneChange("gamma", 1, 7, "coverage", "add a legal Basic attacker"),
+        OneChange("energy", 2, 1, "energy", "trade one attacker for Basic Energy"),
+    ]
+    first = generate_one_change_candidates(champion=champion, changes=changes, cards=cards)
+    second = generate_one_change_candidates(
+        champion=champion, changes=reversed(changes), cards=cards
+    )
+    assert first == second
+    assert [row["id"] for row in first["candidates"]] == ["energy", "gamma"]
+    assert all(row["legal"] and row["loadable"] for row in first["candidates"])
+    assert all(row["card_count"] == 60 for row in first["candidates"])
+    assert len({row["composition_sha256"] for row in first["candidates"]}) == 2
+    for row in first["candidates"]:
+        champion_counts = {card: champion.count(card) for card in set(champion)}
+        candidate = tuple(row["cards"])
+        changed = sum(
+            abs(candidate.count(card) - champion_counts.get(card, 0))
+            for card in set(champion) | set(candidate)
+        )
+        assert changed == 2
