@@ -96,8 +96,7 @@ def screen(manifest: dict[str, Any], generated: dict[str, Any], output: Path) ->
     raw_dir = output / "screen"
     raw_dir.mkdir(parents=True, exist_ok=True)
     decks = [("champion", ROOT / manifest["champion"]["deck"])] + [
-        (row["id"], output / "decks" / f"{row['id']}.csv")
-        for row in generated["candidates"]
+        (row["id"], output / "decks" / f"{row['id']}.csv") for row in generated["candidates"]
     ]
     by_deck: dict[str, dict[str, Any]] = {}
     for deck_id, deck_path in decks:
