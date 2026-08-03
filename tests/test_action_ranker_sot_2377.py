@@ -1,12 +1,17 @@
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
-
-from scripts.train_pairwise_action_ranker import train
 
 ORACLE = Path("artifacts/sot-2376-public-counterfactual-oracle/oracle.jsonl")
 MODEL = Path("artifacts/sot-2377-action-ranking/public_action_ranker.json")
 MANIFEST = Path("eval/manifests/sot-2377-action-ranking.json")
+SPEC = importlib.util.spec_from_file_location(
+    "train_pairwise_action_ranker", Path("scripts/train_pairwise_action_ranker.py")
+)
+assert SPEC and SPEC.loader
+TRAINER = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(TRAINER)
 
 
 def test_model_is_train_only_and_pins_oracle_fingerprint() -> None:
@@ -22,7 +27,7 @@ def test_model_is_train_only_and_pins_oracle_fingerprint() -> None:
 
 def test_training_is_deterministic_except_timestamp() -> None:
     expected = json.loads(MODEL.read_text())
-    rebuilt = train(ORACLE, expected["oracleSha256"])
+    rebuilt = TRAINER.train(ORACLE, expected["oracleSha256"])
     rebuilt["trainedAt"] = expected["trainedAt"]
     assert rebuilt == expected
 
