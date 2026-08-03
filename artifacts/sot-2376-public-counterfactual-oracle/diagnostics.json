@@ -1,0 +1,84 @@
+{
+  "artifactFingerprint": "0851082aa6df95ab5e197131ba4ce274efb12cb62d295204d5f39277101fcf5a",
+  "axis": "public-counterfactual-action-ranking",
+  "coverage": {
+    "coverage": 0.9066293183940243,
+    "eligibleActionPairs": 1071,
+    "eligiblePublicStates": 122,
+    "supportedActionPairs": 971
+  },
+  "forbiddenLearningFeatures": [
+    "opponent_identity",
+    "opponent_fingerprint",
+    "pool_identity",
+    "hidden_hand_identity",
+    "hidden_deck_identity",
+    "world_fingerprint",
+    "seed",
+    "seat",
+    "match_id"
+  ],
+  "kaggleSubmissionPerformed": false,
+  "oracle": "artifacts/sot-2376-public-counterfactual-oracle/oracle.jsonl",
+  "oracleSha256": "7f1808c55f7430b423b4f4c0b42f2fb68ed4895287b0aff92812edfc7a8cbd0e",
+  "preregisteredGates": {
+    "confirmOnlyAfterScreenPass": true,
+    "minimumCoverage": 0.5,
+    "minimumPairwiseSignal": 0.05,
+    "screenThenIndependentConfirm": true
+  },
+  "publicFeatureAllowlist": [
+    "turn_index",
+    "turn_action_count",
+    "selection_context",
+    "hand_count_delta",
+    "bench_count_delta",
+    "prize_count_delta",
+    "own",
+    "opponent",
+    "energy_already_attached_this_turn",
+    "energy_attachment_available",
+    "attack_ready",
+    "end_turn_available",
+    "option_count"
+  ],
+  "schemaVersion": "1.0.0",
+  "screenEligible": true,
+  "seedOverlap": {
+    "screen:confirm": [],
+    "train:confirm": [],
+    "train:screen": []
+  },
+  "splitLeakagePassed": true,
+  "splitOverlap": {
+    "screen:confirm": [],
+    "train:confirm": [],
+    "train:screen": []
+  },
+  "splits": {
+    "confirm": {
+      "actionPairs": 125,
+      "nonZeroPairwiseLabels": 102,
+      "pairwiseSignalRate": 0.672,
+      "publicStates": 30,
+      "relativeOutcomeMax": 0.988249397869233,
+      "relativeOutcomeMin": -0.875
+    },
+    "screen": {
+      "actionPairs": 83,
+      "nonZeroPairwiseLabels": 49,
+      "pairwiseSignalRate": 0.4457831325301205,
+      "publicStates": 16,
+      "relativeOutcomeMax": 1.0,
+      "relativeOutcomeMin": -0.4084325396825397
+    },
+    "train": {
+      "actionPairs": 140,
+      "nonZeroPairwiseLabels": 121,
+      "pairwiseSignalRate": 0.75,
+      "publicStates": 26,
+      "relativeOutcomeMax": 0.7414030712856264,
+      "relativeOutcomeMin": -0.5625
+    }
+  }
+}

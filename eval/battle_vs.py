@@ -99,6 +99,7 @@ def public_decision_snapshot(observation: dict, seat: int, action: list | None =
         "selected_end_turn": 14 in chosen_types,
         "selected_attack": 13 in chosen_types,
         "selected_option_types": chosen_types,
+        "legal_option_types": option_types,
         "option_count": len(option_types),
     }
 
