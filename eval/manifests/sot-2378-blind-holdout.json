@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2378",
+  "purpose": "blind audit of the terminal action-ranking decision and exact parent handoff",
+  "preregistered_before_experiment": true,
+  "provenance": {
+    "sot_2377_terminal_commit": "06d2382",
+    "terminal_identity": "champion",
+    "promotion_outcome": "champion_retained",
+    "promoted_candidate": null,
+    "terminal_main_sha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "terminal_deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "candidate_artifact_sha256": "dcd6e0c93f091aed5a3e23f1a5317544f57ee3b223459b31e534bc46b1af061c",
+    "decision_sha256": "1879a85f05297e9669355fe8422885d02e7d8c73b7c21df26ea0e9aa913877d7",
+    "source_manifest_sha256": "a6a374aaefd3870ae105e438f147064edfe4abfd5a37c551f8d7c14328efb0eb"
+  },
+  "isolation": {
+    "holdout_base_seed": 2378101,
+    "holdout_seeds": [2378101, 2378102, 2378103, 2378104, 2378105],
+    "excluded_prior_seed_ranges": {"SOT-2376": "2376101..2376306", "SOT-2377_screen": "2377201"},
+    "excluded_artifacts": ["artifacts/sot-2376-public-counterfactual-oracle", "artifacts/sot-2377-action-ranking/screen"],
+    "seat_reversal": true,
+    "matches_per_opponent": 10
+  },
+  "pools": {"fixed": ["matsu", "take", "ume"], "diversified": ["claude", "obo"]},
+  "opponents": [
+    {"label": "matsu", "repo": "/workspaces/ptcg-agent-matsu", "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "take", "repo": "/workspaces/ptcg-agent-take", "commit": "e837e35f45b88ca3ddf8e6de44562e8355c3e414", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "ume", "repo": "/workspaces/ptcg-agent-ume", "commit": "9a1945513533089b142033d33406e1248de65111", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "claude", "repo": "/workspaces/ptcg-agent-claude", "commit": "2db3b64c34562308cae7de41a80548de8accdee5", "deck_sha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "obo", "repo": "/workspaces/ptcg-agent-obo", "commit": "216d057c9ab6e4dd2f5ebbf4131f8496a43e883d", "deck_sha256": "66e37caa6c0cc6eae69749c927f2bf717d4eeec3e8b003de113ffe131ee9ebc2"}
+  ],
+  "gate": {"faults": 0, "illegal_actions": 0, "unfinished": 0, "match_runtime_seconds_max": 600.0, "deterministic_rebuild": true, "exec_compatibility": true, "kaggle_submission_allowed": false}
+}
