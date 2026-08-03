@@ -115,7 +115,7 @@ def run_phase(
                     json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
                 )
             identity_reports[opponent["label"]] = report
-            hashes[path.relative_to(ROOT).as_posix()] = sha256(path)
+            hashes[path.resolve().relative_to(ROOT).as_posix()] = sha256(path)
         reports[identity] = summarize(identity_reports)
     return reports, hashes
 
