@@ -18,7 +18,9 @@ self-deck-out guard (SOT-1697 loss analysis: deck-out dominated matsu's
 losses — 53% vs 竹, 91% vs 梅).
 """
 
+import json
 import math
+from pathlib import Path
 
 # Feature weights (externally overridable via eval_weights). Scores are
 # per-side; the value is a logistic squash of (score_me - score_opp).
@@ -115,6 +117,59 @@ class HeuristicEvaluator(Evaluator):
         return score
 
 
+class PublicValueEvaluator(Evaluator):
+    """Small public-state linear model blended with the champion heuristic.
+
+    The checked-in artifact is deliberately loaded from ``agents/`` so it is
+    included in the self-contained submission archive.  Runtime features are
+    the same seven count-only fields frozen by SOT-2345; card identities,
+    determinizations, and opponent identity never enter this evaluator.
+    """
+
+    def __init__(self, artifact=None, heuristic_weights: dict | None = None):
+        path = Path(__file__).with_name("public_value_model.json")
+        self.artifact = artifact or json.loads(path.read_text(encoding="utf-8"))
+        self.heuristic = HeuristicEvaluator(heuristic_weights)
+
+    def evaluate(self, obs, root_player: int) -> float:
+        current = getattr(obs, "current", None)
+        if current is None:
+            return 0.5
+        result = getattr(current, "result", -1)
+        if result is not None and result != -1:
+            return self.heuristic.evaluate(obs, root_player)
+        players = getattr(current, "players", None) or ()
+        if len(players) < 2:
+            return 0.5
+
+        def count(player, name, fallback=0):
+            value = getattr(player, name, fallback)
+            return float(fallback if value is None else value)
+
+        own, opponent = players[root_player], players[1 - root_player]
+        features = (
+            count(current, "turn", 0),
+            count(own, "handCount", 0),
+            count(own, "deckCount", 0),
+            float(len(getattr(own, "prize", None) or ())),
+            count(opponent, "handCount", 0),
+            count(opponent, "deckCount", 0),
+            float(len(getattr(opponent, "prize", None) or ())),
+        )
+        means = self.artifact["featureMeans"]
+        scales = self.artifact["featureScales"]
+        logit = float(self.artifact["intercept"]) + sum(
+            float(weight) * ((value - float(mean)) / float(scale))
+            for weight, value, mean, scale in zip(
+                self.artifact["weights"], features, means, scales, strict=True
+            )
+        )
+        learned = 1.0 / (1.0 + math.exp(-max(-30.0, min(30.0, logit))))
+        blend = float(self.artifact["blendWeight"])
+        champion = self.heuristic.evaluate(obs, root_player)
+        return (1.0 - blend) * champion + blend * learned
+
+
 def make_evaluator(spec, card_index=None) -> Evaluator:
     """Resolve an evaluator spec: an Evaluator instance passes through;
     "heuristic"/None builds the default. Unknown specs raise (fable ships
@@ -123,4 +178,6 @@ def make_evaluator(spec, card_index=None) -> Evaluator:
         return spec
     if spec in (None, "heuristic"):
         return HeuristicEvaluator()
+    if spec == "public-value":
+        return PublicValueEvaluator()
     raise ValueError(f"unknown evaluator spec: {spec!r}")

@@ -1,0 +1,47 @@
+{
+  "blendWeight": 0.25,
+  "featureAllowlist": [
+    "turn_index",
+    "own_hand_count",
+    "own_deck_count",
+    "own_prize_count",
+    "opponent_hand_count",
+    "opponent_deck_count",
+    "opponent_prize_count"
+  ],
+  "featureMeans": [
+    4.306818181818182,
+    5.6477272727272725,
+    39.70454545454545,
+    4.511363636363637,
+    4.25,
+    44.60227272727273,
+    5.3522727272727275
+  ],
+  "featureScales": [
+    3.894512323728019,
+    1.6099108722314184,
+    9.23944002989985,
+    2.241115378666585,
+    2.1065374432940898,
+    4.623408258592337,
+    1.5078564912972026
+  ],
+  "intercept": 2.1757029448650935,
+  "issue": "SOT-2346",
+  "model": "ridge-logistic-public-state-blend",
+  "optimizationSteps": 4000,
+  "regularization": 0.03,
+  "schemaVersion": "1.0.0",
+  "trainingSamples": 88,
+  "trainingSplit": "train",
+  "weights": [
+    0.7037697893552098,
+    0.11332368226575723,
+    -0.6394502561367409,
+    0.27863857146066806,
+    -1.0982568954786731,
+    0.7934305564878369,
+    -0.6204729625902937
+  ]
+}

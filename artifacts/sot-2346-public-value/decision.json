@@ -1,0 +1,185 @@
+{
+  "championBehaviorChanged": false,
+  "confirm": {
+    "gate": {
+      "passed": false,
+      "reasons": [
+        "aggregate win rate did not strictly improve",
+        "matsu matchup regressed",
+        "seat 1 regressed"
+      ]
+    },
+    "opened": true,
+    "protocol": {
+      "baseSeed": 2346201,
+      "seatReversal": true,
+      "seedsPerOpponent": 3
+    },
+    "reportSha256": {
+      "artifacts/sot-2346-public-value/confirm/candidate-vs-matsu.json": "b9f812516d6fd0c4de3ce27a50b95b314c6c61288790235ba29879a7c897731c",
+      "artifacts/sot-2346-public-value/confirm/candidate-vs-take.json": "63887aab085567f012bc342b328982f0c7f5fddaadeafed6f5ab87e571d98182",
+      "artifacts/sot-2346-public-value/confirm/candidate-vs-ume.json": "343e24c381edd75866718ebace01969229d5cc6ba23504e67f6ed675b7f88a1a",
+      "artifacts/sot-2346-public-value/confirm/champion-vs-matsu.json": "e716aea19fe6157f2b2b06124f2f9a1c40dc7513110d291ce23c26a81742112f",
+      "artifacts/sot-2346-public-value/confirm/champion-vs-take.json": "a435f3c780211b122a9ed54d8df709436033c125b3f02dce7c4db0d7a1f0e2a6",
+      "artifacts/sot-2346-public-value/confirm/champion-vs-ume.json": "c37a7d43547bd5002f19773abacaf990ee5dc3d8197b1cd701fb7beb9c727e56"
+    },
+    "results": {
+      "candidate": {
+        "faults": 0,
+        "matches": 18,
+        "matchups": {
+          "matsu": {
+            "matches": 6,
+            "winRate": 0.3333333333333333,
+            "wins": 2
+          },
+          "take": {
+            "matches": 6,
+            "winRate": 0.6666666666666666,
+            "wins": 4
+          },
+          "ume": {
+            "matches": 6,
+            "winRate": 0.8333333333333334,
+            "wins": 5
+          }
+        },
+        "runtimeSeconds": {
+          "max": 24.849637477018405,
+          "mean": 12.888529751336641
+        },
+        "seatWinRate": {
+          "0": 0.5555555555555556,
+          "1": 0.6666666666666666
+        },
+        "unfinished": 0,
+        "winRate": 0.6111111111111112,
+        "wins": 11
+      },
+      "champion": {
+        "faults": 0,
+        "matches": 18,
+        "matchups": {
+          "matsu": {
+            "matches": 6,
+            "winRate": 0.6666666666666666,
+            "wins": 4
+          },
+          "take": {
+            "matches": 6,
+            "winRate": 0.6666666666666666,
+            "wins": 4
+          },
+          "ume": {
+            "matches": 6,
+            "winRate": 0.5,
+            "wins": 3
+          }
+        },
+        "runtimeSeconds": {
+          "max": 37.4790365829831,
+          "mean": 15.251621431991225
+        },
+        "seatWinRate": {
+          "0": 0.4444444444444444,
+          "1": 0.7777777777777778
+        },
+        "unfinished": 0,
+        "winRate": 0.6111111111111112,
+        "wins": 11
+      }
+    }
+  },
+  "issue": "SOT-2346",
+  "kaggleSubmission": false,
+  "manifestSha256": "ae20ae66e356b3841341ec72f831d751950cd6b5a070ff84cd0da7714d6ce1a7",
+  "outcome": "champion_retained",
+  "promoted": false,
+  "schemaVersion": "1.0.0",
+  "screen": {
+    "gate": {
+      "passed": true,
+      "reasons": []
+    },
+    "phase": "screen",
+    "protocol": {
+      "baseSeed": 2346101,
+      "seatReversal": true,
+      "seedsPerOpponent": 1
+    },
+    "reportSha256": {
+      "artifacts/sot-2346-public-value/screen/candidate-vs-matsu.json": "db4a81f239fb766c6886dc9bead86db54d80c986ca34ee10cc2e5f987c6fa832",
+      "artifacts/sot-2346-public-value/screen/candidate-vs-take.json": "466cf758366f56883ff8b48aed846439b314ac8557f167478ab5043b7f1de81c",
+      "artifacts/sot-2346-public-value/screen/candidate-vs-ume.json": "a5d149ec3782eda0cd6bf0da5a49f1f265db1f6a3600bcf44e3c17e99240a4ed",
+      "artifacts/sot-2346-public-value/screen/champion-vs-matsu.json": "30861b8d56198ad46a135710d7bdb5256a62f6d4bf1ff4e20cd01d2f17a759e7",
+      "artifacts/sot-2346-public-value/screen/champion-vs-take.json": "e990c645a18308d64574909857427d68ecf3eec063d66565d8abcd19505d80a4",
+      "artifacts/sot-2346-public-value/screen/champion-vs-ume.json": "053877f64de4cea9923532ae50e4606580643dc812afed2b4ccad0908ef0842d"
+    },
+    "results": {
+      "candidate": {
+        "faults": 0,
+        "matches": 6,
+        "matchups": {
+          "matsu": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "take": {
+            "matches": 2,
+            "winRate": 1.0,
+            "wins": 2
+          },
+          "ume": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          }
+        },
+        "runtimeSeconds": {
+          "max": 15.566988677019253,
+          "mean": 10.224566112485869
+        },
+        "seatWinRate": {
+          "0": 0.6666666666666666,
+          "1": 0.6666666666666666
+        },
+        "unfinished": 0,
+        "winRate": 0.6666666666666666,
+        "wins": 4
+      },
+      "champion": {
+        "faults": 0,
+        "matches": 6,
+        "matchups": {
+          "matsu": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "take": {
+            "matches": 2,
+            "winRate": 1.0,
+            "wins": 2
+          },
+          "ume": {
+            "matches": 2,
+            "winRate": 0.0,
+            "wins": 0
+          }
+        },
+        "runtimeSeconds": {
+          "max": 15.501036650966853,
+          "mean": 10.606489772491235
+        },
+        "seatWinRate": {
+          "0": 0.3333333333333333,
+          "1": 0.6666666666666666
+        },
+        "unfinished": 0,
+        "winRate": 0.5,
+        "wins": 3
+      }
+    }
+  }
+}

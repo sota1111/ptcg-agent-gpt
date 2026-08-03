@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2346",
+  "preregisteredBeforeConfirm": true,
+  "source": {
+    "issue": "SOT-2345",
+    "corpus": "artifacts/sot-2345/public-oracle.jsonl",
+    "corpusSha256": "154ce404d14be23998390955e324d8b84f593a4383e2e47de148f7e024cf525f"
+  },
+  "champion": {
+    "deck": "deck.csv",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "candidate": {
+    "id": "public-value-linear-blend-v1",
+    "artifact": "agents/public_value_model.json",
+    "artifactSha256": "5ca1818ba039e2c80218b89208454ca2d9cc6dfc2ecadbf70f19c11da1df1472",
+    "runtimeEnv": {"PTCG_PUBLIC_VALUE_CANDIDATE": "1"}
+  },
+  "fixedAgentContract": {
+    "deck": "same",
+    "worlds": "same",
+    "rootBudget": "same",
+    "fallbackChain": "same",
+    "onlyDifference": "leaf evaluator"
+  },
+  "opponents": [
+    {"label": "matsu", "repo": "/workspaces/ptcg-agent-matsu", "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67", "deckSha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "take", "repo": "/workspaces/ptcg-agent-take", "commit": "e837e35f45b88ca3ddf8e6de44562e8355c3e414", "deckSha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"},
+    {"label": "ume", "repo": "/workspaces/ptcg-agent-ume", "commit": "9a1945513533089b142033d33406e1248de65111", "deckSha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799"}
+  ],
+  "screen": {"baseSeed": 2346101, "seedsPerOpponent": 1, "seatReversal": true},
+  "confirm": {"baseSeed": 2346201, "seedsPerOpponent": 3, "seatReversal": true},
+  "gate": {
+    "aggregateWinRateStrictlyImproves": true,
+    "eachMatchupNonRegressing": true,
+    "eachSeatNonRegressing": true,
+    "faultsAndUnfinishedNonIncreasing": true,
+    "matchRuntimeSecondsMax": 600.0
+  },
+  "kaggleSubmission": false
+}

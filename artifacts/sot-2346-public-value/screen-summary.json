@@ -1,0 +1,86 @@
+{
+  "gate": {
+    "passed": true,
+    "reasons": []
+  },
+  "phase": "screen",
+  "protocol": {
+    "baseSeed": 2346101,
+    "seatReversal": true,
+    "seedsPerOpponent": 1
+  },
+  "reportSha256": {
+    "artifacts/sot-2346-public-value/screen/candidate-vs-matsu.json": "db4a81f239fb766c6886dc9bead86db54d80c986ca34ee10cc2e5f987c6fa832",
+    "artifacts/sot-2346-public-value/screen/candidate-vs-take.json": "466cf758366f56883ff8b48aed846439b314ac8557f167478ab5043b7f1de81c",
+    "artifacts/sot-2346-public-value/screen/candidate-vs-ume.json": "a5d149ec3782eda0cd6bf0da5a49f1f265db1f6a3600bcf44e3c17e99240a4ed",
+    "artifacts/sot-2346-public-value/screen/champion-vs-matsu.json": "30861b8d56198ad46a135710d7bdb5256a62f6d4bf1ff4e20cd01d2f17a759e7",
+    "artifacts/sot-2346-public-value/screen/champion-vs-take.json": "e990c645a18308d64574909857427d68ecf3eec063d66565d8abcd19505d80a4",
+    "artifacts/sot-2346-public-value/screen/champion-vs-ume.json": "053877f64de4cea9923532ae50e4606580643dc812afed2b4ccad0908ef0842d"
+  },
+  "results": {
+    "candidate": {
+      "faults": 0,
+      "matches": 6,
+      "matchups": {
+        "matsu": {
+          "matches": 2,
+          "winRate": 0.5,
+          "wins": 1
+        },
+        "take": {
+          "matches": 2,
+          "winRate": 1.0,
+          "wins": 2
+        },
+        "ume": {
+          "matches": 2,
+          "winRate": 0.5,
+          "wins": 1
+        }
+      },
+      "runtimeSeconds": {
+        "max": 15.566988677019253,
+        "mean": 10.224566112485869
+      },
+      "seatWinRate": {
+        "0": 0.6666666666666666,
+        "1": 0.6666666666666666
+      },
+      "unfinished": 0,
+      "winRate": 0.6666666666666666,
+      "wins": 4
+    },
+    "champion": {
+      "faults": 0,
+      "matches": 6,
+      "matchups": {
+        "matsu": {
+          "matches": 2,
+          "winRate": 0.5,
+          "wins": 1
+        },
+        "take": {
+          "matches": 2,
+          "winRate": 1.0,
+          "wins": 2
+        },
+        "ume": {
+          "matches": 2,
+          "winRate": 0.0,
+          "wins": 0
+        }
+      },
+      "runtimeSeconds": {
+        "max": 15.501036650966853,
+        "mean": 10.606489772491235
+      },
+      "seatWinRate": {
+        "0": 0.3333333333333333,
+        "1": 0.6666666666666666
+      },
+      "unfinished": 0,
+      "winRate": 0.5,
+      "wins": 3
+    }
+  }
+}

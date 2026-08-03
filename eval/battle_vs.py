@@ -129,6 +129,7 @@ class Contestant:
         deck_path: str | None = None,
         capture_determinization: bool = False,
         public_telemetry_only: bool = False,
+        env_overrides: dict[str, str] | None = None,
     ):
         self.label = label
         self.repo = os.path.abspath(repo)
@@ -143,6 +144,7 @@ class Contestant:
         self.seed = seed
         self.capture_determinization = capture_determinization
         self.public_telemetry_only = public_telemetry_only
+        self.env_overrides = dict(env_overrides or {})
         self.last_telemetry = {}
 
     @property
@@ -152,6 +154,7 @@ class Contestant:
 
     def start(self) -> None:
         env = dict(os.environ)
+        env.update(self.env_overrides)
         env["AGENT_SEED"] = str(self.seed)
         if self.capture_determinization:
             env["PTCG_TELEMETRY_PROTOCOL"] = "1"
@@ -326,6 +329,7 @@ def run(
     base_seed: int,
     semantic_deck: str | None = None,
     public_telemetry_only: bool = False,
+    semantic_env: dict[str, str] | None = None,
 ) -> dict:
     sys.path.insert(0, REPO)
     os.chdir(REPO)  # libcg.so resolves relative to the repo root
@@ -338,6 +342,7 @@ def run(
         semantic_deck,
         capture_determinization=True,
         public_telemetry_only=public_telemetry_only,
+        env_overrides=semantic_env,
     )
     opp = Contestant(opponent_label, opponent_repo, base_seed)
     semantic.start()
