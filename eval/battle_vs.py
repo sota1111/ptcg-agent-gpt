@@ -68,6 +68,8 @@ def public_decision_snapshot(observation: dict, seat: int, action: list | None =
             "discard_count": len(player.get("discard") or []),
             "active_energy_count": sum(len(card.get("energies") or []) for card in active),
             "board_energy_count": sum(len(card.get("energies") or []) for card in in_play),
+            "pokemon_count": len(in_play),
+            "hp_total": sum(int(card.get("hp") or 0) for card in in_play),
         }
 
     rows = [player_counts(player or {}) for player in players[:2]]

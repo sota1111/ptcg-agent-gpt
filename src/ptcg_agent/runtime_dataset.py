@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from collections.abc import Iterator
 from dataclasses import dataclass
@@ -16,6 +17,42 @@ class RuntimeTrainingSample:
     legal_actions: tuple[int, ...]
     value: float
     split: str
+    heuristic_value: float | None = None
+    provenance_fingerprint: str | None = None
+
+
+PUBLIC_FEATURE_ALLOWLIST = (
+    "turn_index",
+    "own_hand_count",
+    "own_deck_count",
+    "own_prize_count",
+    "opponent_hand_count",
+    "opponent_deck_count",
+    "opponent_prize_count",
+)
+SPLITS = {"train", "screen", "confirm"}
+
+
+def public_feature_vector(state: dict[str, Any]) -> tuple[float, ...]:
+    """Project an allowlisted public snapshot onto the stable seven-feature contract."""
+    own = state.get("own") or {}
+    opponent = state.get("opponent") or {}
+    values = (
+        state.get("turn_index", 0),
+        own.get("hand_count", 0),
+        own.get("deck_count", 0),
+        own.get("prize_count", 0),
+        opponent.get("hand_count", 0),
+        opponent.get("deck_count", 0),
+        opponent.get("prize_count", 0),
+    )
+    return tuple(float(value) for value in values)
+
+
+def provenance_fingerprint(seed: int, seat: int, opponent_fingerprint: str) -> str:
+    """Identify a match unit without exposing opponent identity to model features."""
+    payload = f"{seed}:{seat}:{opponent_fingerprint}".encode()
+    return hashlib.sha256(payload).hexdigest()
 
 
 def load_runtime_dataset(path: Path, split: str | None = None) -> Iterator[RuntimeTrainingSample]:
@@ -25,10 +62,12 @@ def load_runtime_dataset(path: Path, split: str | None = None) -> Iterator[Runti
             if not line.strip():
                 continue
             raw: dict[str, Any] = json.loads(line)
-            if raw.get("schemaVersion") != "1.0.0":
+            version = raw.get("schemaVersion")
+            if version not in {"1.0.0", "2.0.0"}:
                 raise ValueError(f"line {number}: unsupported dataset schema")
             sample_split = raw.get("split")
-            if sample_split not in {"train", "validation", "holdout"}:
+            valid_splits = {"train", "validation", "holdout"} if version == "1.0.0" else SPLITS
+            if sample_split not in valid_splits:
                 raise ValueError(f"line {number}: invalid split")
             if split is not None and sample_split != split:
                 continue
@@ -43,4 +82,6 @@ def load_runtime_dataset(path: Path, split: str | None = None) -> Iterator[Runti
                 legal_actions=legal,
                 value=float(raw["value"]),
                 split=sample_split,
+                heuristic_value=(float(raw["heuristicValue"]) if "heuristicValue" in raw else None),
+                provenance_fingerprint=raw.get("provenanceFingerprint"),
             )

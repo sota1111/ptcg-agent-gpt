@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "diversified public-state value-oracle corpus",
+  "champion": {"main": "main.py", "deck": "deck.csv"},
+  "opponents": [
+    {"id": "matsu", "repo": "../ptcg-agent-matsu"},
+    {"id": "take", "repo": "../ptcg-agent-take"},
+    {"id": "ume", "repo": "../ptcg-agent-ume"}
+  ],
+  "splits": {
+    "train": {"seeds": [2345101]},
+    "screen": {"seeds": [2345201]},
+    "confirm": {"seeds": [2345301]}
+  },
+  "seatReversal": true,
+  "privacy": {
+    "publicStateOnly": true,
+    "hiddenInformation": false,
+    "opponentIdentityModelFeature": false
+  },
+  "promotionContract": {
+    "screenThenIndependentConfirm": true,
+    "nonPromotion": "revert behavioral changes; retain docs, fingerprints, and ledger evidence",
+    "promotion": "submission exec-style import compatibility must pass",
+    "kaggleSubmission": false
+  }
+}
