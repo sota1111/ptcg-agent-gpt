@@ -1,0 +1,16 @@
+  match 1/10: semantic 0 - 1 matsu (draws 0, faults F0/O0)
+  match 2/10: semantic 0 - 2 matsu (draws 0, faults F0/O0)
+  match 3/10: semantic 0 - 3 matsu (draws 0, faults F0/O0)
+  match 4/10: semantic 0 - 4 matsu (draws 0, faults F0/O0)
+  match 5/10: semantic 1 - 4 matsu (draws 0, faults F0/O0)
+  match 6/10: semantic 2 - 4 matsu (draws 0, faults F0/O0)
+  match 7/10: semantic 3 - 4 matsu (draws 0, faults F0/O0)
+  match 8/10: semantic 4 - 4 matsu (draws 0, faults F0/O0)
+  match 9/10: semantic 5 - 4 matsu (draws 0, faults F0/O0)
+  match 10/10: semantic 5 - 5 matsu (draws 0, faults F0/O0)
+semantic vs matsu: n=10  semantic 5 - 5 (draws 0, unfinished 0)
+  win rate (excl. draws): 0.5000  Wilson95 [0.2366, 0.7634]  (先手 3/5)
+  faults: semantic 0  matsu 0
+  max think/match: {'semantic': 12.197050652117468, 'matsu': 5.9223346839426085}
+  promotion: {'promote': False, 'reasons': ['fewer than 20 fixed agent seeds', 'win rate below 60%', 'Wilson 95% lower bound does not exceed 50%']}
+wrote artifacts/sot-2378/holdout/matsu.json

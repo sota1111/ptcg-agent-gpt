@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2378",
+  "parent_issue": "SOT-2364",
+  "terminal": {"identity": "champion", "candidate": null, "source_decision": "champion_retained"},
+  "result": {"blind_matches": 50, "wins": 25, "losses": 25, "win_rate": 0.5, "worst_matchup": "claude", "worst_matchup_win_rate": 0.3, "seat_win_rate": {"0": 0.64, "1": 0.36}, "faults": 0, "illegal_actions": 0, "unfinished": 0, "mean_runtime_s": 11.898685410699109, "max_runtime_s": 40.80901162099326},
+  "artifact": {"path": "submission.tar.gz", "archive_sha256": "94461a7306daf411f32b6009c4a59d3c574da9646f7e5872d0101e57ef9c9017", "content_sha256": "2bc66b4c3d6e51fd11251aedca21fb1ff587101b87cd6675567854ba8c6d6acd", "main_sha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c", "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"},
+  "evidence": {"manifest": "eval/manifests/sot-2378-blind-holdout.json", "manifest_sha256": "1ac23625d3635e83eb93157604ae3d5b3ea103b539ad4198bd534d5f3a39019b", "summary": "artifacts/sot-2378/summary.json", "summary_sha256": "73959d3cd78713b7d06e31f6d4ebdeb178f965d6fd743fb846ce2f86492831fc", "fingerprint": "artifacts/sot-2378/submission-fingerprint.json"},
+  "verification": {"blind_holdout_passed": true, "deterministic_rebuild_passed": true, "exec_compatibility_passed": true},
+  "submission": {"eligible_for_parent_submission": true, "kaggle_submitted": false, "submission_owner": "SOT-2364"}
+}
