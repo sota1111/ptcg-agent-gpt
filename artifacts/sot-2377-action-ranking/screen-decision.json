@@ -1,0 +1,221 @@
+{
+  "championBehaviorChanged": false,
+  "confirmRequired": false,
+  "issue": "SOT-2377",
+  "kaggleSubmissionPerformed": false,
+  "manifestSha256": "a6a374aaefd3870ae105e438f147064edfe4abfd5a37c551f8d7c14328efb0eb",
+  "passed": false,
+  "phase": "screen",
+  "promoted": false,
+  "reasons": [
+    "fixed pool win rate did not strictly improve",
+    "diversified pool win rate did not strictly improve",
+    "seat 1 regressed"
+  ],
+  "reportSha256": {
+    "artifacts/sot-2377-action-ranking/screen/candidate-claude.json": "92bbf5d4132080a4ff5a68dc996503a15a25669bdbd136d6c6b76740c776f46d",
+    "artifacts/sot-2377-action-ranking/screen/candidate-matsu.json": "5692fec73e6d30cbd6d84c6658a00e19e1b8187e70a0832f85c44a2c0659f79b",
+    "artifacts/sot-2377-action-ranking/screen/candidate-obo.json": "fddefcbc54800f4d5de5eb798f911a0d144ef6dc6f84dd0ffa548bcd61899ece",
+    "artifacts/sot-2377-action-ranking/screen/candidate-take.json": "fcb9c692df5fcb8c36a9d37d4f541a428c91727a2b8bfc2800b5a94eabc9d0d6",
+    "artifacts/sot-2377-action-ranking/screen/champion-claude.json": "755e227791baadc484ec8a8ef0f151dbf48980860759019f612e9a2ee26318c3",
+    "artifacts/sot-2377-action-ranking/screen/champion-matsu.json": "8a361ce51c5351b934a8f383f263a9370f81810fa10e827b90d64a86c30e358f",
+    "artifacts/sot-2377-action-ranking/screen/champion-obo.json": "3b71b4f0f0b82927702bf3cd5f8662c915a9fa51d9bf9802e37b5d85a0b805ee",
+    "artifacts/sot-2377-action-ranking/screen/champion-take.json": "fc1f86d5f853efc4a05736f8f77c4b79e339586665cf2b00353489df99c0d218"
+  },
+  "results": {
+    "candidate": {
+      "all": {
+        "faults": 0,
+        "matches": 8,
+        "opponents": {
+          "claude": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "matsu": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "obo": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "take": {
+            "matches": 2,
+            "winRate": 0.0,
+            "wins": 0
+          }
+        },
+        "runtime": {
+          "max": 17.997134061995894,
+          "mean": 9.701205677491089
+        },
+        "seatWinRates": {
+          "0": 0.75,
+          "1": 0.0
+        },
+        "unfinished": 0,
+        "winRate": 0.375,
+        "wins": 3,
+        "worstMatchupWinRate": 0.0
+      },
+      "diversified": {
+        "faults": 0,
+        "matches": 4,
+        "opponents": {
+          "claude": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "obo": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          }
+        },
+        "runtime": {
+          "max": 17.997134061995894,
+          "mean": 10.830761191493366
+        },
+        "seatWinRates": {
+          "0": 1.0,
+          "1": 0.0
+        },
+        "unfinished": 0,
+        "winRate": 0.5,
+        "wins": 2,
+        "worstMatchupWinRate": 0.5
+      },
+      "fixed": {
+        "faults": 0,
+        "matches": 4,
+        "opponents": {
+          "matsu": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "take": {
+            "matches": 2,
+            "winRate": 0.0,
+            "wins": 0
+          }
+        },
+        "runtime": {
+          "max": 17.924418860988226,
+          "mean": 8.571650163488812
+        },
+        "seatWinRates": {
+          "0": 0.5,
+          "1": 0.0
+        },
+        "unfinished": 0,
+        "winRate": 0.25,
+        "wins": 1,
+        "worstMatchupWinRate": 0.0
+      }
+    },
+    "champion": {
+      "all": {
+        "faults": 0,
+        "matches": 8,
+        "opponents": {
+          "claude": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "matsu": {
+            "matches": 2,
+            "winRate": 0.0,
+            "wins": 0
+          },
+          "obo": {
+            "matches": 2,
+            "winRate": 1.0,
+            "wins": 2
+          },
+          "take": {
+            "matches": 2,
+            "winRate": 1.0,
+            "wins": 2
+          }
+        },
+        "runtime": {
+          "max": 43.938859253015835,
+          "mean": 18.224578971123265
+        },
+        "seatWinRates": {
+          "0": 0.75,
+          "1": 0.5
+        },
+        "unfinished": 0,
+        "winRate": 0.625,
+        "wins": 5,
+        "worstMatchupWinRate": 0.0
+      },
+      "diversified": {
+        "faults": 0,
+        "matches": 4,
+        "opponents": {
+          "claude": {
+            "matches": 2,
+            "winRate": 0.5,
+            "wins": 1
+          },
+          "obo": {
+            "matches": 2,
+            "winRate": 1.0,
+            "wins": 2
+          }
+        },
+        "runtime": {
+          "max": 43.938859253015835,
+          "mean": 24.656443208747078
+        },
+        "seatWinRates": {
+          "0": 1.0,
+          "1": 0.5
+        },
+        "unfinished": 0,
+        "winRate": 0.75,
+        "wins": 3,
+        "worstMatchupWinRate": 0.5
+      },
+      "fixed": {
+        "faults": 0,
+        "matches": 4,
+        "opponents": {
+          "matsu": {
+            "matches": 2,
+            "winRate": 0.0,
+            "wins": 0
+          },
+          "take": {
+            "matches": 2,
+            "winRate": 1.0,
+            "wins": 2
+          }
+        },
+        "runtime": {
+          "max": 16.993595340987667,
+          "mean": 11.792714733499452
+        },
+        "seatWinRates": {
+          "0": 0.5,
+          "1": 0.5
+        },
+        "unfinished": 0,
+        "winRate": 0.5,
+        "wins": 2,
+        "worstMatchupWinRate": 0.0
+      }
+    }
+  },
+  "runtimeRatio": 0.5323143921657993,
+  "schemaVersion": "1.0.0"
+}
