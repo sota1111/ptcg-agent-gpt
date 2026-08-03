@@ -1,3 +1,4 @@
+import importlib.util
 import json
 from pathlib import Path
 
@@ -9,7 +10,14 @@ from ptcg_agent.runtime_dataset import (
     provenance_fingerprint,
     public_feature_vector,
 )
-from scripts.build_public_oracle_corpus import diagnostics
+
+SPEC = importlib.util.spec_from_file_location(
+    "build_public_oracle_corpus", Path("scripts/build_public_oracle_corpus.py")
+)
+assert SPEC and SPEC.loader
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
+diagnostics = MODULE.diagnostics
 
 
 def test_public_allowlist_excludes_hidden_and_opponent_identity() -> None:
