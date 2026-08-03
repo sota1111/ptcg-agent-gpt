@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2377",
+  "oracle": {
+    "path": "artifacts/sot-2376-public-counterfactual-oracle/oracle.jsonl",
+    "sha256": "7f1808c55f7430b423b4f4c0b42f2fb68ed4895287b0aff92812edfc7a8cbd0e",
+    "trainingSplit": "train",
+    "screenSplitOpened": true,
+    "confirmOnlyAfterScreenPass": true
+  },
+  "candidate": {
+    "id": "public-pairwise-root-prior",
+    "model": "artifacts/sot-2377-action-ranking/public_action_ranker.json",
+    "evaluatedPatch": "root candidate ordering and PUCT prior only; reverted after failed screen"
+  },
+  "fixedVariables": {
+    "main": "main.py",
+    "deck": "deck.csv",
+    "searchBudget": {"maxRootActions": 6, "nWorlds": 4, "timeBudgetSeconds": 0.8},
+    "rollout": "greedy",
+    "fallback": "MCTS -> Greedy -> Rule -> random-legal",
+    "worldAggregation": "sum",
+    "leafEvaluator": "heuristic with champion deck-preservation weights"
+  },
+  "pools": {
+    "fixed": ["matsu", "take"],
+    "diversified": ["claude", "obo"],
+    "opponentRepositories": {
+      "matsu": "/workspaces/ptcg-agent-matsu",
+      "take": "/workspaces/ptcg-agent-take",
+      "claude": "/workspaces/ptcg-agent-claude",
+      "obo": "/workspaces/ptcg-agent-obo"
+    }
+  },
+  "screen": {"baseSeed": 2377201, "seedsPerOpponent": 1, "seatReversal": true},
+  "confirm": {"baseSeed": 2377301, "seedsPerOpponent": 2, "seatReversal": true},
+  "promotionGate": {
+    "poolWinRateStrictlyImproves": true,
+    "worstMatchupNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsAndUnfinishedDoNotIncrease": true,
+    "meanRuntimeRatioMax": 1.1,
+    "matchRuntimeSecondsMaxExclusive": 600
+  },
+  "kaggleSubmission": false
+}

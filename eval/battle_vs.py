@@ -596,6 +596,13 @@ def main():
         action="store_true",
         help="omit hidden-world fingerprints while retaining root action/value telemetry",
     )
+    p.add_argument(
+        "--semantic-env",
+        action="append",
+        default=[],
+        metavar="KEY=VALUE",
+        help="evaluation-only environment override for the semantic contestant",
+    )
     p.add_argument("--json", default=None)
     p.add_argument(
         "--aggregate",
@@ -619,6 +626,7 @@ def main():
             args.base_seed,
             args.semantic_deck,
             args.public_telemetry_only,
+            dict(value.split("=", 1) for value in args.semantic_env),
         )
         report["promotion"] = promotion_decision(report)
     print(summarize(report))
