@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2376",
+  "axis": "public-counterfactual-action-ranking",
+  "purpose": "fixed public-state legal-root-action pair oracle",
+  "champion": {"main": "main.py", "deck": "deck.csv"},
+  "opponents": [
+    {"id": "hash-baseline", "repo": "eval/hash_baseline"}
+  ],
+  "splits": {
+    "train": {"seeds": [2376101]},
+    "screen": {"seeds": [2376201]},
+    "confirm": {"seeds": [2376301]}
+  },
+  "seatReversal": true,
+  "searchBudget": {
+    "determinizations": 4,
+    "timeBudgetSeconds": 0.8,
+    "maxRootActions": 6,
+    "counterfactualHorizon": "one root decision",
+    "sharedWorldsRequired": 2
+  },
+  "publicFeatureAllowlist": [
+    "turn_index", "turn_action_count", "selection_context", "hand_count_delta",
+    "bench_count_delta", "prize_count_delta", "own", "opponent",
+    "energy_already_attached_this_turn", "energy_attachment_available", "attack_ready",
+    "end_turn_available", "option_count"
+  ],
+  "forbiddenLearningFeatures": [
+    "opponent_identity", "opponent_fingerprint", "pool_identity", "hidden_hand_identity",
+    "hidden_deck_identity", "world_fingerprint", "seed", "seat", "match_id"
+  ],
+  "preregisteredGates": {
+    "minimumCoverage": 0.5,
+    "minimumPairwiseSignal": 0.05,
+    "screenThenIndependentConfirm": true,
+    "confirmOnlyAfterScreenPass": true
+  },
+  "promotionContract": {
+    "nextIssue": "SOT-2377",
+    "nonPromotion": "retain champion behavior and oracle evidence",
+    "promotion": "candidate must preserve submission exec compatibility",
+    "kaggleSubmission": false
+  }
+}

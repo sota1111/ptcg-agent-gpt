@@ -18,5 +18,7 @@ artifacts/*
 !artifacts/meta-analysis.json
 !artifacts/sot-2058-deck-pool/
 !artifacts/sot-2058-deck-pool/**
+!artifacts/sot-2376-public-counterfactual-oracle/
+!artifacts/sot-2376-public-counterfactual-oracle/**
 cg/
 submission.tar.gz
