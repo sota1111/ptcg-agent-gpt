@@ -1,0 +1,141 @@
+{
+  "corpus": "artifacts/sot-2345/public-oracle.jsonl",
+  "corpusSha256": "154ce404d14be23998390955e324d8b84f593a4383e2e47de148f7e024cf525f",
+  "forbiddenModelFeatures": [
+    "hidden_cards",
+    "world_fingerprint",
+    "opponent_identity"
+  ],
+  "heuristicBaseline": {
+    "confirm": {
+      "brier_score": 0.24857399973811392,
+      "match_units": 6,
+      "matchupSeat": {
+        "10b00662b0e3:seat0": {
+          "brier_score": 0.16358088339010698,
+          "roc_auc": null,
+          "samples": 19
+        },
+        "10b00662b0e3:seat1": {
+          "brier_score": 0.15490687691672816,
+          "roc_auc": null,
+          "samples": 6
+        },
+        "95eec2b4f18e:seat0": {
+          "brier_score": 0.1957959945317777,
+          "roc_auc": null,
+          "samples": 9
+        },
+        "95eec2b4f18e:seat1": {
+          "brier_score": 0.28257270936017326,
+          "roc_auc": null,
+          "samples": 6
+        },
+        "bbe8087513e2:seat0": {
+          "brier_score": 0.14806692848815065,
+          "roc_auc": null,
+          "samples": 14
+        },
+        "bbe8087513e2:seat1": {
+          "brier_score": 0.4238003967455961,
+          "roc_auc": null,
+          "samples": 22
+        }
+      },
+      "roc_auc": 0.6958188153310104,
+      "samples": 76
+    },
+    "screen": {
+      "brier_score": 0.32130555572780595,
+      "match_units": 6,
+      "matchupSeat": {
+        "10b00662b0e3:seat0": {
+          "brier_score": 0.17405266017176024,
+          "roc_auc": null,
+          "samples": 12
+        },
+        "10b00662b0e3:seat1": {
+          "brier_score": 0.35735988135275143,
+          "roc_auc": null,
+          "samples": 12
+        },
+        "95eec2b4f18e:seat0": {
+          "brier_score": 0.17640437436660844,
+          "roc_auc": null,
+          "samples": 11
+        },
+        "95eec2b4f18e:seat1": {
+          "brier_score": 0.5022646295070081,
+          "roc_auc": null,
+          "samples": 34
+        },
+        "bbe8087513e2:seat0": {
+          "brier_score": 0.2399512791015977,
+          "roc_auc": null,
+          "samples": 35
+        },
+        "bbe8087513e2:seat1": {
+          "brier_score": 0.24592295724196472,
+          "roc_auc": null,
+          "samples": 5
+        }
+      },
+      "roc_auc": 0.5009615384615385,
+      "samples": 109
+    },
+    "train": {
+      "brier_score": 0.14623976194641788,
+      "match_units": 6,
+      "matchupSeat": {
+        "10b00662b0e3:seat0": {
+          "brier_score": 0.08165797832933243,
+          "roc_auc": null,
+          "samples": 44
+        },
+        "10b00662b0e3:seat1": {
+          "brier_score": 0.2464553910308707,
+          "roc_auc": null,
+          "samples": 6
+        },
+        "95eec2b4f18e:seat0": {
+          "brier_score": 0.18203205921273635,
+          "roc_auc": null,
+          "samples": 11
+        },
+        "95eec2b4f18e:seat1": {
+          "brier_score": 0.4299142346638662,
+          "roc_auc": null,
+          "samples": 4
+        },
+        "bbe8087513e2:seat0": {
+          "brier_score": 0.16243735155957473,
+          "roc_auc": null,
+          "samples": 17
+        },
+        "bbe8087513e2:seat1": {
+          "brier_score": 0.21899518201676485,
+          "roc_auc": null,
+          "samples": 6
+        }
+      },
+      "roc_auc": 0.8146701388888888,
+      "samples": 88
+    }
+  },
+  "publicFeatureAllowlist": [
+    "turn_index",
+    "own_hand_count",
+    "own_deck_count",
+    "own_prize_count",
+    "opponent_hand_count",
+    "opponent_deck_count",
+    "opponent_prize_count"
+  ],
+  "schemaVersion": "1.0.0",
+  "splitLeakagePassed": true,
+  "splitOverlap": {
+    "confirm:screen": [],
+    "confirm:train": [],
+    "screen:train": []
+  }
+}
