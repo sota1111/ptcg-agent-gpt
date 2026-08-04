@@ -1,0 +1,16 @@
+  match 1/10: semantic 1 - 0 claude (draws 0, faults F0/O0)
+  match 2/10: semantic 1 - 1 claude (draws 0, faults F0/O0)
+  match 3/10: semantic 2 - 1 claude (draws 0, faults F0/O0)
+  match 4/10: semantic 2 - 2 claude (draws 0, faults F0/O0)
+  match 5/10: semantic 2 - 3 claude (draws 0, faults F0/O0)
+  match 6/10: semantic 3 - 3 claude (draws 0, faults F0/O0)
+  match 7/10: semantic 4 - 3 claude (draws 0, faults F0/O0)
+  match 8/10: semantic 4 - 4 claude (draws 0, faults F0/O0)
+  match 9/10: semantic 5 - 4 claude (draws 0, faults F0/O0)
+  match 10/10: semantic 5 - 5 claude (draws 0, faults F0/O0)
+semantic vs claude: n=10  semantic 5 - 5 (draws 0, unfinished 0)
+  win rate (excl. draws): 0.5000  Wilson95 [0.2366, 0.7634]  (先手 4/5)
+  faults: semantic 0  claude 0
+  max think/match: {'semantic': 14.125253979233094, 'claude': 16.03852187783923}
+  promotion: {'promote': False, 'reasons': ['fewer than 20 fixed agent seeds', 'win rate below 60%', 'Wilson 95% lower bound does not exceed 50%']}
+wrote artifacts/sot-2401/holdout/claude.json

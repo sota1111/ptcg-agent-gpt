@@ -1,0 +1,158 @@
+{
+  "archive": "submission.tar.gz",
+  "archive_sha256": "621a3d113002400d1b4257d9f17e51cdb6ff4797d1aeadbbb5d9f82738bdd221",
+  "canonical_content_sha256": "32c3affee78cdc95eab31bc1620f24fa04fa37911efa4fc8edd408b771fb443f",
+  "entries": [
+    {
+      "mode": 420,
+      "path": "agents/__init__.py",
+      "sha256": "13a491ecbfae6f45d1c5e3076a360f0b49d366a5555bc01c51f2e70d77f3d223",
+      "size": 1376
+    },
+    {
+      "mode": 420,
+      "path": "agents/actions.py",
+      "sha256": "16e060462841abbd9ab72c395e9b319d8593c754f2b14f2970060b830eb13112",
+      "size": 2472
+    },
+    {
+      "mode": 420,
+      "path": "agents/base.py",
+      "sha256": "0ab673452ba78df461089db0ca829ea208a4a6a370ffa36cc44d594093e4434a",
+      "size": 1665
+    },
+    {
+      "mode": 420,
+      "path": "agents/cards.py",
+      "sha256": "45a38e036cb4d60a8824c2419c1d796078fb46d2620f0a0bb74e4b2271636b40",
+      "size": 7112
+    },
+    {
+      "mode": 420,
+      "path": "agents/evaluator.py",
+      "sha256": "ff39707c6b3b1b9f78234775127b49e9013c9f229523df1dd4d9712e2a1ac8f8",
+      "size": 7940
+    },
+    {
+      "mode": 420,
+      "path": "agents/greedy_agent.py",
+      "sha256": "6e6e47e492fc18dadcbfef15b3a935108321ccb54b6f749fa414e752cf7cf929",
+      "size": 11009
+    },
+    {
+      "mode": 420,
+      "path": "agents/mcts_agent.py",
+      "sha256": "b91dade04940b5e7c03475424e6689cf999c2174c9ef90643129634204c465f8",
+      "size": 4399
+    },
+    {
+      "mode": 420,
+      "path": "agents/observation.py",
+      "sha256": "16e352aab00278ae91850af2cc3a1e176424ed815e3578a3ae06a0a9454baeac",
+      "size": 13357
+    },
+    {
+      "mode": 420,
+      "path": "agents/planner.py",
+      "sha256": "a26c6a3ff7eb2a7a6c6b68a9b6f0cf73cd863097bb7718d8811e356c5ead7fda",
+      "size": 35138
+    },
+    {
+      "mode": 420,
+      "path": "agents/public_belief.py",
+      "sha256": "e92a82fb13be6712739cc0854b38eedb283d0b06c4295a1e2b8c82b016e2d9bd",
+      "size": 3380
+    },
+    {
+      "mode": 420,
+      "path": "agents/public_value_model.json",
+      "sha256": "5ca1818ba039e2c80218b89208454ca2d9cc6dfc2ecadbf70f19c11da1df1472",
+      "size": 1017
+    },
+    {
+      "mode": 420,
+      "path": "agents/random_agent.py",
+      "sha256": "3b21bb17fd41f3c5dab12c8b4a83a45e9281fb3f735a84b9d137a2127239f213",
+      "size": 343
+    },
+    {
+      "mode": 420,
+      "path": "agents/rng.py",
+      "sha256": "67807da7690f3a50344f40afcf1a8f9fd79db9cf82ee810fc946fc6830b01f0a",
+      "size": 1290
+    },
+    {
+      "mode": 420,
+      "path": "agents/rule_policy.py",
+      "sha256": "dfc2980e9bb90d76d2f8a02bf514c36ff323aa5775d032bd020e9ed306843243",
+      "size": 14829
+    },
+    {
+      "mode": 420,
+      "path": "cg/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "mode": 420,
+      "path": "cg/api.py",
+      "sha256": "593f1298e52a635f90f8f505a52113e9af114f444c293404e37906f18ee06ced",
+      "size": 26933
+    },
+    {
+      "mode": 420,
+      "path": "cg/cg.dll",
+      "sha256": "9ea2b0a751029689bff3ddccb5f29a98edd46961dad264490ed121ef704fb500",
+      "size": 1525248
+    },
+    {
+      "mode": 420,
+      "path": "cg/game.py",
+      "sha256": "3bd3d4f4a369a11e6d2f5da9094cf15ebc410a2221835e6417b7cff4883f1fc2",
+      "size": 2225
+    },
+    {
+      "mode": 420,
+      "path": "cg/libcg-arm64.so",
+      "sha256": "030b4728ce9fb9e90b75830b7cf7236f71859732a05ec4a377078eee0421bbe5",
+      "size": 1300584
+    },
+    {
+      "mode": 420,
+      "path": "cg/libcg.dylib",
+      "sha256": "77bb978a8129b094452679e0daf0da69593afda7331685f4642c0d4a94d39d82",
+      "size": 1245544
+    },
+    {
+      "mode": 420,
+      "path": "cg/libcg.so",
+      "sha256": "ffd89bf923525a3e6feb5e6201e96a866c0f456895499ed5c4a566303caae67c",
+      "size": 1342400
+    },
+    {
+      "mode": 420,
+      "path": "cg/sim.py",
+      "sha256": "1555f57f5d22bf4c09d70e0e667a916e575e68c9dd1de9ead34ba5e7e4968655",
+      "size": 2273
+    },
+    {
+      "mode": 420,
+      "path": "cg/utils.py",
+      "sha256": "60f29665cee0a88525d6f0383bc45959a6262d16fe35ef380aece1e0ea13c49b",
+      "size": 1970
+    },
+    {
+      "mode": 420,
+      "path": "deck.csv",
+      "sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+      "size": 185
+    },
+    {
+      "mode": 420,
+      "path": "main.py",
+      "sha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+      "size": 10061
+    }
+  ],
+  "schema_version": 1
+}

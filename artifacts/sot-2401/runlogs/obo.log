@@ -1,0 +1,16 @@
+  match 1/10: semantic 1 - 0 obo (draws 0, faults F0/O0)
+  match 2/10: semantic 2 - 0 obo (draws 0, faults F0/O0)
+  match 3/10: semantic 3 - 0 obo (draws 0, faults F0/O0)
+  match 4/10: semantic 4 - 0 obo (draws 0, faults F0/O0)
+  match 5/10: semantic 5 - 0 obo (draws 0, faults F0/O0)
+  match 6/10: semantic 6 - 0 obo (draws 0, faults F0/O0)
+  match 7/10: semantic 7 - 0 obo (draws 0, faults F0/O0)
+  match 8/10: semantic 8 - 0 obo (draws 0, faults F0/O0)
+  match 9/10: semantic 9 - 0 obo (draws 0, faults F0/O0)
+  match 10/10: semantic 10 - 0 obo (draws 0, faults F0/O0)
+semantic vs obo: n=10  semantic 10 - 0 (draws 0, unfinished 0)
+  win rate (excl. draws): 1.0000  Wilson95 [0.7225, 1.0000]  (先手 5/5)
+  faults: semantic 0  obo 0
+  max think/match: {'semantic': 39.07578780467156, 'obo': 0.0155025142012164}
+  promotion: {'promote': False, 'reasons': ['fewer than 20 fixed agent seeds']}
+wrote artifacts/sot-2401/holdout/obo.json

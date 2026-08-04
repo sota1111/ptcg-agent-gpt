@@ -120,8 +120,10 @@ class PlannerConfig:
     world_aggregation: str = "sum"  # "sum" | "median" | "trimmed_mean"
     # Evaluation-only SOT-2400 candidate. False preserves the MIRROR champion.
     public_belief: bool = field(
-        default_factory=lambda: os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
-        and os.environ.get("PTCG_PUBLIC_BELIEF_CANDIDATE") == "1"
+        default_factory=lambda: (
+            os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+            and os.environ.get("PTCG_PUBLIC_BELIEF_CANDIDATE") == "1"
+        )
     )
 
 
