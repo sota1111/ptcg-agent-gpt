@@ -48,13 +48,15 @@ import contextlib
 import hashlib
 import json
 import math
+import os
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from . import actions
 from .evaluator import HeuristicEvaluator
 from .greedy_agent import _COUNT_MAX_CONTEXTS, _YES_CONTEXTS, GreedyAgent
 from .observation import View, adapt_engine_obs
+from .public_belief import apply_public_belief
 from .rule_policy import preferred_count
 
 # --- OptionType tiers for the lightweight rollout policy ---------------------
@@ -116,6 +118,11 @@ class PlannerConfig:
     # Robust modes normalize visits per world before reducing so one world
     # cannot dominate merely because it received more wall-clock iterations.
     world_aggregation: str = "sum"  # "sum" | "median" | "trimmed_mean"
+    # Evaluation-only SOT-2400 candidate. False preserves the MIRROR champion.
+    public_belief: bool = field(
+        default_factory=lambda: os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+        and os.environ.get("PTCG_PUBLIC_BELIEF_CANDIDATE") == "1"
+    )
 
 
 @dataclass
@@ -218,7 +225,10 @@ def sample_fills(raw_obs: dict, own_deck: list, rng, card_index) -> Fills:
     my_pool = _pool_minus(own_deck, _visible_ids(me, my_stadium))
     opp_pool = _pool_minus(own_deck, _visible_ids(opp, opp_stadium))
     rng.shuffle(my_pool)
-    rng.shuffle(opp_pool)
+    if getattr(rng, "public_belief", False):
+        apply_public_belief(raw_obs, opp_pool, own_deck, rng, card_index)
+    else:
+        rng.shuffle(opp_pool)
 
     my_deck_n = me.get("deckCount", 0) or 0
     my_prize = list(me.get("prize") or ())
@@ -542,6 +552,9 @@ class MctsPlanner:
     # ---- worlds -----------------------------------------------------------
 
     def _make_world(self, raw_obs, candidates, priors, root_player, rng):
+        # Keep the injected fills_fn contract stable while passing the
+        # evaluation-mode choice through the per-decision RNG object.
+        rng.public_belief = self.config.public_belief
         fills = self._fills_fn(raw_obs, self._own_deck, rng, self.cards)
         encoded = json.dumps(
             {

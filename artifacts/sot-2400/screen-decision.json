@@ -1,0 +1,246 @@
+{
+  "candidate": {
+    "baseSeed": 2399101,
+    "opponents": {
+      "claude": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "diversified",
+        "runtimeSeconds": {
+          "max": 18.02608135191258,
+          "mean": 11.896998923912179
+        },
+        "unfinished": 0,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "matsu": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "fixed",
+        "runtimeSeconds": {
+          "max": 10.944112046970986,
+          "mean": 10.338982640998438
+        },
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "meta-proxy": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "reanchoring",
+        "runtimeSeconds": {
+          "max": 64.75954766606446,
+          "mean": 63.41751911153551
+        },
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "obo": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "diversified",
+        "runtimeSeconds": {
+          "max": 23.04562921496108,
+          "mean": 21.985488050966524
+        },
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "take": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "fixed",
+        "runtimeSeconds": {
+          "max": 9.64506134192925,
+          "mean": 5.465116598003078
+        },
+        "unfinished": 0,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "ume": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "fixed",
+        "runtimeSeconds": {
+          "max": 11.788491926970892,
+          "mean": 10.96150267496705
+        },
+        "unfinished": 0,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    },
+    "phase": "screen",
+    "pool": {
+      "faults": 0,
+      "matches": 12,
+      "runtimeSeconds": {
+        "max": 64.75954766606446,
+        "mean": 20.67760133339713,
+        "p95": 62.07549055700656
+      },
+      "unfinished": 0,
+      "winRate": 0.6666666666666666,
+      "wins": 8
+    },
+    "seats": {
+      "0": {
+        "matches": 6,
+        "winRate": 0.8333333333333334,
+        "wins": 5
+      },
+      "1": {
+        "matches": 6,
+        "winRate": 0.5,
+        "wins": 3
+      }
+    },
+    "worstMatchup": {
+      "faults": 0,
+      "matches": 2,
+      "opponent": "take",
+      "pool": "fixed",
+      "runtimeSeconds": {
+        "max": 9.64506134192925,
+        "mean": 5.465116598003078
+      },
+      "unfinished": 0,
+      "winRate": 0.0,
+      "wins": 0
+    }
+  },
+  "candidateBehaviorRevertedOnFailure": true,
+  "champion": {
+    "baseSeed": 2399101,
+    "opponents": {
+      "claude": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "diversified",
+        "runtimeSeconds": {
+          "max": 29.370655498933047,
+          "mean": 21.75497908651596
+        },
+        "unfinished": 0,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "matsu": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "fixed",
+        "runtimeSeconds": {
+          "max": 23.438701645005494,
+          "mean": 20.95977286150446
+        },
+        "unfinished": 0,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "meta-proxy": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "reanchoring",
+        "runtimeSeconds": {
+          "max": 83.9331169470679,
+          "mean": 72.042799548537
+        },
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "obo": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "diversified",
+        "runtimeSeconds": {
+          "max": 32.09043117600959,
+          "mean": 29.510734311013948
+        },
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "take": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "fixed",
+        "runtimeSeconds": {
+          "max": 6.134339248994365,
+          "mean": 5.6293502654880285
+        },
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "ume": {
+        "faults": 0,
+        "matches": 2,
+        "pool": "fixed",
+        "runtimeSeconds": {
+          "max": 19.26993604004383,
+          "mean": 15.367416582535952
+        },
+        "unfinished": 0,
+        "winRate": 0.0,
+        "wins": 0
+      }
+    },
+    "phase": "screen",
+    "pool": {
+      "faults": 0,
+      "matches": 12,
+      "runtimeSeconds": {
+        "max": 83.9331169470679,
+        "mean": 27.544175442599226,
+        "p95": 60.15248215000611
+      },
+      "unfinished": 0,
+      "winRate": 0.5833333333333334,
+      "wins": 7
+    },
+    "seats": {
+      "0": {
+        "matches": 6,
+        "winRate": 0.6666666666666666,
+        "wins": 4
+      },
+      "1": {
+        "matches": 6,
+        "winRate": 0.5,
+        "wins": 3
+      }
+    },
+    "worstMatchup": {
+      "faults": 0,
+      "matches": 2,
+      "opponent": "claude",
+      "pool": "diversified",
+      "runtimeSeconds": {
+        "max": 29.370655498933047,
+        "mean": 21.75497908651596
+      },
+      "unfinished": 0,
+      "winRate": 0.0,
+      "wins": 0
+    }
+  },
+  "decision": "retain-champion",
+  "execCompatibilityRequiredOnPromotion": true,
+  "gate": {
+    "passed": false,
+    "reasons": [
+      "opponent regression: take"
+    ]
+  },
+  "issue": "SOT-2399",
+  "kaggleSubmitted": false,
+  "nextPhase": null,
+  "phase": "screen",
+  "schemaVersion": "1.0.0"
+}
