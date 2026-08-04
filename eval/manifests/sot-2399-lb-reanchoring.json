@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2399",
+  "axis": "leaderboard-drift-reanchored-evaluation-contract",
+  "preregisteredBeforeEvaluation": true,
+  "leaderboardDriftEvidence": {
+    "localTerminalWinRate": 0.5,
+    "publicLeaderboardState": "out-of-range",
+    "interpretation": "local holdout is a proxy and must not independently authorize promotion"
+  },
+  "champion": {
+    "main": "main.py",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "deck": "deck.csv",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "opponents": [
+    {"id": "matsu", "pool": "fixed", "repo": "/workspaces/ptcg-agent-matsu", "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67"},
+    {"id": "take", "pool": "fixed", "repo": "/workspaces/ptcg-agent-take", "commit": "e837e35f45b88ca3ddf8e6de44562e8355c3e414"},
+    {"id": "ume", "pool": "fixed", "repo": "/workspaces/ptcg-agent-ume", "commit": "9a1945513533089b142033d33406e1248de65111"},
+    {"id": "claude", "pool": "diversified", "repo": "/workspaces/ptcg-agent-claude", "commit": "39d99e5da35136ec1012337c14668ead18e101f7"},
+    {"id": "obo", "pool": "diversified", "repo": "/workspaces/ptcg-agent-obo", "commit": "7497b315be5df066b509277770cd5d113478c6df"},
+    {
+      "id": "meta-proxy",
+      "pool": "reanchoring",
+      "repo": "eval/reanchoring_proxy",
+      "mainSha256": "b5c0ab7783b8099e3793593b0f0400fa94b431fdb7ad417d0c187362c2651d2e",
+      "deckSha256": "c705b5f8a5b03b6a57b475fb2e33178ca5ca1c75ad54131305f47108411c694d",
+      "portableStrategy": "manifest-pinned champion policy crossed with a frozen diversified archetype deck",
+      "publicRationale": "https://www.kaggle.com/competitions/pokemon-tcg-ai-battle/discussion/727816"
+    }
+  ],
+  "phases": {
+    "screen": {"baseSeed": 2399101, "seedsPerOpponent": 1, "seatReversal": true},
+    "confirm": {"baseSeed": 2399201, "seedsPerOpponent": 5, "seatReversal": true, "independentFromScreen": true}
+  },
+  "promotionGate": {
+    "poolWinRateStrictlyImproves": true,
+    "everyOpponentNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsAndUnfinishedDoNotIncrease": true,
+    "meanRuntimeRatioMax": 1.1,
+    "matchRuntimeSecondsMaxExclusive": 600,
+    "confirmOnlyAfterScreenPass": true,
+    "execCompatibilityRequired": true
+  },
+  "nonPromotion": "revert candidate behavior and retain machine-readable evidence",
+  "kaggleSubmissionAllowed": false
+}
