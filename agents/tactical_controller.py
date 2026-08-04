@@ -119,8 +119,7 @@ class PublicTacticalAgent(GreedyAgent):
         )
         bench_pressure = max(
             self.cards.card(pokemon.card_id).max_attack_damage
-            - 8.0
-            * max(0, self.cards.card(pokemon.card_id).retreat_cost - len(pokemon.energies))
+            - 8.0 * max(0, self.cards.card(pokemon.card_id).retreat_cost - len(pokemon.energies))
             for pokemon in view.me.bench
         )
         status_penalty = 20.0 if (view.me.asleep or view.me.paralyzed or view.me.confused) else 0.0

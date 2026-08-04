@@ -41,6 +41,7 @@ def _view(hidden_marker="a"):
             "tools": [],
             "preEvolution": [],
         }
+
     raw = {
         "select": {
             "type": 0,
