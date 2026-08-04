@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "issue": "SOT-2441",
+  "parent_issue": "SOT-2434",
+  "terminal": {"identity": "champion", "candidate": null, "source_decision": "champion_retained_after_screen_failure"},
+  "result": {"blind_matches": 50, "wins": 32, "losses": 18, "win_rate": 0.64, "fixed_win_rate": 0.6, "diversified_win_rate": 0.7, "worst_matchup": "matsu", "worst_matchup_win_rate": 0.4, "seat_win_rate": {"0": 0.84, "1": 0.44}, "faults": 0, "illegal_actions": 0, "unfinished": 0, "mean_runtime_s": 15.620324035945814, "max_runtime_s": 50.00322736101225},
+  "artifact": {"path": "submission.tar.gz", "archive_sha256": "e528f57e16068c6f3947063d74c6fe552c561207f7cd2a0bb2e2e42d27a1adda", "content_sha256": "186744e97227881a84b3ca931fab8e24c3bbf9a7052d496e13569f1f9a7ac698", "main_sha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c", "deck_sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"},
+  "evidence": {"manifest": "eval/manifests/sot-2441-blind-holdout.json", "manifest_sha256": "88539ce4fe1b8e096741791b8fc7006a94c98533cf872c5a6fca641326d8e75d", "summary": "artifacts/sot-2441/summary.json", "summary_sha256": "0b999e86880e583086c0586eb3c6b1ba3024c36d730541cc2005ac43e96a8610", "fingerprint": "artifacts/sot-2441/submission-fingerprint.json"},
+  "verification": {"blind_holdout_passed": true, "deterministic_rebuild_passed": true, "top_level_main_passed": true, "offline_import_passed": true, "exec_compatibility_passed": true},
+  "submission": {"eligible_for_parent_submission": true, "kaggle_submitted": false, "submission_owner": "SOT-2434"}
+}
