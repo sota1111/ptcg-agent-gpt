@@ -125,6 +125,14 @@ class PlannerConfig:
             and os.environ.get("PTCG_PUBLIC_BELIEF_CANDIDATE") == "1"
         )
     )
+    # Evaluation-only SOT-2440 candidate. Normal/Kaggle execution remains
+    # the frozen champion unless both telemetry and candidate flags are set.
+    public_tactical_controller: bool = field(
+        default_factory=lambda: (
+            os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+            and os.environ.get("PTCG_PUBLIC_TACTICAL_CANDIDATE") == "1"
+        )
+    )
 
 
 @dataclass
@@ -384,7 +392,12 @@ class MctsPlanner:
         self._backend = backend
         self._card_index = card_index
         self._clock = clock
-        self._greedy = GreedyAgent(seed=0, card_index=card_index)
+        if self.config.public_tactical_controller:
+            from .tactical_controller import PublicTacticalAgent
+
+            self._greedy = PublicTacticalAgent(seed=0, card_index=card_index)
+        else:
+            self._greedy = GreedyAgent(seed=0, card_index=card_index)
         self.degraded_count = 0  # decisions answered by the greedy prior
         self.last_stats = {}
         self._world_fingerprints = []
