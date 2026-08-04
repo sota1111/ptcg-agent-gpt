@@ -4,7 +4,7 @@
   "purpose": "blind audit of the terminal tactical-controller decision and exact parent handoff",
   "preregistered_before_experiment": true,
   "provenance": {
-    "sot_2440_terminal_commit": "dbbe452ef30ea6b3288775e455838eb7f34bc9af",
+    "sot_2440_terminal_commit": "dbbe452401ade22073901958af3985159231942e",
     "terminal_identity": "champion",
     "promotion_outcome": "champion_retained",
     "promoted_candidate": null,
