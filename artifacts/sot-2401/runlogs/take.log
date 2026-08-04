@@ -1,0 +1,16 @@
+  match 1/10: semantic 1 - 0 take (draws 0, faults F0/O0)
+  match 2/10: semantic 2 - 0 take (draws 0, faults F0/O0)
+  match 3/10: semantic 3 - 0 take (draws 0, faults F0/O0)
+  match 4/10: semantic 3 - 1 take (draws 0, faults F0/O0)
+  match 5/10: semantic 4 - 1 take (draws 0, faults F0/O0)
+  match 6/10: semantic 5 - 1 take (draws 0, faults F0/O0)
+  match 7/10: semantic 6 - 1 take (draws 0, faults F0/O0)
+  match 8/10: semantic 6 - 2 take (draws 0, faults F0/O0)
+  match 9/10: semantic 7 - 2 take (draws 0, faults F0/O0)
+  match 10/10: semantic 7 - 3 take (draws 0, faults F0/O0)
+semantic vs take: n=10  semantic 7 - 3 (draws 0, unfinished 0)
+  win rate (excl. draws): 0.7000  Wilson95 [0.3968, 0.8922]  (先手 5/5)
+  faults: semantic 0  take 0
+  max think/match: {'semantic': 19.243214669055305, 'take': 0.01011561939958483}
+  promotion: {'promote': False, 'reasons': ['fewer than 20 fixed agent seeds', 'Wilson 95% lower bound does not exceed 50%']}
+wrote artifacts/sot-2401/holdout/take.json
