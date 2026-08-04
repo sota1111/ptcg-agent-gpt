@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2439",
+  "axis": "external-public-tactical-controller-distillation",
+  "preregisteredBeforeEvaluation": true,
+  "sourceAudit": {
+    "notebook": "aristophanivan/improved-probabilistic-agent",
+    "url": "https://www.kaggle.com/code/aristophanivan/improved-probabilistic-agent",
+    "visibility": "public",
+    "declaredLicense": "Apache-2.0",
+    "publicScore": 967.7,
+    "downloadedNotebookSha256": "68a93212f5d63a8013bddffdff08147f10f4a0d9c62c59db494ac71852b332d8",
+    "dependencies": ["python-standard-library", "cg.api"],
+    "portableLogic": [
+      "attack-plan feasibility and damage-to-KO ordering",
+      "public prize value of a reachable target",
+      "energy readiness and public board resource commitment",
+      "legal gust, switch, retreat, evolution, and attack availability",
+      "archetype signals derived only from revealed public board cards"
+    ],
+    "nonPortableAssets": [
+      "source deck list and source-deck card identifiers",
+      "source-deck card-specific weights, thresholds, and matchup exceptions",
+      "global mutable turn memory not reconstructible from the current public observation",
+      "the source search budget and candidate ordering without an equal-budget comparison"
+    ],
+    "copyPolicy": "reimplement portable concepts against the Abomasnow champion; do not copy source card IDs or weights"
+  },
+  "policyFeatures": {
+    "allowlist": [
+      "turn_number",
+      "acting_seat",
+      "legal_action_types",
+      "own_public_active_and_bench",
+      "own_public_hp_damage_status",
+      "own_public_attached_energy_and_tools",
+      "own_public_discard_counts",
+      "own_hand_card_attributes",
+      "own_deck_count",
+      "own_remaining_prize_count",
+      "opponent_public_active_and_bench",
+      "opponent_public_hp_damage_status",
+      "opponent_public_attached_energy_and_tools",
+      "opponent_public_discard_counts",
+      "opponent_hand_count",
+      "opponent_deck_count",
+      "opponent_remaining_prize_count",
+      "public_stadium",
+      "public_turn_flags",
+      "attack_damage_and_energy_requirements",
+      "public_knockout_and_prize_value",
+      "public_archetype_attributes"
+    ],
+    "forbidden": [
+      "hidden_hand_identity",
+      "hidden_deck_identity_or_order",
+      "hidden_prize_identity",
+      "opponent_identity",
+      "opponent_pool_identity",
+      "evaluation_seed",
+      "match_seed",
+      "seat_as_matchup_proxy",
+      "hidden_world_fingerprint"
+    ],
+    "decisionAllowlist": [
+      "attack_plan",
+      "ko_and_prize_targeting",
+      "energy_readiness",
+      "gust_switch_retreat",
+      "public_board_archetype_response"
+    ]
+  },
+  "inheritedReanchoringContract": {
+    "sourceManifest": "eval/manifests/sot-2399-lb-reanchoring.json",
+    "sourceManifestSha256": "eabd1caf11a92423f9e93696acb9d5cbdc9fe139c9b4ed3f5691c4248796a0f7",
+    "opponents": ["matsu", "take", "ume", "claude", "obo", "meta-proxy"]
+  },
+  "champion": {
+    "main": "main.py",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "deck": "deck.csv",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "candidate": {
+    "name": "public-tactical-controller",
+    "implementationIssue": "SOT-2440",
+    "changesOnlyFrozenDecisionAllowlist": true,
+    "sameSearchAndRuntimeBudgetAsChampion": true
+  },
+  "phases": {
+    "screen": {"baseSeed": 2439101, "seedsPerOpponent": 2, "seatReversal": true},
+    "confirm": {"baseSeed": 2439201, "seedsPerOpponent": 5, "seatReversal": true, "independentFromScreen": true}
+  },
+  "promotionGate": {
+    "poolWinRateStrictlyImproves": true,
+    "everyOpponentNonRegression": true,
+    "seat1NonRegression": true,
+    "faultsAndUnfinishedDoNotIncrease": true,
+    "meanRuntimeRatioMax": 1.0,
+    "matchRuntimeSecondsMaxExclusive": 600,
+    "confirmOnlyAfterScreenPass": true,
+    "execCompatibilityRequired": true
+  },
+  "nonPromotion": "revert candidate behavior while retaining manifest, results, and documentation",
+  "promotion": "require exec-compatible terminal artifact; submission remains forbidden in child issues",
+  "kaggleSubmissionAllowed": false
+}
