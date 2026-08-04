@@ -20,9 +20,7 @@ def wilson(wins: int, total: int) -> list[float]:
     rate = wins / total
     denominator = 1 + z * z / total
     center = (rate + z * z / (2 * total)) / denominator
-    margin = z / denominator * math.sqrt(
-        rate * (1 - rate) / total + z * z / (4 * total * total)
-    )
+    margin = z / denominator * math.sqrt(rate * (1 - rate) / total + z * z / (4 * total * total))
     return [max(0, center - margin), min(1, center + margin)]
 
 
@@ -94,7 +92,10 @@ def main() -> int:
         current_commit = subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=opponent["repo"], text=True
         ).strip()
-        if current_commit != opponent["commit"] or sha(Path(opponent["repo"]) / "deck.csv") != opponent["deck_sha256"]:
+        if (
+            current_commit != opponent["commit"]
+            or sha(Path(opponent["repo"]) / "deck.csv") != opponent["deck_sha256"]
+        ):
             raise ValueError(f"{opponent['label']}: opponent provenance drift")
     provenance = manifest["provenance"]
     paths = {
