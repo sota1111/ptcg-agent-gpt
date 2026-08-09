@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2539",
+  "axis": "search-audited-forced-root-exploration",
+  "preregisteredBeforeScreen": true,
+  "sourceContract": "eval/manifests/sot-2538-entity-time-cv.json",
+  "source": {
+    "url": "https://www.kaggle.com/code/prvsiyan/ptcg-ai-battle-search-audited-alakazam-v12",
+    "version": 19,
+    "license": "Apache-2.0",
+    "upstreamPolicySha256": "9fac17a8314544a6a24d4a27941123ef06cefbc70921ab464fd3a6c85d554df3",
+    "executablePolicySha256": "d709a2f2a86644ea3fdf481cdacebd6c495ba360bc73c1b4c07e64304c925804",
+    "portableConcept": "visit every root candidate once before adaptive UCB/PUCT allocation"
+  },
+  "hypothesis": "one forced visit per legal root branch and determinized world reduces prior starvation and strictly improves the entity/time-disjoint screen without opponent, seat, reliability, or runtime regression",
+  "candidate": {
+    "environment": "PTCG_FORCED_ROOT_EXPLORATION_CANDIDATE=1",
+    "defaultEnabled": false,
+    "telemetryProtocolRequired": true,
+    "budgetDelta": 0,
+    "maxRootActionsDelta": 0,
+    "hiddenFeatures": [],
+    "identityFeatures": [],
+    "externalWeights": []
+  },
+  "allowList": [
+    "legal root action indices",
+    "per-world root edge visit counts",
+    "existing public-only determinization",
+    "existing PUCT priors and values"
+  ],
+  "forbidden": [
+    "hidden hand identity",
+    "hidden deck identity",
+    "opponent identity proxy",
+    "deck-specific private feature",
+    "non-portable learned weight"
+  ],
+  "priorAxesNotRetried": [
+    "public-state-ridge-logistic-value-blend",
+    "public-pairwise-root-prior",
+    "public-history-belief-determinization",
+    "external-public-tactical-controller-distillation"
+  ],
+  "phases": {
+    "screen": {"baseSeed": 2538201, "seedsPerOpponent": 1, "opponents": ["take", "search-alakazam-v12"]},
+    "confirm": {"baseSeed": 2538301, "seedsPerOpponent": 1, "opponents": ["ume", "claude"]}
+  },
+  "promotionGate": {
+    "screenBeforeConfirm": true,
+    "pooledWinRateStrictlyImproves": true,
+    "everyOpponentNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsMax": 0,
+    "unfinishedMax": 0,
+    "meanRuntimeRatioMax": 1.10,
+    "matchRuntimeSecondsMaxExclusive": 600
+  },
+  "failureBehavior": "retain champion; candidate remains default disabled",
+  "kaggleSubmissionAllowed": false
+}

@@ -17,6 +17,8 @@ except ModuleNotFoundError:  # direct ``python scripts/...`` execution
 
 def summarize(reports: list[dict[str, Any]]) -> dict[str, Any]:
     matches = [match for report in reports for match in report["matches"]]
+    runtimes = sorted(match["runtime_s"] for match in matches)
+    p95_index = max(0, (95 * len(runtimes) + 99) // 100 - 1)
     seats = {
         str(seat): {
             "wins": sum(m["semantic_won"] for m in matches if m["semantic_seat"] == seat),
@@ -43,6 +45,7 @@ def summarize(reports: list[dict[str, Any]]) -> dict[str, Any]:
             "unfinished": sum(r["unfinished"] for r in reports),
             "runtimeSeconds": {
                 "mean": sum(m["runtime_s"] for m in matches) / len(matches),
+                "p95": runtimes[p95_index],
                 "max": max(m["runtime_s"] for m in matches),
             },
         },
