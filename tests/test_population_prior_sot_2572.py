@@ -1,6 +1,7 @@
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 from agents.observation import OptionView, SelectView, SideView, View
@@ -91,7 +92,7 @@ def test_training_is_fixed_seed_reproducible_and_train_only():
     before = [hashlib.sha256(path.read_bytes()).hexdigest() for path in tracked]
     subprocess.run(
         [
-            str(ROOT / ".venv/bin/python"),
+            sys.executable,
             "scripts/train_population_prior_sot_2572.py",
             "--seed",
             "2572",
