@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2555",
+  "axis": "single-prize-alakazam-mist-paired-evaluation",
+  "preregisteredBeforeScreen": true,
+  "sourceContract": "eval/manifests/sot-2553-replay-lineage-cv.json",
+  "sourceContractSha256": "a64af58ecfe0f42c362a7a12d46f7afa1b51a4f3d4e3ecb081dccc25abada341",
+  "evaluatorSha256": "bf0093059969438f29dd221a5ebd37ec0f9754d2f3957a0340304a778d866991",
+  "champion": {
+    "policy": "main.SubmissionAgent",
+    "policySha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "deck": "deck.csv",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "candidate": {
+    "policy": "agents.counter_meta_policy.CounterMetaAgent",
+    "policySha256": "03c40a2935d42d31d8ab96423ace3fb0ead154ef62a05951fe5559fd8b2cd44b",
+    "deck": "decks/candidates/sot-2554-single-prize-alakazam.csv",
+    "deckSha256": "93bf05ca176276443becf796e1788d1106813e9e34e40515e0c904277a19c9da",
+    "sourceContract": "configs/experiments/sot-2554-single-prize-counter-meta.json",
+    "sourceContractSha256": "17d949f46764a1d316b7a87e63919235680144df55412a9d6b7443077174b493",
+    "environment": {
+      "PTCG_TELEMETRY_PROTOCOL": "1",
+      "PTCG_COUNTER_META_CANDIDATE": "single-prize-alakazam-mist",
+      "PTCG_COUNTER_META_DECK": "decks/candidates/sot-2554-single-prize-alakazam.csv"
+    },
+    "defaultEnabled": false
+  },
+  "budget": {
+    "champion": {"cpu": "2 vCPU", "memoryGiB": 12.2, "matchSecondsMaxExclusive": 600},
+    "candidate": {"cpu": "2 vCPU", "memoryGiB": 12.2, "matchSecondsMaxExclusive": 600},
+    "equal": true
+  },
+  "phases": {
+    "screen": {
+      "sourceSplit": "screen",
+      "baseSeed": 2555201,
+      "seedsPerOpponent": 1,
+      "seats": [0, 1],
+      "opponents": ["take", "search-alakazam-v12"]
+    },
+    "confirm": {
+      "sourceSplit": "confirm",
+      "baseSeed": 2555301,
+      "seedsPerOpponent": 1,
+      "seats": [0, 1],
+      "opponents": ["ume", "claude"]
+    }
+  },
+  "splitIsolation": {
+    "dimensions": ["entity", "time", "evidence", "submissionLineage", "matchUnit", "seed"],
+    "screenConfirmDisjoint": true
+  },
+  "promotionGate": {
+    "screenBeforeConfirm": true,
+    "pooledWinRateStrictlyImproves": true,
+    "everyOpponentNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsMax": 0,
+    "unfinishedMax": 0,
+    "meanRuntimeRatioMax": 1.10,
+    "matchRuntimeSecondsMaxExclusive": 600
+  },
+  "cvPublicGap": {
+    "publicRole": "sanity-only",
+    "disagreementRule": "prefer-cv",
+    "publicBestSelectionAllowed": false
+  },
+  "failureBehavior": "retain champion; candidate remains default disabled; skip confirm",
+  "kaggleSubmissionAllowed": false
+}
