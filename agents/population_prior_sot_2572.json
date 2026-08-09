@@ -1,0 +1,110 @@
+{
+  "archetypeSignatures": {
+    "fixed-baseline": [
+      721,
+      722,
+      723
+    ],
+    "prize-race": [
+      673,
+      674,
+      675
+    ],
+    "search-control": [
+      1102,
+      1123,
+      1141
+    ]
+  },
+  "candidateDefaultEnabled": false,
+  "contentSha256": "05c4a81faa047598cd2a3d508c5fbc5c75f0443027712e911306344058a8ca94",
+  "fallback": "neutral-logits-and-engine-legal-champion-order",
+  "featureAllowlist": [
+    "opponent_revealed_card_ids",
+    "public_board_counts",
+    "public_prize_counts",
+    "legal_option_type",
+    "public_turn_count"
+  ],
+  "featureDenylist": [
+    "opponent_hidden_hand",
+    "opponent_hidden_deck",
+    "hidden_prize_ids",
+    "opponent_identity",
+    "policy_identity",
+    "deck_identity",
+    "match_seed",
+    "evaluation_split",
+    "submission_lineage"
+  ],
+  "issue": "SOT-2572",
+  "policyWeights": {
+    "fixed-baseline": {
+      "10": 3100,
+      "12": -800,
+      "13": 1700,
+      "14": -1900,
+      "15": 800,
+      "7": 2200,
+      "8": 2700,
+      "9": 3300
+    },
+    "prize-race": {
+      "10": 2100,
+      "12": -300,
+      "13": 3600,
+      "14": -2200,
+      "15": 900,
+      "7": 1700,
+      "8": 2300,
+      "9": 2600
+    },
+    "search-control": {
+      "10": 3900,
+      "12": -400,
+      "13": 900,
+      "14": -1500,
+      "15": 1200,
+      "7": 2900,
+      "8": 2100,
+      "9": 3800
+    },
+    "unknown": {
+      "10": 3200,
+      "12": -700,
+      "13": 1500,
+      "14": -1800,
+      "15": 700,
+      "7": 2100,
+      "8": 2500,
+      "9": 3500
+    }
+  },
+  "provenance": {
+    "checkpointSha256": "0627eeeaffd7ea61dfd168206aa81e02c8d3e7b3335de8540897afc3f6270c32",
+    "configSha256": "4890b4ba5ced258f2504f3dd5bbeddbcc63c8fa28e131704a53894d035d1b968",
+    "populationSha256": "276895051b80102efda02cb92f51a5c683b45e1eb6abf1e15dbbfde18b632232"
+  },
+  "publicOnly": true,
+  "schemaVersion": "1.0.0",
+  "tempoWeights": {
+    "ahead": {
+      "13": 600,
+      "14": -300
+    },
+    "behind": {
+      "10": 350,
+      "13": 250,
+      "7": 350
+    },
+    "even": {
+      "7": 200,
+      "9": 200
+    }
+  },
+  "trainSplitOnly": true,
+  "valueWeights": {
+    "boardDelta": 24,
+    "prizeDelta": 85
+  }
+}
