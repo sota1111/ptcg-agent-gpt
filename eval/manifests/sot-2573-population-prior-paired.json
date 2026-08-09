@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2573",
+  "axis": "archetype-conditioned-population-prior-paired-evaluation",
+  "preregisteredBeforeScreen": true,
+  "sourceContract": "eval/manifests/sot-2571-archetype-population.json",
+  "populationSnapshot": "population/archetypes/sot-2571-population.json",
+  "fingerprintedInputs": {
+    "sourceContract": {"path": "eval/manifests/sot-2571-archetype-population.json", "sha256": "2be9316b86bc04a92719b861c2420d44fffdc202f69a6df3d42a028e747e439a"},
+    "populationSnapshot": {"path": "population/archetypes/sot-2571-population.json", "sha256": "276895051b80102efda02cb92f51a5c683b45e1eb6abf1e15dbbfde18b632232"},
+    "evaluator": {"path": "eval/agent_server.py", "sha256": "6eee2b173d208df5f45c7143e4dbc7405ac0f641ec96c25f16206d6622bf89ac"},
+    "championPolicy": {"path": "main.py", "sha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c"},
+    "championDeck": {"path": "deck.csv", "sha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"},
+    "candidateCode": {"path": "agents/population_prior.py", "sha256": "4aa7cb4cb4a121e8c8285d4528b3e9c5d815153f80bb1d929d01b478c528b35d"},
+    "candidateArtifact": {"path": "agents/population_prior_sot_2572.json", "sha256": "e60c4d8b4fa6ee4793945dd523bf1c99c7fe21b0fd120cad5d3d0021942691d1"},
+    "candidateConfig": {"path": "configs/experiments/sot-2572-population-prior.json", "sha256": "4890b4ba5ced258f2504f3dd5bbeddbcc63c8fa28e131704a53894d035d1b968"},
+    "candidateReceipt": {"path": "artifacts/sot-2572/training-receipt.json", "sha256": "b917d5d5dcc78f65008e35fcf4347853984c27397d6230c336bd57ddd1f5ec4f"}
+  },
+  "candidateEnvironment": {
+    "PTCG_TELEMETRY_PROTOCOL": "1",
+    "PTCG_POPULATION_PRIOR_CANDIDATE": "1"
+  },
+  "candidateDefaultEnabled": false,
+  "budget": {
+    "champion": {"cpu": "2 vCPU", "memoryGiB": 12.2, "matchSecondsMaxExclusive": 600},
+    "candidate": {"cpu": "2 vCPU", "memoryGiB": 12.2, "matchSecondsMaxExclusive": 600},
+    "equal": true
+  },
+  "phases": {
+    "screen": {
+      "sourceSplit": "screen",
+      "baseSeed": 2573201,
+      "seedsPerOpponent": 1,
+      "seats": [0, 1],
+      "opponents": ["take", "search-alakazam-v12"],
+      "populationMemberByOpponent": {"take": "take-prize-race", "search-alakazam-v12": "search-alakazam"}
+    },
+    "confirm": {
+      "sourceSplit": "confirm",
+      "baseSeed": 2573301,
+      "seedsPerOpponent": 1,
+      "seats": [0, 1],
+      "opponents": ["ume", "claude"],
+      "populationMemberByOpponent": {"ume": "ume-stw", "claude": "claude-kyogre"}
+    }
+  },
+  "splitIsolation": {
+    "dimensions": ["policyEntity", "deckEntity", "evidenceId", "submissionLineage", "time", "replay", "match", "seed"],
+    "screenConfirmDisjoint": true
+  },
+  "promotionGate": {
+    "screenBeforeConfirm": true,
+    "pooledWinRateStrictlyImproves": true,
+    "everyArchetypeNonRegression": true,
+    "everyOpponentNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsMax": 0,
+    "unfinishedMax": 0,
+    "meanRuntimeRatioMax": 1.10,
+    "matchRuntimeSecondsMaxExclusive": 600
+  },
+  "cvPublicGap": {"publicRole": "sanity-only", "disagreementRule": "prefer-cv-pessimistic", "publicBestSelectionAllowed": false},
+  "candidateHandoff": {
+    "policySha256": "4aa7cb4cb4a121e8c8285d4528b3e9c5d815153f80bb1d929d01b478c528b35d",
+    "artifactSha256": "e60c4d8b4fa6ee4793945dd523bf1c99c7fe21b0fd120cad5d3d0021942691d1",
+    "configSha256": "4890b4ba5ced258f2504f3dd5bbeddbcc63c8fa28e131704a53894d035d1b968",
+    "trainingReceiptSha256": "b917d5d5dcc78f65008e35fcf4347853984c27397d6230c336bd57ddd1f5ec4f"
+  },
+  "failureBehavior": "retain champion; candidate remains default disabled; skip confirm",
+  "kaggleSubmissionAllowed": false
+}

@@ -1,0 +1,6669 @@
+{
+  "base_seed": 2573301,
+  "context_decisions": {
+    "0": 22,
+    "1": 2,
+    "2": 1,
+    "21": 2,
+    "22": 2,
+    "41": 1,
+    "7": 2
+  },
+  "draw_bench_contexts": {
+    "2": {
+      "decisions": 1,
+      "explicit_rule": true,
+      "generic_ordering_fallbacks": 0
+    },
+    "38": {
+      "decisions": 0,
+      "explicit_rule": true,
+      "generic_ordering_fallbacks": 0
+    }
+  },
+  "draws": 0,
+  "evaluationIdentity": "champion",
+  "faults_opp": 0,
+  "faults_semantic": 0,
+  "generic_ordering_contexts": {},
+  "generic_ordering_decisions": 0,
+  "lineage": {
+    "agentSeeds": [
+      2573301,
+      2573301
+    ],
+    "archetype": "kyogre-consistency",
+    "deckEntity": "claude-c9e9c8eb",
+    "opponentId": "claude",
+    "policyEntity": "claude-00b51a33",
+    "semanticSeats": [
+      0,
+      1
+    ],
+    "split": "confirm",
+    "submissionLineage": "claude-00b51a33"
+  },
+  "match_time_allowance_s": 600.0,
+  "matches": [
+    {
+      "agent_seed": 2573301,
+      "determinization_telemetry": [
+        {
+          "elapsed_s": 0.6400586249947082,
+          "generated_worlds": 4,
+          "iterations": 228,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              1,
+              2
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 60,
+              "discard_count": 0,
+              "hand_count": 0,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 60,
+              "discard_count": 0,
+              "hand_count": 0,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              1
+            ],
+            "selection_context": 41,
+            "turn_action_count": 1,
+            "turn_index": 0
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 41,
+          "step": 0,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.42857142857142855,
+                  "visits": 42
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.2,
+                  "visits": 15
+                }
+              ],
+              "iterations": 57
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.7857142857142857,
+                  "visits": 42
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.6,
+                  "visits": 15
+                }
+              ],
+              "iterations": 57
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.3333333333333333,
+                  "visits": 6
+                }
+              ],
+              "iterations": 57
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.7377688619183338,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 6
+                }
+              ],
+              "iterations": 57
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401267040055245,
+          "generated_worlds": 4,
+          "iterations": 118,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 6
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 53,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "prize_count_delta": -6,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 1,
+            "turn_action_count": 3,
+            "turn_index": 0
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 1,
+          "step": 2,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.375,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.35714285714285715,
+                  "visits": 14
+                }
+              ],
+              "iterations": 30
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.4755888220781575,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.6818181818181818,
+                  "visits": 22
+                }
+              ],
+              "iterations": 30
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.6875,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.6923076923076923,
+                  "visits": 13
+                }
+              ],
+              "iterations": 29
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 15
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                }
+              ],
+              "iterations": 29
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6400572569982614,
+          "generated_worlds": 4,
+          "iterations": 136,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 44,
+              "discard_count": 0,
+              "hand_count": 9,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 2,
+            "turn_action_count": 5,
+            "turn_index": 0
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 2,
+          "step": 4,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.5151515151515151,
+                  "visits": 33
+                },
+                {
+                  "action": [],
+                  "value_mean": 0.0,
+                  "visits": 1
+                }
+              ],
+              "iterations": 34
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                },
+                {
+                  "action": [],
+                  "value_mean": 1.0,
+                  "visits": 5
+                }
+              ],
+              "iterations": 34
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                },
+                {
+                  "action": [],
+                  "value_mean": 1.0,
+                  "visits": 5
+                }
+              ],
+              "iterations": 34
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.6111111111111112,
+                  "visits": 18
+                },
+                {
+                  "action": [],
+                  "value_mean": 0.9015973426992713,
+                  "visits": 16
+                }
+              ],
+              "iterations": 34
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6400608200056013,
+          "generated_worlds": 4,
+          "iterations": 131,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 44,
+              "discard_count": 0,
+              "hand_count": 9,
+              "hp_total": 150,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 7,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 180,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 1
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 5,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                }
+              ],
+              "iterations": 33
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.9333333333333333,
+                  "visits": 15
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.7142857142857143,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                }
+              ],
+              "iterations": 33
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8571428571428571,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.9246421809269378,
+                  "visits": 6
+                }
+              ],
+              "iterations": 33
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.8888888888888888,
+                  "visits": 9
+                }
+              ],
+              "iterations": 32
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "forced": true,
+          "iterations": 0,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 44,
+              "discard_count": 0,
+              "hand_count": 9,
+              "hp_total": 150,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 180,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 1
+          },
+          "selection_context": 0,
+          "step": 6,
+          "world_roots": [],
+          "worlds": 0
+        },
+        {
+          "elapsed_s": 0.640139401977649,
+          "generated_worlds": 4,
+          "iterations": 118,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              7,
+              8,
+              8,
+              9,
+              9,
+              8,
+              8,
+              9,
+              9,
+              8,
+              8,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 42,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 240,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 13,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 45,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 180,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              9
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 3
+          },
+          "selected_action": [
+            3
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 12,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.7142857142857143,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.9090909090909091,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.8181818181818182,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 30
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.125,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.125,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.13016604336963972,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                }
+              ],
+              "iterations": 30
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.9,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 29
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.3333333333333333,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 29
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401816699944902,
+          "generated_worlds": 4,
+          "iterations": 109,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              7,
+              8,
+              8,
+              8,
+              8,
+              9,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 42,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 240,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 9,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 45,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 440,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              9
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 3
+          },
+          "selected_action": [
+            5
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 13,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.5737987204877876,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.7777777777777778,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 28
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.5789473684210527,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                }
+              ],
+              "iterations": 27
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.625,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 3
+                }
+              ],
+              "iterations": 27
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.2857142857142857,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 12
+                }
+              ],
+              "iterations": 27
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6400428460037801,
+          "generated_worlds": 4,
+          "iterations": 163,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 42,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 240,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 8,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 45,
+              "discard_count": 0,
+              "hand_count": 4,
+              "hp_total": 700,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 3
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 14,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 5
+                }
+              ],
+              "iterations": 41
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.875,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                }
+              ],
+              "iterations": 41
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8244748106003227,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 9
+                }
+              ],
+              "iterations": 41
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.7142857142857143,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.9,
+                  "visits": 20
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                }
+              ],
+              "iterations": 40
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401638489915058,
+          "generated_worlds": 4,
+          "iterations": 115,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              7,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 42,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 240,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 12,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 40,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 700,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 3
+          },
+          "selected_action": [
+            6
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 15,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.8888888888888888,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8571428571428571,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                }
+              ],
+              "iterations": 29
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.7142857142857143,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.7222222222222222,
+                  "visits": 18
+                }
+              ],
+              "iterations": 29
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.2,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.3784128111690396,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.38461538461538464,
+                  "visits": 13
+                }
+              ],
+              "iterations": 29
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.6,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.8888888888888888,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.7142857142857143,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                }
+              ],
+              "iterations": 28
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6400870899960864,
+          "generated_worlds": 4,
+          "iterations": 121,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 42,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 240,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 16,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 2,
+              "board_energy_count": 1,
+              "deck_count": 40,
+              "discard_count": 1,
+              "hand_count": 7,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 3
+          },
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 5,
+          "selection_context": 0,
+          "step": 16,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.7334783358035698,
+                  "visits": 26
+                }
+              ],
+              "iterations": 31
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.3333333333333333,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                }
+              ],
+              "iterations": 30
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 20
+                }
+              ],
+              "iterations": 30
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 4
+                }
+              ],
+              "iterations": 30
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "forced": true,
+          "iterations": 0,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 42,
+              "discard_count": 1,
+              "hand_count": 8,
+              "hp_total": 240,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 2,
+              "board_energy_count": 2,
+              "deck_count": 40,
+              "discard_count": 1,
+              "hand_count": 6,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 6,
+            "turn_index": 3
+          },
+          "selection_context": 0,
+          "step": 17,
+          "world_roots": [],
+          "worlds": 0
+        },
+        {
+          "elapsed_s": 0.6400623910012655,
+          "generated_worlds": 4,
+          "iterations": 123,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              7,
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 1,
+              "board_energy_count": 2,
+              "deck_count": 41,
+              "discard_count": 1,
+              "hand_count": 7,
+              "hp_total": 500,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 16,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 2,
+              "board_energy_count": 2,
+              "deck_count": 39,
+              "discard_count": 1,
+              "hand_count": 7,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 5
+          },
+          "selected_action": [
+            6
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 21,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.6,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    14
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                }
+              ],
+              "iterations": 31
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.7142857142857143,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    14
+                  ],
+                  "value_mean": 0.3333333333333333,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                }
+              ],
+              "iterations": 31
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.9881216413034126,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    14
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                }
+              ],
+              "iterations": 31
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    14
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 5
+                }
+              ],
+              "iterations": 30
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401373270200565,
+          "generated_worlds": 4,
+          "iterations": 145,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 1,
+              "board_energy_count": 2,
+              "deck_count": 41,
+              "discard_count": 1,
+              "hand_count": 7,
+              "hp_total": 500,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 22,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 2,
+              "board_energy_count": 2,
+              "deck_count": 37,
+              "discard_count": 2,
+              "hand_count": 8,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 5
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 22,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.875,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                }
+              ],
+              "iterations": 37
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.9090909090909091,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.875,
+                  "visits": 8
+                }
+              ],
+              "iterations": 36
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8181818181818182,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.9230769230769231,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.8571428571428571,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                }
+              ],
+              "iterations": 36
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8666666666666667,
+                  "visits": 15
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 10
+                }
+              ],
+              "iterations": 36
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401192210032605,
+          "generated_worlds": 4,
+          "iterations": 138,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 1,
+              "board_energy_count": 2,
+              "deck_count": 41,
+              "discard_count": 1,
+              "hand_count": 7,
+              "hp_total": 500,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 19,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 2,
+              "board_energy_count": 2,
+              "deck_count": 37,
+              "discard_count": 2,
+              "hand_count": 7,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 5
+          },
+          "selected_action": [
+            15
+          ],
+          "selected_action_index": 5,
+          "selection_context": 0,
+          "step": 23,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.7777777777777778,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.8571428571428571,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 8
+                }
+              ],
+              "iterations": 35
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.875,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.9080499623784792,
+                  "visits": 12
+                }
+              ],
+              "iterations": 35
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.3333333333333333,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.8148148148148148,
+                  "visits": 27
+                }
+              ],
+              "iterations": 34
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    9
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    12
+                  ],
+                  "value_mean": 0.1111111111111111,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    15
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 5
+                }
+              ],
+              "iterations": 34
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401732060185168,
+          "generated_worlds": 4,
+          "iterations": 145,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 1,
+              "board_energy_count": 2,
+              "deck_count": 41,
+              "discard_count": 1,
+              "hand_count": 7,
+              "hp_total": 500,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 2,
+              "bench_count": 2,
+              "board_energy_count": 3,
+              "deck_count": 37,
+              "discard_count": 2,
+              "hand_count": 6,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": true,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              13
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 5
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 24,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.7857142857142857,
+                  "visits": 28
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.6562435455066642,
+                  "visits": 9
+                }
+              ],
+              "iterations": 37
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 33
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.3333333333333333,
+                  "visits": 3
+                }
+              ],
+              "iterations": 36
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 30
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 6
+                }
+              ],
+              "iterations": 36
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 34
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                }
+              ],
+              "iterations": 36
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401457370084245,
+          "generated_worlds": 4,
+          "iterations": 131,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 1,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 41,
+              "discard_count": 4,
+              "hand_count": 7,
+              "hp_total": 350,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 2,
+              "bench_count": 2,
+              "board_energy_count": 3,
+              "deck_count": 31,
+              "discard_count": 8,
+              "hand_count": 6,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 5,
+            "turn_index": 5
+          },
+          "selected_action": [
+            5
+          ],
+          "selected_action_index": 5,
+          "selection_context": 7,
+          "step": 25,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.7777777777777778,
+                  "visits": 9
+                }
+              ],
+              "iterations": 33
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 4
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.9230769230769231,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.8181818181818182,
+                  "visits": 11
+                }
+              ],
+              "iterations": 33
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.2857142857142857,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.45454545454545453,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.646232688532505,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.2,
+                  "visits": 5
+                }
+              ],
+              "iterations": 33
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 3
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.9285714285714286,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.9,
+                  "visits": 10
+                }
+              ],
+              "iterations": 32
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401294470124412,
+          "generated_worlds": 4,
+          "iterations": 183,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 2,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              7,
+              8,
+              8,
+              8,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 5,
+              "hand_count": 7,
+              "hp_total": 350,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 22,
+            "own": {
+              "active_energy_count": 2,
+              "bench_count": 2,
+              "board_energy_count": 3,
+              "deck_count": 30,
+              "discard_count": 8,
+              "hand_count": 8,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 7
+          },
+          "selected_action": [
+            6
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 31,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    16
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                }
+              ],
+              "iterations": 46
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.8666666666666667,
+                  "visits": 15
+                },
+                {
+                  "action": [
+                    16
+                  ],
+                  "value_mean": 0.9444444444444444,
+                  "visits": 18
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.5,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 0.8888888888888888,
+                  "visits": 9
+                }
+              ],
+              "iterations": 46
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    16
+                  ],
+                  "value_mean": 0.9959551365980174,
+                  "visits": 9
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 7
+                }
+              ],
+              "iterations": 46
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 0.4782608695652174,
+                  "visits": 23
+                },
+                {
+                  "action": [
+                    16
+                  ],
+                  "value_mean": 0.4166666666666667,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 0.25,
+                  "visits": 4
+                }
+              ],
+              "iterations": 45
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401057869952638,
+          "generated_worlds": 4,
+          "iterations": 422,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 2,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 5,
+              "hand_count": 7,
+              "hp_total": 350,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 12,
+            "own": {
+              "active_energy_count": 2,
+              "bench_count": 2,
+              "board_energy_count": 3,
+              "deck_count": 31,
+              "discard_count": 9,
+              "hand_count": 6,
+              "hp_total": 850,
+              "pokemon_count": 3,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 7
+          },
+          "selected_action": [
+            3
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 32,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 21
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                }
+              ],
+              "iterations": 106
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.9984561567280542,
+                  "visits": 21
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                }
+              ],
+              "iterations": 106
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 20
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 19
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 14
+                }
+              ],
+              "iterations": 105
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.8181818181818182,
+                  "visits": 11
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.6,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    7
+                  ],
+                  "value_mean": 0.6,
+                  "visits": 5
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 39
+                }
+              ],
+              "iterations": 105
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401354290137533,
+          "generated_worlds": 4,
+          "iterations": 354,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 5,
+              "hand_count": 7,
+              "hp_total": 350,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 14,
+            "own": {
+              "active_energy_count": 2,
+              "bench_count": 3,
+              "board_energy_count": 3,
+              "deck_count": 31,
+              "discard_count": 9,
+              "hand_count": 5,
+              "hp_total": 940,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 7
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 33,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                }
+              ],
+              "iterations": 89
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.9999581711676532,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                }
+              ],
+              "iterations": 89
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.9375,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 28
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.75,
+                  "visits": 8
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.9411764705882353,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.8888888888888888,
+                  "visits": 9
+                }
+              ],
+              "iterations": 88
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                }
+              ],
+              "iterations": 88
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401207289891317,
+          "generated_worlds": 4,
+          "iterations": 306,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              13,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 5,
+              "hand_count": 7,
+              "hp_total": 350,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 3,
+              "bench_count": 3,
+              "board_energy_count": 4,
+              "deck_count": 31,
+              "discard_count": 9,
+              "hand_count": 4,
+              "hp_total": 940,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": true,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              13
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 7
+          },
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 34,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 38
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                }
+              ],
+              "iterations": 77
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.9090621758158732,
+                  "visits": 44
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8461538461538461,
+                  "visits": 26
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.5714285714285714,
+                  "visits": 7
+                }
+              ],
+              "iterations": 77
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.6923076923076923,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 61
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                }
+              ],
+              "iterations": 76
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 36
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 34
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 6
+                }
+              ],
+              "iterations": 76
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6400978910096455,
+          "generated_worlds": 4,
+          "iterations": 948,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              7,
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              13,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 0,
+              "board_energy_count": 2,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 7,
+              "hp_total": 100,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 17,
+            "own": {
+              "active_energy_count": 3,
+              "bench_count": 3,
+              "board_energy_count": 4,
+              "deck_count": 30,
+              "discard_count": 9,
+              "hand_count": 5,
+              "hp_total": 670,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 9
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 37,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 38
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                }
+              ],
+              "iterations": 237
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 38
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                }
+              ],
+              "iterations": 237
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 38
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                }
+              ],
+              "iterations": 237
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.999572671673257,
+                  "visits": 38
+                },
+                {
+                  "action": [
+                    6
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    10
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 37
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                }
+              ],
+              "iterations": 237
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401059830095619,
+          "generated_worlds": 4,
+          "iterations": 1232,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 0,
+              "board_energy_count": 2,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 7,
+              "hp_total": 100,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 3,
+              "bench_count": 3,
+              "board_energy_count": 4,
+              "deck_count": 24,
+              "discard_count": 9,
+              "hand_count": 4,
+              "hp_total": 670,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 22,
+            "turn_action_count": 2,
+            "turn_index": 9
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 22,
+          "step": 38,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                }
+              ],
+              "iterations": 308
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                }
+              ],
+              "iterations": 308
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                }
+              ],
+              "iterations": 308
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [],
+                  "value_mean": 1.0,
+                  "visits": 52
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 51
+                }
+              ],
+              "iterations": 308
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.640038170007756,
+          "generated_worlds": 4,
+          "iterations": 1666,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 0,
+              "board_energy_count": 2,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 7,
+              "hp_total": 100,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 4,
+            "own": {
+              "active_energy_count": 3,
+              "bench_count": 3,
+              "board_energy_count": 4,
+              "deck_count": 24,
+              "discard_count": 9,
+              "hand_count": 4,
+              "hp_total": 670,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 21,
+            "turn_action_count": 3,
+            "turn_index": 9
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 21,
+          "step": 39,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 209
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 208
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 417
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.9999223039405921,
+                  "visits": 209
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 208
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 417
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 208
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 208
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 416
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 208
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 208
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": null,
+                  "visits": 0
+                }
+              ],
+              "iterations": 416
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.5204662129981443,
+          "generated_worlds": 4,
+          "iterations": 2000,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              13,
+              13,
+              12,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 0,
+              "board_energy_count": 2,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 7,
+              "hp_total": 100,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 16,
+            "own": {
+              "active_energy_count": 4,
+              "bench_count": 3,
+              "board_energy_count": 5,
+              "deck_count": 29,
+              "discard_count": 10,
+              "hand_count": 4,
+              "hp_total": 670,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 9
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 40,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 93
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                }
+              ],
+              "iterations": 500
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 93
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                }
+              ],
+              "iterations": 500
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 93
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                }
+              ],
+              "iterations": 500
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 94
+                },
+                {
+                  "action": [
+                    8
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 93
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 73
+                }
+              ],
+              "iterations": 500
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6400190569984261,
+          "generated_worlds": 4,
+          "iterations": 699,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              13,
+              13,
+              12,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 0,
+              "board_energy_count": 2,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 7,
+              "hp_total": 100,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 4,
+            "own": {
+              "active_energy_count": 5,
+              "bench_count": 3,
+              "board_energy_count": 6,
+              "deck_count": 29,
+              "discard_count": 10,
+              "hand_count": 3,
+              "hp_total": 670,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": true,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              13
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 9
+          },
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 41,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 63
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 49
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 33
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 30
+                }
+              ],
+              "iterations": 175
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 63
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 49
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 33
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 30
+                }
+              ],
+              "iterations": 175
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 77
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 61
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.9642857142857143,
+                  "visits": 28
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.6666666666666666,
+                  "visits": 9
+                }
+              ],
+              "iterations": 175
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 80
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 63
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.9655172413793104,
+                  "visits": 29
+                },
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 2
+                }
+              ],
+              "iterations": 174
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.006224222015589476,
+          "generated_worlds": 4,
+          "iterations": 2000,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 32,
+              "discard_count": 15,
+              "hand_count": 7,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 6
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 5,
+              "bench_count": 3,
+              "board_energy_count": 6,
+              "deck_count": 29,
+              "discard_count": 10,
+              "hand_count": 3,
+              "hp_total": 670,
+              "pokemon_count": 4,
+              "prize_count": 5
+            },
+            "prize_count_delta": -1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3,
+              3,
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 6,
+            "turn_index": 9
+          },
+          "selected_action": [
+            0,
+            1,
+            2
+          ],
+          "selected_action_index": 0,
+          "selection_context": 7,
+          "step": 42,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                }
+              ],
+              "iterations": 500
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                }
+              ],
+              "iterations": 500
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                }
+              ],
+              "iterations": 500
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 84
+                },
+                {
+                  "action": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                },
+                {
+                  "action": [
+                    0,
+                    1,
+                    4
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 83
+                }
+              ],
+              "iterations": 500
+            }
+          ],
+          "worlds": 4
+        }
+      ],
+      "fault": null,
+      "final": {
+        "claude": {
+          "bench_count": 0,
+          "deck_count": 32,
+          "hand_count": 7,
+          "prize_count": 6
+        },
+        "semantic": {
+          "bench_count": 3,
+          "deck_count": 29,
+          "hand_count": 6,
+          "prize_count": 2
+        }
+      },
+      "match_index": 0,
+      "opponent_telemetry": {
+        "branching_decisions": 6,
+        "decisions": 17,
+        "max_options": 17,
+        "min_deck_count": 38,
+        "min_prize_count": 0
+      },
+      "result_seat": 0,
+      "runtime_s": 23.64701365600922,
+      "semantic_contexts": {
+        "0": 19,
+        "1": 1,
+        "2": 1,
+        "21": 1,
+        "22": 1,
+        "41": 1,
+        "7": 2
+      },
+      "semantic_first": true,
+      "semantic_seat": 0,
+      "semantic_telemetry": {
+        "branching_decisions": 14,
+        "decisions": 26,
+        "max_options": 22,
+        "min_deck_count": 24,
+        "min_prize_count": 0
+      },
+      "semantic_won": true,
+      "steps": 43,
+      "think_s": {
+        "claude": 8.993496315088123,
+        "semantic": 14.646704274928197
+      },
+      "unfinished": false,
+      "winner": "semantic"
+    },
+    {
+      "agent_seed": 2573301,
+      "determinization_telemetry": [
+        {
+          "forced": true,
+          "iterations": 0,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 53,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "prize_count_delta": -6,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 1,
+            "turn_action_count": 3,
+            "turn_index": 0
+          },
+          "selection_context": 1,
+          "step": 2,
+          "world_roots": [],
+          "worlds": 0
+        },
+        {
+          "elapsed_s": 0.6401282950246241,
+          "generated_worlds": 4,
+          "iterations": 308,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              7,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 2,
+              "hand_count": 9,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 7,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 2
+          },
+          "selected_action": [
+            5
+          ],
+          "selected_action_index": 5,
+          "selection_context": 0,
+          "step": 10,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                }
+              ],
+              "iterations": 77
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                }
+              ],
+              "iterations": 77
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 16
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 13
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 12
+                }
+              ],
+              "iterations": 77
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    3
+                  ],
+                  "value_mean": 0.8,
+                  "visits": 10
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.8823529411764706,
+                  "visits": 17
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.8333333333333334,
+                  "visits": 12
+                },
+                {
+                  "action": [
+                    4
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 1
+                },
+                {
+                  "action": [
+                    5
+                  ],
+                  "value_mean": 0.9351769012829163,
+                  "visits": 25
+                }
+              ],
+              "iterations": 77
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.6401067400001921,
+          "generated_worlds": 4,
+          "iterations": 401,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              7,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 2,
+              "hand_count": 9,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 2
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 11,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.9949143341559908,
+                  "visits": 67
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 21
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 13
+                }
+              ],
+              "iterations": 101
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.47058823529411764,
+                  "visits": 68
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.45,
+                  "visits": 20
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.4166666666666667,
+                  "visits": 12
+                }
+              ],
+              "iterations": 100
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.26153846153846155,
+                  "visits": 65
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.2608695652173913,
+                  "visits": 23
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.25,
+                  "visits": 12
+                }
+              ],
+              "iterations": 100
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 66
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 21
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 13
+                }
+              ],
+              "iterations": 100
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "elapsed_s": 0.640045979002025,
+          "generated_worlds": 4,
+          "iterations": 624,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 2,
+              "hand_count": 9,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 40,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 22,
+            "turn_action_count": 3,
+            "turn_index": 2
+          },
+          "selected_action": [
+            0
+          ],
+          "selected_action_index": 0,
+          "selection_context": 22,
+          "step": 12,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.23684210526315788,
+                  "visits": 38
+                },
+                {
+                  "action": [],
+                  "value_mean": 0.3137254901960784,
+                  "visits": 51
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.22857142857142856,
+                  "visits": 35
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.21875,
+                  "visits": 32
+                }
+              ],
+              "iterations": 156
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                }
+              ],
+              "iterations": 156
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                }
+              ],
+              "iterations": 156
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.012897434974372266,
+                  "visits": 39
+                }
+              ],
+              "iterations": 156
+            }
+          ],
+          "worlds": 4
+        },
+        {
+          "forced": true,
+          "iterations": 0,
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 2,
+              "hand_count": 9,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 40,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 21,
+            "turn_action_count": 4,
+            "turn_index": 2
+          },
+          "selection_context": 21,
+          "step": 13,
+          "world_roots": [],
+          "worlds": 0
+        },
+        {
+          "elapsed_s": 0.640125393983908,
+          "generated_worlds": 4,
+          "iterations": 425,
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              13,
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 2,
+              "hand_count": 9,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 2,
+              "bench_count": 0,
+              "board_energy_count": 2,
+              "deck_count": 45,
+              "discard_count": 1,
+              "hand_count": 5,
+              "hp_total": 90,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": true,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              13
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 2
+          },
+          "selected_action": [
+            1
+          ],
+          "selected_action_index": 0,
+          "selection_context": 0,
+          "step": 14,
+          "unique_fingerprints": 4,
+          "world_roots": [
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.9333333333333333,
+                  "visits": 30
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.9976281156594382,
+                  "visits": 48
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 1.0,
+                  "visits": 29
+                }
+              ],
+              "iterations": 107
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 41
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 41
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 24
+                }
+              ],
+              "iterations": 106
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.2564102564102564,
+                  "visits": 39
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.25,
+                  "visits": 40
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.25925925925925924,
+                  "visits": 27
+                }
+              ],
+              "iterations": 106
+            },
+            {
+              "actions": [
+                {
+                  "action": [
+                    1
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 41
+                },
+                {
+                  "action": [
+                    0
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 41
+                },
+                {
+                  "action": [
+                    2
+                  ],
+                  "value_mean": 0.0,
+                  "visits": 24
+                }
+              ],
+              "iterations": 106
+            }
+          ],
+          "worlds": 4
+        }
+      ],
+      "fault": null,
+      "final": {
+        "claude": {
+          "bench_count": 0,
+          "deck_count": 33,
+          "hand_count": 9,
+          "prize_count": 5
+        },
+        "semantic": {
+          "bench_count": 0,
+          "deck_count": 45,
+          "hand_count": 5,
+          "prize_count": 6
+        }
+      },
+      "match_index": 1,
+      "opponent_telemetry": {
+        "branching_decisions": 2,
+        "decisions": 15,
+        "max_options": 12,
+        "min_deck_count": 33,
+        "min_prize_count": 0
+      },
+      "result_seat": 0,
+      "runtime_s": 10.008855131018208,
+      "semantic_contexts": {
+        "0": 3,
+        "1": 1,
+        "21": 1,
+        "22": 1
+      },
+      "semantic_first": false,
+      "semantic_seat": 1,
+      "semantic_telemetry": {
+        "branching_decisions": 1,
+        "decisions": 6,
+        "max_options": 7,
+        "min_deck_count": 40,
+        "min_prize_count": 0
+      },
+      "semantic_won": false,
+      "steps": 21,
+      "think_s": {
+        "claude": 7.443594948970713,
+        "semantic": 2.5624185080232564
+      },
+      "unfinished": false,
+      "winner": "claude"
+    }
+  ],
+  "max_think_s": {
+    "claude": 8.993496315088123,
+    "semantic": 14.646704274928197
+  },
+  "n_matches": 2,
+  "n_semantic_as_first": 1,
+  "opponent": "claude",
+  "opponent_repo": "/workspaces/ptcg-agent-claude",
+  "promotion": {
+    "promote": false,
+    "reasons": [
+      "fewer than 20 fixed agent seeds",
+      "win rate below 60%",
+      "Wilson 95% lower bound does not exceed 50%"
+    ]
+  },
+  "seeds": 1,
+  "semantic_deck": "deck.csv",
+  "semantic_repo": "/workspaces/ptcg-agent-gpt",
+  "time_per_match_sec": {
+    "max": 23.64701365600922,
+    "mean": 16.827934393513715,
+    "total": 33.65586878702743
+  },
+  "unfinished": 0,
+  "wilson95_excl_draws": [
+    0.09452865480086614,
+    0.9054713451991339
+  ],
+  "winrate_semantic_draws_half": 0.5,
+  "winrate_semantic_excl_draws": 0.5,
+  "wins_opp": 1,
+  "wins_semantic": 1,
+  "wins_semantic_as_first": 1
+}
