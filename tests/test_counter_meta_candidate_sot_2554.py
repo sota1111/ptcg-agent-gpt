@@ -9,6 +9,7 @@ from pathlib import Path
 import pytest
 
 from agents.counter_meta_policy import CounterMetaAgent, candidate_enabled
+from tests.support import synthetic_card_index
 
 REPO = Path(__file__).resolve().parents[1]
 CANDIDATE_DECK = REPO / "decks/candidates/sot-2554-single-prize-alakazam.csv"
@@ -58,8 +59,8 @@ def test_candidate_deck_is_legal_single_prize_alakazam() -> None:
 @pytest.mark.parametrize("context", range(49))
 def test_every_select_context_is_legal_and_deterministic(context: int) -> None:
     deck = [int(line) for line in CANDIDATE_DECK.read_text().splitlines()]
-    first = CounterMetaAgent(2554, deck=deck)
-    second = CounterMetaAgent(2554, deck=deck)
+    first = CounterMetaAgent(2554, deck=deck, card_index=synthetic_card_index())
+    second = CounterMetaAgent(2554, deck=deck, card_index=synthetic_card_index())
     obs = _observation(context)
     first_action = first.act(obs)
     assert first_action == second.act(obs)
