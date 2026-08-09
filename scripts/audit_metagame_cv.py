@@ -1,4 +1,4 @@
-"""Fail-closed audit and gate for the SOT-2538 metagame CV contract."""
+"""Fail-closed audit and gate for the metagame CV contracts."""
 
 from __future__ import annotations
 
@@ -11,6 +11,16 @@ from typing import Any
 
 SPLITS = ("train", "screen", "confirm", "blind")
 LICENSE_ALLOW_LIST = {"Apache-2.0", "repository-local"}
+DISJOINT_KEYS = (
+    "entity",
+    "policy",
+    "deck",
+    "match",
+    "seed",
+    "time",
+    "evidence",
+    "submissionLineage",
+)
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -50,13 +60,44 @@ def audit_manifest(path: Path) -> dict[str, Any]:
         entities: set[str] = set()
         match_units: set[str] = set()
         seeds: set[str] = set()
+        evidence_ids: set[str] = set()
+        submission_lineages: set[str] = set()
         for opponent_id in split["opponents"]:
             opponent = opponents[opponent_id]
+            evidence = opponent.get("evidence")
+            if manifest.get("schemaVersion", "1.0.0") >= "2.0.0":
+                if not isinstance(evidence, dict):
+                    raise ValueError(f"evidence metadata is required: {opponent_id}")
+                required = {
+                    "id",
+                    "kind",
+                    "collectedAt",
+                    "provenance",
+                    "licenseEvidence",
+                    "offlinePortable",
+                    "submissionLineage",
+                    "metagameFamily",
+                }
+                if required - evidence.keys():
+                    raise ValueError(f"incomplete evidence metadata: {opponent_id}")
+                collected_at = datetime.fromisoformat(
+                    evidence["collectedAt"].replace("Z", "+00:00")
+                )
+                if not start <= collected_at <= end:
+                    raise ValueError(f"evidence timestamp outside split window: {opponent_id}")
+                if not evidence["offlinePortable"] or not evidence["licenseEvidence"]:
+                    raise ValueError(
+                        f"evidence is not licensed and offline portable: {opponent_id}"
+                    )
+                evidence_ids.add(evidence["id"])
+                submission_lineages.add(evidence["submissionLineage"])
             repo = _repo(opponent["repo"], root)
             if opponent["license"] not in LICENSE_ALLOW_LIST:
                 raise ValueError(f"license is not allowed: {opponent_id}")
             deck_path = _repo(opponent.get("deckPath", str(repo / "deck.csv")), root)
             if not (repo / "main.py").is_file() or not deck_path.is_file():
+                if manifest.get("schemaVersion", "1.0.0") >= "2.0.0":
+                    raise ValueError(f"required opponent is unavailable: {opponent_id}")
                 if (
                     opponent["license"] != "repository-local"
                     or not Path(opponent["repo"]).is_absolute()
@@ -81,6 +122,8 @@ def audit_manifest(path: Path) -> dict[str, Any]:
             "match": match_units,
             "seed": seeds,
             "time": {split["window"]["start"], split["window"]["end"]},
+            "evidence": evidence_ids,
+            "submissionLineage": submission_lineages,
         }
 
     overlaps: dict[str, dict[str, list[str]]] = {}
@@ -89,24 +132,45 @@ def audit_manifest(path: Path) -> dict[str, Any]:
             key = f"{left}:{right}"
             overlaps[key] = {
                 boundary: sorted(boundaries[left][boundary] & boundaries[right][boundary])
-                for boundary in ("entity", "policy", "match", "seed", "time")
+                for boundary in DISJOINT_KEYS
             }
-            overlaps[key]["deck"] = sorted(boundaries[left]["deck"] & boundaries[right]["deck"])
-            if any(
-                overlaps[key][item]
-                for item in ("entity", "policy", "deck", "match", "seed", "time")
-            ):
+            if any(overlaps[key][item] for item in DISJOINT_KEYS):
                 raise ValueError(f"cross-split overlap: {key}")
     public = [row for row in manifest["opponents"] if row["license"] == "Apache-2.0"]
     if not public or not all(row.get("source") and row.get("offline") for row in public):
         raise ValueError("at least one portable Apache-2.0 public opponent is required")
+    gap_schema = manifest.get("cvPublicGap")
+    if manifest.get("schemaVersion", "1.0.0") >= "2.0.0":
+        if not isinstance(gap_schema, dict):
+            raise ValueError("CV/public gap schema is required")
+        if gap_schema.get("publicRole") != "sanity-only":
+            raise ValueError("public rating must remain sanity-only")
+        if gap_schema.get("disagreementRule") != "prefer-cv":
+            raise ValueError("CV must be selected when CV and public rating disagree")
     return {
         "manifestSha256": manifest_fingerprint(manifest),
         "splits": {name: len(manifest["splits"][name]["opponents"]) for name in SPLITS},
         "overlaps": overlaps,
         "publicOpponents": [row["id"] for row in public],
         "unavailableExternalOpponents": sorted(unavailable_external),
+        "cvPublicGap": gap_schema,
         "passed": True,
+    }
+
+
+def compare_cv_public(cv_order: list[str], public_order: list[str] | None) -> dict[str, Any]:
+    """Record direction/order agreement without allowing public rating to select a policy."""
+    public = public_order or []
+    shared = [item for item in cv_order if item in public]
+    public_shared = [item for item in public if item in shared]
+    agreement = shared == public_shared if len(shared) >= 2 else None
+    return {
+        "cvOrder": cv_order,
+        "publicOrder": public_order,
+        "sharedOrderAgreement": agreement,
+        "selectedOrder": cv_order,
+        "selectionBasis": "cv" if agreement is not False else "cv-pessimistic-on-disagreement",
+        "publicRole": "sanity-only",
     }
 
 
