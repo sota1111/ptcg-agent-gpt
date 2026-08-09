@@ -133,6 +133,17 @@ class PlannerConfig:
             and os.environ.get("PTCG_PUBLIC_TACTICAL_CANDIDATE") == "1"
         )
     )
+    # Evaluation-only SOT-2539 candidate, distilled from the explicit
+    # explore-every-root-arm phase in Search-Audited Alakazam v12.  It changes
+    # only branch allocation inside the existing iteration/time budget: every
+    # legal root candidate receives one visit in each sampled world before
+    # PUCT can revisit an arm.  Normal and Kaggle execution remain champion.
+    forced_root_exploration: bool = field(
+        default_factory=lambda: (
+            os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+            and os.environ.get("PTCG_FORCED_ROOT_EXPLORATION_CANDIDATE") == "1"
+        )
+    )
 
 
 @dataclass
@@ -610,7 +621,7 @@ class MctsPlanner:
             if depth >= self.config.max_tree_depth or not node.edges:
                 value = self._rollout(node, root_player, rng, deadline)
                 break
-            edge = self._select_edge(node, root_player)
+            edge = self._select_edge(node, root_player, depth)
             path.append(edge)
             if edge[1] is None:
                 child = self._expand(node, edge[0], root_player, rng)
@@ -628,7 +639,14 @@ class MctsPlanner:
             edge[3] += value
         world.iterations += 1
 
-    def _select_edge(self, node, root_player):
+    def _select_edge(self, node, root_player, depth=0):
+        if self.config.forced_root_exploration and depth == 0:
+            # Stable candidate order makes the audit deterministic when an
+            # iteration cap binds.  This is root-only; child policy, hidden
+            # world sampling, values, and the total budget are unchanged.
+            unvisited = next((edge for edge in node.edges if edge[2] == 0), None)
+            if unvisited is not None:
+                return unvisited
         c = self.config.uct_c
         total = sum(e[2] for e in node.edges) + 1
         sqrt_total = math.sqrt(total)
