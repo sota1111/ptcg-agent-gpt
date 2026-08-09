@@ -5,6 +5,7 @@ import pytest
 
 from agents.planner import MctsPlanner, PlannerConfig
 from scripts.evaluate_forward_planning_sot_2539 import compare
+from scripts.run_metagame_cv import summarize
 
 
 def test_candidate_is_default_disabled_and_eval_guarded(monkeypatch) -> None:
@@ -60,3 +61,16 @@ def test_confirm_refuses_failed_screen(tmp_path) -> None:
     receipt = tmp_path / "screen.json"
     receipt.write_text('{"phase":"screen","gate":{"passed":false}}')
     assert json.loads(receipt.read_text())["gate"]["passed"] is False
+
+
+def test_runtime_summary_includes_mean_p95_and_max() -> None:
+    reports = [{
+        "opponent": "a", "wins_semantic": 1, "n_matches": 2,
+        "faults_semantic": 0, "faults_opp": 0, "unfinished": 0,
+        "matches": [
+            {"semantic_won": True, "semantic_seat": 0, "runtime_s": 1.0},
+            {"semantic_won": False, "semantic_seat": 1, "runtime_s": 3.0},
+        ],
+    }]
+    runtime = summarize(reports)["pool"]["runtimeSeconds"]
+    assert runtime == {"mean": 2.0, "p95": 3.0, "max": 3.0}

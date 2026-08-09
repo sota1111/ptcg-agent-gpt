@@ -38,6 +38,15 @@ def compare(champion: dict, candidate: dict, gate: dict) -> dict:
 
 
 def run_report(root: Path, opponent: dict, phase: dict, identity: str, raw: Path) -> dict:
+    if raw.is_file():
+        report = json.loads(raw.read_text())
+        if (
+            report.get("evaluationIdentity") == identity
+            and report.get("opponent") == opponent["id"]
+            and report.get("base_seed") == phase["baseSeed"]
+            and report.get("seeds") == phase["seedsPerOpponent"]
+        ):
+            return report
     repo = Path(opponent["repo"])
     if not repo.is_absolute():
         repo = root / repo

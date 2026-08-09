@@ -1,0 +1,93 @@
+{
+  "axis": "search-audited-forced-root-exploration",
+  "candidate": {
+    "opponents": {
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 4,
+      "runtimeSeconds": {
+        "max": 37.86588728998322,
+        "mean": 20.524015837749175,
+        "p95": 37.86588728998322
+      },
+      "unfinished": 0,
+      "wins": 2
+    },
+    "seats": {
+      "0": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "1": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    }
+  },
+  "candidateDefaultEnabled": false,
+  "champion": {
+    "opponents": {
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 4,
+      "runtimeSeconds": {
+        "max": 26.32387020200258,
+        "mean": 22.00999051224062,
+        "p95": 26.32387020200258
+      },
+      "unfinished": 0,
+      "wins": 3
+    },
+    "seats": {
+      "0": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "1": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    }
+  },
+  "decision": "retain-champion",
+  "gate": {
+    "meanRuntimeRatio": 0.932486355518189,
+    "passed": false,
+    "reasons": [
+      "pooled wins did not strictly improve",
+      "opponent regression: search-alakazam-v12",
+      "seat regression: 0"
+    ]
+  },
+  "issue": "SOT-2539",
+  "kaggleSubmitted": false,
+  "nextPhase": null,
+  "phase": "screen",
+  "schemaVersion": "1.0.0"
+}
