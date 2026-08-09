@@ -51,10 +51,19 @@ def run_report(root: Path, opponent: dict, phase: dict, identity: str, raw: Path
     if not repo.is_absolute():
         repo = root / repo
     command = [
-        sys.executable, "eval/battle_vs.py", "--opponent", str(repo),
-        "--label", opponent["id"], "--seeds", str(phase["seedsPerOpponent"]),
-        "--base-seed", str(phase["baseSeed"]), "--public-telemetry-only",
-        "--json", str(raw),
+        sys.executable,
+        "eval/battle_vs.py",
+        "--opponent",
+        str(repo),
+        "--label",
+        opponent["id"],
+        "--seeds",
+        str(phase["seedsPerOpponent"]),
+        "--base-seed",
+        str(phase["baseSeed"]),
+        "--public-telemetry-only",
+        "--json",
+        str(raw),
     ]
     if identity == "candidate":
         command.extend(["--semantic-env", "PTCG_FORCED_ROOT_EXPLORATION_CANDIDATE=1"])
@@ -86,24 +95,37 @@ def main() -> None:
         if receipt.get("phase") != "screen" or not receipt.get("gate", {}).get("passed"):
             raise SystemExit("confirm forbidden: screen gate did not pass")
     phase = manifest["phases"][args.phase]
-    opponents = [next(row for row in source["opponents"] if row["id"] == oid) for oid in phase["opponents"]]
+    opponents = [
+        next(row for row in source["opponents"] if row["id"] == oid) for oid in phase["opponents"]
+    ]
     args.raw_dir.mkdir(parents=True, exist_ok=True)
     reports = {}
     for identity in ("champion", "candidate"):
         reports[identity] = [
-            run_report(root, opponent, phase, identity, args.raw_dir / f"{identity}-{opponent['id']}.json")
+            run_report(
+                root, opponent, phase, identity, args.raw_dir / f"{identity}-{opponent['id']}.json"
+            )
             for opponent in opponents
         ]
     champion = summarize(reports["champion"])
     candidate = summarize(reports["candidate"])
     result = {
-        "schemaVersion": "1.0.0", "issue": "SOT-2539", "axis": manifest["axis"],
-        "phase": args.phase, "champion": champion, "candidate": candidate,
+        "schemaVersion": "1.0.0",
+        "issue": "SOT-2539",
+        "axis": manifest["axis"],
+        "phase": args.phase,
+        "champion": champion,
+        "candidate": candidate,
         "gate": compare(champion, candidate, manifest["promotionGate"]),
-        "candidateDefaultEnabled": False, "kaggleSubmitted": False,
+        "candidateDefaultEnabled": False,
+        "kaggleSubmitted": False,
     }
     result["nextPhase"] = "confirm" if args.phase == "screen" and result["gate"]["passed"] else None
-    result["decision"] = "eligible-for-promotion" if args.phase == "confirm" and result["gate"]["passed"] else "retain-champion"
+    result["decision"] = (
+        "eligible-for-promotion"
+        if args.phase == "confirm" and result["gate"]["passed"]
+        else "retain-champion"
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps(result["gate"], sort_keys=True))

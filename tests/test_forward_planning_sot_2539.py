@@ -1,8 +1,6 @@
 import json
 from pathlib import Path
 
-import pytest
-
 from agents.planner import MctsPlanner, PlannerConfig
 from scripts.evaluate_forward_planning_sot_2539 import compare
 from scripts.run_metagame_cv import summarize
@@ -37,8 +35,13 @@ def test_manifest_audits_source_privacy_budget_and_disjoint_gate() -> None:
     assert manifest["source"]["executablePolicySha256"] == opponent["policySha256"]
     assert manifest["candidate"]["budgetDelta"] == 0
     assert manifest["candidate"]["defaultEnabled"] is False
-    assert all(not manifest["candidate"][key] for key in ("hiddenFeatures", "identityFeatures", "externalWeights"))
-    assert set(manifest["phases"]["screen"]["opponents"]).isdisjoint(manifest["phases"]["confirm"]["opponents"])
+    assert all(
+        not manifest["candidate"][key]
+        for key in ("hiddenFeatures", "identityFeatures", "externalWeights")
+    )
+    assert set(manifest["phases"]["screen"]["opponents"]).isdisjoint(
+        manifest["phases"]["confirm"]["opponents"]
+    )
     assert manifest["phases"]["screen"]["baseSeed"] != manifest["phases"]["confirm"]["baseSeed"]
     assert manifest["promotionGate"]["screenBeforeConfirm"] is True
     assert manifest["kaggleSubmissionAllowed"] is False
@@ -48,9 +51,19 @@ def test_gate_requires_strict_pool_and_no_slice_or_runtime_regression() -> None:
     summary = {
         "opponents": {"a": {"winRate": 0.5}},
         "seats": {"0": {"winRate": 0.5}, "1": {"winRate": 0.5}},
-        "pool": {"wins": 1, "faults": 0, "unfinished": 0, "runtimeSeconds": {"mean": 10.0, "max": 20.0}},
+        "pool": {
+            "wins": 1,
+            "faults": 0,
+            "unfinished": 0,
+            "runtimeSeconds": {"mean": 10.0, "max": 20.0},
+        },
     }
-    gate = {"faultsMax": 0, "unfinishedMax": 0, "meanRuntimeRatioMax": 1.1, "matchRuntimeSecondsMaxExclusive": 600}
+    gate = {
+        "faultsMax": 0,
+        "unfinishedMax": 0,
+        "meanRuntimeRatioMax": 1.1,
+        "matchRuntimeSecondsMaxExclusive": 600,
+    }
     assert compare(summary, summary, gate)["passed"] is False
     candidate = json.loads(json.dumps(summary))
     candidate["pool"]["wins"] = 2
@@ -64,13 +77,19 @@ def test_confirm_refuses_failed_screen(tmp_path) -> None:
 
 
 def test_runtime_summary_includes_mean_p95_and_max() -> None:
-    reports = [{
-        "opponent": "a", "wins_semantic": 1, "n_matches": 2,
-        "faults_semantic": 0, "faults_opp": 0, "unfinished": 0,
-        "matches": [
-            {"semantic_won": True, "semantic_seat": 0, "runtime_s": 1.0},
-            {"semantic_won": False, "semantic_seat": 1, "runtime_s": 3.0},
-        ],
-    }]
+    reports = [
+        {
+            "opponent": "a",
+            "wins_semantic": 1,
+            "n_matches": 2,
+            "faults_semantic": 0,
+            "faults_opp": 0,
+            "unfinished": 0,
+            "matches": [
+                {"semantic_won": True, "semantic_seat": 0, "runtime_s": 1.0},
+                {"semantic_won": False, "semantic_seat": 1, "runtime_s": 3.0},
+            ],
+        }
+    ]
     runtime = summarize(reports)["pool"]["runtimeSeconds"]
     assert runtime == {"mean": 2.0, "p95": 3.0, "max": 3.0}
