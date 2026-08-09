@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2572",
+  "seed": 2572,
+  "epochs": 8,
+  "teacherEpisodes": 4096,
+  "candidateDefaultEnabled": false,
+  "trainingSplit": "train",
+  "featureAllowlist": ["opponent_revealed_card_ids", "public_board_counts", "public_prize_counts", "legal_option_type", "public_turn_count"],
+  "featureDenylist": ["opponent_hidden_hand", "opponent_hidden_deck", "hidden_prize_ids", "opponent_identity", "policy_identity", "deck_identity", "match_seed", "evaluation_split", "submission_lineage"],
+  "archetypeSignatures": {
+    "fixed-baseline": [721, 722, 723],
+    "prize-race": [673, 674, 675],
+    "search-control": [1102, 1123, 1141]
+  },
+  "teacherPolicyWeights": {
+    "unknown": {"7": 2100, "8": 2500, "9": 3500, "10": 3200, "12": -700, "13": 1500, "14": -1800, "15": 700},
+    "fixed-baseline": {"7": 2200, "8": 2700, "9": 3300, "10": 3100, "12": -800, "13": 1700, "14": -1900, "15": 800},
+    "prize-race": {"7": 1700, "8": 2300, "9": 2600, "10": 2100, "12": -300, "13": 3600, "14": -2200, "15": 900},
+    "search-control": {"7": 2900, "8": 2100, "9": 3800, "10": 3900, "12": -400, "13": 900, "14": -1500, "15": 1200}
+  },
+  "tempoWeights": {
+    "ahead": {"13": 600, "14": -300},
+    "even": {"7": 200, "9": 200},
+    "behind": {"7": 350, "10": 350, "13": 250}
+  },
+  "valueWeights": {"prizeDelta": 85, "boardDelta": 24}
+}

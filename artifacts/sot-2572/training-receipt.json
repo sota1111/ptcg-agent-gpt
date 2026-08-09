@@ -1,0 +1,11 @@
+{
+  "artifactSha256": "e60c4d8b4fa6ee4793945dd523bf1c99c7fe21b0fd120cad5d3d0021942691d1",
+  "checkpointSha256": "0627eeeaffd7ea61dfd168206aa81e02c8d3e7b3335de8540897afc3f6270c32",
+  "configSha256": "4890b4ba5ced258f2504f3dd5bbeddbcc63c8fa28e131704a53894d035d1b968",
+  "issue": "SOT-2572",
+  "kaggleSubmitted": false,
+  "populationSha256": "276895051b80102efda02cb92f51a5c683b45e1eb6abf1e15dbbfde18b632232",
+  "resumeCommand": "python scripts/train_population_prior_sot_2572.py --seed 2572",
+  "schemaVersion": "1.0.0",
+  "seed": 2572
+}

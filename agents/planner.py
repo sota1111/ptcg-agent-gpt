@@ -144,6 +144,15 @@ class PlannerConfig:
             and os.environ.get("PTCG_FORCED_ROOT_EXPLORATION_CANDIDATE") == "1"
         )
     )
+    # Evaluation-only SOT-2572 distilled population policy prior.  It is
+    # deliberately gated behind telemetry plus an explicit candidate flag;
+    # normal/offline/Kaggle execution therefore retains the champion exactly.
+    population_prior: bool = field(
+        default_factory=lambda: (
+            os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+            and os.environ.get("PTCG_POPULATION_PRIOR_CANDIDATE") == "1"
+        )
+    )
 
 
 @dataclass
@@ -409,6 +418,12 @@ class MctsPlanner:
             self._greedy = PublicTacticalAgent(seed=0, card_index=card_index)
         else:
             self._greedy = GreedyAgent(seed=0, card_index=card_index)
+        self._population_prior = None
+        if self.config.population_prior:
+            from .population_prior import PopulationPrior
+
+            prior = PopulationPrior()
+            self._population_prior = prior if prior.available else None
         self.degraded_count = 0  # decisions answered by the greedy prior
         self.last_stats = {}
         self._world_fingerprints = []
@@ -509,6 +524,9 @@ class MctsPlanner:
         if lo == hi and lo in (0, n):  # forced: empty or take-everything
             return [sorted(range(lo))] if lo == 0 else [list(range(n))], [1.0]
         scores = self._greedy.score_options(view)
+        if self._population_prior is not None:
+            distilled = self._population_prior.score_options(view)
+            scores = [score + prior for score, prior in zip(scores, distilled, strict=True)]
         order = sorted(range(n), key=lambda i: (-scores[i], i))
         if lo == hi == 1:
             order = self._guarded_root_order(view, order)
