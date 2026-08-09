@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2556",
+  "parentIssue": "SOT-2552",
+  "axis": "terminal-counter-meta-blind-holdout",
+  "preregisteredBeforeExperiment": true,
+  "terminal": {
+    "identity": "champion",
+    "candidate": null,
+    "sourceDecision": "retain-champion",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "sourceEvidence": {
+    "cvManifest": "eval/manifests/sot-2553-replay-lineage-cv.json",
+    "cvManifestSha256": "a64af58ecfe0f42c362a7a12d46f7afa1b51a4f3d4e3ecb081dccc25abada341",
+    "pairedManifest": "eval/manifests/sot-2555-counter-meta-paired.json",
+    "pairedManifestSha256": "f0570d957935faf99ee0a6502e8e7cc632d9af268b1a8060124b71a85c8c6811",
+    "screenDecision": "artifacts/sot-2555/screen-decision.json",
+    "screenDecisionSha256": "85395d273c265f54bc89b69d81913a769a890ced64b3daae63cc413ca3226dfd"
+  },
+  "isolation": {
+    "window": {"start": "2026-08-10T00:00:00Z", "end": "2026-08-16T23:59:59Z"},
+    "baseSeed": 2556101,
+    "seeds": [2556101, 2556102, 2556103, 2556104, 2556105],
+    "matchUnits": ["SOT-2556-matsu-dragapult", "SOT-2556-take-hydrapple", "SOT-2556-ume-festival", "SOT-2556-claude-honchkrow", "SOT-2556-search-emerging"],
+    "submissionLineages": ["matsu-db743198-93fb59a1", "take-1dc9900c-ea570c0b", "ume-b14e4bcb-75fd969d", "claude-00b51a33-2b8ea303", "search-d709a2f2-56c2aa11"],
+    "seatReversal": true,
+    "matchesPerOpponent": 10
+  },
+  "opponents": [
+    {"label": "matsu-dragapult", "repo": "/workspaces/ptcg-agent-matsu", "commit": "bf338e8d6330d8a3680f4b1edd7437f5a98b8b67", "policySha256": "db743198103546e540dd04b83b3b9d4a34a88dd3f8a83293bcd5d01fbd11ee9e", "deckPath": "/workspaces/ptcg-agent-matsu/decks/meta_active/22_dragapult_ex_naic_2nd.csv", "deckSha256": "93fb59a1c750d954b223c034aa2762194af68edf1c69fc313b637abcd5519720"},
+    {"label": "take-hydrapple", "repo": "/workspaces/ptcg-agent-take", "commit": "e837e35f45b88ca3ddf8e6de44562e8355c3e414", "policySha256": "1dc9900ccc1a61381adb1002feeefea7afe69d2f0a1024a3adf9ff31aa8d741f", "deckPath": "/workspaces/ptcg-agent-take/decks/meta_active/06_hydrapple.csv", "deckSha256": "ea570c0b18841c25e4e7dfe111febd9be43ed1c97ff20d499c45049b8ce0feaa"},
+    {"label": "ume-festival", "repo": "/workspaces/ptcg-agent-ume", "commit": "9a1945513533089b142033d33406e1248de65111", "policySha256": "b14e4bcba4809e6fb2479ad7d1b6e86c099bd3ce96b846e1fcf7c64f38d4ab4f", "deckPath": "/workspaces/ptcg-agent-ume/decks/meta_active/13_festival_lead.csv", "deckSha256": "75fd969db14be59825345a1bea6e97dfee9ad6bd56a1b89aed5ee3ceb9354798"},
+    {"label": "claude-honchkrow", "repo": "/workspaces/ptcg-agent-claude", "commit": "05ab179b6fd42556a8d72f21000612facba4f16e", "policySha256": "00b51a33e32df827929b22e9d7905bf30b82ecfdb8948b295b517103ff4326a1", "deckPath": "/workspaces/ptcg-agent-claude/decks/meta_active/18_rocket_s_honchkrow.csv", "deckSha256": "2b8ea3036d71d7029030ad72c05ed4cd4d71b2c401ae608979649302e81742b3"},
+    {"label": "search-emerging", "repo": "eval/opponents/search_audited_alakazam_v12", "policySha256": "d709a2f2a86644ea3fdf481cdacebd6c495ba360bc73c1b4c07e64304c925804", "deckPath": "artifacts/sot-2058-deck-pool/decks/top-emerging.csv", "deckSha256": "56c2aa117f9024fc5f5d4a2afe3683b43a662c778d64b960e84c5a625632448b"}
+  ],
+  "gate": {"faultsMax": 0, "illegalActionsMax": 0, "unfinishedMax": 0, "matchRuntimeSecondsMaxExclusive": 600, "archiveBytesMax": 20000000},
+  "previousSubmission": {"canonicalContentSha256": "5fda6f5f727c4647882755601807ac48b21995336e94670538923ef64767a24e"},
+  "kaggleSubmissionAllowed": false
+}
