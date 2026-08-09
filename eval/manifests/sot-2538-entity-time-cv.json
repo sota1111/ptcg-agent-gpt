@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2538",
+  "axis": "entity-time-disjoint-metagame-cv",
+  "candidateChangesAllowed": false,
+  "kaggleSubmissionAllowed": false,
+  "entityDefinition": "sha256(policy) + sha256(deck)",
+  "groupDefinition": "entity + matchUnit + seed + collectedAt",
+  "champion": {
+    "repo": ".",
+    "policySha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "splits": {
+    "train": {
+      "window": {"start": "2026-07-01T00:00:00Z", "end": "2026-07-15T23:59:59Z"},
+      "baseSeed": 2538101,
+      "seedsPerOpponent": 1,
+      "opponents": ["matsu"]
+    },
+    "screen": {
+      "window": {"start": "2026-07-16T00:00:00Z", "end": "2026-07-31T23:59:59Z"},
+      "baseSeed": 2538201,
+      "seedsPerOpponent": 1,
+      "opponents": ["take", "search-alakazam-v12"]
+    },
+    "confirm": {
+      "window": {"start": "2026-08-01T00:00:00Z", "end": "2026-08-07T23:59:59Z"},
+      "baseSeed": 2538301,
+      "seedsPerOpponent": 1,
+      "opponents": ["ume", "claude"]
+    },
+    "blind": {
+      "window": {"start": "2026-08-08T00:00:00Z", "end": "2026-08-09T23:59:59Z"},
+      "baseSeed": 2538401,
+      "seedsPerOpponent": 1,
+      "opponents": ["obo", "meta-proxy"]
+    }
+  },
+  "opponents": [
+    {"id": "matsu", "repo": "/workspaces/ptcg-agent-matsu", "policySha256": "db743198103546e540dd04b83b3b9d4a34a88dd3f8a83293bcd5d01fbd11ee9e", "deckSha256": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799", "archetype": "fixed-baseline", "license": "repository-local"},
+    {"id": "take", "repo": "/workspaces/ptcg-agent-take", "deckPath": "/workspaces/ptcg-agent-take/decks/candidates/prize_race_tr_mewtwo.csv", "policySha256": "1dc9900ccc1a61381adb1002feeefea7afe69d2f0a1024a3adf9ff31aa8d741f", "deckSha256": "0fddbbd70db7a09a0a9602c6a055e60f9925bfb14f65aeeca7a6b92fe5efaffc", "archetype": "prize-race-mewtwo", "license": "repository-local"},
+    {"id": "ume", "repo": "/workspaces/ptcg-agent-ume", "deckPath": "/workspaces/ptcg-agent-ume/decks/candidates/stw_e25.csv", "policySha256": "b14e4bcba4809e6fb2479ad7d1b6e86c099bd3ce96b846e1fcf7c64f38d4ab4f", "deckSha256": "042b4b5f2507c854c606ade0a0bf5844675e5b83d18cf251aa41560c6b7bb88f", "archetype": "stw-energy-25", "license": "repository-local"},
+    {"id": "claude", "repo": "/workspaces/ptcg-agent-claude", "deckPath": "/workspaces/ptcg-agent-claude/decks/candidates_sot2284/A_kyogre3.csv", "policySha256": "00b51a33e32df827929b22e9d7905bf30b82ecfdb8948b295b517103ff4326a1", "deckSha256": "c9e9c8ebaaa9f879265cddcacc45d7999e2aab162bda1e4a998f25dbc7ba7228", "archetype": "kyogre-consistency", "license": "repository-local"},
+    {"id": "obo", "repo": "/workspaces/ptcg-agent-obo", "policySha256": "5aa203691a4c05e5b615d27142751e14967fa2925bf00d7f2ae98062628b4985", "deckSha256": "c705b5f8a5b03b6a57b475fb2e33178ca5ca1c75ad54131305f47108411c694d", "archetype": "diversified-policy-deck", "license": "repository-local"},
+    {"id": "meta-proxy", "repo": "eval/reanchoring_proxy", "deckPath": "artifacts/sot-2058-deck-pool/decks/top-emerging.csv", "policySha256": "b5c0ab7783b8099e3793593b0f0400fa94b431fdb7ad417d0c187362c2651d2e", "deckSha256": "56c2aa117f9024fc5f5d4a2afe3683b43a662c778d64b960e84c5a625632448b", "archetype": "top-emerging-reanchoring", "license": "repository-local"},
+    {
+      "id": "search-alakazam-v12",
+      "repo": "eval/opponents/search_audited_alakazam_v12",
+      "policySha256": "d709a2f2a86644ea3fdf481cdacebd6c495ba360bc73c1b4c07e64304c925804",
+      "upstreamPolicySha256": "9fac17a8314544a6a24d4a27941123ef06cefbc70921ab464fd3a6c85d554df3",
+      "deckSha256": "2a541d7bf3d9e6b36037123f53f4dfef6348223f79fd27095dafc602a5357c19",
+      "archetype": "search-audited-alakazam",
+      "source": "https://www.kaggle.com/code/prvsiyan/ptcg-ai-battle-search-audited-alakazam-v12",
+      "sourceVersion": 19,
+      "upstream": "https://www.kaggle.com/code/aristophanivan/improved-probabilistic-agent",
+      "license": "Apache-2.0",
+      "offline": true
+    }
+  ],
+  "promotionGate": {
+    "screenBeforeConfirm": true,
+    "pooledWinRateStrictlyImproves": true,
+    "everyOpponentNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsMax": 0,
+    "unfinishedMax": 0,
+    "meanRuntimeRatioMax": 1.10,
+    "matchRuntimeSecondsMaxExclusive": 600
+  }
+}
