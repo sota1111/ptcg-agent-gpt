@@ -1,0 +1,3414 @@
+{
+  "base_seed": 2555201,
+  "context_decisions": {
+    "0": 35,
+    "1": 2,
+    "3": 4,
+    "30": 3,
+    "4": 4,
+    "41": 1,
+    "43": 4,
+    "5": 2,
+    "7": 5,
+    "8": 4
+  },
+  "draw_bench_contexts": {
+    "2": {
+      "decisions": 0,
+      "explicit_rule": true,
+      "generic_ordering_fallbacks": 0
+    },
+    "38": {
+      "decisions": 0,
+      "explicit_rule": true,
+      "generic_ordering_fallbacks": 0
+    }
+  },
+  "draws": 0,
+  "evaluationIdentity": "candidate",
+  "faults_opp": 0,
+  "faults_semantic": 0,
+  "generic_ordering_contexts": {
+    "5": 2,
+    "8": 4
+  },
+  "generic_ordering_decisions": 6,
+  "match_time_allowance_s": 600.0,
+  "matches": [
+    {
+      "agent_seed": 2555201,
+      "determinization_telemetry": [
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              1,
+              2
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 60,
+              "discard_count": 0,
+              "hand_count": 0,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 60,
+              "discard_count": 0,
+              "hand_count": 0,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              1
+            ],
+            "selection_context": 41,
+            "turn_action_count": 1,
+            "turn_index": 0
+          },
+          "selection_context": 41,
+          "step": 0,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 53,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 53,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 1,
+            "turn_action_count": 2,
+            "turn_index": 0
+          },
+          "selection_context": 1,
+          "step": 1,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 2,
+            "legal_option_types": [
+              7,
+              7,
+              7,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 1
+          },
+          "selection_context": 0,
+          "step": 4,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -1,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              7,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 41,
+              "discard_count": 7,
+              "hand_count": 5,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 1
+          },
+          "selection_context": 0,
+          "step": 5,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 9,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 41,
+              "discard_count": 7,
+              "hand_count": 4,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 1
+          },
+          "selection_context": 0,
+          "step": 6,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              12,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 7,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              12
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 1
+          },
+          "selection_context": 0,
+          "step": 7,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              6
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 41,
+              "discard_count": 7,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              6
+            ],
+            "selection_context": 30,
+            "turn_action_count": 5,
+            "turn_index": 1
+          },
+          "selection_context": 30,
+          "step": 8,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 41,
+              "discard_count": 8,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 3,
+            "turn_action_count": 6,
+            "turn_index": 1
+          },
+          "selection_context": 3,
+          "step": 9,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 5,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 41,
+              "discard_count": 8,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 7,
+            "turn_index": 1
+          },
+          "selection_context": 0,
+          "step": 10,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -2,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 3,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 3,
+              "hand_count": 6,
+              "hp_total": 480,
+              "pokemon_count": 4,
+              "prize_count": 6
+            },
+            "option_count": 9,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 40,
+              "discard_count": 8,
+              "hand_count": 4,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 3
+          },
+          "selection_context": 0,
+          "step": 21,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -2,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              12,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 3,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 3,
+              "hand_count": 6,
+              "hp_total": 480,
+              "pokemon_count": 4,
+              "prize_count": 6
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 40,
+              "discard_count": 8,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              12
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 3
+          },
+          "selection_context": 0,
+          "step": 22,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -2,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              6
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 3,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 3,
+              "hand_count": 6,
+              "hp_total": 480,
+              "pokemon_count": 4,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 40,
+              "discard_count": 8,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              6
+            ],
+            "selection_context": 30,
+            "turn_action_count": 3,
+            "turn_index": 3
+          },
+          "selection_context": 30,
+          "step": 23,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -2,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 3,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 3,
+              "hand_count": 6,
+              "hp_total": 480,
+              "pokemon_count": 4,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 40,
+              "discard_count": 9,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 3,
+            "turn_action_count": 4,
+            "turn_index": 3
+          },
+          "selection_context": 3,
+          "step": 24,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -2,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 3,
+              "board_energy_count": 1,
+              "deck_count": 39,
+              "discard_count": 3,
+              "hand_count": 6,
+              "hp_total": 480,
+              "pokemon_count": 4,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 40,
+              "discard_count": 9,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 3
+          },
+          "selection_context": 0,
+          "step": 25,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 2,
+              "deck_count": 27,
+              "discard_count": 10,
+              "hand_count": 7,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 40,
+              "discard_count": 10,
+              "hand_count": 3,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 4,
+            "turn_action_count": 22,
+            "turn_index": 4
+          },
+          "selection_context": 4,
+          "step": 47,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 2,
+              "deck_count": 27,
+              "discard_count": 10,
+              "hand_count": 7,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 39,
+              "discard_count": 10,
+              "hand_count": 4,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 5
+          },
+          "selection_context": 0,
+          "step": 48,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 2,
+              "deck_count": 27,
+              "discard_count": 10,
+              "hand_count": 7,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 39,
+              "discard_count": 10,
+              "hand_count": 3,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3,
+              3
+            ],
+            "selection_context": 8,
+            "turn_action_count": 2,
+            "turn_index": 5
+          },
+          "selection_context": 8,
+          "step": 49,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -6,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 2,
+              "deck_count": 27,
+              "discard_count": 10,
+              "hand_count": 7,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 7,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 39,
+              "discard_count": 12,
+              "hand_count": 1,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 3,
+            "turn_index": 5
+          },
+          "selection_context": 7,
+          "step": 50,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 2,
+              "deck_count": 27,
+              "discard_count": 10,
+              "hand_count": 7,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 38,
+              "discard_count": 13,
+              "hand_count": 2,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 5
+          },
+          "selection_context": 0,
+          "step": 51,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -6,
+            "legal_option_types": [
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 2,
+              "deck_count": 27,
+              "discard_count": 10,
+              "hand_count": 7,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 38,
+              "discard_count": 13,
+              "hand_count": 1,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": true,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              13
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 5
+          },
+          "selection_context": 0,
+          "step": 52,
+          "world_roots": []
+        }
+      ],
+      "fault": null,
+      "final": {
+        "search-alakazam-v12": {
+          "bench_count": 5,
+          "deck_count": 23,
+          "hand_count": 7,
+          "prize_count": 4
+        },
+        "semantic": {
+          "bench_count": 0,
+          "deck_count": 38,
+          "hand_count": 1,
+          "prize_count": 6
+        }
+      },
+      "match_index": 0,
+      "opponent_telemetry": {
+        "branching_decisions": 18,
+        "decisions": 48,
+        "max_options": 25,
+        "min_deck_count": 21,
+        "min_prize_count": 0
+      },
+      "result_seat": 1,
+      "runtime_s": 0.04372542101191357,
+      "semantic_contexts": {
+        "0": 11,
+        "1": 1,
+        "3": 2,
+        "30": 2,
+        "4": 1,
+        "41": 1,
+        "7": 1,
+        "8": 1
+      },
+      "semantic_first": true,
+      "semantic_seat": 0,
+      "semantic_telemetry": {
+        "branching_decisions": 3,
+        "decisions": 20,
+        "max_options": 9,
+        "min_deck_count": 38,
+        "min_prize_count": 0
+      },
+      "semantic_won": false,
+      "steps": 68,
+      "think_s": {
+        "search-alakazam-v12": 0.008657089027110487,
+        "semantic": 0.029764313047053292
+      },
+      "unfinished": false,
+      "winner": "search-alakazam-v12"
+    },
+    {
+      "agent_seed": 2555201,
+      "determinization_telemetry": [
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": 0,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 47,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 53,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 0,
+              "pokemon_count": 0,
+              "prize_count": 0
+            },
+            "prize_count_delta": -6,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 1,
+            "turn_action_count": 3,
+            "turn_index": 0
+          },
+          "selection_context": 1,
+          "step": 2,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 4,
+            "legal_option_types": [
+              7,
+              7,
+              7,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 7,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 2
+          },
+          "selection_context": 0,
+          "step": 17,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 3,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 0,
+              "hand_count": 6,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 3,
+            "turn_action_count": 2,
+            "turn_index": 2
+          },
+          "selection_context": 3,
+          "step": 18,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 3,
+            "legal_option_types": [
+              7,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 1,
+              "hand_count": 6,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 2
+          },
+          "selection_context": 0,
+          "step": 19,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 2,
+            "legal_option_types": [
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 46,
+              "discard_count": 1,
+              "hand_count": 5,
+              "hp_total": 50,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3,
+              3
+            ],
+            "selection_context": 5,
+            "turn_action_count": 4,
+            "turn_index": 2
+          },
+          "selection_context": 5,
+          "step": 20,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 2,
+            "legal_option_types": [
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 44,
+              "discard_count": 2,
+              "hand_count": 5,
+              "hp_total": 150,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 2
+          },
+          "selection_context": 0,
+          "step": 21,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 4,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 44,
+              "discard_count": 2,
+              "hand_count": 4,
+              "hp_total": 150,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3,
+              3
+            ],
+            "selection_context": 8,
+            "turn_action_count": 6,
+            "turn_index": 2
+          },
+          "selection_context": 8,
+          "step": 22,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 7,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 44,
+              "discard_count": 4,
+              "hand_count": 2,
+              "hp_total": 150,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 7,
+            "turn_index": 2
+          },
+          "selection_context": 7,
+          "step": 23,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 0,
+              "bench_count": 5,
+              "board_energy_count": 1,
+              "deck_count": 32,
+              "discard_count": 11,
+              "hand_count": 3,
+              "hp_total": 640,
+              "pokemon_count": 6,
+              "prize_count": 6
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 43,
+              "discard_count": 5,
+              "hand_count": 3,
+              "hp_total": 150,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 0,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 8,
+            "turn_index": 2
+          },
+          "selection_context": 0,
+          "step": 24,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 43,
+              "discard_count": 6,
+              "hand_count": 3,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 4,
+            "turn_action_count": 24,
+            "turn_index": 3
+          },
+          "selection_context": 4,
+          "step": 48,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              9,
+              9,
+              9,
+              9,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 42,
+              "discard_count": 6,
+              "hand_count": 4,
+              "hp_total": 100,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              9
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 49,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              1,
+              2
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 42,
+              "discard_count": 6,
+              "hand_count": 3,
+              "hp_total": 130,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              1
+            ],
+            "selection_context": 43,
+            "turn_action_count": 2,
+            "turn_index": 4
+          },
+          "selection_context": 43,
+          "step": 50,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              9,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 40,
+              "discard_count": 6,
+              "hand_count": 5,
+              "hp_total": 130,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              9
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 51,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              1,
+              2
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 40,
+              "discard_count": 6,
+              "hand_count": 4,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              1
+            ],
+            "selection_context": 43,
+            "turn_action_count": 4,
+            "turn_index": 4
+          },
+          "selection_context": 43,
+          "step": 52,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 2,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 38,
+              "discard_count": 6,
+              "hand_count": 6,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 53,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              7,
+              7,
+              7,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 33,
+              "discard_count": 12,
+              "hand_count": 5,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 6,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 54,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 4,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 33,
+              "discard_count": 12,
+              "hand_count": 4,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 7,
+            "turn_index": 4
+          },
+          "selection_context": 7,
+          "step": 55,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              7,
+              7,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 4,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 32,
+              "discard_count": 13,
+              "hand_count": 5,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 8,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 56,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 32,
+              "discard_count": 13,
+              "hand_count": 4,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 9,
+            "turn_index": 4
+          },
+          "selection_context": 7,
+          "step": 57,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 1,
+            "legal_option_types": [
+              7,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 31,
+              "discard_count": 14,
+              "hand_count": 5,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 10,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 58,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 31,
+              "discard_count": 14,
+              "hand_count": 4,
+              "hp_total": 160,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 5,
+            "turn_action_count": 11,
+            "turn_index": 4
+          },
+          "selection_context": 5,
+          "step": 59,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 30,
+              "discard_count": 15,
+              "hand_count": 4,
+              "hp_total": 210,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 12,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 60,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 1,
+              "bench_count": 5,
+              "board_energy_count": 5,
+              "deck_count": 20,
+              "discard_count": 17,
+              "hand_count": 4,
+              "hp_total": 970,
+              "pokemon_count": 6,
+              "prize_count": 5
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 30,
+              "discard_count": 16,
+              "hand_count": 3,
+              "hp_total": 210,
+              "pokemon_count": 3,
+              "prize_count": 6
+            },
+            "prize_count_delta": 1,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 14,
+            "turn_index": 4
+          },
+          "selection_context": 0,
+          "step": 61,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -3,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 2,
+              "board_energy_count": 0,
+              "deck_count": 30,
+              "discard_count": 18,
+              "hand_count": 3,
+              "hp_total": 130,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 4,
+            "turn_action_count": 15,
+            "turn_index": 5
+          },
+          "selection_context": 4,
+          "step": 75,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              7,
+              9,
+              9,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 29,
+              "discard_count": 18,
+              "hand_count": 4,
+              "hp_total": 130,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              9
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 76,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              1,
+              2
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 29,
+              "discard_count": 18,
+              "hand_count": 3,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              1
+            ],
+            "selection_context": 43,
+            "turn_action_count": 2,
+            "turn_index": 6
+          },
+          "selection_context": 43,
+          "step": 77,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              7,
+              9,
+              7,
+              8,
+              8,
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 8,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 26,
+              "discard_count": 18,
+              "hand_count": 6,
+              "hp_total": 190,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              9
+            ],
+            "selection_context": 0,
+            "turn_action_count": 3,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 78,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              1,
+              2
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 26,
+              "discard_count": 18,
+              "hand_count": 5,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              1
+            ],
+            "selection_context": 43,
+            "turn_action_count": 4,
+            "turn_index": 6
+          },
+          "selection_context": 43,
+          "step": 79,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              7,
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 10,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 24,
+              "discard_count": 18,
+              "hand_count": 7,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 5,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 80,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 19,
+              "discard_count": 25,
+              "hand_count": 5,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 6,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 81,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -3,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 4,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 19,
+              "discard_count": 25,
+              "hand_count": 4,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3,
+              3
+            ],
+            "selection_context": 8,
+            "turn_action_count": 7,
+            "turn_index": 6
+          },
+          "selection_context": 8,
+          "step": 82,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 19,
+              "discard_count": 27,
+              "hand_count": 2,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 7,
+            "turn_action_count": 8,
+            "turn_index": 6
+          },
+          "selection_context": 7,
+          "step": 83,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 18,
+              "discard_count": 28,
+              "hand_count": 3,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 9,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 84,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              12,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 18,
+              "discard_count": 28,
+              "hand_count": 2,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              12
+            ],
+            "selection_context": 0,
+            "turn_action_count": 10,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 85,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              6
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 1,
+              "board_energy_count": 1,
+              "deck_count": 18,
+              "discard_count": 28,
+              "hand_count": 2,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              6
+            ],
+            "selection_context": 30,
+            "turn_action_count": 11,
+            "turn_index": 6
+          },
+          "selection_context": 30,
+          "step": 86,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 18,
+              "discard_count": 29,
+              "hand_count": 2,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 3,
+            "turn_action_count": 12,
+            "turn_index": 6
+          },
+          "selection_context": 3,
+          "step": 87,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 8,
+              "deck_count": 12,
+              "discard_count": 19,
+              "hand_count": 7,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 4
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 18,
+              "discard_count": 29,
+              "hand_count": 2,
+              "hp_total": 220,
+              "pokemon_count": 2,
+              "prize_count": 6
+            },
+            "prize_count_delta": 2,
+            "selected_attack": false,
+            "selected_end_turn": true,
+            "selected_option_types": [
+              14
+            ],
+            "selection_context": 0,
+            "turn_action_count": 13,
+            "turn_index": 6
+          },
+          "selection_context": 0,
+          "step": 88,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -4,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -6,
+            "legal_option_types": [
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 1,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 1,
+              "board_energy_count": 0,
+              "deck_count": 18,
+              "discard_count": 31,
+              "hand_count": 2,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3
+            ],
+            "selection_context": 4,
+            "turn_action_count": 12,
+            "turn_index": 7
+          },
+          "selection_context": 4,
+          "step": 100,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              7,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 17,
+              "discard_count": 31,
+              "hand_count": 3,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 1,
+            "turn_index": 8
+          },
+          "selection_context": 0,
+          "step": 101,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": 0,
+            "legal_option_types": [
+              7,
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 11,
+              "discard_count": 32,
+              "hand_count": 8,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 2,
+            "turn_index": 8
+          },
+          "selection_context": 0,
+          "step": 102,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -1,
+            "legal_option_types": [
+              8,
+              8,
+              8,
+              7,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 5,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 11,
+              "discard_count": 33,
+              "hand_count": 7,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              7
+            ],
+            "selection_context": 0,
+            "turn_action_count": 4,
+            "turn_index": 8
+          },
+          "selection_context": 0,
+          "step": 103,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": false,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": false,
+            "hand_count_delta": -2,
+            "legal_option_types": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 6,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 11,
+              "discard_count": 33,
+              "hand_count": 6,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              3,
+              3
+            ],
+            "selection_context": 8,
+            "turn_action_count": 5,
+            "turn_index": 8
+          },
+          "selection_context": 8,
+          "step": 104,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": false,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": false,
+            "energy_attachment_available": true,
+            "hand_count_delta": -4,
+            "legal_option_types": [
+              8,
+              8,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 3,
+            "own": {
+              "active_energy_count": 0,
+              "bench_count": 0,
+              "board_energy_count": 0,
+              "deck_count": 11,
+              "discard_count": 36,
+              "hand_count": 4,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": false,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              8
+            ],
+            "selection_context": 0,
+            "turn_action_count": 7,
+            "turn_index": 8
+          },
+          "selection_context": 0,
+          "step": 105,
+          "world_roots": []
+        },
+        {
+          "public_state": {
+            "attack_ready": true,
+            "bench_count_delta": -5,
+            "end_turn_available": true,
+            "energy_already_attached_this_turn": true,
+            "energy_attachment_available": false,
+            "hand_count_delta": -5,
+            "legal_option_types": [
+              13,
+              14
+            ],
+            "opponent": {
+              "active_energy_count": 2,
+              "bench_count": 5,
+              "board_energy_count": 10,
+              "deck_count": 7,
+              "discard_count": 22,
+              "hand_count": 8,
+              "hp_total": 1230,
+              "pokemon_count": 6,
+              "prize_count": 3
+            },
+            "option_count": 2,
+            "own": {
+              "active_energy_count": 1,
+              "bench_count": 0,
+              "board_energy_count": 1,
+              "deck_count": 11,
+              "discard_count": 36,
+              "hand_count": 3,
+              "hp_total": 140,
+              "pokemon_count": 1,
+              "prize_count": 6
+            },
+            "prize_count_delta": 3,
+            "selected_attack": true,
+            "selected_end_turn": false,
+            "selected_option_types": [
+              13
+            ],
+            "selection_context": 0,
+            "turn_action_count": 8,
+            "turn_index": 8
+          },
+          "selection_context": 0,
+          "step": 106,
+          "world_roots": []
+        }
+      ],
+      "fault": null,
+      "final": {
+        "search-alakazam-v12": {
+          "bench_count": 5,
+          "deck_count": 5,
+          "hand_count": 9,
+          "prize_count": 2
+        },
+        "semantic": {
+          "bench_count": 0,
+          "deck_count": 11,
+          "hand_count": 3,
+          "prize_count": 6
+        }
+      },
+      "match_index": 1,
+      "opponent_telemetry": {
+        "branching_decisions": 22,
+        "decisions": 68,
+        "max_options": 28,
+        "min_deck_count": 5,
+        "min_prize_count": 0
+      },
+      "result_seat": 0,
+      "runtime_s": 0.02711634399020113,
+      "semantic_contexts": {
+        "0": 24,
+        "1": 1,
+        "3": 2,
+        "30": 1,
+        "4": 3,
+        "43": 4,
+        "5": 2,
+        "7": 4,
+        "8": 3
+      },
+      "semantic_first": false,
+      "semantic_seat": 1,
+      "semantic_telemetry": {
+        "branching_decisions": 3,
+        "decisions": 44,
+        "max_options": 10,
+        "min_deck_count": 11,
+        "min_prize_count": 0
+      },
+      "semantic_won": false,
+      "steps": 112,
+      "think_s": {
+        "search-alakazam-v12": 0.012813691253541037,
+        "semantic": 0.005069148843176663
+      },
+      "unfinished": false,
+      "winner": "search-alakazam-v12"
+    }
+  ],
+  "max_think_s": {
+    "search-alakazam-v12": 0.012813691253541037,
+    "semantic": 0.029764313047053292
+  },
+  "n_matches": 2,
+  "n_semantic_as_first": 1,
+  "opponent": "search-alakazam-v12",
+  "opponent_repo": "/workspaces/ptcg-agent-gpt/eval/opponents/search_audited_alakazam_v12",
+  "promotion": {
+    "promote": false,
+    "reasons": [
+      "fewer than 20 fixed agent seeds",
+      "win rate below 60%",
+      "Wilson 95% lower bound does not exceed 50%"
+    ]
+  },
+  "seeds": 1,
+  "semantic_deck": "/workspaces/ptcg-agent-gpt/decks/candidates/sot-2554-single-prize-alakazam.csv",
+  "semantic_repo": "/workspaces/ptcg-agent-gpt",
+  "time_per_match_sec": {
+    "max": 0.04372542101191357,
+    "mean": 0.03542088250105735,
+    "total": 0.0708417650021147
+  },
+  "unfinished": 0,
+  "wilson95_excl_draws": [
+    0.0,
+    0.6576280471103807
+  ],
+  "winrate_semantic_draws_half": 0.0,
+  "winrate_semantic_excl_draws": 0.0,
+  "wins_opp": 2,
+  "wins_semantic": 0,
+  "wins_semantic_as_first": 0
+}

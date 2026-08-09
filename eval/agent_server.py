@@ -29,6 +29,7 @@ importable, then serves requests until stdin is closed. Launch with
 import json
 import os
 import sys
+from pathlib import Path
 
 
 def main() -> int:
@@ -36,6 +37,16 @@ def main() -> int:
     import main as main_mod  # the project's Kaggle submission entry point
 
     assert hasattr(main_mod, "agent")
+    candidate = None
+    if (
+        os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
+        and os.environ.get("PTCG_COUNTER_META_CANDIDATE") == "single-prize-alakazam-mist"
+    ):
+        from agents.counter_meta_policy import CounterMetaAgent
+
+        deck_path = os.environ["PTCG_COUNTER_META_DECK"]
+        deck = [int(value) for value in Path(deck_path).read_text().splitlines() if value]
+        candidate = CounterMetaAgent(seed=int(os.environ["AGENT_SEED"]), deck=deck)
 
     sys.stderr.write("READY\n")
     sys.stderr.flush()
@@ -46,7 +57,7 @@ def main() -> int:
             continue
         obs = json.loads(line)
         try:
-            action = main_mod.agent(obs)
+            action = candidate.act(obs) if candidate is not None else main_mod.agent(obs)
         except Exception as exc:  # noqa: BLE001 - report, never crash
             payload = {"__error__": f"{type(exc).__name__}: {exc}"}
         else:

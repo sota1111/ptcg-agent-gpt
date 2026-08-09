@@ -1,0 +1,141 @@
+{
+  "axis": "single-prize-alakazam-mist-paired-evaluation",
+  "candidate": {
+    "opponents": {
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 4,
+      "runtimeSeconds": {
+        "max": 0.05381726298946887,
+        "mean": 0.03777166424697498,
+        "p95": 0.05381726298946887
+      },
+      "unfinished": 0,
+      "wins": 0
+    },
+    "seats": {
+      "0": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "1": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      }
+    }
+  },
+  "candidateArtifact": null,
+  "candidateDefaultEnabled": false,
+  "champion": {
+    "opponents": {
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 4,
+      "runtimeSeconds": {
+        "max": 31.42829754500417,
+        "mean": 17.946807870255725,
+        "p95": 31.42829754500417
+      },
+      "unfinished": 0,
+      "wins": 2
+    },
+    "seats": {
+      "0": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "1": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    }
+  },
+  "cvPublicGap": {
+    "cvOrder": [
+      "search-alakazam-v12",
+      "take"
+    ],
+    "publicBestSelectionAllowed": false,
+    "publicOrder": null,
+    "selectedOrder": [
+      "search-alakazam-v12",
+      "take"
+    ],
+    "selectionBasis": "cv-public-unavailable",
+    "sharedOrderAgreement": null
+  },
+  "decision": "retain-champion",
+  "fingerprints": {
+    "candidateContract": "17d949f46764a1d316b7a87e63919235680144df55412a9d6b7443077174b493",
+    "candidateDeck": "93bf05ca176276443becf796e1788d1106813e9e34e40515e0c904277a19c9da",
+    "candidatePolicy": "03c40a2935d42d31d8ab96423ace3fb0ead154ef62a05951fe5559fd8b2cd44b",
+    "championDeck": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "championPolicy": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "evaluator": "bf0093059969438f29dd221a5ebd37ec0f9754d2f3957a0340304a778d866991",
+    "sourceContract": "a64af58ecfe0f42c362a7a12d46f7afa1b51a4f3d4e3ecb081dccc25abada341"
+  },
+  "gate": {
+    "meanRuntimeRatio": 0.002104645267283221,
+    "passed": false,
+    "reasons": [
+      "pooled wins did not strictly improve",
+      "opponent regression: take",
+      "seat regression: 0",
+      "seat regression: 1"
+    ]
+  },
+  "issue": "SOT-2555",
+  "kaggleSubmitted": false,
+  "nextPhase": null,
+  "phase": "screen",
+  "rawReportSha256": {
+    "candidate": {
+      "search-alakazam-v12": "67b09ecc181b7bbaecd42e3d973577d83b40648de3e60e0e1b26ca24ed5c91c8",
+      "take": "752c1d051d5a7354348a410b499881966c0d27b841fe32eb77eff2dcf863ef21"
+    },
+    "champion": {
+      "search-alakazam-v12": "3f1f2e68242f46df86f346929f23cef093d95d8c408bd771973a4eb277cb9fbc",
+      "take": "1fc274a51145ab7dd029db5b220e924521fb6bec2371389a510829f97a69f0b2"
+    }
+  },
+  "schemaVersion": "1.0.0",
+  "split": {
+    "baseSeed": 2555201,
+    "equalBudget": true,
+    "seats": [
+      0,
+      1
+    ],
+    "source": "screen",
+    "window": {
+      "end": "2026-07-31T23:59:59Z",
+      "start": "2026-07-16T00:00:00Z"
+    }
+  }
+}
