@@ -33,11 +33,16 @@ def test_handoff_is_exact_and_records_no_submission() -> None:
     fingerprint = load("artifacts/sot-2540/submission-fingerprint.json")
     assert handoff["terminal"]["identity"] == "champion"
     assert handoff["terminal"]["candidate"] is None
-    assert handoff["artifact"]["contentSha256"] == fingerprint["canonical_content_sha256"]
+    manifest = load("eval/manifests/sot-2540-blind-holdout.json")
+    assert handoff["artifact"] is None
     assert (
-        handoff["artifact"]["mainSha256"]
-        == hashlib.sha256(Path("main.py").read_bytes()).hexdigest()
+        fingerprint["canonical_content_sha256"]
+        == manifest["previousSubmission"]["canonicalContentSha256"]
+    )
+    assert (
+        hashlib.sha256(Path("main.py").read_bytes()).hexdigest()
+        == manifest["terminal"]["mainSha256"]
     )
     assert all(handoff["verification"].values())
-    assert handoff["newArtifact"] is True
+    assert handoff["newArtifact"] is False
     assert handoff["kaggleSubmitted"] is False
