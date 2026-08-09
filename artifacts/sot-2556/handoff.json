@@ -1,0 +1,100 @@
+{
+  "archiveSha256": "3ed0fc2d3ea8deb4f81238bdfd78441b09efbce34fe722c313aa51506ad86659",
+  "artifact": null,
+  "currentContentSha256": "5fda6f5f727c4647882755601807ac48b21995336e94670538923ef64767a24e",
+  "evidence": {
+    "fingerprint": "artifacts/sot-2556/submission-fingerprint.json",
+    "manifest": "eval/manifests/sot-2556-blind-holdout.json",
+    "manifestSha256": "cc2eba07eaf3fc2ec8e3d0d2f007f57fbd3be7143f4d193dfbbe05262cde60b6",
+    "summary": "artifacts/sot-2556/summary.json",
+    "summarySha256": "a54358f27a0775eeef66cd00e6f6efcf01a0d0e26d4fa23ff0b61ee9f2d5e16d"
+  },
+  "issue": "SOT-2556",
+  "kaggleSubmitted": false,
+  "newArtifact": false,
+  "parentIssue": "SOT-2552",
+  "previousContentSha256": "5fda6f5f727c4647882755601807ac48b21995336e94670538923ef64767a24e",
+  "reason": "terminal fingerprint matches previous submission",
+  "result": {
+    "faults": 0,
+    "illegalActions": 0,
+    "losses": 7,
+    "matches": 50,
+    "opponents": {
+      "claude-honchkrow": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      },
+      "matsu-dragapult": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.7,
+        "wins": 7
+      },
+      "search-emerging": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.6,
+        "wins": 6
+      },
+      "take-hydrapple": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      },
+      "ume-festival": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      }
+    },
+    "runtimeSeconds": {
+      "max": 98.61199266999029,
+      "mean": 32.08290464930178,
+      "p95": 89.87484098598361
+    },
+    "seats": {
+      "0": {
+        "matches": 25,
+        "winRate": 0.88,
+        "wins": 22
+      },
+      "1": {
+        "matches": 25,
+        "winRate": 0.84,
+        "wins": 21
+      }
+    },
+    "unfinished": 0,
+    "wilson95": [
+      0.738135428014719,
+      0.9304925473797714
+    ],
+    "winRate": 0.86,
+    "wins": 43
+  },
+  "schemaVersion": "1.0.0",
+  "terminal": {
+    "candidate": null,
+    "identity": "champion",
+    "sourceDecision": "retain-champion"
+  },
+  "verification": {
+    "archiveSizePassed": true,
+    "blindHoldoutPassed": true,
+    "deterministicRebuildPassed": true,
+    "execCompatibilityPassed": true,
+    "offlineImportPassed": true,
+    "runtimePassed": true,
+    "topLevelFilesPassed": true
+  }
+}

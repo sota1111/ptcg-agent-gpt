@@ -1,0 +1,96 @@
+{
+  "isolation": {
+    "entityOverlap": 0,
+    "lineageOverlap": 0,
+    "matchUnitOverlap": 0,
+    "seedOverlap": 0,
+    "timeOverlap": 0
+  },
+  "issue": "SOT-2556",
+  "kaggleSubmitted": false,
+  "manifestSha256": "cc2eba07eaf3fc2ec8e3d0d2f007f57fbd3be7143f4d193dfbbe05262cde60b6",
+  "operationalAuditPassed": true,
+  "reportSha256": {
+    "claude-honchkrow": "5eadc91348e1b52b3922401985b55a46a1c1f82574965ed0d76f445dace9ca8e",
+    "matsu-dragapult": "ff68127006aaeadc49096ad40246153086941cf1f3a3edf716cedeaa22c30a47",
+    "search-emerging": "de23522db48b0b49702a11a497c570d9cdc23c8550150f2e06267e149d82313e",
+    "take-hydrapple": "4336e841a25a3b172fe8c8d18c0749a61564de47b912c8f1c61a6a2a81ed9bc0",
+    "ume-festival": "40cebfc6814695dccc46476bcb498781a71d8545e52dc4ca133274535ddbc977"
+  },
+  "result": {
+    "faults": 0,
+    "illegalActions": 0,
+    "losses": 7,
+    "matches": 50,
+    "opponents": {
+      "claude-honchkrow": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      },
+      "matsu-dragapult": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.7,
+        "wins": 7
+      },
+      "search-emerging": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.6,
+        "wins": 6
+      },
+      "take-hydrapple": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      },
+      "ume-festival": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      }
+    },
+    "runtimeSeconds": {
+      "max": 98.61199266999029,
+      "mean": 32.08290464930178,
+      "p95": 89.87484098598361
+    },
+    "seats": {
+      "0": {
+        "matches": 25,
+        "winRate": 0.88,
+        "wins": 22
+      },
+      "1": {
+        "matches": 25,
+        "winRate": 0.84,
+        "wins": 21
+      }
+    },
+    "unfinished": 0,
+    "wilson95": [
+      0.738135428014719,
+      0.9304925473797714
+    ],
+    "winRate": 0.86,
+    "wins": 43
+  },
+  "schemaVersion": "1.0.0",
+  "terminal": {
+    "candidate": null,
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "identity": "champion",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "sourceDecision": "retain-champion",
+    "validated": true
+  }
+}
