@@ -5,7 +5,7 @@
   "preregisteredBeforeScreen": true,
   "sourceContract": "eval/manifests/sot-2553-replay-lineage-cv.json",
   "sourceContractSha256": "a64af58ecfe0f42c362a7a12d46f7afa1b51a4f3d4e3ecb081dccc25abada341",
-  "evaluatorSha256": "bf0093059969438f29dd221a5ebd37ec0f9754d2f3957a0340304a778d866991",
+  "evaluatorSha256": "6eee2b173d208df5f45c7143e4dbc7405ac0f641ec96c25f16206d6622bf89ac",
   "champion": {
     "policy": "main.SubmissionAgent",
     "policySha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",

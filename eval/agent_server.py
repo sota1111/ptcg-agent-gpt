@@ -40,8 +40,7 @@ def main() -> int:
     candidate = None
     if (
         os.environ.get("PTCG_TELEMETRY_PROTOCOL") == "1"
-        and os.environ.get("PTCG_COUNTER_META_CANDIDATE")
-        == "single-prize-alakazam-mist"
+        and os.environ.get("PTCG_COUNTER_META_CANDIDATE") == "single-prize-alakazam-mist"
     ):
         from agents.counter_meta_policy import CounterMetaAgent
 
