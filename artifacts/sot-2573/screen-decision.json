@@ -1,0 +1,246 @@
+{
+  "axis": "archetype-conditioned-population-prior-paired-evaluation",
+  "candidate": {
+    "archetypes": {
+      "prize-race-mewtwo": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "search-alakazam": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    },
+    "opponents": {
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 4,
+      "runtimeSeconds": {
+        "max": 28.159734450018732,
+        "mean": 19.556115615509043,
+        "p95": 28.159734450018732
+      },
+      "unfinished": 0,
+      "wins": 3
+    },
+    "seats": {
+      "0": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "1": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    }
+  },
+  "candidateDefaultEnabled": false,
+  "candidateHandoff": null,
+  "champion": {
+    "archetypes": {
+      "prize-race-mewtwo": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "search-alakazam": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      }
+    },
+    "opponents": {
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 4,
+      "runtimeSeconds": {
+        "max": 33.98868212697562,
+        "mean": 22.910284531739308,
+        "p95": 33.98868212697562
+      },
+      "unfinished": 0,
+      "wins": 2
+    },
+    "seats": {
+      "0": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      },
+      "1": {
+        "matches": 2,
+        "winRate": 0.5,
+        "wins": 1
+      }
+    }
+  },
+  "cvPublicGap": {
+    "cvOrder": [
+      "search-alakazam",
+      "prize-race-mewtwo"
+    ],
+    "publicBestSelectionAllowed": false,
+    "publicOrder": null,
+    "selectedOrder": [
+      "search-alakazam",
+      "prize-race-mewtwo"
+    ],
+    "selectionBasis": "cv-public-unavailable",
+    "sharedOrderAgreement": null
+  },
+  "decision": "retain-champion",
+  "fingerprints": {
+    "candidateArtifact": "e60c4d8b4fa6ee4793945dd523bf1c99c7fe21b0fd120cad5d3d0021942691d1",
+    "candidateCode": "4aa7cb4cb4a121e8c8285d4528b3e9c5d815153f80bb1d929d01b478c528b35d",
+    "candidateConfig": "4890b4ba5ced258f2504f3dd5bbeddbcc63c8fa28e131704a53894d035d1b968",
+    "candidateReceipt": "b917d5d5dcc78f65008e35fcf4347853984c27397d6230c336bd57ddd1f5ec4f",
+    "championDeck": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "championPolicy": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "evaluator": "6eee2b173d208df5f45c7143e4dbc7405ac0f641ec96c25f16206d6622bf89ac",
+    "populationSnapshot": "276895051b80102efda02cb92f51a5c683b45e1eb6abf1e15dbbfde18b632232",
+    "sourceContract": "2be9316b86bc04a92719b861c2420d44fffdc202f69a6df3d42a028e747e439a"
+  },
+  "gate": {
+    "checks": {
+      "bothSeatsNonRegression": true,
+      "everyArchetypeNonRegression": true,
+      "everyMatchupNonRegression": true,
+      "faultsWithinLimit": true,
+      "pooledStrictImprovement": true,
+      "runtimeWithinLimit": true,
+      "unfinishedWithinLimit": true
+    },
+    "meanRuntimeRatio": 0.8535954928196773,
+    "passed": true,
+    "reasons": []
+  },
+  "issue": "SOT-2573",
+  "kaggleSubmitted": false,
+  "lineage": {
+    "candidate": [
+      {
+        "agentSeeds": [
+          2573201,
+          2573201
+        ],
+        "archetype": "prize-race-mewtwo",
+        "deckEntity": "take-0fddbbd7",
+        "opponentId": "take",
+        "policyEntity": "take-1dc9900c",
+        "semanticSeats": [
+          0,
+          1
+        ],
+        "split": "screen",
+        "submissionLineage": "take-1dc9900c"
+      },
+      {
+        "agentSeeds": [
+          2573201,
+          2573201
+        ],
+        "archetype": "search-alakazam",
+        "deckEntity": "search-2a541d7b",
+        "opponentId": "search-alakazam-v12",
+        "policyEntity": "search-d709a2f2",
+        "semanticSeats": [
+          0,
+          1
+        ],
+        "split": "screen",
+        "submissionLineage": "kaggle-prvsiyan-v19"
+      }
+    ],
+    "champion": [
+      {
+        "agentSeeds": [
+          2573201,
+          2573201
+        ],
+        "archetype": "prize-race-mewtwo",
+        "deckEntity": "take-0fddbbd7",
+        "opponentId": "take",
+        "policyEntity": "take-1dc9900c",
+        "semanticSeats": [
+          0,
+          1
+        ],
+        "split": "screen",
+        "submissionLineage": "take-1dc9900c"
+      },
+      {
+        "agentSeeds": [
+          2573201,
+          2573201
+        ],
+        "archetype": "search-alakazam",
+        "deckEntity": "search-2a541d7b",
+        "opponentId": "search-alakazam-v12",
+        "policyEntity": "search-d709a2f2",
+        "semanticSeats": [
+          0,
+          1
+        ],
+        "split": "screen",
+        "submissionLineage": "kaggle-prvsiyan-v19"
+      }
+    ]
+  },
+  "nextPhase": "confirm",
+  "phase": "screen",
+  "rawReportSha256": {
+    "candidate": {
+      "search-alakazam-v12": "d9550f09299273988d224dd41e932c871dfd810fcded7496fef934ed59da068b",
+      "take": "9ed891403b27b57d40e21980e257a2878b8c141f18284e6c3dbd4c012e987724"
+    },
+    "champion": {
+      "search-alakazam-v12": "dcf1e2e099d4e68ab9ffaafc0a0e7ab22646d9d3fdf4d2cbe32a369deedef93f",
+      "take": "f480c128746a6823455744c8bcf522d60d1d6959ef603b482a47cbe2fef76955"
+    }
+  },
+  "revert": {
+    "reason": "candidate was never enabled by default",
+    "required": false,
+    "retainedDefault": "champion"
+  },
+  "schemaVersion": "1.0.0",
+  "split": {
+    "baseSeed": 2573201,
+    "equalBudget": true,
+    "seats": [
+      0,
+      1
+    ],
+    "source": "screen",
+    "window": {
+      "end": "2026-07-31T23:59:59Z",
+      "start": "2026-07-16T00:00:00Z"
+    }
+  }
+}

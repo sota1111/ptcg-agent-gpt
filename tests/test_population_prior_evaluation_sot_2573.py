@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -93,3 +95,30 @@ def test_strict_gate_accepts_only_complete_non_regressing_improvement():
     )
     assert result["passed"] is True
     assert all(result["checks"].values())
+
+
+def test_confirm_is_skipped_after_failed_screen(tmp_path):
+    failed = tmp_path / "failed-screen.json"
+    failed.write_text(json.dumps({"phase": "screen", "gate": {"passed": False}}))
+    result = subprocess.run(
+        [
+            sys.executable,
+            "scripts/evaluate_population_prior_sot_2573.py",
+            "--manifest",
+            str(MANIFEST),
+            "--phase",
+            "confirm",
+            "--screen-decision",
+            str(failed),
+            "--raw-dir",
+            str(tmp_path / "raw"),
+            "--output",
+            str(tmp_path / "confirm.json"),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode != 0
+    assert "confirm forbidden: screen gate did not pass" in result.stderr
+    assert not (tmp_path / "raw").exists()
