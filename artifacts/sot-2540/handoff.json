@@ -1,0 +1,87 @@
+{
+  "artifact": null,
+  "evidence": {
+    "fingerprint": "artifacts/sot-2540/submission-fingerprint.json",
+    "manifest": "eval/manifests/sot-2540-blind-holdout.json",
+    "manifestSha256": "4e3b0a73f3bc12b56964855f4e5992b39e31bd269a53f5bd789d9d2326ec17a7",
+    "summary": "artifacts/sot-2540/summary.json",
+    "summarySha256": "aaa993bdcc8a0e7a3a0cdee04c1ad77e202c4054f3b8f6387af8d842bb5c96b9"
+  },
+  "issue": "SOT-2540",
+  "kaggleSubmitted": false,
+  "newArtifact": false,
+  "parentIssue": "SOT-2535",
+  "reason": "terminal fingerprint matches previous submission",
+  "result": {
+    "faults": 0,
+    "illegalActions": 0,
+    "losses": 10,
+    "matches": 50,
+    "opponents": {
+      "claude-honchkrow": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.8,
+        "wins": 8
+      },
+      "matsu-dragapult": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.8,
+        "wins": 8
+      },
+      "search-emerging": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.7,
+        "wins": 7
+      },
+      "take-hydrapple": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.7,
+        "wins": 7
+      },
+      "ume-festival": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      }
+    },
+    "runtimeSeconds": {
+      "max": 94.82429206799134,
+      "mean": 27.8437589286227,
+      "p95": 83.93480985600036
+    },
+    "seatWinRate": {
+      "0": 0.8,
+      "1": 0.8
+    },
+    "unfinished": 0,
+    "wilson95": [
+      0.6696262789551477,
+      0.8875637005402612
+    ],
+    "winRate": 0.8,
+    "wins": 40
+  },
+  "schemaVersion": "1.0.0",
+  "terminal": {
+    "candidate": null,
+    "identity": "champion",
+    "sourceDecision": "champion-retained-after-screen-failure"
+  },
+  "verification": {
+    "blindHoldoutPassed": true,
+    "deterministicRebuildPassed": true,
+    "execCompatibilityPassed": true,
+    "offlineImportPassed": true,
+    "topLevelMainPassed": true
+  }
+}

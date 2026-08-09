@@ -1,0 +1,88 @@
+{
+  "isolation": {
+    "entityOverlap": 0,
+    "matchUnitOverlap": 0,
+    "seedOverlap": 0,
+    "timeOverlap": 0
+  },
+  "issue": "SOT-2540",
+  "kaggleSubmitted": false,
+  "manifestSha256": "4e3b0a73f3bc12b56964855f4e5992b39e31bd269a53f5bd789d9d2326ec17a7",
+  "operationalAuditPassed": true,
+  "reportSha256": {
+    "claude-honchkrow": "2364bcd9cd734480458b352a63ae06c269b32b1bf54b69ee95befe7b273607ae",
+    "matsu-dragapult": "9355a548a3194f65278ea17be7d18c193a45a9d4fb70b5930cf00bb2d5598a92",
+    "search-emerging": "49959691e0e36febe53830ad4f174252fe7848e83339ec13202cc369bd795d60",
+    "take-hydrapple": "c10c70b5b7aed64c9afce2bfc5f88de6491961d5ca59db91e759c7ab8c9e6c17",
+    "ume-festival": "7a044cef455756d21ef36be815e27cc674c0af17c0b5932b14ef62d6a22d9f43"
+  },
+  "result": {
+    "faults": 0,
+    "illegalActions": 0,
+    "losses": 10,
+    "matches": 50,
+    "opponents": {
+      "claude-honchkrow": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.8,
+        "wins": 8
+      },
+      "matsu-dragapult": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.8,
+        "wins": 8
+      },
+      "search-emerging": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.7,
+        "wins": 7
+      },
+      "take-hydrapple": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.7,
+        "wins": 7
+      },
+      "ume-festival": {
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 1.0,
+        "wins": 10
+      }
+    },
+    "runtimeSeconds": {
+      "max": 94.82429206799134,
+      "mean": 27.8437589286227,
+      "p95": 83.93480985600036
+    },
+    "seatWinRate": {
+      "0": 0.8,
+      "1": 0.8
+    },
+    "unfinished": 0,
+    "wilson95": [
+      0.6696262789551477,
+      0.8875637005402612
+    ],
+    "winRate": 0.8,
+    "wins": 40
+  },
+  "schemaVersion": "1.0.0",
+  "terminal": {
+    "candidate": null,
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "identity": "champion",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "sourceCommit": "91b891a32792a351a9a544d012935f64e682842f",
+    "sourceDecision": "champion-retained-after-screen-failure",
+    "validated": true
+  }
+}
