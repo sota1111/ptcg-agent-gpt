@@ -68,9 +68,7 @@ def main() -> int:
     }
     if prior_seeds & set(manifest["isolation"]["seeds"]):
         raise ValueError("blind seed overlap")
-    if manifest["isolation"]["window"]["start"] <= max(
-        phase["window"]["end"] for phase in paired["phases"].values()
-    ):
+    if manifest["isolation"]["window"]["start"] <= decision["split"]["window"]["end"]:
         raise ValueError("blind time overlap")
 
     reports = []
