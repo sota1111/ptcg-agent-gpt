@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2571",
+  "axis": "archetype-conditioned-population-distillation-contract",
+  "preregistered": true,
+  "candidateDefaultEnabled": false,
+  "kaggleSubmissionAllowed": false,
+  "sourceContract": "eval/manifests/sot-2553-replay-lineage-cv.json",
+  "sourceContractSha256": "a64af58ecfe0f42c362a7a12d46f7afa1b51a4f3d4e3ecb081dccc25abada341",
+  "populationSnapshot": "population/archetypes/sot-2571-population.json",
+  "populationSnapshotSha256": "276895051b80102efda02cb92f51a5c683b45e1eb6abf1e15dbbfde18b632232",
+  "splitContract": {
+    "names": ["train", "screen", "confirm", "blind"],
+    "disjointDimensions": ["policyEntity", "deckEntity", "evidenceId", "submissionLineage", "time", "replay", "match", "seed"],
+    "inheritSourceWindows": true,
+    "popularityFitSplit": "train",
+    "popularityReadAllowedSplits": ["train"],
+    "nonTrainWeightBehavior": "uniform-frozen-population"
+  },
+  "features": {
+    "allow": ["own_public_board", "opponent_public_board", "public_discard", "public_stadium", "revealed_card_ids", "legal_actions", "public_turn_count", "public_prize_counts", "public_zone_counts", "archetype_from_revealed_cards"],
+    "deny": ["opponent_hidden_hand", "opponent_hidden_deck", "hidden_prize_ids", "hidden_card_order", "opponent_identity", "policy_identity", "deck_identity", "match_seed", "evaluation_split", "submission_lineage", "future_replay", "future_popularity", "private_rating"],
+    "archetypeInference": "deterministic mapping from currently revealed public card ids only",
+    "unknownArchetype": "unknown"
+  },
+  "assets": [
+    {"id": "population-snapshot", "path": "population/archetypes/sot-2571-population.json", "portable": true, "license": "repository-local", "provenance": "SOT-2553 frozen licensed snapshots", "runtimeAllowed": true},
+    {"id": "source-cv", "path": "eval/manifests/sot-2553-replay-lineage-cv.json", "portable": true, "license": "repository-local", "provenance": "SOT-2553", "runtimeAllowed": false},
+    {"id": "raw-public-replays", "path": null, "portable": false, "license": "source-specific", "provenance": "public replay URLs pinned by training receipt", "runtimeAllowed": false}
+  ],
+  "protocol": {
+    "order": ["train", "screen", "confirm", "blind"],
+    "screenBeforeConfirm": true,
+    "confirmRequiresIndependentPassingScreenReceipt": true,
+    "blindRequiresPassingConfirmReceipt": true,
+    "failureBehavior": "retain champion; candidate remains default disabled; preserve contract and decision docs",
+    "promotionBehavior": "emit fingerprinted offline-portable exec-compatible candidate artifact"
+  },
+  "budget": {"equalChampionCandidate": true, "seats": [0, 1], "matchSecondsMaxExclusive": 600},
+  "promotionGate": {
+    "pooledWinRateStrictlyImproves": true,
+    "everyArchetypeNonRegression": true,
+    "everyMatchupNonRegression": true,
+    "bothSeatsNonRegression": true,
+    "faultsMax": 0,
+    "unfinishedMax": 0,
+    "meanRuntimeRatioMax": 1.10,
+    "artifactFingerprintRequired": true,
+    "offlineImportRequired": true,
+    "execCompatibilityRequired": true
+  }
+}

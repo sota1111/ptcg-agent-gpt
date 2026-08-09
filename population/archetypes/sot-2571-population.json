@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2571",
+  "frozenAt": "2026-08-09T15:58:00Z",
+  "sourceVisibility": "public-or-repository-local-licensed",
+  "members": [
+    {"id": "matsu-fixed", "archetype": "fixed-baseline", "policyEntity": "matsu-db743198", "deckEntity": "matsu-42068a18", "evidenceId": "local-matsu-20260708", "submissionLineage": "matsu-db743198", "split": "train", "popularityClass": "established"},
+    {"id": "take-prize-race", "archetype": "prize-race-mewtwo", "policyEntity": "take-1dc9900c", "deckEntity": "take-0fddbbd7", "evidenceId": "local-take-20260720", "submissionLineage": "take-1dc9900c", "split": "screen", "popularityClass": "established"},
+    {"id": "search-alakazam", "archetype": "search-alakazam", "policyEntity": "search-d709a2f2", "deckEntity": "search-2a541d7b", "evidenceId": "kaggle-search-alakazam-v12-v19", "submissionLineage": "kaggle-prvsiyan-v19", "split": "screen", "popularityClass": "emerging"},
+    {"id": "ume-stw", "archetype": "stw-energy-25", "policyEntity": "ume-b14e4bcb", "deckEntity": "ume-042b4b5f", "evidenceId": "local-ume-20260803", "submissionLineage": "ume-b14e4bcb", "split": "confirm", "popularityClass": "established"},
+    {"id": "claude-kyogre", "archetype": "kyogre-consistency", "policyEntity": "claude-00b51a33", "deckEntity": "claude-c9e9c8eb", "evidenceId": "local-claude-20260804", "submissionLineage": "claude-00b51a33", "split": "confirm", "popularityClass": "emerging"},
+    {"id": "obo-diversified", "archetype": "diversified-policy-deck", "policyEntity": "obo-5aa20369", "deckEntity": "obo-c705b5f8", "evidenceId": "local-obo-20260808", "submissionLineage": "obo-5aa20369", "split": "blind", "popularityClass": "emerging"},
+    {"id": "meta-proxy", "archetype": "top-emerging-reanchoring", "policyEntity": "meta-b5c0ab77", "deckEntity": "meta-56c2aa11", "evidenceId": "local-meta-proxy-20260809", "submissionLineage": "meta-proxy-b5c0ab77", "split": "blind", "popularityClass": "emerging"}
+  ]
+}
