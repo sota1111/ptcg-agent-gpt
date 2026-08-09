@@ -1,0 +1,76 @@
+{
+  "isolation": {
+    "deckEntityOverlap": 0,
+    "evidenceIdOverlap": 0,
+    "matchUnitOverlap": 0,
+    "policyEntityOverlap": 0,
+    "seedOverlap": 0,
+    "submissionLineageOverlap": 0,
+    "timeOverlap": 0
+  },
+  "issue": "SOT-2574",
+  "kaggleSubmitted": false,
+  "manifestSha256": "b8020228cb5143c461d123d5bb8f4e40f9ced8fb88c0ac940af25d339f42cbea",
+  "operationalAuditPassed": true,
+  "reportSha256": {
+    "meta-proxy": "fe741b64af2cd51074fa6c04c0da4b5520af4d345eee57883c97b0c643c0e99f",
+    "obo-diversified": "5f1093d1a3b9552bf4194ec467d2cd1a242ce82707b85f6575d85213c839e8cc"
+  },
+  "result": {
+    "faults": 0,
+    "illegalActions": 0,
+    "losses": 4,
+    "matches": 20,
+    "opponents": {
+      "meta-proxy": {
+        "archetype": "top-emerging-reanchoring",
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.8,
+        "wins": 8
+      },
+      "obo-diversified": {
+        "archetype": "diversified-policy-deck",
+        "faults": 0,
+        "matches": 10,
+        "unfinished": 0,
+        "winRate": 0.8,
+        "wins": 8
+      }
+    },
+    "runtimeSeconds": {
+      "max": 41.06459231098415,
+      "mean": 24.036527590254263,
+      "p95": 37.648943406005856
+    },
+    "seats": {
+      "0": {
+        "matches": 10,
+        "winRate": 0.9,
+        "wins": 9
+      },
+      "1": {
+        "matches": 10,
+        "winRate": 0.7,
+        "wins": 7
+      }
+    },
+    "unfinished": 0,
+    "wilson95": [
+      0.5839782779742401,
+      0.9193436467288
+    ],
+    "winRate": 0.8,
+    "wins": 16
+  },
+  "schemaVersion": "1.0.0",
+  "terminal": {
+    "candidate": null,
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997",
+    "identity": "champion",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "sourceDecision": "retain-champion",
+    "validated": true
+  }
+}
