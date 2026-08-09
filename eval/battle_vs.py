@@ -156,6 +156,9 @@ class Contestant:
     def start(self) -> None:
         env = dict(os.environ)
         env.update(self.env_overrides)
+        env["PYTHONPATH"] = os.pathsep.join(
+            value for value in (REPO, env.get("PYTHONPATH", "")) if value
+        )
         env["AGENT_SEED"] = str(self.seed)
         if self.capture_determinization:
             env["PTCG_TELEMETRY_PROTOCOL"] = "1"
@@ -329,6 +332,7 @@ def run(
     seeds: int,
     base_seed: int,
     semantic_deck: str | None = None,
+    opponent_deck: str | None = None,
     public_telemetry_only: bool = False,
     semantic_env: dict[str, str] | None = None,
 ) -> dict:
@@ -345,7 +349,7 @@ def run(
         public_telemetry_only=public_telemetry_only,
         env_overrides=semantic_env,
     )
-    opp = Contestant(opponent_label, opponent_repo, base_seed)
+    opp = Contestant(opponent_label, opponent_repo, base_seed, opponent_deck)
     semantic.start()
     opp.start()
     stats = {
@@ -592,6 +596,11 @@ def main():
         help="candidate deck CSV for semantic (default: repository deck.csv)",
     )
     p.add_argument(
+        "--opponent-deck",
+        default=None,
+        help="frozen opponent deck CSV (default: opponent repository deck.csv)",
+    )
+    p.add_argument(
         "--public-telemetry-only",
         action="store_true",
         help="omit hidden-world fingerprints while retaining root action/value telemetry",
@@ -625,6 +634,7 @@ def main():
             args.seeds,
             args.base_seed,
             args.semantic_deck,
+            args.opponent_deck,
             args.public_telemetry_only,
             dict(value.split("=", 1) for value in args.semantic_env),
         )

@@ -1,0 +1,132 @@
+{
+  "audit": {
+    "manifestSha256": "3cdb538ae81080285c8b2f331fbcd9a2370e56c6cf33f3f012524798fd412235",
+    "overlaps": {
+      "confirm:blind": {
+        "deck": [],
+        "entity": [],
+        "match": [],
+        "policy": [],
+        "seed": [],
+        "time": []
+      },
+      "screen:blind": {
+        "deck": [],
+        "entity": [],
+        "match": [],
+        "policy": [],
+        "seed": [],
+        "time": []
+      },
+      "screen:confirm": {
+        "deck": [],
+        "entity": [],
+        "match": [],
+        "policy": [],
+        "seed": [],
+        "time": []
+      },
+      "train:blind": {
+        "deck": [],
+        "entity": [],
+        "match": [],
+        "policy": [],
+        "seed": [],
+        "time": []
+      },
+      "train:confirm": {
+        "deck": [],
+        "entity": [],
+        "match": [],
+        "policy": [],
+        "seed": [],
+        "time": []
+      },
+      "train:screen": {
+        "deck": [],
+        "entity": [],
+        "match": [],
+        "policy": [],
+        "seed": [],
+        "time": []
+      }
+    },
+    "passed": true,
+    "publicOpponents": [
+      "search-alakazam-v12"
+    ],
+    "splits": {
+      "blind": 2,
+      "confirm": 2,
+      "screen": 2,
+      "train": 1
+    },
+    "unavailableExternalOpponents": []
+  },
+  "baseline": {
+    "opponents": {
+      "claude": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "matsu": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "meta-proxy": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "obo": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "search-alakazam-v12": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      },
+      "take": {
+        "matches": 2,
+        "winRate": 1.0,
+        "wins": 2
+      },
+      "ume": {
+        "matches": 2,
+        "winRate": 0.0,
+        "wins": 0
+      }
+    },
+    "pool": {
+      "faults": 0,
+      "matches": 14,
+      "runtimeSeconds": {
+        "max": 60.83782548099407,
+        "mean": 20.788882230429277
+      },
+      "unfinished": 0,
+      "wins": 8
+    },
+    "seats": {
+      "0": {
+        "matches": 7,
+        "winRate": 0.5714285714285714,
+        "wins": 4
+      },
+      "1": {
+        "matches": 7,
+        "winRate": 0.5714285714285714,
+        "wins": 4
+      }
+    }
+  },
+  "candidateChanged": false,
+  "issue": "SOT-2538",
+  "kaggleSubmitted": false,
+  "schemaVersion": "1.0.0",
+  "screenConfirmGateFailClosed": true
+}
