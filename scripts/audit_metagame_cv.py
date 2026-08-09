@@ -38,6 +38,7 @@ def audit_manifest(path: Path) -> dict[str, Any]:
         raise ValueError("opponent ids must be unique")
 
     boundaries: dict[str, dict[str, set[str]]] = {}
+    unavailable_external: set[str] = set()
     previous_end: datetime | None = None
     for split_name in SPLITS:
         split = manifest["splits"][split_name]
@@ -54,11 +55,19 @@ def audit_manifest(path: Path) -> dict[str, Any]:
             repo = _repo(opponent["repo"], root)
             if opponent["license"] not in LICENSE_ALLOW_LIST:
                 raise ValueError(f"license is not allowed: {opponent_id}")
-            if sha256(repo / "main.py") != opponent["policySha256"]:
-                raise ValueError(f"policy fingerprint drift: {opponent_id}")
             deck_path = _repo(opponent.get("deckPath", str(repo / "deck.csv")), root)
-            if sha256(deck_path) != opponent["deckSha256"]:
-                raise ValueError(f"deck fingerprint drift: {opponent_id}")
+            if not (repo / "main.py").is_file() or not deck_path.is_file():
+                if (
+                    opponent["license"] != "repository-local"
+                    or not Path(opponent["repo"]).is_absolute()
+                ):
+                    raise ValueError(f"required opponent is unavailable: {opponent_id}")
+                unavailable_external.add(opponent_id)
+            else:
+                if sha256(repo / "main.py") != opponent["policySha256"]:
+                    raise ValueError(f"policy fingerprint drift: {opponent_id}")
+                if sha256(deck_path) != opponent["deckSha256"]:
+                    raise ValueError(f"deck fingerprint drift: {opponent_id}")
             entity = f"{opponent['policySha256']}:{opponent['deckSha256']}"
             entities.add(entity)
             for offset in range(split["seedsPerOpponent"]):
@@ -96,6 +105,7 @@ def audit_manifest(path: Path) -> dict[str, Any]:
         "splits": {name: len(manifest["splits"][name]["opponents"]) for name in SPLITS},
         "overlaps": overlaps,
         "publicOpponents": [row["id"] for row in public],
+        "unavailableExternalOpponents": sorted(unavailable_external),
         "passed": True,
     }
 

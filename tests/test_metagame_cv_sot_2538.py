@@ -26,6 +26,16 @@ def test_intentional_entity_leak_is_rejected(tmp_path: Path) -> None:
         audit_manifest(path)
 
 
+def test_vendored_public_opponent_is_always_required(tmp_path: Path) -> None:
+    manifest = json.loads(MANIFEST.read_text())
+    public = next(row for row in manifest["opponents"] if row["id"] == "search-alakazam-v12")
+    public["repo"] = str(tmp_path / "missing-public")
+    path = tmp_path / "missing.json"
+    path.write_text(json.dumps(manifest))
+    with pytest.raises(ValueError, match="required opponent is unavailable"):
+        audit_manifest(path)
+
+
 def test_public_opponent_is_offline_license_allowlisted_and_fingerprinted() -> None:
     manifest = json.loads(MANIFEST.read_text())
     opponent = next(row for row in manifest["opponents"] if row["id"] == "search-alakazam-v12")

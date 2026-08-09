@@ -60,7 +60,8 @@
       "confirm": 2,
       "screen": 2,
       "train": 1
-    }
+    },
+    "unavailableExternalOpponents": []
   },
   "baseline": {
     "opponents": {
