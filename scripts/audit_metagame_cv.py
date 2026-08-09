@@ -96,8 +96,6 @@ def audit_manifest(path: Path) -> dict[str, Any]:
                 raise ValueError(f"license is not allowed: {opponent_id}")
             deck_path = _repo(opponent.get("deckPath", str(repo / "deck.csv")), root)
             if not (repo / "main.py").is_file() or not deck_path.is_file():
-                if manifest.get("schemaVersion", "1.0.0") >= "2.0.0":
-                    raise ValueError(f"required opponent is unavailable: {opponent_id}")
                 if (
                     opponent["license"] != "repository-local"
                     or not Path(opponent["repo"]).is_absolute()

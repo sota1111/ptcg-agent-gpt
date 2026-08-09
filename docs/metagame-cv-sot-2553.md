@@ -8,9 +8,11 @@ metagame family. The public Search-Audited Alakazam v12 snapshot remains pinned 
 
 The audit fails closed unless train/screen/confirm/blind have zero overlap in entity, policy, deck,
 match unit, seed, time window, evidence ID, and submission lineage. Each collection timestamp must fall
-inside its split's frozen window. Every v2 opponent payload must be locally available, fingerprinted,
-licensed, and offline portable. Metagame family is recorded for stratified reporting; it is not treated
-as an identity because distinct policies from the same family are a valid future generalization test.
+inside its split's frozen window. Every v2 evidence row must be licensed and marked offline portable;
+vendored public payloads are always required and fingerprinted. Repository-local sibling snapshots are
+fingerprinted whenever available so portable CI can audit the contract without those private checkout
+paths; the real baseline requires every sibling checkout. Metagame family is recorded for stratified
+reporting, not as an identity, because distinct policies from one family are a valid generalization test.
 
 ## CV/public gap rule
 
