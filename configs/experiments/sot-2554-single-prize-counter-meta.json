@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2554",
+  "candidate": "single-prize-alakazam-mist",
+  "enabledByDefault": false,
+  "activation": {
+    "requiredEnvironment": {
+      "PTCG_TELEMETRY_PROTOCOL": "1",
+      "PTCG_COUNTER_META_CANDIDATE": "single-prize-alakazam-mist"
+    }
+  },
+  "deck": "decks/candidates/sot-2554-single-prize-alakazam.csv",
+  "policy": "agents.counter_meta_policy.CounterMetaAgent",
+  "informationAllowlist": ["public-board", "public-log", "legal-options"],
+  "informationDenylist": ["opponent-identity", "pool-identity", "hidden-opponent-hand", "facedown-prize-identity", "unrevealed-deck-identity"],
+  "screenConfirmAllowed": false,
+  "kaggleSubmissionAllowed": false,
+  "runtimeLimits": {"cpu": "2 vCPU", "memoryGiB": 12.2, "decisionSecondsMaxExclusive": 600}
+}
