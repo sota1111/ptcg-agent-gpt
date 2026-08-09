@@ -8,7 +8,10 @@ import subprocess
 import sys
 from pathlib import Path
 
-from scripts.run_metagame_cv import summarize
+try:
+    from scripts.run_metagame_cv import summarize
+except ModuleNotFoundError:  # direct ``python scripts/...`` execution
+    from run_metagame_cv import summarize
 
 
 def compare(champion: dict, candidate: dict, gate: dict) -> dict:
