@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2574",
+  "parentIssue": "SOT-2570",
+  "axis": "terminal-population-policy-blind-holdout",
+  "preregisteredBeforeExperiment": true,
+  "terminal": {
+    "identity": "champion",
+    "candidate": null,
+    "sourceDecision": "retain-champion",
+    "mainSha256": "f65bfc5151d847f2d23d40baf22f293eaaaa04e13b366c7162c592f7d175613c",
+    "deckSha256": "e92d5717fd04865b0b528307df7a9d9aecc2c7b917bfbd5042fe58e3d1f26997"
+  },
+  "sourceEvidence": {
+    "populationContract": "eval/manifests/sot-2571-archetype-population.json",
+    "populationContractSha256": "2be9316b86bc04a92719b861c2420d44fffdc202f69a6df3d42a028e747e439a",
+    "populationSnapshot": "population/archetypes/sot-2571-population.json",
+    "populationSnapshotSha256": "276895051b80102efda02cb92f51a5c683b45e1eb6abf1e15dbbfde18b632232",
+    "pairedManifest": "eval/manifests/sot-2573-population-prior-paired.json",
+    "pairedManifestSha256": "53189ace4d0a58d68280d28e096301bfa590be184cf2c8c1c5c3542a268022d4",
+    "terminalDecision": "artifacts/sot-2573/confirm-decision.json",
+    "terminalDecisionSha256": "ffeeb385dcdd75fcd8d55cfd16021c99cb815b8c1c174c12dab78edc14354a14"
+  },
+  "isolation": {
+    "window": {"start": "2026-08-10T00:00:00Z", "end": "2026-08-16T23:59:59Z"},
+    "baseSeed": 2574101,
+    "seeds": [2574101, 2574102, 2574103, 2574104, 2574105],
+    "matchUnits": ["SOT-2574-obo-diversified", "SOT-2574-meta-proxy"],
+    "submissionLineages": ["obo-5aa20369", "meta-proxy-b5c0ab77"],
+    "seatReversal": true,
+    "matchesPerOpponent": 10
+  },
+  "opponents": [
+    {"id": "obo-diversified", "archetype": "diversified-policy-deck", "repo": "/workspaces/ptcg-agent-obo", "commit": "7497b315be5df066b509277770cd5d113478c6df", "policyEntity": "obo-5aa20369", "deckEntity": "obo-c705b5f8", "evidenceId": "local-obo-20260808", "submissionLineage": "obo-5aa20369", "policySha256": "5aa203691a4c05e5b615d27142751e14967fa2925bf00d7f2ae98062628b4985", "deckPath": "/workspaces/ptcg-agent-obo/deck.csv", "deckSha256": "c705b5f8a5b03b6a57b475fb2e33178ca5ca1c75ad54131305f47108411c694d"},
+    {"id": "meta-proxy", "archetype": "top-emerging-reanchoring", "repo": "eval/reanchoring_proxy", "policyEntity": "meta-b5c0ab77", "deckEntity": "meta-56c2aa11", "evidenceId": "local-meta-proxy-20260809", "submissionLineage": "meta-proxy-b5c0ab77", "policySha256": "b5c0ab7783b8099e3793593b0f0400fa94b431fdb7ad417d0c187362c2651d2e", "deckPath": "artifacts/sot-2058-deck-pool/decks/top-emerging.csv", "deckSha256": "56c2aa117f9024fc5f5d4a2afe3683b43a662c778d64b960e84c5a625632448b"}
+  ],
+  "gate": {"faultsMax": 0, "illegalActionsMax": 0, "unfinishedMax": 0, "matchRuntimeSecondsMaxExclusive": 600, "archiveBytesMax": 20000000},
+  "previousSubmission": {"canonicalContentSha256": "5fda6f5f727c4647882755601807ac48b21995336e94670538923ef64767a24e"},
+  "kaggleSubmissionAllowed": false
+}
