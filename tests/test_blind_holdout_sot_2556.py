@@ -40,10 +40,19 @@ def test_terminal_receipt_is_exact_and_records_no_submission() -> None:
         "identity": "champion",
         "sourceDecision": "retain-champion",
     }
-    assert hashlib.sha256(Path("main.py").read_bytes()).hexdigest() == manifest["terminal"]["mainSha256"]
+    assert (
+        hashlib.sha256(Path("main.py").read_bytes()).hexdigest()
+        == manifest["terminal"]["mainSha256"]
+    )
     assert handoff["currentContentSha256"] == fingerprint["canonical_content_sha256"]
     assert handoff["archiveSha256"] == fingerprint["archive_sha256"]
     assert all(handoff["verification"].values())
     assert handoff["newArtifact"] is False
     assert handoff["artifact"] is None
     assert handoff["kaggleSubmitted"] is False
+
+
+def test_rejected_candidate_is_absent_from_retained_archive() -> None:
+    fingerprint = load("artifacts/sot-2556/submission-fingerprint.json")
+    paths = {entry["path"] for entry in fingerprint["entries"]}
+    assert "agents/counter_meta_policy.py" not in paths

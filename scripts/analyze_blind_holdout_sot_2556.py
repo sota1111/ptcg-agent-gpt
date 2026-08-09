@@ -25,9 +25,7 @@ def wilson(wins: int, total: int) -> list[float]:
     rate = wins / total
     denominator = 1 + z * z / total
     center = (rate + z * z / (2 * total)) / denominator
-    margin = z / denominator * math.sqrt(
-        rate * (1 - rate) / total + z * z / (4 * total * total)
-    )
+    margin = z / denominator * math.sqrt(rate * (1 - rate) / total + z * z / (4 * total * total))
     return [max(0.0, center - margin), min(1.0, center + margin)]
 
 
@@ -76,9 +74,13 @@ def summarize(reports: list[dict[str, Any]]) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--manifest", type=Path, default=Path("eval/manifests/sot-2556-blind-holdout.json"))
+    parser.add_argument(
+        "--manifest", type=Path, default=Path("eval/manifests/sot-2556-blind-holdout.json")
+    )
     parser.add_argument("--output", type=Path, default=Path("artifacts/sot-2556/summary.json"))
-    parser.add_argument("--fingerprint", type=Path, default=Path("artifacts/sot-2556/submission-fingerprint.json"))
+    parser.add_argument(
+        "--fingerprint", type=Path, default=Path("artifacts/sot-2556/submission-fingerprint.json")
+    )
     parser.add_argument("--handoff", type=Path, default=Path("artifacts/sot-2556/handoff.json"))
     args = parser.parse_args()
     root = args.manifest.parents[2]
@@ -87,7 +89,10 @@ def main() -> int:
     paired = load(root / manifest["sourceEvidence"]["pairedManifest"])
     decision = load(root / manifest["sourceEvidence"]["screenDecision"])
     for key in ("cvManifest", "pairedManifest", "screenDecision"):
-        if digest(root / manifest["sourceEvidence"][key]) != manifest["sourceEvidence"][key + "Sha256"]:
+        if (
+            digest(root / manifest["sourceEvidence"][key])
+            != manifest["sourceEvidence"][key + "Sha256"]
+        ):
             raise ValueError(f"source evidence drift: {key}")
     if decision["decision"] != "retain-champion" or decision["candidateArtifact"] is not None:
         raise ValueError("terminal decision is not a rejected candidate / retained champion")
@@ -102,7 +107,9 @@ def main() -> int:
         for offset in range(phase["seedsPerOpponent"])
     }
     for phase in paired["phases"].values():
-        prior_seeds.update(phase["baseSeed"] + offset for offset in range(phase["seedsPerOpponent"]))
+        prior_seeds.update(
+            phase["baseSeed"] + offset for offset in range(phase["seedsPerOpponent"])
+        )
     if prior_seeds & set(manifest["isolation"]["seeds"]):
         raise ValueError("blind seed overlaps a prior phase")
     if manifest["isolation"]["window"]["start"] <= max(
@@ -116,19 +123,35 @@ def main() -> int:
         raise ValueError("blind submission lineage overlaps a prior phase")
 
     terminal = manifest["terminal"]
-    if digest(root / "main.py") != terminal["mainSha256"] or digest(root / "deck.csv") != terminal["deckSha256"]:
+    if (
+        digest(root / "main.py") != terminal["mainSha256"]
+        or digest(root / "deck.csv") != terminal["deckSha256"]
+    ):
         raise ValueError("terminal policy/deck drift")
     reports = []
     report_hashes = {}
     expected_seeds = [seed for seed in manifest["isolation"]["seeds"] for _ in range(2)]
     for opponent in manifest["opponents"]:
-        repo = Path(opponent["repo"]) if Path(opponent["repo"]).is_absolute() else root / opponent["repo"]
-        deck = Path(opponent["deckPath"]) if Path(opponent["deckPath"]).is_absolute() else root / opponent["deckPath"]
-        if digest(repo / "main.py") != opponent["policySha256"] or digest(deck) != opponent["deckSha256"]:
+        repo = (
+            Path(opponent["repo"])
+            if Path(opponent["repo"]).is_absolute()
+            else root / opponent["repo"]
+        )
+        deck = (
+            Path(opponent["deckPath"])
+            if Path(opponent["deckPath"]).is_absolute()
+            else root / opponent["deckPath"]
+        )
+        if (
+            digest(repo / "main.py") != opponent["policySha256"]
+            or digest(deck) != opponent["deckSha256"]
+        ):
             raise ValueError(f"opponent provenance drift: {opponent['label']}")
-        if opponent.get("commit") and subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], cwd=repo, text=True
-        ).strip() != opponent["commit"]:
+        if (
+            opponent.get("commit")
+            and subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip()
+            != opponent["commit"]
+        ):
             raise ValueError(f"opponent commit drift: {opponent['label']}")
         report_path = root / "artifacts/sot-2556/holdout" / f"{opponent['label']}.json"
         report = load(report_path)
@@ -147,30 +170,75 @@ def main() -> int:
         and result["runtimeSeconds"]["max"] < gate["matchRuntimeSecondsMaxExclusive"]
     )
     summary = {
-        "schemaVersion": "1.0.0", "issue": "SOT-2556",
-        "manifestSha256": digest(args.manifest), "reportSha256": report_hashes,
+        "schemaVersion": "1.0.0",
+        "issue": "SOT-2556",
+        "manifestSha256": digest(args.manifest),
+        "reportSha256": report_hashes,
         "terminal": {**terminal, "validated": True},
-        "isolation": {"entityOverlap": 0, "timeOverlap": 0, "lineageOverlap": 0, "matchUnitOverlap": 0, "seedOverlap": 0},
-        "result": result, "operationalAuditPassed": passed, "kaggleSubmitted": False,
+        "isolation": {
+            "entityOverlap": 0,
+            "timeOverlap": 0,
+            "lineageOverlap": 0,
+            "matchUnitOverlap": 0,
+            "seedOverlap": 0,
+        },
+        "result": result,
+        "operationalAuditPassed": passed,
+        "kaggleSubmitted": False,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     fingerprint = load(args.fingerprint)
     archive = root / str(fingerprint["archive"])
-    same = fingerprint["canonical_content_sha256"] == manifest["previousSubmission"]["canonicalContentSha256"]
+    same = (
+        fingerprint["canonical_content_sha256"]
+        == manifest["previousSubmission"]["canonicalContentSha256"]
+    )
     archive_ok = archive.stat().st_size <= gate["archiveBytesMax"]
     handoff = {
-        "schemaVersion": "1.0.0", "issue": "SOT-2556", "parentIssue": "SOT-2552",
-        "terminal": {"identity": "champion", "candidate": None, "sourceDecision": terminal["sourceDecision"]},
+        "schemaVersion": "1.0.0",
+        "issue": "SOT-2556",
+        "parentIssue": "SOT-2552",
+        "terminal": {
+            "identity": "champion",
+            "candidate": None,
+            "sourceDecision": terminal["sourceDecision"],
+        },
         "result": result,
-        "artifact": None if same else {"path": str(archive), "archiveSha256": fingerprint["archive_sha256"], "contentSha256": fingerprint["canonical_content_sha256"], "bytes": archive.stat().st_size, "mainSha256": terminal["mainSha256"], "deckSha256": terminal["deckSha256"]},
+        "artifact": None
+        if same
+        else {
+            "path": str(archive),
+            "archiveSha256": fingerprint["archive_sha256"],
+            "contentSha256": fingerprint["canonical_content_sha256"],
+            "bytes": archive.stat().st_size,
+            "mainSha256": terminal["mainSha256"],
+            "deckSha256": terminal["deckSha256"],
+        },
         "newArtifact": not same and passed and archive_ok,
-        "reason": "terminal fingerprint matches previous submission" if same else "terminal fingerprint differs from previous submission",
+        "reason": "terminal fingerprint matches previous submission"
+        if same
+        else "terminal fingerprint differs from previous submission",
         "previousContentSha256": manifest["previousSubmission"]["canonicalContentSha256"],
         "currentContentSha256": fingerprint["canonical_content_sha256"],
         "archiveSha256": fingerprint["archive_sha256"],
-        "evidence": {"manifest": str(args.manifest), "manifestSha256": digest(args.manifest), "summary": str(args.output), "summarySha256": digest(args.output), "fingerprint": str(args.fingerprint)},
-        "verification": {"blindHoldoutPassed": passed, "deterministicRebuildPassed": True, "topLevelFilesPassed": True, "offlineImportPassed": True, "execCompatibilityPassed": True, "archiveSizePassed": archive_ok, "runtimePassed": result["runtimeSeconds"]["max"] < gate["matchRuntimeSecondsMaxExclusive"]},
+        "evidence": {
+            "manifest": str(args.manifest),
+            "manifestSha256": digest(args.manifest),
+            "summary": str(args.output),
+            "summarySha256": digest(args.output),
+            "fingerprint": str(args.fingerprint),
+        },
+        "verification": {
+            "blindHoldoutPassed": passed,
+            "deterministicRebuildPassed": True,
+            "topLevelFilesPassed": True,
+            "offlineImportPassed": True,
+            "execCompatibilityPassed": True,
+            "archiveSizePassed": archive_ok,
+            "runtimePassed": result["runtimeSeconds"]["max"]
+            < gate["matchRuntimeSecondsMaxExclusive"],
+        },
         "kaggleSubmitted": False,
     }
     args.handoff.write_text(json.dumps(handoff, indent=2, sort_keys=True) + "\n")
