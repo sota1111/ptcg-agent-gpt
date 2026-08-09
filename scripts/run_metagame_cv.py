@@ -10,9 +10,9 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from scripts.audit_metagame_cv import audit_manifest
+    from scripts.audit_metagame_cv import audit_manifest, compare_cv_public
 except ModuleNotFoundError:  # direct ``python scripts/...`` execution
-    from audit_metagame_cv import audit_manifest
+    from audit_metagame_cv import audit_manifest, compare_cv_public
 
 
 def summarize(reports: list[dict[str, Any]]) -> dict[str, Any]:
@@ -57,6 +57,11 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
+    parser.add_argument(
+        "--public-order",
+        nargs="*",
+        help="Optional public-rating order used for sanity comparison only",
+    )
     args = parser.parse_args()
     audit = audit_manifest(args.manifest)
     manifest = json.loads(args.manifest.read_text())
@@ -107,6 +112,19 @@ def main() -> None:
         "issue": manifest["issue"],
         "audit": audit,
         "baseline": summarize(reports),
+        "cvPublicGap": compare_cv_public(
+            [
+                row[0]
+                for row in sorted(
+                    (
+                        (opponent, values["winRate"])
+                        for opponent, values in summarize(reports)["opponents"].items()
+                    ),
+                    key=lambda item: (-item[1], item[0]),
+                )
+            ],
+            args.public_order,
+        ),
         "screenConfirmGateFailClosed": True,
         "candidateChanged": False,
         "kaggleSubmitted": False,
