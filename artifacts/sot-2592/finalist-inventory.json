@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "issue": "SOT-2592",
+  "mode": "converge",
+  "selectionContract": {
+    "primaryMetric": "leak_free_blind_cv_wilson95_lower",
+    "publicResultPolicy": "missing_public_is_null_and_never_imputed",
+    "officialCompetitionContract": {
+      "metric": "relative_skill_rating",
+      "activeSubmissionSlots": 2,
+      "source": "docs/kaggle-submission.md"
+    },
+    "requiredIsolationDimensions": [
+      "entity",
+      "time",
+      "seed",
+      "submission_lineage"
+    ],
+    "candidatePolicy": "retained_or_promoted_terminal_behavior_only",
+    "kaggleSubmissionAllowed": false
+  },
+  "auditedTerminalArtifacts": [
+    {
+      "issue": "SOT-2441",
+      "strategyLineage": "tactical-controller-retained-champion",
+      "status": "excluded_incomparable",
+      "exclusionReasons": ["time isolation absent", "submission-lineage isolation absent"],
+      "paths": {
+        "manifest": "eval/manifests/sot-2441-blind-holdout.json",
+        "handoff": "artifacts/sot-2441/handoff.json",
+        "summary": "artifacts/sot-2441/summary.json",
+        "fingerprint": "artifacts/sot-2441/submission-fingerprint.json"
+      },
+      "sha256": {
+        "manifest": "88539ce4fe1b8e096741791b8fc7006a94c98533cf872c5a6fca641326d8e75d",
+        "handoff": "887173628cbf1657f46bd16fe8675d01ad7b9c38bf862ea3c106a62686e42715",
+        "summary": "0b999e86880e583086c0586eb3c6b1ba3024c36d730541cc2005ac43e96a8610",
+        "fingerprint": "0ffa913e813423fe5400375ab10b566e1ea670c55b9f83e7065596afec8cfe33"
+      }
+    },
+    {
+      "issue": "SOT-2540",
+      "strategyLineage": "forward-planning-retained-champion",
+      "status": "excluded_incomparable",
+      "exclusionReasons": ["submission-lineage isolation absent"],
+      "paths": {
+        "manifest": "eval/manifests/sot-2540-blind-holdout.json",
+        "handoff": "artifacts/sot-2540/handoff.json",
+        "summary": "artifacts/sot-2540/summary.json",
+        "fingerprint": "artifacts/sot-2540/submission-fingerprint.json"
+      },
+      "sha256": {
+        "manifest": "4e3b0a73f3bc12b56964855f4e5992b39e31bd269a53f5bd789d9d2326ec17a7",
+        "handoff": "18857af7f46fa6ed9faf7c98f7b6400a7b6e745f12d1e21199afee806de9930d",
+        "summary": "aaa993bdcc8a0e7a3a0cdee04c1ad77e202c4054f3b8f6387af8d842bb5c96b9",
+        "fingerprint": "c22f460dd578c6f9dc6b061c0b3312d0ccb40af7b1597ee5f295a9272d4992f7"
+      }
+    },
+    {
+      "issue": "SOT-2556",
+      "strategyLineage": "counter-meta-retained-champion",
+      "status": "finalist",
+      "exclusionReasons": [],
+      "paths": {
+        "manifest": "eval/manifests/sot-2556-blind-holdout.json",
+        "handoff": "artifacts/sot-2556/handoff.json",
+        "summary": "artifacts/sot-2556/summary.json",
+        "fingerprint": "artifacts/sot-2556/submission-fingerprint.json"
+      },
+      "sha256": {
+        "manifest": "cc2eba07eaf3fc2ec8e3d0d2f007f57fbd3be7143f4d193dfbbe05262cde60b6",
+        "handoff": "e67e9d4422586bbf8947848f3aedde25f90965a469dea3d66c68e61962273e31",
+        "summary": "a54358f27a0775eeef66cd00e6f6efcf01a0d0e26d4fa23ff0b61ee9f2d5e16d",
+        "fingerprint": "c22f460dd578c6f9dc6b061c0b3312d0ccb40af7b1597ee5f295a9272d4992f7"
+      },
+      "cv": {"matches": 50, "wins": 43, "winRate": 0.86, "wilson95": [0.738135428014719, 0.9304925473797714]},
+      "public": {"rating": null, "submissionId": null, "observedAt": null},
+      "fingerprint": {
+        "archiveSha256": "3ed0fc2d3ea8deb4f81238bdfd78441b09efbce34fe722c313aa51506ad86659",
+        "contentSha256": "5fda6f5f727c4647882755601807ac48b21995336e94670538923ef64767a24e"
+      },
+      "submissionHistory": {"matchesPreviousSubmission": true, "kaggleSubmittedByIssue": false},
+      "isolation": {"entity": 0, "time": 0, "seed": 0, "submission_lineage": 0}
+    },
+    {
+      "issue": "SOT-2574",
+      "strategyLineage": "population-policy-retained-champion",
+      "status": "finalist",
+      "exclusionReasons": [],
+      "paths": {
+        "manifest": "eval/manifests/sot-2574-terminal-population-blind.json",
+        "handoff": "artifacts/sot-2574/handoff.json",
+        "summary": "artifacts/sot-2574/summary.json",
+        "fingerprint": "artifacts/sot-2574/submission-fingerprint.json"
+      },
+      "sha256": {
+        "manifest": "b8020228cb5143c461d123d5bb8f4e40f9ced8fb88c0ac940af25d339f42cbea",
+        "handoff": "838c87628947f9bbb820ebe328cf1d260322fed8b4bddaa3c27b16238c31a9bd",
+        "summary": "2ccf061694f302adc6cab08b6a40f3b3f44ab6436004e6ff6243c203487586a1",
+        "fingerprint": "d9ddc39f68427b6cd71f25a2bc12304efdd4d7cae72bb741b04b5cd7d99ec188"
+      },
+      "cv": {"matches": 20, "wins": 16, "winRate": 0.8, "wilson95": [0.5839782779742401, 0.9193436467288]},
+      "public": {"rating": null, "submissionId": null, "observedAt": null},
+      "fingerprint": {
+        "archiveSha256": "568b8cdb9377e926006e133ed1b7f68b3c8889700bc842e47077c55b53a9d0b1",
+        "contentSha256": "07bd558f36408ac422f8340198fc939086878ba4779bf2bd4131f17bf223dc5e"
+      },
+      "submissionHistory": {"matchesPreviousSubmission": false, "kaggleSubmittedByIssue": false},
+      "isolation": {"entity": 0, "time": 0, "seed": 0, "submission_lineage": 0}
+    }
+  ],
+  "frozenFinalists": ["SOT-2556", "SOT-2574"]
+}
