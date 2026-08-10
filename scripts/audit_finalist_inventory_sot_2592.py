@@ -60,7 +60,10 @@ def audit(inventory_path: Path, repo_root: Path) -> dict[str, Any]:
         if len(loaded) != 4:
             continue
         manifest, handoff, summary, fingerprint = (
-            loaded["manifest"], loaded["handoff"], loaded["summary"], loaded["fingerprint"]
+            loaded["manifest"],
+            loaded["handoff"],
+            loaded["summary"],
+            loaded["fingerprint"],
         )
         if any(document.get("issue") != issue for document in (manifest, handoff, summary)):
             errors.append(f"{issue}: source issue identity mismatch")
