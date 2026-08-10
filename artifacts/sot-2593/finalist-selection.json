@@ -1,0 +1,142 @@
+{
+  "contentFingerprintsDistinct": true,
+  "decision": {
+    "hedge": "SOT-2574",
+    "primary": "SOT-2556",
+    "reason": "Primary has the highest leak-free Wilson 95% lower bound. Hedge is the remaining validated finalist with a distinct content fingerprint and strategy lineage."
+  },
+  "directiveSnapshot": {
+    "checkedAt": "2026-08-10T04:34:00Z",
+    "effectiveCycle": "converge",
+    "effectiveSubmit": "auto",
+    "newerHumanDirective": false,
+    "parentIssue": "SOT-2591"
+  },
+  "heavyTailPolicy": "Retain worst-matchup, worst-seat, p95/max runtime, faults, illegal actions, and unfinished counts; aggregate win rate cannot hide these tails.",
+  "issue": "SOT-2593",
+  "lineageIndependent": true,
+  "mode": "converge",
+  "publicCvGap": "Public ratings are unavailable for both exact fingerprints; the gap is unknown and is not imputed. Leak-free CV therefore controls pessimistically.",
+  "relativeRatingRisk": "A fixed-field holdout can overstate live relative-rating performance as the field evolves.",
+  "schemaVersion": "1.0.0",
+  "selected": [
+    {
+      "cv": {
+        "matches": 50,
+        "wilson95": [
+          0.738135428014719,
+          0.9304925473797714
+        ],
+        "winRate": 0.86,
+        "wins": 43
+      },
+      "fingerprint": {
+        "archiveSha256": "3ed0fc2d3ea8deb4f81238bdfd78441b09efbce34fe722c313aa51506ad86659",
+        "contentSha256": "5fda6f5f727c4647882755601807ac48b21995336e94670538923ef64767a24e"
+      },
+      "issue": "SOT-2556",
+      "public": {
+        "observedAt": null,
+        "rating": null,
+        "submissionId": null
+      },
+      "risk": {
+        "reliability": {
+          "faults": 0,
+          "illegalActions": 0,
+          "unfinished": 0
+        },
+        "runtimeSeconds": {
+          "max": 98.61199266999029,
+          "mean": 32.08290464930178,
+          "p95": 89.87484098598361
+        },
+        "worstMatchup": {
+          "id": "search-emerging",
+          "matches": 10,
+          "winRate": 0.6,
+          "wins": 6
+        },
+        "worstSeat": {
+          "matches": 25,
+          "seat": "1",
+          "winRate": 0.84,
+          "wins": 21
+        }
+      },
+      "role": "primary",
+      "sourceSummary": {
+        "path": "artifacts/sot-2556/summary.json",
+        "sha256": "a54358f27a0775eeef66cd00e6f6efcf01a0d0e26d4fa23ff0b61ee9f2d5e16d"
+      },
+      "strategyLineage": "counter-meta-retained-champion"
+    },
+    {
+      "cv": {
+        "matches": 20,
+        "wilson95": [
+          0.5839782779742401,
+          0.9193436467288
+        ],
+        "winRate": 0.8,
+        "wins": 16
+      },
+      "fingerprint": {
+        "archiveSha256": "568b8cdb9377e926006e133ed1b7f68b3c8889700bc842e47077c55b53a9d0b1",
+        "contentSha256": "07bd558f36408ac422f8340198fc939086878ba4779bf2bd4131f17bf223dc5e"
+      },
+      "issue": "SOT-2574",
+      "public": {
+        "observedAt": null,
+        "rating": null,
+        "submissionId": null
+      },
+      "risk": {
+        "reliability": {
+          "faults": 0,
+          "illegalActions": 0,
+          "unfinished": 0
+        },
+        "runtimeSeconds": {
+          "max": 41.06459231098415,
+          "mean": 24.036527590254263,
+          "p95": 37.648943406005856
+        },
+        "worstMatchup": {
+          "id": "meta-proxy",
+          "matches": 10,
+          "winRate": 0.8,
+          "wins": 8
+        },
+        "worstSeat": {
+          "matches": 10,
+          "seat": "1",
+          "winRate": 0.7,
+          "wins": 7
+        }
+      },
+      "role": "hedge",
+      "sourceSummary": {
+        "path": "artifacts/sot-2574/summary.json",
+        "sha256": "2ccf061694f302adc6cab08b6a40f3b3f44ab6436004e6ff6243c203487586a1"
+      },
+      "strategyLineage": "population-policy-retained-champion"
+    }
+  ],
+  "selectionContract": {
+    "activeSubmissionSlots": 2,
+    "hedgeRequirement": "distinct_content_fingerprint_and_strategy_lineage",
+    "kaggleSubmissionAllowed": false,
+    "missingOrIncomparablePolicy": "fail_closed",
+    "primaryMetric": "leak_free_blind_cv_wilson95_lower",
+    "publicResultPolicy": "sanity_only_null_never_imputed",
+    "rejectedAxisRetryAllowed": false,
+    "retrainingAllowed": false,
+    "unequalPopulationPolicy": "compare_wilson95_lower_not_raw_win_rate"
+  },
+  "sourceInventory": {
+    "issue": "SOT-2592",
+    "path": "artifacts/sot-2592/finalist-inventory.json",
+    "sha256": "14a4dfb1250392832ce3acb9bc5fdd95972d9b3b193bd4e50005e8f964c5a3ff"
+  }
+}
