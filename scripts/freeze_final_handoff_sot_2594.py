@@ -6,7 +6,6 @@ import argparse
 import hashlib
 import json
 import os
-import shutil
 import subprocess
 import sys
 import tarfile
@@ -26,16 +25,12 @@ DROP_DEAD_UTC = "2026-08-16T21:29:00Z"
 SLOTS = {
     "SOT-2556": {
         "sourceCommit": "e67ded7",
-        "excludes": ("agents/counter_meta_policy.py",),
+        "frozenArchive": "artifacts/sot-2594/primary.tar.gz",
         "matchesPreviousSubmission": True,
     },
     "SOT-2574": {
         "sourceCommit": "84d33d6",
-        "excludes": (
-            "agents/counter_meta_policy.py",
-            "agents/population_prior.py",
-            "agents/population_prior_sot_2572.json",
-        ),
+        "frozenArchive": "artifacts/sot-2594/hedge.tar.gz",
         "matchesPreviousSubmission": False,
     },
 }
@@ -53,15 +48,9 @@ def build_archive(issue: str, destination: Path) -> None:
     config = SLOTS[issue]
     with tempfile.TemporaryDirectory(prefix=f"{issue.lower()}-") as raw:
         source = Path(raw)
-        archive = subprocess.Popen(
-            ["git", "archive", str(config["sourceCommit"])], cwd=ROOT, stdout=subprocess.PIPE
-        )
-        assert archive.stdout is not None
-        subprocess.run(["tar", "-x", "-C", str(source)], stdin=archive.stdout, check=True)
-        archive.stdout.close()
-        if archive.wait() != 0:
-            raise ValueError(f"cannot materialize {issue} source commit")
-        shutil.copytree(ROOT / "cg", source / "cg")
+        frozen = ROOT / str(config["frozenArchive"])
+        with tarfile.open(frozen, "r:gz") as archive:
+            archive.extractall(source, filter="data")
         command = [
             "tar",
             "--sort=name",
@@ -72,7 +61,6 @@ def build_archive(issue: str, destination: Path) -> None:
             "--exclude=__pycache__",
             "--exclude=*.pyc",
         ]
-        command.extend(f"--exclude={item}" for item in config["excludes"])
         command.extend(["-czf", str(destination), "main.py", "deck.csv", "agents", "cg"])
         env = os.environ.copy()
         env["GZIP"] = "-n"
