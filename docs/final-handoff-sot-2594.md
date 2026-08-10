@@ -1,9 +1,10 @@
 # SOT-2594 deterministic final submission handoff
 
 `artifacts/sot-2594/handoff.json` is the only parent-facing contract for the two SOT-2593 finalists.
-The builder materializes the primary from pinned commit `e67ded7` plus the pinned-by-fingerprint engine,
-and the hedge from `84d33d6`; it builds each archive twice, requires byte identity, and then checks the
-canonical fingerprints selected by SOT-2593.
+The committed archives are immutable reconstruction inputs whose provenance is pinned to primary commit
+`e67ded7` and hedge commit `84d33d6`. The builder extracts and canonically repacks each archive twice,
+requires byte identity, and then checks the canonical fingerprints selected by SOT-2593. This works in
+clean shallow CI checkouts without depending on unshipped Git history.
 
 Both archives contain top-level `main.py` and `deck.csv`, import without network/PYTHONPATH in isolated
 mode, execute the Kaggle-style entry point, return a real 60-card engine deck, and remain below the size
